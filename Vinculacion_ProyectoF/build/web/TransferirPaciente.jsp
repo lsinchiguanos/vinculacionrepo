@@ -1,8 +1,3 @@
-<%-- 
-    Document   : TransferirPaciente
-    Created on : 02/08/2021, 13:36:10
-    Author     : jean
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

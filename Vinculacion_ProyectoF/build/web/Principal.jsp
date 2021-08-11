@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Principal
-    Created on : 11-nov-2019, 13:23:47
-    Author     : Mayra
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
