@@ -1,2 +1,7 @@
 
+<<<<<<< HEAD
 /WebAPP/dist/
+=======
+WebAPP/nbproject/private/private.properties
+WebAPP/nbproject/ant-deploy.xml
+>>>>>>> ab37ea01bf0eb1b63551dfa693fabe8b587548df
