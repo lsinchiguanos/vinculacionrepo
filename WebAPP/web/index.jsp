@@ -22,7 +22,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
-    <form id="form1" action="Login1" name="frm1"  autocomplete="off">
+    <form id="form1" action="/WebAPP/LoginController"  autocomplete="off">
         <!--Div del fondo colorido-->
         <div id="fondocolors" style="background-color:black">
             <!--Div para el logotipo-->

@@ -6,7 +6,7 @@
 package DAO;
 
 import BD.conexion;
-import Model.TrabajadorModel;
+import Model.Constructor;
 import java.sql.ResultSet;
 
 /**
@@ -18,7 +18,7 @@ public class LoginDAO {
     String sql="";
     ResultSet rs=null;
     conexion cn=new conexion();
-    public int validarLogin(TrabajadorModel tm) throws Exception{
+    public int validarLogin(Constructor tm) throws Exception{
         sql="SELECT COUNT(galeno_id) AS cantidad FROM public.galeno WHERE galeno_user='"+tm.getUsuario()+"' AND galeno_pass='"+tm.getClave()+"'";
         rs=cn.ejecutarConsulta(sql);
         while(rs.next()){

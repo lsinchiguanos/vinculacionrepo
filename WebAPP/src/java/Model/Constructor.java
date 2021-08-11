@@ -7,17 +7,16 @@ package Model;
 
 /**
  *
- * @author Manue
+ * @author jean
  */
-public class TrabajadorModel {
-
-    private int galeno_id;
+public class Constructor {
+     private int galeno_id;
     private String galeno_user, galeno_pass;
 
-    public TrabajadorModel() {
+    public Constructor() {
     }
 
-    public TrabajadorModel(int galeno_id, String galeno_user, String galeno_pass) {
+    public Constructor(int galeno_id, String galeno_user, String galeno_pass) {
         this.galeno_id = galeno_id;
         this.galeno_user = galeno_user;
         this.galeno_pass = galeno_pass;
@@ -46,5 +45,4 @@ public class TrabajadorModel {
     public void setClave(String clave) {
         this.galeno_pass = clave;
     }
-
 }

@@ -6,7 +6,7 @@
 package Controller;
 
 import DAO.LoginDAO;
-import Model.TrabajadorModel;
+import Model.Constructor;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -38,12 +38,12 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            TrabajadorModel tm=new TrabajadorModel();
+            Constructor tm=new Constructor();
             LoginDAO lg=new LoginDAO();
             int rspta=0;
-            if(request.getParameter("btn-login")!=null){
-            String usuario=request.getParameter("txtusuario");
-            String clave=request.getParameter("txtclave");
+            if(request.getParameter("btn1")!=null){
+            String usuario=request.getParameter("usuario");
+            String clave=request.getParameter("clave");
             tm.setUsuario(usuario);
             tm.setClave(clave);
                 try {
@@ -52,9 +52,9 @@ public class LoginController extends HttpServlet {
                     Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
                 }
               if(rspta!=0){
-                  response.sendRedirect("/Login/menu.jsp");
+                  response.sendRedirect("Principal.jsp");
               }else{
-                  response.sendRedirect("/Login/login.jsp?rspta="+rspta);
+                  response.sendRedirect("index.jsp?rspta="+rspta);
               } 
             }
         }
