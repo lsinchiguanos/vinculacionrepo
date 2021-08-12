@@ -4,7 +4,12 @@
     Author     : jean
 --%>
 
+<%@page import="Controller.LoginController"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import = "Model.Constructor"%> 
+<%@ page import = "DAO.LoginDAO"%> 
+<%@ page import = "java.util.LinkedList"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,29 +25,35 @@
                 <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
             </nav>
         </header>
-        <form>
-            <section  class="form-register">            
-                <center><h4>ACTUALIZAR DATOS PERSONALES</h4></center>
-                CEDULA: 
-                <input class="controls" type="text" name="cedula" id="Cedula" required="">
-                PRIMER NOMBRE: 
-                <input class="controls" type="text" name="primerNombre" id="nombres1">
-                SEGUNDO NOMBRE:
-                <input class="controls" type="text" name="segundoNombre" id="nombres2">
-                TELEFONO O CELULAR:
-                <input class="controls" type="text" name="telefono" id="telefono">
-                DIRECCION:
-                <input class="controls" type="text" name="direccion" id="direccion" >
-                PROVINCIA:
-                <input class="controls" type="text" name="provincia" id="provincia">
-                CANTON:
-                <input class="controls" type="text" name="canton" id="canton">
-                PARROQUIA:
-                <input class="controls" type="text" name="parroquia" id="parroquia">
-                EMAIL:
-                <input class="controls" type="text" name="correoElectronico" id="correoElectronico">
-                <center><input class="botons" type="submit" value="Actualizar datos"></center>
-            </section>
-        </form>
+        <table border="1">
+            <tr>
+                <td>id</td>
+                <td>nombre</td>
+                <td>apellido</td>
+                <td>telefono</td>
+                <td>id</td>
+                <td>nombre</td>
+                <td>apellido</td>
+                <td>telefono</td>
+                <td>telefono</td>
+                <td>telefono</td
+            </tr>
+            <%
+                 ArrayList<Constructor> lista = new LoginDAO().getContactos();
+                for (int i = 0; i < lista.size(); i++) {
+                    out.println("<tr>");
+                    out.println("<td>" + lista.get(i).getGaleno_dni()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_primer_nombre()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_telefono()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_direccion()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_segundo_nombre()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_provincia()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_canton()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_parroquia()+ "</td>");
+                    out.println("<td>" + lista.get(i).getGaleno_correoelectronico()+ "</td>");
+                    out.println("</tr>");
+                }
+            %>
+        </table>
     </body>
 </html>

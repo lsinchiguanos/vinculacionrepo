@@ -12,46 +12,52 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Manue
  */
-public class conexion implements Serializable{
-     public static String url = "jdbc:postgresql://localhost:5432/vinculacion";
+public class conexion {
+
+    public static String url = "jdbc:postgresql://localhost:5432/vinculacion";
     public static String usuario = "postgres";
     public static String clave = "1234";
-    public static String clase = "org.postgresql.Driver";
-    PreparedStatement ps=null;
+    PreparedStatement ps = null;
+    Statement st;
+    private Connection conecction;
+    private static final long serialVersionUID = 1L;
 
-    public static Connection conectar() {
-        Connection conexion = null;
+    public conexion() {
         try {
-            Class.forName(clase);
-            conexion = (Connection) DriverManager.getConnection(url, usuario, clave);
-            System.out.println("Conexion establecida..");
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println(e);
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            System.err.println(e.getMessage());
         }
-        return conexion;
     }
-    public ResultSet ejecutarConsulta(String sql) throws Exception{
-    Statement st=null;
-    st=conectar().createStatement();
-    ResultSet rs=st.executeQuery(sql);
-    return rs;
+
+    public synchronized Connection getConecction() {
+        try {
+            if (conecction == null || conecction.isClosed()) {
+                conecction = DriverManager.getConnection(url, usuario, clave);
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return conecction;
     }
-    public int ejecutarActualizacionP(String sql,Object[] params)throws SQLException{
-        ps=conectar().prepareStatement(sql);
-        //definir los valores para los argumentos
-        for(int i=0;i<params.length;i++){
-                ps.setObject(i+1,params[i]);
-                }
-        int r=ps.executeUpdate(); //retorna la cantidad de registros actualizados    
-        return r;   
+
+    public boolean isConected() {
+        try {
+            if (conecction == null) {
+                return false;
+            } else {
+                return !conecction.isClosed();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
-    public void desconectar() throws SQLException{
-    conectar().close();
-    }
-    
 }
