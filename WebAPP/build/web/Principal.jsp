@@ -44,9 +44,11 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/departamentos.png">
+                                    <img alt="" src="img/icons8_workstation_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#4D8846; font-weight: bold">AGREGAR INFORMACIÓN</h3>
+                                
+                               
                             </header>
                             <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
                             <a  href="" class="button primary" >Acceder</a>
@@ -58,9 +60,10 @@
                         <div class="content">
                             <header>
                                 <a href="" >
-                                    <img alt="" src="img/REPORTESSS.png">
+                                    <img alt="" src="img/icons8_account_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#4D8846; font-weight: bold">Reportes</h3>
+                                <h3 style="color:#4D8846; font-weight: bold" class="textgrueso">Reportes</h3>
+
                             </header>
                             <p>Mostrar informe de las actividades</p>
                             <a href="" class="button primary">Acceder</a>
@@ -72,7 +75,7 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/HISTORIAL11.png">
+                                    <img alt="" src="img/icons8_accounting_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#4D8846; font-weight: bold">Historial</h3>
                             </header>
