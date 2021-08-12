@@ -88,7 +88,7 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/HISTORIAL11.png">
+                                    <img alt="" src="img/icons8_cv_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#4D8846; font-weight: bold">Transferir Paciente</h3>
                             </header>
