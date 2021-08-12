@@ -28,8 +28,9 @@
             <!--Div para el logotipo-->
             <div id="divlogo">
                 <div id="logotipo" style="display: inline-block">
-                    <img src="img/LOGO_DIRE" alt="Alternate Text">
-                    <p>DIRECCION DE DESARROLLO SOCIAL</p>
+                    <img src="img/logo_quevedo.png" alt="Alternate Text"style="height:65px; width: 65px; margin:auto; text-align:center; margin-top:5px">
+                    <p><strong style="color:#F5F0EE; font-size:32px; font-size: 120%" class="textgrueso">DIRECCION DE DESARROLLO SOCIAL</strong></p>
+          
                 </div>
             </div>
 
@@ -50,14 +51,14 @@
 
                         <!--Nombre de usuario-->
                         <div class="input-field col s6" style="margin-left:0px; margin-right:10px; margin-top:-1px; height:30px;">
-                            <img alt="" src="img/icons8_User_Male_30px.png" style="position:absolute; margin-left: 0px; margin-top:15px"/>
+                            <img alt="" src="img/icons8_male_user_30px.png" style="position:absolute; margin-left: 0px; margin-top:15px"/>
                             <input id="usuario" name="usuario" class="validate" type="text" style="width:240px; margin-left:40px; margin-top:2px">
                             <label for="UserName" style="width:270px; margin-left:78px;">
                                 Nombre de usuario</label>
                         </div>
                         <!--Contraseña-->
                         <div class="input-field col s6" style="margin-left:0px; margin-right:10px; margin-top:55px; height:30px; top: 0px; left: 0px;">
-                            <img alt="" src="img/icons8_Lock_2_30px.png" style="position:absolute; margin-left: 0px; margin-top:15px"/>
+                            <img alt="" src="img/icons8_lock_30px.png" style="position:absolute; margin-left: 0px; margin-top:15px"/>
                             <input id="clave" class="validate" type="password"  name="clave" style="width:240px; margin-left:40px; margin-top:2px">
                             <label for="clave" style="width:270px; margin-left:78px;">
                                 Contraseña</label>
@@ -91,23 +92,25 @@
                 <!--Párrafo con centrado vertical-->                                
                 <p>
                     <img src="img/estruc.png" alt="Alternate Text" style="height:18px; width:18px; margin-left:-20px" />
-                <center><strong style="color:#4D8846; font-size:16px; font-size: 190%" class="textgrueso">&nbsp&nbsp MÓDULOS PARA CADA DEPARTAMENTO</strong></center>
+                <center><strong style="color:#4D8846; font-size:32px; font-size: 190%" class="textgrueso">&nbsp&nbsp MÓDULOS PARA CADA DEPARTAMENTO</strong></center>
                 </p>
 
                 <div>
-                    <img src="img/departamentos.png" alt="" style="display:block; margin:auto; text-align:center"/>
+                    <img src="img/icons8_permanent_job_96px.png" alt="" style="display:block; margin:auto; text-align:center"/>
                     <p style="color:#4D8846; font-size:16px" class="textgrueso">DEPARTAMENTOS</p>
                     <p>Se proporcionara información diferente por cada departamento</p>
                 </div>
 
                 <div>
-                    <img src="img/REPORTESSS.png" alt="" style="display:block; margin:auto; text-align:center"/>
+                    <img src="img/icons8_account_96px.png" alt="" style="display:block; margin:auto; text-align:center"/>
                     <p style="color:#4D8846; font-size:16px" class="textgrueso">Reportes</p>
                     <p>Mostrar informe de las actividades de acuerdo a cada departamento</p>
                 </div>
 
+               
                 <div>
-                    <img src="img/HISTORIAL11.png" alt="" style="display:block; margin:auto; text-align:center"/>
+
+                    <img src="img/icons8_accounting_96px.png" alt="" style="display:block; margin:auto; text-align:center"/>
                     <p style="color:#4D8846; font-size:16px" class="textgrueso">Historial</p>
                     <p>Mostrar la información de las actividades de acuerdo a cada departamento</p>
                 </div>
