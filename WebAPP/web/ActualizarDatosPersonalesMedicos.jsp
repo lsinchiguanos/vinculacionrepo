@@ -20,27 +20,29 @@
                 <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
             </nav>
         </header>
-        <section  class="form-register">
-            <center><h4>ACTUALIZAR DATOS PERSONALES</h4></center>
-            CEDULA: 
-            <input class="controls" type="text" name="cedula" id="Cedula" required="">
-            PRIMER NOMBRE: 
-            <input class="controls" type="text" name="primerNombre" id="nombres1">
-            SEGUNDO NOMBRE:
-            <input class="controls" type="text" name="segundoNombre" id="nombres2">
-            TELEFONO O CELULAR:
-            <input class="controls" type="text" name="telefono" id="telefono">
-            DIRECCION:
-            <input class="controls" type="text" name="direccion" id="direccion" >
-            PROVINCIA:
-            <input class="controls" type="text" name="provincia" id="provincia">
-            CANTON:
-            <input class="controls" type="text" name="canton" id="canton">
-            PARROQUIA:
-            <input class="controls" type="text" name="parroquia" id="parroquia">
-            EMAIL:
-            <input class="controls" type="text" name="correoElectronico" id="correoElectronico">
-            <center><input class="botons" type="submit" value="Actualizar datos"></center>
-        </section>
+        <form>
+            <section  class="form-register">            
+                <center><h4>ACTUALIZAR DATOS PERSONALES</h4></center>
+                CEDULA: 
+                <input class="controls" type="text" name="cedula" id="Cedula" required="">
+                PRIMER NOMBRE: 
+                <input class="controls" type="text" name="primerNombre" id="nombres1">
+                SEGUNDO NOMBRE:
+                <input class="controls" type="text" name="segundoNombre" id="nombres2">
+                TELEFONO O CELULAR:
+                <input class="controls" type="text" name="telefono" id="telefono">
+                DIRECCION:
+                <input class="controls" type="text" name="direccion" id="direccion" >
+                PROVINCIA:
+                <input class="controls" type="text" name="provincia" id="provincia">
+                CANTON:
+                <input class="controls" type="text" name="canton" id="canton">
+                PARROQUIA:
+                <input class="controls" type="text" name="parroquia" id="parroquia">
+                EMAIL:
+                <input class="controls" type="text" name="correoElectronico" id="correoElectronico">
+                <center><input class="botons" type="submit" value="Actualizar datos"></center>
+            </section>
+        </form>
     </body>
 </html>

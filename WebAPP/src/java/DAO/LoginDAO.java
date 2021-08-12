@@ -24,8 +24,8 @@ public class LoginDAO {
     conexion cn = new conexion();
 
     public int validarLogin(Constructor tm) throws Exception {
-        String user = tm.getUsuario();
-        String clave1 = tm.getClave();
+        String user = tm.getGaleno_user();
+        String clave1 = tm.getGaleno_pass();
         sql = "SELECT COUNT(galeno_id) AS cantidad FROM public.galeno WHERE galeno_user='" + user + "' AND galeno_pass='" + getMD5(clave1) + "'";
         rs = cn.ejecutarConsulta(sql);
         while (rs.next()) {
