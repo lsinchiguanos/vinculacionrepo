@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 10-nov-2019, 10:28:21
-    Author     : Mayra
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
