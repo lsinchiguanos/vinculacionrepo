@@ -98,6 +98,19 @@
                             <a href="TransferirPaciente.jsp" class="button primary">Acceder</a>
                         </div>
                     </section>
+                   <!-- Quinto MODULO -->
+                    <section>
+                        <div class="content">
+                            <header>
+                                <a href="">
+                                    <img alt="" src="img/icons8_cv_96px.png">
+                                    <span class="label"></span></a>
+                                <h3 style="color:#4D8846; font-weight: bold">Actualizar datos personales</h3>
+                            </header>
+                            <p>Podrá actualizar sus datos personales, en caso de alguna actualización</p>
+                            <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary">Acceder</a>
+                        </div>
+                    </section>
                 </div>
             </div>
             

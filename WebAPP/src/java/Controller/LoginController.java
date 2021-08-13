@@ -44,8 +44,8 @@ public class LoginController extends HttpServlet {
             if(request.getParameter("btn1")!=null){
             String usuario=request.getParameter("usuario");
             String clave=request.getParameter("clave");
-            tm.setUsuario(usuario);
-            tm.setClave(clave);
+            tm.setGaleno_user(usuario);
+            tm.setGaleno_pass(clave);
                 try {
                     rspta=lg.validarLogin(tm);
                 } catch (Exception ex) {
