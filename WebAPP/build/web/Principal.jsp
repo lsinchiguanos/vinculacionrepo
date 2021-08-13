@@ -11,6 +11,8 @@
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="stylesheet" href="Principal/css/main.css" />
+        <link href="css/animacionprincipal.css" rel="stylesheet" type="text/css"/>
+        
     </head>
     <%
         HttpSession s = request.getSession();
@@ -40,15 +42,14 @@
                 <div class="highlights">
 
                     <!-- PRIMER MODULO -->
-                    <section>
+                    <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="">
                                     <img alt="" src="img/icons8_workstation_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#4D8846; font-weight: bold">AGREGAR INFORMACIÓN</h3>
-                                
-                               
+                                                          
                             </header>
                             <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
                             <a  href="" class="button primary" >Acceder</a>
@@ -56,7 +57,7 @@
                     </section>
 
                     <!-- SEGUNDO MODULO -->
-                    <section>
+                    <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="" >
@@ -70,8 +71,8 @@
                         </div>
                     </section>
 
-                    <!-- TERCER MODULO -->
-                    <section>
+                    <!-- TERCER MODULO -->                 
+                     <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="">
@@ -80,11 +81,12 @@
                                 <h3 style="color:#4D8846; font-weight: bold">Historial</h3>
                             </header>
                             <p>Mostrar la información de las actividades </p>
-                            <a href="" class="button primary">Acceder</a>
+                            <a href="TransferirPaciente.jsp" class="button primary">Acceder</a>
                         </div>
                     </section>
+                    
                    <!-- CUARTO MODULO -->
-                    <section>
+                    <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="">
@@ -107,6 +109,8 @@
         <script src="Principal/js/breakpoints.min.js"></script>
         <script src="Principal/js/util.js"></script>
         <script src="Principal/js/main.js"></script>
+        <script src="js/animacion.js" type="text/javascript"></script>
+
     </body>
     
 </html>
