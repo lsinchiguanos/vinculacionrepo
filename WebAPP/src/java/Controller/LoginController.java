@@ -9,6 +9,7 @@ import DAO.LoginDAO;
 import Model.Constructor;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -34,28 +36,26 @@ public class LoginController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            Constructor tm=new Constructor();
-            LoginDAO lg=new LoginDAO();
-            int rspta=0;
-            if(request.getParameter("btn1")!=null){
-            String usuario=request.getParameter("usuario");
-            String clave=request.getParameter("clave");
+            Constructor tm = new Constructor();
+            LoginDAO lg = new LoginDAO();
+            HttpSession sesion = request.getSession(true);
+            int rspta = 0;
+            int cliente_id = 0;
+            String usuario = request.getParameter("usuario");
+            String clave = request.getParameter("clave");
             tm.setGaleno_user(usuario);
             tm.setGaleno_pass(clave);
-                try {
-                    rspta=lg.validarLogin(tm);
-                } catch (Exception ex) {
-                    Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-                }
-              if(rspta!=0){
-                  response.sendRedirect("Principal.jsp");
-              }else{
-                  response.sendRedirect("index.jsp?rspta="+rspta);
-              } 
+            cliente_id = new DAO.LoginDAO().SearchClienteLogin(tm);
+            if (cliente_id != 0) {
+                sesion.setAttribute("galeno_id", cliente_id);
+                sesion.setAttribute("galeno_correoelectronico", usuario);
+                response.sendRedirect("Principal.jsp");
+            } else {
+                response.sendRedirect("index.jsp");
             }
         }
     }
@@ -72,7 +72,11 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -86,7 +90,11 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

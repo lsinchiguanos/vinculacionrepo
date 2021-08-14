@@ -12,7 +12,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -27,23 +29,44 @@ public class LoginDAO {
     String sql = "";
     ResultSet rs = null;
     conexion cn = new conexion();
-    public int validarLogin(Constructor tm) throws Exception {
-        String user = tm.getGaleno_user();
-        String clave1 = tm.getGaleno_pass();
-        Statement st = cn.getConecction().createStatement();
-        rs = st.executeQuery("SELECT COUNT(galeno_id) AS cantidad FROM public.galeno WHERE galeno_user='" + user + "' AND galeno_pass='" + getMD5(clave1) + "'");
-        while (rs.next()) {
-            rspta = rs.getInt("cantidad");
+    private String sql_command = "";
+    private PreparedStatement pst = null;
+
+    public int SearchClienteLogin(Constructor tm) throws SQLException {
+        int cliente_id = 0;
+        sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'";
+        try {
+            pst = cn.getConecction().prepareStatement(sql_command);
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                cliente_id = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            try {
+                if (cn.isConected()) {
+                    cn.getConecction().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
         }
-        return rspta;
+        return cliente_id;
     }
 
-    public  ArrayList<Constructor> getContactos() {
+    public ArrayList<Constructor> getContactos() {
         ArrayList<Constructor> listaContactos = new ArrayList<>();
         conexion cn = new conexion();
         try {
             Constructor contacto = new Constructor();
-            String user = contacto.getGaleno_user();
+            String user = "jalmeidam2";
             Statement st = cn.getConecction().createStatement();
             ResultSet rs = st.executeQuery("select * from galeno where galeno_user = '" + user + "'");
             {
