@@ -5,15 +5,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="Principal/css/main.css" />
         <link rel="stylesheet" href="css/CSS_Transferir.css">
+        <link href="css/terapiaocupacional.css" rel="stylesheet" type="text/css"/>
         <title>Terapia Ocupacional</title>
     </head>
     <body>
-        <header id="header" style="">
-            <a class id="ulUserData" href="index.html"></a>
-            <nav>
-                <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
-            </nav>
-        </header>
+         <header>
+             <nav class="nav-tp">
+                  <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
+             </nav>
+        </header>      
+
+        <div class="div-head-tittle"><h2></h2></div>
         <section  class="form-register">
             <center><h4>Datos Paciente</h4></center>
             <input class="controls" type="text" name="cedula" id="Cedula" placeholder="Ingrese la cedula">

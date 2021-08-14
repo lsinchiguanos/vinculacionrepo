@@ -1,12 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 31-oct-2019, 23:40:51
-    Author     : Mayra
-*/
+
 
 * 
 {
@@ -201,7 +193,7 @@ and open the template in the editor.
 	height: 360px;
 	color: #fff;
     padding-bottom: 30px;
-	background: linear-gradient(-40deg, #46733D, #E8CE48, #83A655, #467AB3);
+	background: linear-gradient(-40deg, #46733D, #E8CE48, #007653, #007653);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;

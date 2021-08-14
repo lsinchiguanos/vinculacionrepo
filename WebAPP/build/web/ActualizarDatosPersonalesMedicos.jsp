@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ActualizarDatosPersonalesMedicos
-    Created on : 12/08/2021, 9:02:17
-    Author     : jean
---%>
-
 <%@page import="Controller.LoginController"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,15 +10,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="Principal/css/main.css" />
         <link rel="stylesheet" href="css/CSS_Transferir.css">
+        <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/>
         <title>Actualizar datos personales medicos</title>
     </head>
     <body>
-        <header id="header" style="">
-            <a class id="ulUserData" href="index.html"></a>
-            <nav>
-                <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
-            </nav>
-        </header>
+       <header>
+            <nav class="nav-tp"></nav>
+        </header>      
+
+        <div class="div-head-tittle"><h2></h2></div>
+        
         <table border="1">
             <tr>
                 <td>id</td>

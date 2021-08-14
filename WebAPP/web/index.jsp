@@ -72,7 +72,7 @@
                             </p>
                             <p style="color:black; background-color:white; font-family:sans-serif; font-size:11px; text-align:center; margin-top:3px">
                                 <a id="LinkButton1" class="waves-effect waves-light btn modal-trigger" href="">
-                                    <strong style="color:#4D8846; font-size:16px; font-size: 85%" class="textgrueso">Recuperar Contraseña</strong>
+                                    <strong style="color:#007653; font-size:16px; font-size: 85%" class="textgrueso">Recuperar Contraseña</strong>
                                 </a>
                             </p>
                         </div>
@@ -86,18 +86,18 @@
                 <!--Párrafo con centrado vertical-->                                
                 <p>
                     <img src="img/estruc.png" alt="Alternate Text" style="height:18px; width:18px; margin-left:-20px" />
-                <center><strong style="color:#4D8846; font-size:32px; font-size: 190%" class="textgrueso">&nbsp&nbsp MÓDULOS PARA CADA DEPARTAMENTO</strong></center>
+                <center><strong style="color:#007653; font-size:32px; font-size: 190%" class="textgrueso">&nbsp&nbsp MÓDULOS PARA CADA DEPARTAMENTO</strong></center>
                 </p>
 
                 <div>
                     <img src="img/icons8_permanent_job_96px.png" alt="" style="display:block; margin:auto; text-align:center"/>
-                    <p style="color:#4D8846; font-size:16px" class="textgrueso">DEPARTAMENTOS</p>
+                    <p style="color:#007653; font-size:16px" class="textgrueso">DEPARTAMENTOS</p>
                     <p>Se proporcionara información diferente por cada departamento</p>
                 </div>
 
                 <div>
                     <img src="img/icons8_account_96px.png" alt="" style="display:block; margin:auto; text-align:center"/>
-                    <p style="color:#4D8846; font-size:16px" class="textgrueso">Reportes</p>
+                    <p style="color:#007653; font-size:16px" class="textgrueso">Reportes</p>
                     <p>Mostrar informe de las actividades de acuerdo a cada departamento</p>
                 </div>
 
@@ -105,7 +105,7 @@
                 <div>
 
                     <img src="img/icons8_accounting_96px.png" alt="" style="display:block; margin:auto; text-align:center"/>
-                    <p style="color:#4D8846; font-size:16px" class="textgrueso">Historial</p>
+                    <p style="color:#007653; font-size:16px" class="textgrueso">Historial</p>
                     <p>Mostrar la información de las actividades de acuerdo a cada departamento</p>
                 </div>
 

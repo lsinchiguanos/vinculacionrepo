@@ -20,7 +20,7 @@
     %>
     <body class="is-preload">    
         <!-- Encabezado -->
-        <header id="header" style="">
+        <header id="header" style=" background: #007653 !important;">
             
             <a class="logo" id="ulUserData" href="index.html"></a>
             <nav>
@@ -40,7 +40,6 @@
         <section class="wrapper">
             <div class="inner">
                 <div class="highlights">
-
                     <!-- PRIMER MODULO -->
                     <section class="animadoagregarinformacion">
                         <div class="content">
@@ -48,11 +47,11 @@
                                 <a href="">
                                     <img alt="" src="img/icons8_workstation_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#4D8846; font-weight: bold">AGREGAR INFORMACIÓN</h3>
+                                <h3 style="color:#007653; font-weight: bold">AGREGAR INFORMACIÓN</h3>
                                                           
                             </header>
                             <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
-                            <a  href="" class="button primary" >Acceder</a>
+                            <a  href="" class="button primary" style=" background: #007653 !important;" >Acceder</a>
                         </div>
                     </section>
 
@@ -63,11 +62,11 @@
                                 <a href="" >
                                     <img alt="" src="img/icons8_account_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#4D8846; font-weight: bold" class="textgrueso">Reportes</h3>
+                                <h3 style="color:#007653; font-weight: bold" class="textgrueso">Reportes</h3>
 
                             </header>
                             <p>Mostrar informe de las actividades</p>
-                            <a href="" class="button primary">Acceder</a>
+                            <a href="" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
 
@@ -78,10 +77,10 @@
                                 <a href="">
                                     <img alt="" src="img/icons8_accounting_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#4D8846; font-weight: bold">Historial</h3>
+                                <h3 style="color:#007653; font-weight: bold">Historial</h3>
                             </header>
                             <p>Mostrar la información de las actividades </p>
-                            <a href="TransferirPaciente.jsp" class="button primary">Acceder</a>
+                            <a href="TransferirPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
                     
@@ -92,23 +91,23 @@
                                 <a href="">
                                     <img alt="" src="img/icons8_cv_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#4D8846; font-weight: bold">Transferir Paciente</h3>
+                                <h3 style="color:#007653; font-weight: bold">Transferir Paciente</h3>
                             </header>
                             <p>Transferir un paciente a otro departamento</p>
-                            <a href="TransferirPaciente.jsp" class="button primary">Acceder</a>
+                            <a href="TransferirPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
                    <!-- Quinto MODULO -->
-                    <section>
+                    <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/icons8_cv_96px.png">
+                                    <img alt="" src="img/icons8_profile_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#4D8846; font-weight: bold">Actualizar datos personales</h3>
+                                <h3 style="color:#007653; font-weight: bold">Actualizar datos personales</h3>
                             </header>
                             <p>Podrá actualizar sus datos personales, en caso de alguna actualización</p>
-                            <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary">Acceder</a>
+                            <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
                 </div>
