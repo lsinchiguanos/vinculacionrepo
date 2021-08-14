@@ -32,7 +32,6 @@
                     conexion cn = new conexion();
                     ResultSet rs;
                     PreparedStatement ps;
-                    String id = "jalmeidam2";
                     String sql;
                     sql = "select * from galeno where galeno_user='" + session.getAttribute("galeno_user11") + "'";
                     pst = cn.getConecction().prepareStatement(sql);
@@ -82,7 +81,7 @@
                         + ",galeno_canton='" + canton + "'"
                         + " ,galeno_parroquia='" + parroquia + "'"
                         + ",galeno_correoelectronico='" + email + "'"
-                        + " where galeno_user='" + id + "'");
+                        + " where galeno_user='" + session.getAttribute("galeno_user11")+ "'");
                 ps.executeUpdate();
                 response.sendRedirect("Principal.jsp");
             }
