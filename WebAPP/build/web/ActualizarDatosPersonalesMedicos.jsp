@@ -1,3 +1,4 @@
+<%@page import="javafx.scene.control.Alert"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -8,6 +9,7 @@
 <%@ page import = "Model.Constructor"%> 
 <%@ page import = "DAO.LoginDAO"%> 
 <%@ page import = "java.util.LinkedList"%>
+<%@ page import = "BD.conexion"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,26 +22,21 @@
         <title>Actualizar datos personales medicos</title>
     </head>
     <body>
-        <%HttpSession s = request.getSession();%>
         <header>
             <nav class="nav-tp"></nav>
         </header>      
         <div class="div-head-tittle"><h2></h2></div>
                 <%
-                    //CONECTANOD A LA BASE DE DATOS:
-                    Connection con;
-                    String url = "jdbc:postgresql://localhost:5432/vinculacion";
-                    String Driver = "org.postgresql.Driver";
-                    String user = "postgres";
-                    String clave = "1234";
-                    Class.forName(Driver);
-                    con = DriverManager.getConnection(url, user, clave);
-                    //Emnpezamos Listando los Datos de la Tabla Usuario pero de la fila seleccionada
-                    PreparedStatement ps;
+                    HttpSession s = request.getSession();
+                    PreparedStatement pst;
+                    conexion cn = new conexion();
                     ResultSet rs;
+                    PreparedStatement ps;
                     String id = "jalmeidam2";
-                    ps = con.prepareStatement("select * from galeno where galeno_user='" + id + "'");
-                    rs = ps.executeQuery();
+                    String sql;
+                    sql = "select * from galeno where galeno_user='" + session.getAttribute("galeno_user11") + "'";
+                    pst = cn.getConecction().prepareStatement(sql);
+                    rs = pst.executeQuery();
                     while (rs.next()) {
                 %>
         <form id="form1" autocomplete="off">
@@ -68,7 +65,7 @@
         </form>
         <%}%>
         <%
-            String dni, Pnom,Snom,telefono,direccion,provincia,canton,parroquia,email;
+            String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email;
             dni = request.getParameter("Cedula");
             Pnom = request.getParameter("PrimerNombre");
             Snom = request.getParameter("SegundoNombre");
@@ -78,16 +75,16 @@
             canton = request.getParameter("galeno_canton");
             parroquia = request.getParameter("galeno_parroquia");
             email = request.getParameter("galeno_correoelectronico");
-            if (Pnom != null && Snom != null && telefono !=null && direccion !=null && provincia !=null && canton !=null && parroquia !=null && email !=null) {
-                ps = con.prepareStatement("update galeno set galeno_primer_nombre='" + Pnom + "', galeno_segundo_nombre='" + Snom + "', galeno_telefono='" + telefono + "'"
+            if (Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && email != null) {
+                ps = cn.getConecction().prepareStatement("update galeno set galeno_primer_nombre='" + Pnom + "', galeno_segundo_nombre='" + Snom + "', galeno_telefono='" + telefono + "'"
                         + ",galeno_direccion='" + direccion + "'"
-                                + ",galeno_provincia='" + provincia + "' "
-                                        + ",galeno_canton='" + canton + "'"
-                                                + " ,galeno_parroquia='" + parroquia + "'"
-                                                        + ",galeno_correoelectronico='" + email + "'"
-                                                                + " where galeno_user='" + id + "'");
+                        + ",galeno_provincia='" + provincia + "' "
+                        + ",galeno_canton='" + canton + "'"
+                        + " ,galeno_parroquia='" + parroquia + "'"
+                        + ",galeno_correoelectronico='" + email + "'"
+                        + " where galeno_user='" + id + "'");
                 ps.executeUpdate();
-                 response.sendRedirect("ActualizarDatosPersonalesMedicos.jsp");
+                response.sendRedirect("Principal.jsp");
             }
 
 
