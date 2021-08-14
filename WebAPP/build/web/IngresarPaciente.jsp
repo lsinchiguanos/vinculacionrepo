@@ -25,7 +25,7 @@
         <input type="text" id="txt-lname" class="inp-lname" placeholder="SegundoApellido" name="SegundoApellido"/>
         <input type="date" id="txt-edad" class="inp-edad" placeholder="Fechadenacimiento" name="Fechadenacimiento"/>
         <input type="email" id="txt-name" class="inp-name" placeholder="CorreoElectronico" name="CorreoElectronico"/>
-        <input type="number" id="txt-lname" class="inp-lname" placeholder="Telefono" name="Telefono"/> 
+        <input type="number" id="txt-lname" class="inp-lname" placeholder="convencional" name="convencional"/> 
         <input type="number" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular"/>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="Provincia" name="Provincia"/>
         <input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"/>
