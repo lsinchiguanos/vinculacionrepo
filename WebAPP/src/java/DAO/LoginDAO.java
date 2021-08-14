@@ -61,32 +61,14 @@ public class LoginDAO {
         return cliente_id;
     }
 
-    public ArrayList<Constructor> getContactos() {
-        ArrayList<Constructor> listaContactos = new ArrayList<>();
-        conexion cn = new conexion();
-        try {
-            Constructor contacto = new Constructor();
-            String user = "jalmeidam2";
-            Statement st = cn.getConecction().createStatement();
-            ResultSet rs = st.executeQuery("select * from galeno where galeno_user = '" + user + "'");
-            {
-                while (rs.next()) {
-                    contacto.setGaleno_dni(rs.getString("galeno_dni"));
-                    contacto.setGaleno_primer_nombre(rs.getString("galeno_primer_nombre"));
-                    contacto.setGaleno_telefono(rs.getString("galeno_telefono"));
-                    contacto.setGaleno_direccion(rs.getString("galeno_direccion"));
-                    contacto.setGaleno_segundo_nombre(rs.getString("galeno_segundo_nombre"));
-                    contacto.setGaleno_provincia(rs.getString("galeno_provincia"));
-                    contacto.setGaleno_canton(rs.getString("galeno_canton"));
-                    contacto.setGaleno_parroquia(rs.getString("galeno_parroquia"));
-                    contacto.setGaleno_correoelectronico(rs.getString("galeno_correoelectronico"));
-                    listaContactos.add(contacto);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return listaContactos;
+    public String SearchGaleno(Constructor tm) throws SQLException {
+        String mensaje = "El producto fue encontrado con éxito";
+        sql_command = "SELECT galeno_dni, galeno_primer_nombre \n"
+                + "	FROM galeno WHERE producto_id=" + tm.getGaleno_user() + ";";
+
+        pst = cn.getConecction().prepareStatement(sql_command);
+        rs = pst.executeQuery();
+        return mensaje;
     }
 
     public static String getMD5(String input) {

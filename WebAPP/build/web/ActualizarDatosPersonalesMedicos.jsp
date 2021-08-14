@@ -11,44 +11,34 @@
         <link rel="stylesheet" href="Principal/css/main.css" />
         <link rel="stylesheet" href="css/CSS_Transferir.css">
         <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="Principal/css/main.css" />
+        <link rel="stylesheet" href="css/CSS_Transferir.css">
         <title>Actualizar datos personales medicos</title>
     </head>
     <body>
-       <header>
+        <%HttpSession s = request.getSession();%>
+        <header>
             <nav class="nav-tp"></nav>
         </header>      
 
         <div class="div-head-tittle"><h2></h2></div>
-        
-        <table border="1">
-            <tr>
-                <td>Identificación</td>
-                <td>PimerNombre</td>
-                <td>SegundoNombre</td>
-                <td>Telefono</td>
-                <td>Direccion</td>
-                <td>Provincia</td>
-                <td>Canton</td>
-                <td>Parroquia</td>
-                <td>Email</td>
-            </tr>
-            <%
-                 ArrayList<Constructor> lista = new LoginDAO().getContactos();
-                for (int i = 0; i < lista.size(); i++) {
-                    out.println("<tr>");
-                    out.println("<td>" + lista.get(i).getGaleno_dni()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_primer_nombre()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_segundo_nombre()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_telefono()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_direccion()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_provincia()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_canton()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_parroquia()+ "</td>");
-                    out.println("<td>" + lista.get(i).getGaleno_correoelectronico()+ "</td>");
-                    out.println("<Button>Actualizar Información</Button>");
-                    out.println("</tr>");
-                }
-            %>
-        </table>
+
+        <form id="form1" action="/WebAPP/CargarDatosPersonales"  autocomplete="off">
+            <section  class="form-register">
+                <center><h4>Datos Personales</h4></center>
+                <input class="controls" type="text" name="cedula" id="Cedula">
+                <input class="controls" type="text" name="PrimerNombre" id="PrimerNombre">
+                <!--
+                <input class="controls" type="text" name="SegundoNombre" id="SegundoNombre">
+                <input class="controls" type="text" name="galeno_telefono" id="galeno_telefono">
+                <input class="controls" type="text" name="galeno_direccion" id="galeno_direccion">
+                <input class="controls" type="text" name="galeno_provincia" id="galeno_provincia">
+                <input class="controls" type="text" name="galeno_canton" id="galeno_canton">
+                <input class="controls" type="text" name="galeno_parroquia" id="galeno_parroquia">
+                <input class="controls" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico">
+                -->
+                <center><input class="botons" type="submit" value="Transferir"></center>
+            </section>
+        </form>
     </body>
 </html>
