@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form id="form1" action="/WebAPP/AddPaciente">
             <select class="sel-dep-to-transf" name="TipoIden">
                 <option>Tipo de identificacion</option>
                 <option>Pasaporte</option>
@@ -49,6 +48,5 @@
             <input type="text" id="txt-lname" class="inp-lname" placeholder="Dsicapacidad" name="discapacidad"/>
             <input type="text" id="txt-lname" class="inp-lname" placeholder="tipoSangre" name="tipoSangre"/>
             <center><input class="botons" type="submit" name="btn2"value="Guardar"></center>
-        </form>
     </body>
 </html>
