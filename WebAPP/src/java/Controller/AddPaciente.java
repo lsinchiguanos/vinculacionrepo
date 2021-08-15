@@ -9,6 +9,10 @@ import DAO.InsertAddPaciente;
 import Model.ControladorPaciente;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,11 +55,21 @@ public class AddPaciente extends HttpServlet {
             String parroquia = request.getParameter("parroquia");
             String estadoCivil = request.getParameter("estadoCivil");
             String Ayuda = request.getParameter("Ayuda");
+            if(Ayuda.equals("si"))
+            {
+                Ayuda = "1";
+            }
+            else
+            {
+                Ayuda = "0";
+            }
             String nacionalidad = request.getParameter("nacionalidad");
             String discapacidad = request.getParameter("discapacidad");
             String tipoSangre = request.getParameter("tipoSangre");
             String genero = request.getParameter("genero");
-            String d = "12/12/2020";
+            Calendar fecha = new GregorianCalendar();
+            java.sql.Date d1 = new Date(Calendar.getInstance().getTimeInMillis());
+            Date d = d1;
             String estado = "1";
 
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
@@ -63,7 +77,7 @@ public class AddPaciente extends HttpServlet {
                     && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
                     && !parroquia.equalsIgnoreCase("") && !estadoCivil.equalsIgnoreCase("") && !Ayuda.equalsIgnoreCase("")
                     && !nacionalidad.equalsIgnoreCase("") && !discapacidad.equalsIgnoreCase("") && !tipoSangre.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("")
-                    && !genero.equalsIgnoreCase("")&& !d.equalsIgnoreCase("")&& !estado.equalsIgnoreCase("")) {
+                    && !genero.equalsIgnoreCase("") && d != null && !estado.equalsIgnoreCase("")) {
                 ControladorPaciente busuario = new ControladorPaciente(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Fechadenacimiento, Direccion, Celular, genero, discapacidad,
                         Ayuda, d, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre);
                 boolean sw = InsertAddPaciente.agregarUsuario(busuario);
@@ -89,7 +103,7 @@ public class AddPaciente extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-      
+
     }
 
     /**
