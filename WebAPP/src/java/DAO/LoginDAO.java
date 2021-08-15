@@ -61,15 +61,7 @@ public class LoginDAO {
         return cliente_id;
     }
 
-    public String SearchGaleno(Constructor tm) throws SQLException {
-        String mensaje = "El producto fue encontrado con éxito";
-        sql_command = "SELECT galeno_dni, galeno_primer_nombre \n"
-                + "	FROM galeno WHERE producto_id=" + tm.getGaleno_user() + ";";
-
-        pst = cn.getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
-        return mensaje;
-    }
+  
 
     public static String getMD5(String input) {
         try {

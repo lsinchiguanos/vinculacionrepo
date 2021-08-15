@@ -111,6 +111,19 @@
                             <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
+                   <!-- Sexto MODULO -->
+                    <section class="animadoagregarinformacion">
+                        <div class="content">
+                            <header>
+                                <a href="">
+                                    <img alt="" src="img/icons8_profile_96px.png">
+                                    <span class="label"></span></a>
+                                <h3 style="color:#007653; font-weight: bold">Ingresar Información</h3>
+                            </header>
+                            <p>Ingresar informacion por primera vez</p>
+                            <a href="IngresarPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
+                        </div>
+                    </section>
                 </div>
             </div>
             

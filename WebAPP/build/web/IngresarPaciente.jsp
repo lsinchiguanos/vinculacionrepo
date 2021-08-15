@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form id="form1" action="/WebAPP/AddPaciente"  autocomplete="off">
+        <form id="form1" action="/WebAPP/AddPaciente">
         <select class="sel-dep-to-transf" name="TipoIden">
             <option>Tipo de identificacion</option>
             <option>Pasaporte</option>
@@ -31,6 +31,7 @@
         <input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"/>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion" name="Direccion"/>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="parroquia" name="parroquia"/>
+        <input type="text" id="txt-lname" class="inp-lname" placeholder="genero" name="genero"/>
         <select class="sel-dep-to-transf" name="estadoCivil">
             <option>Seleccione el estado civil</option>
             <option>Soltero</option>
@@ -41,8 +42,8 @@
         </select>
         <select class="sel-dep-to-transf" name="Ayuda">
             <option>Recibe ayuda social</option>
-            <option>si</option>
-            <option>no</option>
+            <option>1</option>
+            <option>2</option>
         </select>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="nacionalidad"/>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="Dsicapacidad" name="discapacidad"/>
