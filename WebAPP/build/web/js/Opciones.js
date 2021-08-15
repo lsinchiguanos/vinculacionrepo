@@ -87,10 +87,10 @@ $(document).ready(function(){
         if(texto === "Datos personales del paciente")
         {            
             Option_1();            
-        }else if(texto === "Datos del tutor")
+        }else if(texto === "Datos medicos generales")
         {         
             Option_2();            
-        }else if(texto === "Datos médicos generales")
+        }else if(texto === "Antecedentes")
         {
             Option_3();            
         }

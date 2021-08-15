@@ -23,8 +23,8 @@
 
         <section class="sec-options">
             <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
-            <div class="div-cont-repre"><h3>Datos del tutor</h3></div> 
-            <div class="div-cont-d-medicos"><h3>Datos médicos generales</h3></div> 
+            <div class="div-cont-repre"><h3>Datos medicos generales</h3></div> 
+            <div class="div-cont-d-medicos"><h3>Antecedentes</h3></div> 
         </section>
 
 
@@ -98,6 +98,5 @@
     </body>
     <footer></footer>
     <script src="js/JQuery.js" type="text/javascript"></script>
-    <script src="js/Opciones.js" type="text/javascript"></script> 
-    <script src="js/AltoRestante.js" type="text/javascript"></script>  
+    <script src="js/Opciones.js" type="text/javascript"></script>  
 </html>

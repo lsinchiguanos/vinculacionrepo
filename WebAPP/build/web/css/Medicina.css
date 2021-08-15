@@ -33,8 +33,6 @@
     margin-left: 90px;
     color: #ffffff;
 }
-
-
 .sec-input-data
 {
     width: 90%;
@@ -44,9 +42,9 @@
     -webkit-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     -moz-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
-   border-radius:15px 15px 15px 15px;
-    -moz-border-radius: 15px 15px 15px 15px;
-    -webkit-border-radius: 15px 15px 15px 15px; 
+    border-radius: 34px 34px 34px 34px;
+    -moz-border-radius: 34px 34px 34px 34px;
+    -webkit-border-radius: 34px 34px 34px 34px;
     border: 0px solid #f7f4f7;
     display: flex;
     align-items: center;
@@ -132,6 +130,7 @@
 
 .inp-search:hover
 {background-color: #00AC79;}
+
 
 .sec-options
 {
