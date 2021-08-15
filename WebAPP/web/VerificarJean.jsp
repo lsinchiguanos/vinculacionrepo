@@ -42,8 +42,8 @@
         </select>
         <select class="sel-dep-to-transf" name="Ayuda">
             <option>Recibe ayuda social</option>
-            <option>si</option>
-            <option>no</option>
+            <option>1</option>
+            <option>2</option>
         </select>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="nacionalidad"/>
         <input type="text" id="txt-lname" class="inp-lname" placeholder="Dsicapacidad" name="discapacidad"/>
