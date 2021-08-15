@@ -3,38 +3,53 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="Principal/css/main.css" />
-        <link rel="stylesheet" href="css/CSS_Transferir.css">
-        <link href="css/terapiaocupacional.css" rel="stylesheet" type="text/css"/>
-        <title>Terapia Ocupacional</title>
+        <link href="css/terapiaocupacional.css" rel="stylesheet" type="text/css"/>  
+        <title>WebApp - Terapia Ocupacional</title>
     </head>
     <body>
-         <header>
-             <nav class="nav-tp">
-                  <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
-             </nav>
+        <header>
+            <nav class="nav-tp">
+                <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
+            </nav>
         </header>      
 
         <div class="div-head-tittle"><h2></h2></div>
-        <section  class="form-register">
-            <center><h4>Datos Paciente</h4></center>
-            <input class="controls" type="text" name="cedula" id="Cedula" placeholder="Ingrese la cedula">
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
-            <input class="controls" type="text" name="edad" id="edad" placeholder="Edad">
-            GÉNERO: 
-            <select name="genero" id="genero">
-                <option>.....</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
-            </select>
-            <BR>
-            <input class="controls" type="text" name="patología" id="patología" placeholder="patología">
-            <input class="controls" type="text" name="Frecuencia" id="Frecuencia" placeholder="Frecuencia">
-            <input class="controls" type="text" name="costo" id="costo" placeholder="costo">
-            <input class="controls" type="text" name="AyudaSocial" id="AyudaSocial" placeholder="AyudaSocial">
-            <input class="controls" type="text" name="LogrosAlcanzados" id="LogrosAlcanzados" placeholder="LogrosAlcanzados">
-            <center><input class="botons" type="submit" value="Transferir"></center>
+
+        <section class="sec-main">
+            <form>
+                <div class="div-cont-main">
+                    <div class="div-row-one">
+                        <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombre"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Apellido"/></div>
+                    </div>
+                    <div class="div-row-two">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                                <option>Genero</option>
+                                <option>Masculino</option><option>Femenino</option></select></div>
+
+                        <div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Edad"/></div>
+                        <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Patologia"/></div>
+
+                    </div>
+                    <div class="div-row-three">
+                        <div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Frecuencia"/></div>
+                        <div class="div-cont-cod"><input type="number" id="txt-cod" class="inp-cod" placeholder="Costo"/></div>
+                        <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Ayuda Social"/></div>
+                    </div>
+                    <div class="div-row-four">
+                        <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Logros Alcanzados"/></div>
+
+                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                    </div>
+
+                </div>
+            </form>
         </section>
-    </body>
+
+
+    </body> 
+    <script src="js/JQuery.js" type="text/javascript"></script>
+    <script src="js/AltoRestante.js" type="text/javascript"></script> 
 </html>
