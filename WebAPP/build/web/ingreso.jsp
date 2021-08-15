@@ -22,30 +22,30 @@
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="TipoIden">
                                 <option>Tipo de identificacion</option>
                                 <option>Cedula</option><option>Pasaporte</option></select></div>
-                        <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre"/></div>
+                        <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" onkeypress="return soloLetras(event)"/></div>
 
                     </div>
                     <div class="div-row-two">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"/></div>
-                        
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido" onkeypress="return soloLetras(event)"/></div>
+
                     </div>
                     <div class="div-row-three">
                         <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="Fechadenacimiento"/></div>
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Correo Electronico" name="CorreoElectronico"/></div>
-                        <div class="div-cont-lname"><input type="number" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'/></div>
                     </div>
                     <div class="div-row-four">
-                        <div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular"/></div> 
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Provincia" name="Provincia"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"/></div>
+                        <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'/></div> 
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton" onkeypress="return soloLetras(event)"/></div>
                     </div>
                     <div class="div-row-five">
 
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion" name="Direccion"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia" name="parroquia"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia" name="parroquia" onkeypress="return soloLetras(event)"/></div>
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="genero">
                                 <option>Genero</option>
                                 <option>Masculino</option><option>Femenino</option></select></div>
@@ -58,17 +58,43 @@
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf"  name="Ayuda">
                                 <option>Recibe Ayuda Social</option>
                                 <option>Si</option><option>No</option> ></select></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="nacionalidad"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="nacionalidad" onkeypress="return soloLetras(event)"/></div>
                     </div> 
                     <div class="div-row-seven">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad" name="discapacidad"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad" name="discapacidad" /></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"name="tipoSangre"/> 
-                        <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></div>
+                            <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></div>
                     </div> 
                 </div>
             </form> 
         </section>
+        <script>
+            function validaNumericos(event) {
+                if (event.charCode >= 48 && event.charCode <= 57) {
+                    return true;
+                }
+                return false;
+            }
+            function soloLetras(e) {
+                key = e.keyCode || e.which;
+                tecla = String.fromCharCode(key).toLowerCase();
+                letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                especiales = [8, 37, 39, 46];
+
+                tecla_especial = false
+                for (var i in especiales) {
+                    if (key == especiales[i]) {
+                        tecla_especial = true;
+                        break;
+                    }
+                }
+
+                if (letras.indexOf(tecla) == -1 && !tecla_especial)
+                    return false;
+            }
+        </script>
     </body>
+
     <footer></footer>
     <script src="js/JQuery.js" type="text/javascript"></script>
     <script src="js/Opciones.js" type="text/javascript"></script> 
