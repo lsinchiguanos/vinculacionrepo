@@ -45,12 +45,13 @@
                             <td>Canton</td>
                             <td>Parroquia</td>
                             <td>Direccion</td>
-                            <td>Fecha de Nacimiento</td
+                            <td>Fecha de Nacimiento</td> 
                         </tr> 
                     </table>
                 </div> 
             </form> 
         </section>
+        
         <section class="sec-data-repre">
             <form>
                 <div class="div-cont-main">
@@ -70,7 +71,6 @@
                     </div>
                 </div>   
             </form> 
-
         </section>
 
         <section class="sec-data-medicos">
@@ -89,6 +89,8 @@
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                          <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                     </div>
+                    
+                        
                 </div>   
             </form> 
         </section>
