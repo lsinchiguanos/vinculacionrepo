@@ -42,25 +42,50 @@
             <section  class="form-register">
                 <center><h4>Datos Personales</h4></center>
                 IDENTIFICACION: 
-                <input class="controls" type="text" name="cedula" id="Cedula" value="<%= rs.getInt("galeno_dni")%>">
+                <input class="controls" type="text" name="cedula" id="Cedula" value="<%= rs.getInt("galeno_dni")%>" disabled="true">
                 PRIMER NOMBRE:
-                <input class="controls" type="text" name="PrimerNombre" id="PrimerNombre"value="<%= rs.getString("galeno_primer_nombre")%>" required="">
+                <input class="controls" type="text" name="PrimerNombre" id="PrimerNombre"value="<%= rs.getString("galeno_primer_nombre")%>" required="" onkeypress="return soloLetras(event)">
                 SEGUNDO NOMBRE:
-                <input class="controls" type="text" name="SegundoNombre" id="SegundoNombre"value="<%= rs.getString("galeno_segundo_nombre")%>"required="">
+                <input class="controls" type="text" name="SegundoNombre" id="SegundoNombre"value="<%= rs.getString("galeno_segundo_nombre")%>"required="" onkeypress="return soloLetras(event)">
                 TELEFONO O CELULAR:
-                <input class="controls" type="text" name="galeno_telefono" id="galeno_telefono"value="<%= rs.getString("galeno_telefono")%>"required="">
+                <input class="controls" type="text" name="galeno_telefono" id="galeno_telefono"value="<%= rs.getString("galeno_telefono")%>"required="" onkeypress='return validaNumericos(event)'>
                 DIRECCION:
                 <input class="controls" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required="">
                 PROVINCIA:
-                <input class="controls" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="">
+                <input class="controls" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)">
                 CANTON:
-                <input class="controls" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="">
+                <input class="controls" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)">
                 PARROQUIA:
-                <input class="controls" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="">
+                <input class="controls" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)">
                 EMAIL:
                 <input class="controls" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required="">
                 <center><input class="botons" type="submit" value="Actualizar"></center>
             </section>
+            <script>
+                function validaNumericos(event) {
+                    if (event.charCode >= 48 && event.charCode <= 57) {
+                        return true;
+                    }
+                    return false;
+                }
+                function soloLetras(e) {
+                    key = e.keyCode || e.which;
+                    tecla = String.fromCharCode(key).toLowerCase();
+                    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                    especiales = [8, 37, 39, 46];
+
+                    tecla_especial = false
+                    for (var i in especiales) {
+                        if (key == especiales[i]) {
+                            tecla_especial = true;
+                            break;
+                        }
+                    }
+
+                    if (letras.indexOf(tecla) == -1 && !tecla_especial)
+                        return false;
+                }
+            </script>
         </form>
         <%}%>
         <%
@@ -81,7 +106,7 @@
                         + ",galeno_canton='" + canton + "'"
                         + " ,galeno_parroquia='" + parroquia + "'"
                         + ",galeno_correoelectronico='" + email + "'"
-                        + " where galeno_user='" + session.getAttribute("galeno_user11")+ "'");
+                        + " where galeno_user='" + session.getAttribute("galeno_user11") + "'");
                 ps.executeUpdate();
                 response.sendRedirect("Principal.jsp");
             }

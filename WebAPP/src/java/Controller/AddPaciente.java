@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
@@ -55,7 +57,7 @@ public class AddPaciente extends HttpServlet {
             String parroquia = request.getParameter("parroquia");
             String estadoCivil = request.getParameter("estadoCivil");
             String Ayuda = request.getParameter("Ayuda");
-            if(Ayuda.equals("si"))
+            if(Ayuda.equals("Si"))
             {
                 Ayuda = "1";
             }
@@ -67,25 +69,26 @@ public class AddPaciente extends HttpServlet {
             String discapacidad = request.getParameter("discapacidad");
             String tipoSangre = request.getParameter("tipoSangre");
             String genero = request.getParameter("genero");
-            Calendar fecha = new GregorianCalendar();
-            java.sql.Date d1 = new Date(Calendar.getInstance().getTimeInMillis());
-            Date d = d1;
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+//            System.out.println("yyyy/MM/dd HH:mm:ss-> "+dtf.format(LocalDateTime.now()));
             String estado = "1";
-            String s = "12/02/2020";
+            String x = dtf.format(LocalDateTime.now());
+            
 
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
                     && !Fechadenacimiento.equalsIgnoreCase("") && !CorreoElectronico.equalsIgnoreCase("") && !convencional.equalsIgnoreCase("") && !Celular.equalsIgnoreCase("")
                     && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
                     && !parroquia.equalsIgnoreCase("") && !estadoCivil.equalsIgnoreCase("") && !Ayuda.equalsIgnoreCase("")
                     && !nacionalidad.equalsIgnoreCase("") && !discapacidad.equalsIgnoreCase("") && !tipoSangre.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("")
-                    && !genero.equalsIgnoreCase("") && !s.equalsIgnoreCase("")  && !estado.equalsIgnoreCase("")) {
+                    && !genero.equalsIgnoreCase("") && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("")) {
                 ControladorPaciente busuario = new ControladorPaciente(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Fechadenacimiento, Direccion, Celular, genero, discapacidad,
-                        Ayuda, d, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre);
+                        Ayuda, x, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre);
                 boolean sw = InsertAddPaciente.agregarUsuario(busuario);
                 if (sw) {
-                    request.getRequestDispatcher("Principal.jsp").forward(request, response);
+                    response.sendRedirect("Principal.jsp");
+//                    request.getRequestDispatcher("Principal.jsp").forward(request, response);
                 } else {
-                    out.println("Si estas viendo este mensaje es por que algo salio mal, no se pudo completar tu solicitud.");
+//                    out.println("Si estas viendo este mensaje es por que algo salio mal, no se pudo completar tu solicitud.");
                 }
             }
         }
