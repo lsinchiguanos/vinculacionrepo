@@ -71,13 +71,14 @@ public class AddPaciente extends HttpServlet {
             java.sql.Date d1 = new Date(Calendar.getInstance().getTimeInMillis());
             Date d = d1;
             String estado = "1";
+            String s = "12/02/2020";
 
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
                     && !Fechadenacimiento.equalsIgnoreCase("") && !CorreoElectronico.equalsIgnoreCase("") && !convencional.equalsIgnoreCase("") && !Celular.equalsIgnoreCase("")
                     && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
                     && !parroquia.equalsIgnoreCase("") && !estadoCivil.equalsIgnoreCase("") && !Ayuda.equalsIgnoreCase("")
                     && !nacionalidad.equalsIgnoreCase("") && !discapacidad.equalsIgnoreCase("") && !tipoSangre.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("")
-                    && !genero.equalsIgnoreCase("") && d != null && !estado.equalsIgnoreCase("")) {
+                    && !genero.equalsIgnoreCase("") && !s.equalsIgnoreCase("")  && !estado.equalsIgnoreCase("")) {
                 ControladorPaciente busuario = new ControladorPaciente(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Fechadenacimiento, Direccion, Celular, genero, discapacidad,
                         Ayuda, d, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre);
                 boolean sw = InsertAddPaciente.agregarUsuario(busuario);
