@@ -38,10 +38,12 @@
                         <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Ayuda Social"/></div>
                     </div>
                     <div class="div-row-four">
-                        <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Logros Alcanzados"/></div>
-
-                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                         <div class="div-observation"><textarea class="txt-ar-ob" placeholder="Logros Alcanzados"></textarea>
+                             
+                             <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                          <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                         </div>
+                       
                     </div>
 
                 </div>
