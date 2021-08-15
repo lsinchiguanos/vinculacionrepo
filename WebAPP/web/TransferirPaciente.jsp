@@ -17,7 +17,7 @@
             <form>
                 <div class="div-cont-main">
                     <div class="div-row-one">
-                        <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>
+                        <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Numero de Identificacion"/></div>
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombre"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Apellido"/></div>
                     </div>
