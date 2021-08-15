@@ -26,8 +26,6 @@
             <%--  <div class="div-cont-repre"><h3>Datos del tutor</h3></div> --%>
             <%--   <div class="div-cont-d-medicos"><h3>Datos médicos generales</h3></div> 
         </section>--%>
-
-
         <section class="sec-data-pacient">
             <form>
                 <div class="div-cont-main">
@@ -37,7 +35,6 @@
                                 <option>Cedula</option><option>Pasaporte</option></select></div>
                         <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion"/></div>
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre"/></div>
-
                     </div>
                     <div class="div-row-two">
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre"/></div>
@@ -61,7 +58,6 @@
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                                 <option>Genero</option>
                                 <option>Masculino</option><option>Femenino</option></select></div>
-
                     </div> 
                     <div class="div-row-six">
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
@@ -76,7 +72,7 @@
                     <div class="div-row-seven">
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"/> <input type="button" id="btn-action" class="btn-accept" value="Guardar"/></div>
-                      </div> 
+                    </div> 
                 </div>
             </form> 
         </section>
