@@ -30,10 +30,10 @@
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"/></div>
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"/></div>
-                        <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="Fechadenacimiento"/></div>
+                        
                     </div>
                     <div class="div-row-three">
-                        <div class="div-cont-date"><input type="date" id="date" class="inp-date"/></div>
+                        <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="Fechadenacimiento"/></div>
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Correo Electronico" name="CorreoElectronico"/></div>
                         <div class="div-cont-lname"><input type="number" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"/></div>
                     </div>
@@ -62,7 +62,8 @@
                     </div> 
                     <div class="div-row-seven">
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad" name="discapacidad"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"name="tipoSangre"/> <input type="button" id="btn-action" class="btn-accept" value="Guardar"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"name="tipoSangre"/> 
+                        <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></div>
                     </div> 
                 </div>
             </form> 
