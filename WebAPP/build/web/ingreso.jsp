@@ -21,11 +21,11 @@
             </form>
         </section>
 
-        <section class="sec-options">
+        <%-- <section class="sec-options">
             <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
             <%--  <div class="div-cont-repre"><h3>Datos del tutor</h3></div> --%>
-            <%--   <div class="div-cont-d-medicos"><h3>Datos médicos generales</h3></div> --%>
-        </section>
+            <%--   <div class="div-cont-d-medicos"><h3>Datos médicos generales</h3></div> 
+        </section>--%>
 
 
         <section class="sec-data-pacient">
@@ -55,31 +55,29 @@
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton"/></div>
                     </div>
                     <div class="div-row-five">
-                        
+
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"/></div>
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                                 <option>Genero</option>
                                 <option>Masculino</option><option>Femenino</option></select></div>
-                
-                </div> 
-                 <div class="div-row-six">
-                             <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+
+                    </div> 
+                    <div class="div-row-six">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                                 <option>Seleccione el estado civil</option>
                                 <option>Soltero</option><option>Casado</option><option>Union libre</option>
                                 <option>Viudo</option><option>Divorciado</option></select></div>
-                             <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                                 <option>Recibe Ayuda Social</option>
                                 <option>Si</option><option>No</option> ></select></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad"/></div>
-                      
-                </div> 
-                 <div class="div-row-seven">
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"/></div>
-                     <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                </div> 
-                      </div>
+                    </div> 
+                    <div class="div-row-seven">
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"/> <input type="button" id="btn-action" class="btn-accept" value="Guardar"/></div>
+                      </div> 
+                </div>
             </form> 
         </section>
     </body>
