@@ -25,6 +25,7 @@
             <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
             <div class="div-cont-repre"><h3>Datos medicos generales</h3></div> 
             <div class="div-cont-d-medicos"><h3>Antecedentes</h3></div> 
+            <div class="div-cont-d-consulta"><h3>Consulta</h3></div> 
         </section>
 
 
@@ -51,7 +52,7 @@
                 </div> 
             </form> 
         </section>
-        
+
         <section class="sec-data-repre">
             <form>
                 <div class="div-cont-main">
@@ -67,7 +68,7 @@
                     </div>
                     <div class="div-row-three"> 
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                         <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                     </div>
                 </div>   
             </form> 
@@ -78,23 +79,47 @@
                 <div class="div-cont-main">
                     <div class="div-row-one">
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes alérgicos"/></div>
-                          <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes personales"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes personales"/></div>
                     </div> 
                     <div class="div-row-two">   
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes familiares"/></div>
-                          <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes quirugicos"/></div>
-                   
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes quirugicos"/></div>
+
                     </div>
-                     <div class="div-row-three"> 
+                    <div class="div-row-three"> 
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                         <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                     </div>
-                    
-                        
+
+
                 </div>   
             </form> 
         </section>
+        <section class="sec-data-consulta">
+            <form>
+                <div class="div-cont-main">
+                    <div class="div-row-one">
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Motivo de consulta"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Enfermedad o problema actual"/></div>
+                    </div> 
+                    <div class="div-row-two">   
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                                <option>Diagnostico</option>
+                                <option>Preventivo</option>
+                                <option>Definitivo</option>
+                            </select></div>
+                        <div class="div-cont-lname"><input type="file" id="txt-lname" class="inp-lname" placeholder="Datos de examen"/></div>
 
+                    </div>
+                    <div class="div-row-three"> 
+                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                    </div>
+
+
+                </div>   
+            </form> 
+        </section>
     </body>
     <footer></footer>
     <script src="js/JQuery.js" type="text/javascript"></script>

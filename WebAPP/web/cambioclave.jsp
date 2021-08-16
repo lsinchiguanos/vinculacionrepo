@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/Recaudacion.css" rel="stylesheet" type="text/css"/>  
+        <link href="css/clave.css" rel="stylesheet" type="text/css"/>  
         <link rel="stylesheet" href="Principal/css/main.css" />
         <link rel="stylesheet" href="css/CSS_Transferir.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

@@ -170,7 +170,7 @@
     margin-left: 5%;
     margin-top: 75px;
     width: 90%;
-    height: 400px;    
+    height: 1200px;    
     -webkit-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     -moz-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
@@ -201,7 +201,7 @@ footer
 form
 {
     width:100%;
-    height: 85.46762589928058vh;
+    height: 120.46762589928058vh;
     display: flex;
     align-items: center;
     justify-content: center;
