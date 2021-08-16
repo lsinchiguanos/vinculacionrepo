@@ -32,7 +32,6 @@
          <section class="sec-data-pacient">
             <form>
                 <div class="div-cont-main">
-
                     <table border="1">
                         <tr>
                             <td>ID</td>
