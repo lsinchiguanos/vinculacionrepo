@@ -19,11 +19,12 @@
         <header>
             <nav class="nav-tp"></nav>
         </header>      
+
         <div class="div-head-tittle"><h2></h2></div>
 
-        <form id="form1" autocomplete="off">
-            <div class="div-cont-main">
-
+        <section class="sec-main">
+            <form>
+                 <div class="div-cont-main">
                 <center><h4>Cambiar Clave</h4></center>
                 <h4> </h4>
                 <h6>La clave debe cumplir con los siguientes parámetros: </h6>
@@ -34,14 +35,16 @@
                 <br><h8>Al menos ha de contener 8 caracteres</h8>
                 <br><h8>La nueva clave no debe ser igual a la anterior </h8>
                 <br><h8>La nueva clave debe ser igual a repetir clave. </h8>
-              
-               <br> INGRESAR NUEVA CLAVE: 
-                <input class="div-cont-lname" type="password" name="txtPassword" id="txtPassword" required="">
+
+                <br> INGRESAR NUEVA CLAVE: 
+                <div class="div-cont-ced"> <input class="div-cont-lname" type="password" name="txtPassword" id="txtPassword" required=""></div>
+
                 <div class="input-group-append">
                     <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
                 </div>
                 REPETIR LA NUEVA CLAVE:
-                <input class="div-cont-lname" type="password" name="txtPassword1" id="txtPassword1" required="">
+                <div class="div-cont-ced"> 
+                    <input class="div-cont-lname" type="password" name="txtPassword1" id="txtPassword1" required=""></div>
                 <div class="input-group-append">
                     <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword1()"> <span class="fa fa-eye-slash icon"></span> </button>
                 </div>
@@ -49,8 +52,9 @@
                     <input type="button" id="btn-action" class="btn-accept" value="Cambiar clave"/>
                 </center>
 
-            </div>
-        </form>
+                </div>
+            </form>
+        </section>
         <script type="text/javascript">
             function mostrarPassword() {
                 var cambio = document.getElementById("txtPassword");
