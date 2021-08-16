@@ -29,7 +29,7 @@
             <form>
                 <div class="div-cont-main">
                     <div class="div-row-one">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                        <div margin="left" class="div-cont-sel-dep-to-transf"margin="right"><select class="sel-dep-to-transf">
                                 <option>Tipo de identificacion</option>
                                 <option>Cedula</option><option>Pasaporte</option></select></div>
 
