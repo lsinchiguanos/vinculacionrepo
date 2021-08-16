@@ -7,9 +7,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <link href="css/clave.css" rel="stylesheet" type="text/css"/>  
-        <link rel="stylesheet" href="Principal/css/main.css" />
-        <link rel="stylesheet" href="css/CSS_Transferir.css">
+        <link href="css/clave.css" rel="stylesheet" type="text/css"/>   
+        
+        <%--JEANCARLOS TIENES QUE DESCARGAR TUS COSITAS -_- --%>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -29,7 +29,7 @@
                 <h4> </h4>
                 <h6>La clave debe cumplir con los siguientes parámetros: </h6>
                 <br>
-                <br> <h8>Al menos una letra</h8>
+                <br><h8>Al menos una letra</h8>
                 <br><h8>Al menos una letra en mayúscula y una letra en minúscula</h8>
                 <br><h8>Al menos un número</h8>
                 <br><h8>Al menos ha de contener 8 caracteres</h8>
