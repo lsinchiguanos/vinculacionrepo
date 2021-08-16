@@ -29,7 +29,7 @@
         </section>
 
 
-        <section class="sec-data-pacient">
+         <section class="sec-data-pacient">
             <form>
                 <div class="div-cont-main">
 
