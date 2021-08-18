@@ -65,10 +65,10 @@
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/T"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/A"/></div>
                     </div>
-                    <div class="div-row-three"> 
+                  <%--  <div class="div-row-three"> 
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                         <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                    </div>
+                    </div>--%>
                 </div>   
             </form> 
         </section>
@@ -85,10 +85,10 @@
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes quirugicos"/></div>
 
                     </div>
-                    <div class="div-row-three"> 
+                    <%--  <div class="div-row-three"> 
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                         <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                    </div>
+                    </div>--%>
 
 
                 </div>   
@@ -110,10 +110,11 @@
                         <div class="div-cont-lname"><input type="file" id="txt-lname" class="inp-lname" placeholder="Datos de examen"/></div>
 
                     </div>
+                
                     <div class="div-row-three"> 
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                         <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                    </div>
+                    </div> 
 
 
                 </div>   
