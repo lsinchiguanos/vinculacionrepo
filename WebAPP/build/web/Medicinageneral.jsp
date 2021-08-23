@@ -29,26 +29,33 @@
         </section>
 
 
-         <section class="sec-data-pacient">
+        <section class="sec-data-pacient">
             <form>
                 <div class="div-cont-main">
-                    <table border="1">
-                        <tr>
-                            <td>ID</td>
-                            <td>Numero de Identificacion</td>
-                            <td>Nombres</td>
-                            <td>Apellidos</td>
-                            <td>Telefono Convencional</td>
-                            <td>Celular</td>
-                            <td>Correo Electronico</td>
-                            <td>Provincia</td>
-                            <td>Canton</td>
-                            <td>Parroquia</td>
-                            <td>Direccion</td>
-                            <td>Fecha de Nacimiento</td> 
-                        </tr> 
-                    </table>
-                </div> 
+                    <div class="div-row-one">
+                        <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"/></div>
+                    </div>
+                    <div class="div-row-two"> 
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Correo Electronico" name="CorreoElectronico"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'/></div>
+                        <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'/></div> 
+
+                    </div>
+                    <div class="div-row-three">
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"/></div> 
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion" name="Direccion"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"/></div>
+
+                    </div>
+                    <div class="div-row-four">
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="Nacionalidad" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia" name="Discapacidad" onkeypress="return soloLetras(event)"/></div>
+
+                    </div> 
+                </div>
             </form> 
         </section>
 
@@ -64,11 +71,11 @@
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/C"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/T"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/A"/></div>
-                    </div>
-                  <%--  <div class="div-row-three"> 
-                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                    </div>--%>
+                    </div>   
+                    <%--  <div class="div-row-three"> 
+                          <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                          <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                      </div>--%>
                 </div>   
             </form> 
         </section>
@@ -110,7 +117,7 @@
                         <div class="div-cont-lname"><input type="file" id="txt-lname" class="inp-lname" placeholder="Datos de examen"/></div>
 
                     </div>
-                
+
                     <div class="div-row-three"> 
                         <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                         <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>

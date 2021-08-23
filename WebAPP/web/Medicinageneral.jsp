@@ -71,7 +71,7 @@
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/C"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/T"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/A"/></div>
-                    </div>
+                    </div>   
                     <%--  <div class="div-row-three"> 
                           <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                           <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
