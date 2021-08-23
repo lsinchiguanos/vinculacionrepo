@@ -52,7 +52,7 @@
                                                           
                             </header>
                             <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
-                            <a  href="" class="button primary" style=" background: #007653 !important;" >Acceder</a>
+                            <a  href="Medicinageneral.jsp" class="button primary" style=" background: #007653 !important;" >Acceder</a>
                         </div>
                     </section>
 

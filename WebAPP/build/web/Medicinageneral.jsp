@@ -15,7 +15,6 @@
 
         <section class="sec-input-data">
             <form>
-                <div class="div-cont-date"><input type="date" id="date" class="inp-date"/></div>
                 <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>            
                 <div class="div-cont-search"><input type="button" id="btn-action" class="inp-search" value="Buscar"/></div>
             </form>
