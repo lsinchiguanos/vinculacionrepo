@@ -60,7 +60,8 @@ public class LoginDAO {
         }
         return cliente_id;
     }
-public int SearchClienteLogin1(Constructor tm) throws SQLException {
+
+    public int SearchClienteLogin1(Constructor tm) throws SQLException {
         int cliente_id1 = 0;
         sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'and galeno_estado=0";
         try {
@@ -88,7 +89,6 @@ public int SearchClienteLogin1(Constructor tm) throws SQLException {
         }
         return cliente_id1;
     }
-  
 
     public static String getMD5(String input) {
         try {
