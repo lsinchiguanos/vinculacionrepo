@@ -7,6 +7,7 @@ package DAO;
 
 import BD.conexion;
 import Model.ControladorPaciente;
+import Model.Constructor;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -39,6 +40,27 @@ public class InsertAddPaciente {
                         + "','" + usuario.getPaciente_canton() + "','" + usuario.getPaciente_parroquia() + "','" + usuario.getPaciente_nacionalidad()
                         + "','" + usuario.getPaciente_estado_civil() + "','" + usuario.getPaciente_convencional() + "','" + usuario.getPaciente_tipo_sangre()
                         + "')");
+                agregado = true;
+                st.close();
+            }
+            c.isConected();
+        } catch (SQLException e) {
+            agregado = false;
+        }
+        return agregado;
+    }
+
+    public static boolean ActualizarEstado(Constructor usuario) {
+        boolean agregado = false;
+        try {
+            conexion c = new conexion();
+            Connection con = c.getConecction();
+            if (con != null) {
+                Statement st;
+                st = con.createStatement();
+                st.executeUpdate("UPDATE public.galeno\n"
+                        + "   SET galeno_user='" + usuario.getGaleno_user() + "',galeno_pass=md5('" + usuario.getGaleno_pass() + "'),galeno_estado='1'\n"
+                        + " WHERE '" + usuario.getGaleno_user() + "'");
                 agregado = true;
                 st.close();
             }

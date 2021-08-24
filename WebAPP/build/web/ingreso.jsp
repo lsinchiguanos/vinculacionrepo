@@ -18,9 +18,8 @@
                 <div class="div-cont-search"><input type="button" id="btn-action" class="inp-search" value="Buscar"/></div>
             </form>
         </section> !-->
-
         <section class="sec-main">
-            <form class="form1">
+            <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off">
                 <div class="div-cont-main">
                     <div class="div-row-one">
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
