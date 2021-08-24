@@ -12,12 +12,12 @@
         </header>      
         <div class="div-head-tittle"><h2></h2></div>
 
-      <!--  <section class="sec-input-data">
-            <form class="form">
-                <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>            
-                <div class="div-cont-search"><input type="button" id="btn-action" class="inp-search" value="Buscar"/></div>
-            </form>
-        </section> !-->
+        <!--  <section class="sec-input-data">
+              <form class="form">
+                  <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>            
+                  <div class="div-cont-search"><input type="button" id="btn-action" class="inp-search" value="Buscar"/></div>
+              </form>
+          </section> !-->
         <section class="sec-main">
             <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off">
                 <div class="div-cont-main">
