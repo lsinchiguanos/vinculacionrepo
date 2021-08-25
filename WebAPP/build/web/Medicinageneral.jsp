@@ -126,8 +126,6 @@
                     <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                     <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                 </div> 
-
-
             </div>   
         </form> 
     </section>
