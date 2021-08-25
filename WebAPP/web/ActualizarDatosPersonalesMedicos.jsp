@@ -22,22 +22,26 @@
         <title>Actualizar datos personales medicos</title>
     </head>
     <body>
-        <header>
-            <nav class="nav-tp"></nav>
-        </header>      
-        <div class="div-head-tittle"><h2></h2></div>
-                <%
-                    HttpSession s = request.getSession();
-                    PreparedStatement pst;
-                    conexion cn = new conexion();
-                    ResultSet rs;
-                    PreparedStatement ps;
-                    String sql;
-                    sql = "select * from galeno where galeno_user='" + session.getAttribute("galeno_user11") + "'";
-                    pst = cn.getConecction().prepareStatement(sql);
-                    rs = pst.executeQuery();
-                    while (rs.next()) {
-                %>
+        <header id="header" style=" background: #007653 !important;">
+            <a class="logo" href="Principal.jsp">
+                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+            </a>
+            <a class="logo" id="ulUserData" href="index.html"></a>
+            <nav>
+            </nav>
+        </header>
+        <%
+            HttpSession s = request.getSession();
+            PreparedStatement pst;
+            conexion cn = new conexion();
+            ResultSet rs;
+            PreparedStatement ps;
+            String sql;
+            sql = "select * from galeno where galeno_user='" + session.getAttribute("galeno_user11") + "'";
+            pst = cn.getConecction().prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+        %>
         <form id="form1" autocomplete="off">
             <section  class="form-register">
                 <center><h4>Datos Personales</h4></center>
