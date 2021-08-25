@@ -16,11 +16,9 @@ public class Buscador {
     conexion cn = new conexion();
     private String sql_command = "";
     private PreparedStatement pst = null; 
-    
-    
 
- public List<BuscadorPaciente> Listbuscarpaciente(String cedula) {
-        List<BuscadorPaciente> buscar = new ArrayList<BuscadorPaciente>();
+ public BuscadorPaciente Listbuscarpaciente(String cedula) {
+        BuscadorPaciente newbuscar = new  BuscadorPaciente();
         pst = null;
         rs = null;
         try {
@@ -33,21 +31,20 @@ public class Buscador {
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
             while (rs.next()) {
-                BuscadorPaciente newbuscar = new BuscadorPaciente();
-                
-                newbuscar.setPaciente_dni(rs.getInt("paciente_dni"));
+              
+                newbuscar.setPaciente_dni(String.valueOf(rs.getString("paciente_dni")));
                 newbuscar.setPaciente_primer_segundo_nombre(String.valueOf(rs.getString("nombre")));
                 newbuscar.setPaciente_primer_segundo_apellido(String.valueOf(rs.getString("apellido")));
                 newbuscar.setPaciente_fnacimiento(String.valueOf(rs.getString("paciente_fnacimiento")));
-                newbuscar.setPaciente_convencional(rs.getInt("paciente_convencional"));
-                newbuscar.setPaciente_telefono(rs.getInt("paciente_telefono"));
+                newbuscar.setPaciente_convencional(String.valueOf(rs.getString("paciente_convencional")));
+                newbuscar.setPaciente_telefono(String.valueOf(rs.getString("paciente_telefono")));
                 newbuscar.setPaciente_provincia(String.valueOf(rs.getString("paciente_provincia")));
                 newbuscar.setPaciente_direccion(String.valueOf(rs.getString("paciente_direccion")));
                 newbuscar.setPaciente_genero(String.valueOf(rs.getString("paciente_genero")));
                 newbuscar.setPaciente_ayudasocial(String.valueOf(rs.getString("paciente_ayudasocial")));
                 newbuscar.setPaciente_nacionalidad(String.valueOf(rs.getString("paciente_nacionalidad")));
                 newbuscar.setPaciente_tipo_sangre(String.valueOf(rs.getString("paciente_tipo_sangre"))); 
-                buscar.add(newbuscar);
+                
             }
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
@@ -66,7 +63,7 @@ public class Buscador {
                 System.err.println(e.getMessage());
             }
         }
-        return buscar;
+        return newbuscar;
     }
 
 }

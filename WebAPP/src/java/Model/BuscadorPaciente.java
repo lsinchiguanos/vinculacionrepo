@@ -2,13 +2,12 @@ package Model;
 
 public class BuscadorPaciente {
 
-    private int paciente_dni, paciente_telefono, paciente_convencional;
-    private String paciente_primer_segundo_nombre,paciente_fnacimiento, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_tipo_sangre, paciente_ayudasocial;
+    private String paciente_ayudasocial,paciente_dni,paciente_primer_segundo_nombre,paciente_fnacimiento, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_tipo_sangre, paciente_telefono, paciente_convencional;
 
     public BuscadorPaciente() {
     }
 
-    public BuscadorPaciente(int paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_tipo_sangre, String paciente_ayudasocial, int paciente_telefono, int paciente_convencional, String paciente_fnacimiento) {
+    public BuscadorPaciente(String paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_tipo_sangre, String paciente_ayudasocial, String paciente_telefono, String paciente_convencional, String paciente_fnacimiento) {
         this.paciente_dni = paciente_dni;
         this.paciente_primer_segundo_nombre = paciente_primer_segundo_nombre;
         this.paciente_primer_segundo_apellido = paciente_primer_segundo_apellido;
@@ -23,29 +22,7 @@ public class BuscadorPaciente {
         this.paciente_fnacimiento = paciente_fnacimiento;
     }
 
-    public int getPaciente_dni() {
-        return paciente_dni;
-    }
-
-    public void setPaciente_dni(int paciente_dni) {
-        this.paciente_dni = paciente_dni;
-    }
-
-    public int getPaciente_telefono() {
-        return paciente_telefono;
-    }
-
-    public void setPaciente_telefono(int paciente_telefono) {
-        this.paciente_telefono = paciente_telefono;
-    }
-
-    public int getPaciente_convencional() {
-        return paciente_convencional;
-    }
-
-    public void setPaciente_convencional(int paciente_convencional) {
-        this.paciente_convencional = paciente_convencional;
-    }
+     
 
     public String getPaciente_fnacimiento() {
         return paciente_fnacimiento;
@@ -120,5 +97,31 @@ public class BuscadorPaciente {
     public void setPaciente_ayudasocial(String paciente_ayudasocial) {
         this.paciente_ayudasocial = paciente_ayudasocial;
     }
+
+    public String getPaciente_dni() {
+        return paciente_dni;
+    }
+
+    public void setPaciente_dni(String paciente_dni) {
+        this.paciente_dni = paciente_dni;
+    }
+
+    public String getPaciente_telefono() {
+        return paciente_telefono;
+    }
+
+    public void setPaciente_telefono(String paciente_telefono) {
+        this.paciente_telefono = paciente_telefono;
+    }
+
+    public String getPaciente_convencional() {
+        return paciente_convencional;
+    }
+
+    public void setPaciente_convencional(String paciente_convencional) {
+        this.paciente_convencional = paciente_convencional;
+    }
+
+    
 
 }

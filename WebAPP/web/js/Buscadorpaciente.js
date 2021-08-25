@@ -8,8 +8,9 @@ $(function () {
         $.ajax({
             cache: false,
             type: "POST",
-            url: "Buscadorpacientee",
-            data: {cedula:cedula},      
+            url: "Controllerbuscarpaciente",
+            data: {cedula: cedula},
+            dataType: 'json',
             error: function (request, status, error)
             {
                 alert(request, status, error);
@@ -17,13 +18,20 @@ $(function () {
             success: function (data)
             {
                 console.log(data);
+                $("#txt-cedi").val(data.paciente_dni);
+                $("#txt-namen").val(data.paciente_primer_segundo_nombre);
+                $("#txt-lnamea").val(data.paciente_primer_segundo_apellido);
+                $("#txt-namef").val(data.paciente_fnacimiento);
+                $("#txt-lnamet").val(data.paciente_convencional);
+                $("#txt-cel").val(data.paciente_telefono);
+                 $("#txt-provin").val(data.paciente_provincia);
+                $("#txt-direccion").val(data.paciente_direccion);
+                $("#txt-genero").val(data.paciente_genero);
+                $("#txt-ayudaeconomica").val(data.paciente_ayudasocial);
+                 $("#txt-nacionalidad").val(data.paciente_nacionalidad);
+                $("#txt-tiposangre").val(data.paciente_tipo_sangre); 
             }
-//            , headers: {
-//                'Access-Control-Allow-Credentials': true,
-//                'Access-Control-Allow-Origin': '*',
-//                'Access-Control-Allow-Methods': 'GET',
-//                'Access-Control-Allow-Headers': 'application/json'
-//            }
+
         });
     };
 });

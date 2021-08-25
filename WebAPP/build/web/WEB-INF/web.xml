@@ -4,9 +4,17 @@
         <servlet-name>Buscarpacientee</servlet-name>
         <servlet-class>Controller.Buscarpacientee</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controllerbuscarpaciente</servlet-name>
+        <servlet-class>Controller.Controllerbuscarpaciente</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Buscarpacientee</servlet-name>
         <url-pattern>/Buscarpacientee</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controllerbuscarpaciente</servlet-name>
+        <url-pattern>/Controllerbuscarpaciente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -131,8 +131,7 @@
 <footer></footer>
 <script src="js/JQuery.js" type="text/javascript"></script>
 <script src="js/Opciones.js" type="text/javascript"></script> 
-<script src="js/Buscadorpaciente.js" type="text/javascript"></script>
-<script type="text/javascript" src = "${pageContext.request.contextPath}/js/JQuery.js"></script>
+<script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
     $(function(){
 

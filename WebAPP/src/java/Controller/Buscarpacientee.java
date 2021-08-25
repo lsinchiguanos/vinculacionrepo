@@ -26,12 +26,12 @@ public class Buscarpacientee extends HttpServlet {
         Buscador buscar = new Buscador();
         buscar.Listbuscarpaciente(cedula);
 
-        int paciente_dni = Integer.valueOf(request.getParameter("paciente_dni"));
+        String paciente_dni = String.valueOf(request.getParameter("paciente_dni"));
         String paciente_primer_segundo_nombre = String.valueOf(request.getParameter("nombre"));
         String paciente_primer_segundo_apellido = String.valueOf(request.getParameter("apellido"));
         String paciente_fnacimiento = String.valueOf(request.getParameter("paciente_fnacimiento"));
-        int paciente_convencional = Integer.valueOf(request.getParameter("paciente_convencional"));
-        int paciente_telefono = Integer.valueOf(request.getParameter("paciente_telefono"));
+        String paciente_convencional = String.valueOf(request.getParameter("paciente_convencional"));
+        String paciente_telefono = String.valueOf(request.getParameter("paciente_telefono"));
         String paciente_provincia = String.valueOf(request.getParameter("paciente_provincia"));
         String paciente_direccion = String.valueOf(request.getParameter("paciente_direccion"));
         String paciente_genero = String.valueOf(request.getParameter("paciente_genero"));
