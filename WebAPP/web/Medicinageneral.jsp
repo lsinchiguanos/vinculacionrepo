@@ -8,17 +8,21 @@
     <title>WebApp - Medicina General</title>
 </head>
 <body>
-    <header>
-        <nav class="nav-tp"></nav>
-    </header>      
+    <header id="header" style=" background: #007653 !important;">
+        <a class="logo" href="Principal.jsp">
+            <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+        </a>
+        <a class="logo" id="ulUserData" href="index.html"></a>
+       
+    </header>     
 
-    <div class="div-head-tittle"><h2></h2></div>
+
 
     <section class="sec-input-data">
         <form>
             <div class="div-cont-ced"><input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula"/></div>            
             <div class="div-cont-search"><input type="button" id="btn-actionb" class="inp-search" value="Buscar"/></div>
-       
+
         </form>
     </section>
 
@@ -100,7 +104,7 @@
             </div>   
         </form> 
     </section>
-                
+
     <section class="sec-data-consulta">
         <form>
             <div class="div-cont-main">
@@ -134,27 +138,27 @@
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script>
 <script type="text/javascript" src = "${pageContext.request.contextPath}/js/JQuery.js"></script>
 <script type="text/javascript">
-    $(function(){
+                        $(function () {
 
-        $(":input[name = 'search' ]").keyup(function(){
+                            $(":input[name = 'search' ]").keyup(function () {
 
-                        / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
-            $("#list li").remove();
+                                / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+                                $("#list li").remove();
 
-            var $val = $(this).val();
-            var url = "${pageContext.request.contextPath}/searchservlet?content="+$val;
-            var args = {"time":new Date()};
-            $.get(url, args, function(data){
+                                var $val = $(this).val();
+                                var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+                                var args = {"time": new Date()};
+                                $.get(url, args, function (data) {
 
-                / * La respuesta es una matriz de objetos json * /
-                for(var i = 0; i < data.length; i++)
-                    $("#list").append("<li><a>"+data[i].content+"</a></li>");
+                                    / * La respuesta es una matriz de objetos json * /
+                                    for (var i = 0; i < data.length; i++)
+                                        $("#list").append("<li><a>" + data[i].content + "</a></li>");
 
-            },"json");
+                                }, "json");
 
-        });
+                            });
 
-    })
+                        })
 
 
 
