@@ -1,4 +1,4 @@
-
+ 
 package DAO;
 
 import BD.conexion;
@@ -9,8 +9,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-
+ 
 public class InsertAddPaciente {
 
     public static boolean agregarUsuario(ControladorPaciente usuario) {

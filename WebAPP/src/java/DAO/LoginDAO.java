@@ -17,10 +17,6 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Manue
- */
 public class LoginDAO {
 
     int rspta = 0;
@@ -58,6 +54,7 @@ public class LoginDAO {
         }
         return cliente_id;
     }
+ 
     public static String getMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
