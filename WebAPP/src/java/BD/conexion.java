@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
+ 
 package BD;
 import java.io.Serializable;
 import java.sql.Connection;
