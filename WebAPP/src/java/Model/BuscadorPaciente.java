@@ -2,13 +2,13 @@ package Model;
 
 public class BuscadorPaciente {
 
-    private int paciente_dni, paciente_telefono, paciente_convencional, paciente_fnacimiento;
-    private String paciente_primer_segundo_nombre, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_tipo_sangre, paciente_ayudasocial;
+    private int paciente_dni, paciente_telefono, paciente_convencional;
+    private String paciente_primer_segundo_nombre,paciente_fnacimiento, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_tipo_sangre, paciente_ayudasocial;
 
     public BuscadorPaciente() {
     }
 
-    public BuscadorPaciente(int paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_tipo_sangre, String paciente_ayudasocial, int paciente_telefono, int paciente_convencional, int paciente_fnacimiento) {
+    public BuscadorPaciente(int paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_tipo_sangre, String paciente_ayudasocial, int paciente_telefono, int paciente_convencional, String paciente_fnacimiento) {
         this.paciente_dni = paciente_dni;
         this.paciente_primer_segundo_nombre = paciente_primer_segundo_nombre;
         this.paciente_primer_segundo_apellido = paciente_primer_segundo_apellido;
@@ -47,13 +47,15 @@ public class BuscadorPaciente {
         this.paciente_convencional = paciente_convencional;
     }
 
-    public int getPaciente_fnacimiento() {
+    public String getPaciente_fnacimiento() {
         return paciente_fnacimiento;
     }
 
-    public void setPaciente_fnacimiento(int paciente_fnacimiento) {
+    public void setPaciente_fnacimiento(String paciente_fnacimiento) {
         this.paciente_fnacimiento = paciente_fnacimiento;
     }
+
+  
 
     public String getPaciente_primer_segundo_nombre() {
         return paciente_primer_segundo_nombre;
