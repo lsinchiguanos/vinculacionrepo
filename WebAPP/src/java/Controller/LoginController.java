@@ -46,14 +46,12 @@ public class LoginController extends HttpServlet {
             HttpSession sesion = request.getSession(true);
             int rspta = 0;
             int cliente_id = 0;
-            int cliente_id1 = 0;
             String usuario = request.getParameter("usuario");
             String clave = request.getParameter("clave");
             tm.setGaleno_user(usuario);
             tm.setGaleno_pass(clave);
             cliente_id = new DAO.LoginDAO().SearchClienteLogin(tm);
-            cliente_id1 = new DAO.LoginDAO().SearchClienteLogin1(tm);
-            if (cliente_id == 0) {
+            if (cliente_id != 0) {
 //                sesion.setAttribute("galeno_user11", usuario);
                 response.sendRedirect(request.getContextPath() + "/CambiarUserYpass.jsp");
                 //response.sendRedirect("Principal.jsp");
