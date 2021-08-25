@@ -7,6 +7,7 @@
         <title>WebApp - Ingresos</title>
     </head>
     <body>
+
         <header>
             <nav class="nav-tp"></nav>
         </header>      
@@ -18,11 +19,11 @@
                   <div class="div-cont-search"><input type="button" id="btn-action" class="inp-search" value="Buscar"/></div>
               </form>
           </section> !-->
-        <section class="sec-main">
-            <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off">
+        <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off">
+            <section class="sec-main">
                 <div class="div-cont-main">
                     <div class="div-row-one">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="TipoIden">
                                 <option>Tipo de identificacion</option>
                                 <option>Cedula</option><option>Pasaporte</option></select></div>
 
@@ -58,7 +59,7 @@
                     </div>
 
                     <div class="div-row-six">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="estadoCivil">
                                 <option>Seleccione el estado civil</option>
                                 <option>Soltero</option>
                                 <option>Casado</option>
@@ -66,7 +67,7 @@
                                 <option>Viudo</option>
                                 <option>Divorciado</option>
                             </select></div>
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="Ayuda">
                                 <option>Recibe Ayuda Social</option>
                                 <option>Si</option>
                                 <option>No</option>
@@ -75,13 +76,14 @@
                     </div>                 
 
                     <div class="div-row-seven">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"/> </div>
-                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad" name="discapacidad"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"name="tipoSangre"/> </div>
+                        <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
                     </div> 
                 </div>
-            </form> 
-        </section>
+            </section>
+        </form> 
+
         <script>
             function validaNumericos(event) {
                 if (event.charCode >= 48 && event.charCode <= 57) {

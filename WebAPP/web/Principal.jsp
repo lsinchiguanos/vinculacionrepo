@@ -12,31 +12,27 @@
         <meta name="keywords" content="" />
         <link rel="stylesheet" href="Principal/css/main.css" />
         <link href="css/animacionprincipal.css" rel="stylesheet" type="text/css"/>
-        
+
     </head>
     <%
         HttpSession s = request.getSession();
         //variables de session
     %>
     <body class="is-preload">    
-        <!-- Encabezado -->
-        <header id="header" style=" background: #007653 !important;">
-            
-            <a class="logo" id="ulUserData" href="index.html"></a>
-            <nav>
-                <a href="cambioclave.jsp" style="color:white" >Cambiar clave</a>
-                <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
-            </nav>
+        <header id="header" style="">
+         
+            <header id="header" style=" background: #007653 !important;">
+                <a class="logo" href="index.jsp">
+                    <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+                </a>
+                <a class="logo" id="ulUserData" href="index.html"></a>
+                <nav>
+                    <a href="cambioclave.jsp" style="color:white" >Cambiar clave</a>
+                    <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
+                </nav>
+            </header>
+
         </header>
-        <!-- Nav -->
-        <nav id="menu"  style="color:white">
-            <ul class="links">
-                <li><a href="index.html" >Inicio</a></li>
-                <li><a href="ReporteKi.jsp" style="" >Reportes</a></li>
-                <li><a href="reportesj.jsp" style="" >Historial</a></li>
-                
-            </ul>
-        </nav>
         <!-- container principal -->
         <section class="wrapper">
             <div class="inner">
@@ -49,7 +45,7 @@
                                     <img alt="" src="img/icons8_workstation_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold">AGREGAR INFORMACIÓN</h3>
-                                                          
+
                             </header>
                             <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
                             <a  href="Medicinageneral.jsp" class="button primary" style=" background: #007653 !important;" >Acceder</a>
@@ -72,7 +68,7 @@
                     </section>
 
                     <!-- TERCER MODULO -->                 
-                     <section class="animadoagregarinformacion">
+                    <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="">
@@ -84,8 +80,8 @@
                             <a href="TransferirPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
-                    
-                   <!-- CUARTO MODULO -->
+
+                    <!-- CUARTO MODULO -->
                     <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
@@ -98,7 +94,7 @@
                             <a href="TransferirPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
-                   <!-- Quinto MODULO -->
+                    <!-- Quinto MODULO -->
                     <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
@@ -111,7 +107,7 @@
                             <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
-                   <!-- Sexto MODULO -->
+                    <!-- Sexto MODULO -->
                     <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
@@ -126,7 +122,7 @@
                     </section>
                 </div>
             </div>
-            
+
         </section>
 
         <!-- Scripts -->
@@ -138,5 +134,5 @@
         <script src="js/animacion.js" type="text/javascript"></script>
 
     </body>
-    
+
 </html>

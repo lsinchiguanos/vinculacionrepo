@@ -13,7 +13,7 @@ public class Buscador {
             conexion c = new conexion();
             Connection con = c.getConecction();
             if (con != null) {
-                Statement st;
+                Statement st;   
                 st = con.createStatement();
 
                 st.executeQuery("select paciente_dni, CONCAT(paciente_primer_nombre, ' ',paciente_segundo_nombre),"

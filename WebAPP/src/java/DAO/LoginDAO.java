@@ -9,10 +9,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,7 +32,7 @@ public class LoginDAO {
 
     public int SearchClienteLogin(Constructor tm) throws SQLException {
         int cliente_id = 0;
-        sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'";
+        sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'and galeno_estado=1";
         try {
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
@@ -55,36 +58,6 @@ public class LoginDAO {
         }
         return cliente_id;
     }
-public int SearchClienteLogin1(Constructor tm) throws SQLException {
-        int cliente_id1 = 0;
-        sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'and galeno_estado=0";
-        try {
-            pst = cn.getConecction().prepareStatement(sql_command);
-            rs = pst.executeQuery();
-            if (rs.next()) {
-                cliente_id1 = rs.getInt(1);
-            }
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
-        } finally {
-            try {
-                if (cn.isConected()) {
-                    cn.getConecction().close();
-                }
-                if (pst != null) {
-                    pst.close();
-                }
-                if (rs != null) {
-                    rs.close();
-                }
-            } catch (SQLException e) {
-                System.err.println(e.getMessage());
-            }
-        }
-        return cliente_id1;
-    }
-  
-
     public static String getMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");

@@ -24,6 +24,10 @@ public class Constructor {
         this.galeno_correoelectronico = galeno_correoelectronico;
     }
 
+    public Constructor(String galeno_user, String galeno_pass) {
+        this.galeno_user = galeno_user;
+        this.galeno_pass = galeno_pass;
+    }
 
     public int getGaleno_id() {
         return galeno_id;
