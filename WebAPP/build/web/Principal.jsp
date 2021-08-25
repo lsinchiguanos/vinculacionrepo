@@ -115,7 +115,7 @@
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold">Ingresar Información</h3>
                             </header>
-                            <p>Ingresar informacion por primera vez</p>
+                            <p>Ingresar informacion por primera vez del paciente</p>
                             <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
