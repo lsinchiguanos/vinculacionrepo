@@ -34,25 +34,25 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
-                    <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
-                    <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"/></div>
+                    <div class="div-cont-ced"><input type="number" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
+                    <div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"/></div>
                 </div>
                 <div class="div-row-two"> 
-                    <div class="div-cont-name"><input type="date" id="txt-name" class="inp-name" placeholder="Fecha de nacimiento" name="Fecha de nacimiento"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'/></div>
-                    <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'/></div> 
+                    <div class="div-cont-name"><input type="date" id="txt-namef" class="inp-name" placeholder="Fecha de nacimiento" name="Fecha de nacimiento"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'/></div>
+                    <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'/></div> 
                 </div>
                 <div class="div-row-three">
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"/></div> 
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion" name="Direccion"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"/></div> 
+                    <div class="div-cont-lname"><input type="text" id="txt-direccion" class="inp-lname" placeholder="Direccion" name="Direccion"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"/></div>
 
                 </div>
                 <div class="div-row-four">
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="Nacionalidad" onkeypress="return soloLetras(event)"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre" name="Tipo de sangre" onkeypress="return soloLetras(event)"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-ayudaeconomica" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-nacionalidad" class="inp-lname" placeholder="Nacionalidad" name="Nacionalidad" onkeypress="return soloLetras(event)"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Tipo de sangre" name="Tipo de sangre" onkeypress="return soloLetras(event)"/></div>
                 </div> 
             </div>
         </form> 
@@ -62,14 +62,14 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
-                    <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Estatura"/></div>
-                    <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Peso"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de Sangre"/></div>
+                    <div class="div-cont-ced"><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura"/></div>
+                    <div class="div-cont-name"><input type="text" id="txt-peso" class="inp-name" placeholder="Peso"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre"/></div>
                 </div> 
                 <div class="div-row-two">   
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/C"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/T"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="P/A"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A"/></div>
                 </div>   
                 <%--  <div class="div-row-three"> 
                       <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
@@ -83,12 +83,12 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes alérgicos"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes personales"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales"/></div>
                 </div> 
                 <div class="div-row-two">   
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes familiares"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Antecedentes quirurgicos"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos"/></div>
 
                 </div>
                 <%--  <div class="div-row-three"> 
@@ -105,8 +105,8 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Motivo de consulta"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Enfermedad o problema actual"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta"/></div>
+                    <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual"/></div>
                 </div> 
                 <div class="div-row-two">   
                     <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
@@ -114,7 +114,7 @@
                             <option>Preventivo</option>
                             <option>Definitivo</option>
                         </select></div>
-                    <div class="div-cont-lname"><input type="file" id="txt-lname" class="inp-lname" placeholder="Datos de examen"/></div>
+                    <div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen"/></div>
 
                 </div>
 
