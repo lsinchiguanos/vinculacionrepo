@@ -20,9 +20,9 @@ public class ControladorPaciente {
             paciente_estado, paciente_provincia, paciente_canton, paciente_parroquia,
             paciente_nacionalidad, paciente_estado_civil, paciente_convencional,
             paciente_tipo_sangre;
-    String created_at;
+    String created_at,paciente_email;
 
-    public ControladorPaciente(String paciente_tipo_dni, String paciente_dni, String paciente_apellido_paterno, String paciente_primer_nombre, String paciente_fnacimiento, String paciente_direccion, String paciente_telefono, String paciente_genero, String paciente_grupo, String paciente_ayudasocial, String created_at, String paciente_apellido_materno, String paciente_segundo_nombre, String paciente_estado, String paciente_provincia, String paciente_canton, String paciente_parroquia, String paciente_nacionalidad, String paciente_estado_civil, String paciente_convencional, String paciente_tipo_sangre) {
+    public ControladorPaciente(String paciente_tipo_dni, String paciente_dni, String paciente_apellido_paterno, String paciente_primer_nombre, String paciente_fnacimiento, String paciente_direccion, String paciente_telefono, String paciente_genero, String paciente_grupo, String paciente_ayudasocial, String created_at, String paciente_apellido_materno, String paciente_segundo_nombre, String paciente_estado, String paciente_provincia, String paciente_canton, String paciente_parroquia, String paciente_nacionalidad, String paciente_estado_civil, String paciente_convencional, String paciente_tipo_sangre,String paciente_email) {
         this.paciente_tipo_dni = paciente_tipo_dni;
         this.paciente_dni = paciente_dni;
         this.paciente_apellido_paterno = paciente_apellido_paterno;
@@ -44,6 +44,15 @@ public class ControladorPaciente {
         this.paciente_estado_civil = paciente_estado_civil;
         this.paciente_convencional = paciente_convencional;
         this.paciente_tipo_sangre = paciente_tipo_sangre;
+        this.paciente_email = paciente_email;
+    }
+
+    public String getPaciente_email() {
+        return paciente_email;
+    }
+
+    public void setPaciente_email(String paciente_email) {
+        this.paciente_email = paciente_email;
     }
 
     public String getPaciente_tipo_dni() {

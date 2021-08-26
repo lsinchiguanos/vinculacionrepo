@@ -1,4 +1,3 @@
- 
 package DAO;
 
 import BD.conexion;
@@ -9,7 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
- 
+
 public class InsertAddPaciente {
 
     public static boolean agregarUsuario(ControladorPaciente usuario) {
@@ -26,14 +25,14 @@ public class InsertAddPaciente {
                         + "            created_at, paciente_apellido_materno, paciente_segundo_nombre, \n"
                         + "            paciente_estado, paciente_provincia, paciente_canton, paciente_parroquia, \n"
                         + "            paciente_nacionalidad, paciente_estado_civil, paciente_convencional, \n"
-                        + "            paciente_tipo_sangre)VALUES ('" + usuario.getPaciente_tipo_dni() + "','" + usuario.getPaciente_dni() + "','" + usuario.getPaciente_apellido_paterno()
+                        + "            paciente_tipo_sangre,paciente_correoelectronico)VALUES ('" + usuario.getPaciente_tipo_dni() + "','" + usuario.getPaciente_dni() + "','" + usuario.getPaciente_apellido_paterno()
                         + "','" + usuario.getPaciente_primer_nombre() + "','" + usuario.getPaciente_fnacimiento() + "','" + usuario.getPaciente_direccion()
                         + "','" + usuario.getPaciente_telefono() + "','" + usuario.getPaciente_genero() + "','" + usuario.getPaciente_grupo()
                         + "','" + usuario.getPaciente_ayudasocial() + "','" + usuario.getCreated_at() + "','" + usuario.getPaciente_apellido_materno()
                         + "','" + usuario.getPaciente_segundo_nombre() + "','" + usuario.getPaciente_estado() + "','" + usuario.getPaciente_provincia()
                         + "','" + usuario.getPaciente_canton() + "','" + usuario.getPaciente_parroquia() + "','" + usuario.getPaciente_nacionalidad()
                         + "','" + usuario.getPaciente_estado_civil() + "','" + usuario.getPaciente_convencional() + "','" + usuario.getPaciente_tipo_sangre()
-                        + "')");
+                        + "','" + usuario.getPaciente_email() + "')");
                 agregado = true;
                 st.close();
             }

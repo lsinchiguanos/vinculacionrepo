@@ -98,6 +98,7 @@
                     <div class="div-row-seven">
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad"/></div>
                         <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre"/> </div>
+                        <div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div>
                         <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
                     </div> 
                 </div>
@@ -159,7 +160,7 @@
         </script>
     </body>
 
-    
+
     <script src="js/pais.js"></script>
     <script src="js/JQuery.js" type="text/javascript"></script>  
 </html>
