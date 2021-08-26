@@ -48,19 +48,19 @@
                 IDENTIFICACION: 
                 <input class="controls" type="text" name="cedula" id="Cedula" value="<%= rs.getInt("galeno_dni")%>" disabled="true">
                 PRIMER NOMBRE:
-                <input class="controls" type="text" name="PrimerNombre" id="PrimerNombre"value="<%= rs.getString("galeno_primer_nombre")%>" required="" onkeypress="return soloLetras(event)">
+                <input class="controls" type="text" name="PrimerNombre" id="PrimerNombre"value="<%= rs.getString("galeno_primer_nombre")%>" required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);">
                 SEGUNDO NOMBRE:
-                <input class="controls" type="text" name="SegundoNombre" id="SegundoNombre"value="<%= rs.getString("galeno_segundo_nombre")%>"required="" onkeypress="return soloLetras(event)">
+                <input class="controls" type="text" name="SegundoNombre" id="SegundoNombre"value="<%= rs.getString("galeno_segundo_nombre")%>"required="" onkeypress="return soloLetras(event)" onkeyup="mayus(this);">
                 TELEFONO O CELULAR:
                 <input class="controls" type="text" name="galeno_telefono" id="galeno_telefono"value="<%= rs.getString("galeno_telefono")%>"required="" onkeypress='return validaNumericos(event)'>
                 DIRECCION:
                 <input class="controls" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required="">
                 PROVINCIA:
-                <input class="controls" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)">
+                <input class="controls" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);">
                 CANTON:
-                <input class="controls" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)">
+                <input class="controls" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);">
                 PARROQUIA:
-                <input class="controls" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)">
+                <input class="controls" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);">
                 EMAIL:
                 <input class="controls" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required="">
                 <center><input class="botons" type="submit" value="Actualizar"></center>
@@ -89,6 +89,9 @@
                     if (letras.indexOf(tecla) == -1 && !tecla_especial)
                         return false;
                 }
+                function mayus(e) {
+                                    e.value = e.value.toUpperCase();
+                                }
             </script>
         </form>
         <%}%>

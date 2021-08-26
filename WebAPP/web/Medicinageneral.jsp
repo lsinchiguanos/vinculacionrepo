@@ -21,11 +21,6 @@
     <div class="div-head-tittle"><h2></h2></div>
 
 
-    <!-- 
-<section class="sec-options">
-    <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
-</section> !-->
-
     <form id="form1">
         <section class="sec-main">
             <div class="div-cont-main">
@@ -46,8 +41,8 @@
                     <tbody>
                         <tr>
                             <td> <div class="div-cont-ced" style='margin-top: -40px !important;'><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div> </td>
-                            <td> <div class="div-cont-name"  ><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
-                            <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
+                            <td> <div class="div-cont-name"  ><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
+                            <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                         </tr>
                     </tbody>
                     <thead >
@@ -59,7 +54,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td> <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true" disabled="true"/></div> </td>
+                            <td> <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true" disabled="true" onkeyup="mayus(this);"/></div> </td>
                             <td> <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'disabled="true"/></div> </td>
                             <td> <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div>  </td>
                         </tr>
@@ -94,24 +89,6 @@
                     </tbody>
                 </table>
                 <hr />
-
-                <%-- <table style="width: 100%">
-                    <thead style="text-align: center; margin-left: -5%">
-                        <tr>
-                            <th>Ayuda economica</th>
-                            <th>Nacionalidad</th>
-                            <th>Correo Electronico</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-ayudaeconomica" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-nacionalidad" class="inp-lname" placeholder="Nacionalidad" name="Nacionalidad" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Correo Electronico" name="Correo Electronico" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
-                        </tr>
-
-                    </tbody>
-</table>  --%>
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead>
                         <tr>
@@ -124,7 +101,7 @@
                         <tr>
                             <td><div class="div-cont-ced" style='margin-top: -40px !important;'><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="Estatura"/></div></td>
                             <td><div class="div-cont-name" ><input type="text" id="txt-peso" class="inp-name" placeholder="Peso" name="peso"/></div></td>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre" onkeyup="mayus(this);"/></div></td>
                         </tr>
                     <thead>
                         <tr>
@@ -135,9 +112,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/></div></td>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt"/></div></td>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa" onkeyup="mayus(this);"/></div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -150,7 +127,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl"/></div> </td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl" onkeyup="mayus(this);"/></div> </td>
                         </tr>
                     <thead>
                         <tr>
@@ -159,7 +136,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" name="AP"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" onkeyup="mayus(this);"name="AP"/></div></td>
                         </tr>
                     <thead>
                         <tr>
@@ -168,7 +145,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" name="AF"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" onkeyup="mayus(this);" name="AF"/></div></td>
                         </tr>
                     <thead>
                         <tr>
@@ -177,7 +154,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" name="Aq"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" onkeyup="mayus(this);"name="Aq"/></div></td>
                         </tr>
                     </tbody>
                 </table>  
@@ -192,7 +169,7 @@
                     <tbody>
                         <tr>
                             <td><div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td> 
-                            <td><div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc"/></div></td> 
+                            <td><div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></div></td> 
                     <thead>
                         <tr>
                             <th>Enfermedad o problema actual</th> 
@@ -200,8 +177,8 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Enfer"/></div></td> 
-                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></div></td>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Enfer" onkeyup="mayus(this);"/></div></td> 
+                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></div></td>
                     </tr>
                     <thead>
                         <tr>
@@ -234,6 +211,7 @@
             PreparedStatement ps;
             String sql;
             String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag, tipo, cargar;
+
             dni = request.getParameter("cedula");
             Pnom = request.getParameter("Estatura");
             Snom = request.getParameter("peso");
@@ -257,7 +235,7 @@
                 ps = cn.getConecction().prepareStatement("insert into medicinageneral( paciente_dni, estatura, peso, tipossangre,"
                         + "pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares,"
                         + "antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, "
-                        + "diagnositico,tipo, cargararchivo)values('"+dni+"','" + Pnom + "','" + Snom + "','" + telefono + "','" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "','" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "');");
+                        + "diagnositico,tipo, cargararchivo)values('" + dni + "','" + Pnom + "','" + Snom + "','" + telefono + "','" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "','" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "');");
                 ps.executeUpdate();
                 response.sendRedirect("Principal.jsp");
             }
@@ -294,7 +272,9 @@
                                     });
 
                                 })
-
+                                function mayus(e) {
+                                    e.value = e.value.toUpperCase();
+                                }
 
 
 </script>

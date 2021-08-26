@@ -31,13 +31,13 @@
                                 <option>Cedula</option><option>Pasaporte</option></select></div>
 
                         <div class="div-cont-ced"><input type="text" id="txt-ced" minlength="10" maxlength="10" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" required="" onkeypress='return validaNumericos(event)'/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
 
                     </div>
                     <div class="div-row-two">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"required=""  onkeypress="return soloLetras(event)"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"required=""  onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
 
                     </div>
                     <div class="div-row-three">
@@ -62,12 +62,12 @@
                             <option>Orellana</option><option> Morona Santiago</option>
                             <option>Zamora Chinchipe</option><option>Galápagos</option>
                         </select>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
                     </div>
                     <div class="div-row-five">
 
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="genero">   
                                 <option>Seleccione genero</option>
                                 <option>Masculino</option>
@@ -96,8 +96,8 @@
                     </div>                 
 
                     <div class="div-row-seven">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre"/> </div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div>
                         <div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div>
                         <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
                     </div> 
@@ -157,10 +157,11 @@
                     }
                 }
             }
+            function mayus(e) {
+                e.value = e.value.toUpperCase();
+            }
         </script>
     </body>
-
-
     <script src="js/pais.js"></script>
     <script src="js/JQuery.js" type="text/javascript"></script>  
 </html>

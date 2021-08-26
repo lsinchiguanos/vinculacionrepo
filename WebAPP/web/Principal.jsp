@@ -76,12 +76,12 @@
                                 <h3 style="color:#007653; font-weight: bold">Historial</h3>
                             </header>
                             <p>Mostrar la información de las actividades </p>
-                            <a href="TransferirPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
+                            <a href="reportesj.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
 
                     <!-- CUARTO MODULO -->
-                    <section class="animadoagregarinformacion">
+                   <!-- <section class="animadoagregarinformacion">
                         <div class="content">
                             <header>
                                 <a href="">
@@ -92,7 +92,7 @@
                             <p>Transferir un paciente a otro departamento</p>
                             <a href="TransferirPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
-                    </section>
+                    </section>-->
                     <!-- Quinto MODULO -->
                     <section class="animadoagregarinformacion">
                         <div class="content">
