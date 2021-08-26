@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <link href="css/Medicina.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
     <a href="../src/java/DAO/Buscador.java"></a>
+    <link href="css/Medicina.css" rel="stylesheet" type="text/css"/>
     <title>WebApp - Medicina General</title>
 </head>
 <body>
@@ -29,10 +29,10 @@
     <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
 </section> !-->
 
-    <section class="sec-main">
-        <form id="form1" action="/WebAPP/AddMedicinaGeneral"  autocomplete="off">
-            <div class="div-cont-main">
-                <div class="div-row-one">
+    <form id="form1" action="/WebAPP/AddMedicinaGeneral"  autocomplete="off">
+        <section class="sec-main">
+                <div class="div-cont-main">
+                    <div class="div-row-one">
                     Identificación:
                     <div class="div-cont-ced"><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div>
                     Nombres:
@@ -48,7 +48,7 @@
                     Celular:
                     <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div> 
                 </div>
-                
+
                 <div class="div-row-three">
                     Provincia:
                     <div class="div-cont-lname"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"disabled="true"/></div> 
@@ -57,7 +57,7 @@
                     Genero:
                     <div class="div-cont-lname"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"disabled="true"/></div>
                 </div>
-                
+
                 <div class="div-row-four">
                     Ayuda economica:
                     <div class="div-cont-lname"><input type="text" id="txt-ayudaeconomica" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"disabled="true"/></div>
@@ -66,7 +66,7 @@
                     Tipo de sangre:
                     <div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Tipo de sangre" name="Tipo de sangre" onkeypress="return soloLetras(event)"disabled="true"/></div>
                 </div> 
-                
+
                 <div class="div-row-five">
                     Estatura:
                     <div class="div-cont-ced"><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="Estatura"/></div>
@@ -75,7 +75,7 @@
                     Tipo de sangre
                     <div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre"/></div>
                 </div> 
-                
+
                 <div class="div-row-six">   
                     P/C:
                     <div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/></div>
@@ -84,21 +84,21 @@
                     P/A:
                     <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div>
                 </div> 
-                
+
                 <div class="div-row-seven">
                     Antecedentes alérgicos:
                     <div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl"/></div>
                     Antecedentes personales:
                     <div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" name="AP"/></div>
                 </div> 
-                
+
                 <div class="div-row-eigth">   
                     Antecedentes familiares
                     <div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" name="AF"/></div>
                     Antecedentes quirurgicos: 
                     <div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" name="Aq"/></div>
                 </div>  
-                
+
                 <div class="div-row-nine">
                     Fecha:
                     <div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div>
@@ -107,7 +107,7 @@
 
                     <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></div>
                 </div> 
-                
+
                 <div class="div-row-ten">   
                     <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                             <option>Diagnostico</option>
@@ -119,14 +119,15 @@
 
                     <div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div>
                 </div> 
-                
+
                 <div class="div-row-eleven"> 
                     <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
                     <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                 </div> 
             </div>   
-        </form> 
-    </section>
+        </section>
+    </form> 
+
 
 </body>
 <footer></footer>

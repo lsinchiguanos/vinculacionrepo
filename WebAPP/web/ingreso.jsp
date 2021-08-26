@@ -12,10 +12,9 @@
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="index.html"></a>
-            <nav>
-            </nav>
+            <nav class="nav-tp"></nav>
         </header>
-
+ <div class="div-head-tittle"><h2></h2></div>
         <!--  <section class="sec-input-data">
               <form class="form">
                   <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>            
