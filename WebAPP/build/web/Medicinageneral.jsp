@@ -78,13 +78,19 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
+                    Estatura: 
                     <div class="div-cont-ced"><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura"/></div>
+                    Peso:
                     <div class="div-cont-name"><input type="text" id="txt-peso" class="inp-name" placeholder="Peso"/></div>
+                    Temperatura:
                     <div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre"/></div>
                 </div> 
                 <div class="div-row-two">   
+                    P/A:
                     <div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C"/></div>
+                    P/T:
                     <div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T"/></div>
+                    P/A:
                     <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A"/></div>
                 </div>   
                <div class="div-row-three"> 
@@ -99,20 +105,26 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
+                    Antecedentes alergicos:
                     <div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales"/></div>
+                 </div> 
+                <div class="div-row-two">
+                     Antecedentes personales:
+                   <div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales"/></div>
                 </div> 
-                <div class="div-row-two">   
+                <div class="div-row-three">   
+                     Antecedentes familiares:
                     <div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos"/></div>
-
+                 </div>
+                <div class="div-row-four">  
+                     Antecedentes quirurgicos:
+                     <div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos"/></div>
                 </div>
+                
                 <%--  <div class="div-row-three"> 
                     <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                     <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                 </div>--%>
-
-
             </div>   
         </form> 
     </section>
@@ -121,15 +133,21 @@
         <form>
             <div class="div-cont-main">
                 <div class="div-row-one">
+                    Motivo de consulta:
                     <div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta"/></div>
+                  </div> 
+                 <div class="div-row-two">
+                     Enfermedad o problema:
                     <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual"/></div>
                 </div> 
-                <div class="div-row-two">   
+                <div class="div-row-three">   
+                    Diagnostico:
                     <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                             <option>Diagnostico</option>
                             <option>Preventivo</option>
                             <option>Definitivo</option>
                         </select></div>
+                    Archivos de examen:
                     <div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen"/></div>
 
                 </div>
