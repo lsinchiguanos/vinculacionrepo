@@ -48,33 +48,36 @@
                             <td> <div class="div-cont-name"  ><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
                             <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
                         </tr>
-                    <thead>
+                    </tbody>
+                    <thead >
                         <tr>
-                            <td>Discapacidad</td>
-                            <td>Telefono convencional</td>
-                            <td>Celular</td>
+                            <th>Discapacidad</th>
+                            <th>Telefono convencional</th>
+                            <th>Celular</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td> <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true"/></div> </td>
+                            <td> <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true" disabled="true"/></div> </td>
                             <td> <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'disabled="true"/></div> </td>
                             <td> <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div>  </td>
                         </tr>
-                    <thead>
+                    </tbody>
+                    <thead >
                         <tr>
-                            <td>Provincia</td>
-                            <td>Direccion</td>
-                            <td>Genero</td>
+                            <th>Provincia</th>
+                            <th>Direccion</th>
+                            <th>Genero</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>  <div class="div-cont-lname"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"disabled="true"/></div>  </td>
-                            <td> <div class="div-cont-lname"><input type="text" id="txt-direccion" class="inp-lname" placeholder="Direccion" name="Direccion"disabled="true"/></div> </td>
-                            <td> <div class="div-cont-lname"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
+                            <td>  <div class="div-cont-name"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"disabled="true"/></div>  </td>
+                            <td> <div class="div-cont-name"><input type="text" id="txt-direccion" class="inp-lname" placeholder="Direccion" name="Direccion"disabled="true"/></div> </td>
+                            <td> <div class="div-cont-name"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
                         </tr> 
-                    <thead>
+                    </tbody>
+                    <thead >
                         <tr>
                             <th>Ayuda economica</th>
                             <th>Nacionalidad</th>
@@ -124,17 +127,17 @@
                         </tr>
                     <thead>
                         <tr>
-                            <td>P/C</td>
-                            <td>P/T</td>
-                            <td>P/A</td>
+                             <th>P/C</th>
+                            <th>P/T</th>
+                            <th>P/A</th> 
                         </tr>
                     </thead>
-                    <tr>
-                        <td><div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/></div></td>
-                        <td><div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt"/></div></td>
-                        <td><div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div></td>
-                    </tr>
-
+                    <tbody>
+                        <tr>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div></td>
+                        </tr>
                     </tbody>
                 </table>
                 <hr />
@@ -150,7 +153,7 @@
                         </tr>
                     <thead>
                         <tr>
-                            <td>Antecedentes personales</td> 
+                            <th>Antecedentes personales</th> 
                         </tr>
                     </thead>
                     <tbody>
@@ -168,7 +171,7 @@
                         </tr>
                     <thead>
                         <tr>
-                            <td>Antecedentes quirurgicos</td> 
+                            <th>Antecedentes quirurgicos</th> 
                         </tr>
                     </thead>
                     <tbody>
@@ -191,8 +194,8 @@
                             <td><div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc"/></div></td> 
                     <thead>
                         <tr>
-                            <td>Enfermedad o problema actual</td> 
-                            <td>Diagnostico</td> 
+                            <th>Enfermedad o problema actual</th> 
+                            <th>Diagnostico</th> 
                         </tr>
                     </thead>
                     <tr>
@@ -207,17 +210,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf">
+                            <th><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf">
                                         <option>Diagnostico</option>
                                         <option>Preventivo</option>
                                         <option>Definitivo</option>
-                                    </select></div> </td> 
+                                    </select></div> </th> 
                             <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
                         </tr>
 
                         <tr>
-                            <td>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
-                            <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
+                            <th>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></th>
+                            <th><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></th>
                         </tr>
                     </tbody>
                 </table>        
