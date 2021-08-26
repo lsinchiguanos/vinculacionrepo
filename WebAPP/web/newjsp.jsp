@@ -1,38 +1,95 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="BD.conexion"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Validar Cedula</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+ 
+    <title>WebApp - Medicina General</title>
+</head>
+<body>
+    <header id="header" style=" background: #007653 !important;">
+        <a class="logo" href="Principal.jsp">
+            <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+        </a>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    </head>
-    <body>
-        <script>
-            function buscador_en_select() {
-                wp_enqueue_style('estilos-select', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css', array(), '1.0');
-                wp_enqueue_script('jquery');
-                wp_enqueue_script('script-select', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js', array('jquery'), '1.0');
-                wp_enqueue_script('mi-script', get_template_directory_uri().'/js/mi-script.js', array('script-select'), '1.0');
-            }
-            add_action('wp_enqueue_scripts', 'buscador_en_select');
-            jQuery(document).ready(function ($) {
-                $(document).ready(function () {
-                    $('.mi-selector').select2();
-                });
-            });
-        </script>
-        <select class='mi-selector1' name='marcas1'>
-            <option value=''>Seleccionar una marca</option>
-            <option value='audi'>Audi</option>
-            <option value='bmw'>BMW</option>
-            <option value='citroen'>Citroen</option>
-            <option value='fiat'>Fiat</option>
-            <option value='ford'>Ford</option>
-            <option value='honda'>Honda</option>
-            <option value='hyundai'>Hyundai</option>
-            <option value='kia'>Kia</option>
-            <option value='mazda'>Mazda</option>
+        <nav class="nav-tp"></nav>
+    </header>     
+    <div class="div-head-tittle"><h2></h2></div>
+
+
+    <form id="form1">
+        <input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="cedula"/>
+        <input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="Estatura"/>
+        <input type="text" id="txt-peso" class="inp-name" placeholder="Peso" name="peso"/>
+        <input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre"/>
+        <input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/>
+        <input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt"/>
+        <input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/>
+        <input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl"/>
+        <input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" name="AP"/>
+        <input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" name="AF"/>
+        <input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" name="Aq"/>
+        <input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/>
+        <input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc"/>
+        <input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Enfer"/> 
+        <input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/>
+        <select class="sel-dep-to-transf" name="tipo">
+            <option>Diagnostico</option>
+            <option>Preventivo</option>
+            <option>Definitivo</option>
         </select>
-    </body>
-</html>
+        <input type="text" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/>
+        <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
+        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+
+
+
+        <%
+            PreparedStatement pst;
+            conexion cn = new conexion();
+            ResultSet rs;
+            PreparedStatement ps;
+            String sql;
+            String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag, tipo, cargar;
+            dni = request.getParameter("cedula");
+            Pnom = request.getParameter("Estatura");
+            Snom = request.getParameter("peso");
+            telefono = request.getParameter("sangre");
+            direccion = request.getParameter("pc");
+            provincia = request.getParameter("pt");
+            canton = request.getParameter("pa");
+            parroquia = request.getParameter("AAl");
+            ap = request.getParameter("AP");
+            af = request.getParameter("AF");
+            aq = request.getParameter("Aq");
+            fecha = request.getParameter("Fecha");
+            mc = request.getParameter("mc");
+            ep = request.getParameter("Enfer");
+            diag = request.getParameter("diagnostico");
+            tipo = request.getParameter("tipo");
+            cargar = request.getParameter("CargarArchivo");
+
+            if (Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && ap != null
+                    && af != null && aq != null && fecha != null && mc != null && ep != null && diag != null && tipo != null && cargar != null) {
+                ps = cn.getConecction().prepareStatement("insert into medicinageneral( paciente_dni, estatura, peso, tipossangre,"
+                        + "pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares,"
+                        + "antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, "
+                        + "diagnositico,tipo, cargararchivo)values('"+dni+"','" + Pnom + "','" + Snom + "','" + telefono + "',"
+                                + "'" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "',"
+                                        + "'" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "');");
+                ps.executeUpdate();
+                response.sendRedirect("Principal.jsp");
+            }
+
+
+        %>
+    </form> 
+
+
+</body>
+
+
+</html> 

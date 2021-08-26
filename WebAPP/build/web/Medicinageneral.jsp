@@ -1,3 +1,6 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="BD.conexion"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,11 +26,9 @@
     <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
 </section> !-->
 
-    <form id="form1" action="/WebAPP/AddMedicinaGeneral"  autocomplete="off">
+    <form id="form1">
         <section class="sec-main">
             <div class="div-cont-main">
-
-
                 <div class="div-cont-ced">
                     <input type="button" id="btn-actionb" class="inp-search" value="Buscar"/>
                     <input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula" name="cedula"/>
@@ -127,7 +128,7 @@
                         </tr>
                     <thead>
                         <tr>
-                             <th>P/C</th>
+                            <th>P/C</th>
                             <th>P/T</th>
                             <th>P/A</th> 
                         </tr>
@@ -199,7 +200,7 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></div></td> 
+                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Enfer"/></div></td> 
                         <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></div></td>
                     </tr>
                     <thead>
@@ -210,7 +211,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf">
+                            <th><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf" name="tipo">
                                         <option>Diagnostico</option>
                                         <option>Preventivo</option>
                                         <option>Definitivo</option>
@@ -226,6 +227,43 @@
                 </table>        
             </div>
         </section>
+        <%
+            PreparedStatement pst;
+            conexion cn = new conexion();
+            ResultSet rs;
+            PreparedStatement ps;
+            String sql;
+            String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag, tipo, cargar;
+            dni = request.getParameter("cedula");
+            Pnom = request.getParameter("Estatura");
+            Snom = request.getParameter("peso");
+            telefono = request.getParameter("sangre");
+            direccion = request.getParameter("pc");
+            provincia = request.getParameter("pt");
+            canton = request.getParameter("pa");
+            parroquia = request.getParameter("AAl");
+            ap = request.getParameter("AP");
+            af = request.getParameter("AF");
+            aq = request.getParameter("Aq");
+            fecha = request.getParameter("Fecha");
+            mc = request.getParameter("mc");
+            ep = request.getParameter("Enfer");
+            diag = request.getParameter("diagnostico");
+            tipo = request.getParameter("tipo");
+            cargar = request.getParameter("CargarArchivo");
+
+            if (Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && ap != null
+                    && af != null && aq != null && fecha != null && mc != null && ep != null && diag != null && tipo != null && cargar != null) {
+                ps = cn.getConecction().prepareStatement("insert into medicinageneral( paciente_dni, estatura, peso, tipossangre,"
+                        + "pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares,"
+                        + "antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, "
+                        + "diagnositico,tipo, cargararchivo)values('"+dni+"','" + Pnom + "','" + Snom + "','" + telefono + "','" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "','" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "');");
+                ps.executeUpdate();
+                response.sendRedirect("Principal.jsp");
+            }
+
+
+        %>
     </form> 
 
 
