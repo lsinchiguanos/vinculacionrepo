@@ -76,7 +76,7 @@
                                 <h3 style="color:#007653; font-weight: bold">Historial</h3>
                             </header>
                             <p>Mostrar la información de las actividades </p>
-                            <a href="reportesj.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
+                            <a href="HistorialPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
 
