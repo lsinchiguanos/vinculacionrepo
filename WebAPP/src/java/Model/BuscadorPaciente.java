@@ -2,12 +2,12 @@ package Model;
 
 public class BuscadorPaciente {
 
-    private String paciente_ayudasocial,paciente_dni,paciente_primer_segundo_nombre,paciente_fnacimiento, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_tipo_sangre, paciente_telefono, paciente_convencional;
+    private String paciente_ayudasocial,paciente_dni,paciente_primer_segundo_nombre,paciente_grupo, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_correoelectronico, paciente_telefono, paciente_convencional;
 
     public BuscadorPaciente() {
     }
 
-    public BuscadorPaciente(String paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_tipo_sangre, String paciente_ayudasocial, String paciente_telefono, String paciente_convencional, String paciente_fnacimiento) {
+    public BuscadorPaciente(String paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_correoelectronico, String paciente_ayudasocial, String paciente_telefono, String paciente_convencional, String paciente_grupo) {
         this.paciente_dni = paciente_dni;
         this.paciente_primer_segundo_nombre = paciente_primer_segundo_nombre;
         this.paciente_primer_segundo_apellido = paciente_primer_segundo_apellido;
@@ -15,21 +15,21 @@ public class BuscadorPaciente {
         this.paciente_provincia = paciente_provincia;
         this.paciente_nacionalidad = paciente_nacionalidad;
         this.paciente_genero = paciente_genero;
-        this.paciente_tipo_sangre = paciente_tipo_sangre;
+        this.paciente_correoelectronico = paciente_correoelectronico;
         this.paciente_ayudasocial = paciente_ayudasocial;
         this.paciente_telefono = paciente_telefono;
         this.paciente_convencional = paciente_convencional;
-        this.paciente_fnacimiento = paciente_fnacimiento;
+        this.paciente_grupo = paciente_grupo;
     }
 
      
 
-    public String getPaciente_fnacimiento() {
-        return paciente_fnacimiento;
+    public String getPaciente_grupo() {
+        return paciente_grupo;
     }
 
-    public void setPaciente_fnacimiento(String paciente_fnacimiento) {
-        this.paciente_fnacimiento = paciente_fnacimiento;
+    public void setPaciente_grupo(String paciente_grupo) {
+        this.paciente_grupo = paciente_grupo;
     }
 
   
@@ -82,12 +82,12 @@ public class BuscadorPaciente {
         this.paciente_genero = paciente_genero;
     }
 
-    public String getPaciente_tipo_sangre() {
-        return paciente_tipo_sangre;
+    public String getPaciente_correoelectronico() {
+        return paciente_correoelectronico;
     }
 
-    public void setPaciente_tipo_sangre(String paciente_tipo_sangre) {
-        this.paciente_tipo_sangre = paciente_tipo_sangre;
+    public void setPaciente_correoelectronico(String paciente_correoelectronico) {
+        this.paciente_correoelectronico = paciente_correoelectronico;
     }
 
     public String getPaciente_ayudasocial() {

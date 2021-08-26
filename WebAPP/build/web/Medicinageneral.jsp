@@ -46,8 +46,8 @@
                     <div class="div-cont-lname"><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true"/></div>
                 </div>
                 <div class="div-row-two">
-                    Fecha Nacimiento:
-                    <div class="div-cont-name"><input type="date" id="txt-namef" class="inp-name" placeholder="Fecha de nacimiento" name="Fecha de nacimiento"disabled="true"/></div>
+                    Discapacidad:
+                    <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true"/></div>
                     Telefono convencional:
                     <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'disabled="true"/></div>
                     Celular:
@@ -67,8 +67,8 @@
                     <div class="div-cont-lname"><input type="text" id="txt-ayudaeconomica" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"disabled="true"/></div>
                     Nacionalidad:
                     <div class="div-cont-lname"><input type="text" id="txt-nacionalidad" class="inp-lname" placeholder="Nacionalidad" name="Nacionalidad" onkeypress="return soloLetras(event)"disabled="true"/></div>
-                    Tipo de sangre:
-                    <div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Tipo de sangre" name="Tipo de sangre" onkeypress="return soloLetras(event)"disabled="true"/></div>
+                    Correo electronico:
+                    <div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Correo electronico" name="Correo electronico" onkeypress="return soloLetras(event)"disabled="true"/></div>
                 </div> 
             </div>
         </form> 
@@ -87,10 +87,10 @@
                     <div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T"/></div>
                     <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A"/></div>
                 </div>   
-                <%--  <div class="div-row-three"> 
+               <div class="div-row-three"> 
                       <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
                       <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                  </div>--%>
+                  </div> 
             </div>   
         </form> 
     </section>
