@@ -21,7 +21,7 @@ $(function () {
                 $("#txt-cedi").val(data.paciente_dni);
                 $("#txt-namen").val(data.paciente_primer_segundo_nombre);
                 $("#txt-lnamea").val(data.paciente_primer_segundo_apellido);
-                $("#txt-namef").val(data.paciente_fnacimiento);
+                $("#txt-namef").val(data.paciente_grupo);
                 $("#txt-lnamet").val(data.paciente_convencional);
                 $("#txt-cel").val(data.paciente_telefono);
                  $("#txt-provin").val(data.paciente_provincia);
@@ -29,7 +29,7 @@ $(function () {
                 $("#txt-genero").val(data.paciente_genero);
                 $("#txt-ayudaeconomica").val(data.paciente_ayudasocial);
                  $("#txt-nacionalidad").val(data.paciente_nacionalidad);
-                $("#txt-tiposangre").val(data.paciente_tipo_sangre); 
+                $("#txt-tiposangre").val(data.paciente_correoelectronico); 
             }
 
         });

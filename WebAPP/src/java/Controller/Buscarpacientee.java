@@ -29,7 +29,7 @@ public class Buscarpacientee extends HttpServlet {
         String paciente_dni = String.valueOf(request.getParameter("paciente_dni"));
         String paciente_primer_segundo_nombre = String.valueOf(request.getParameter("nombre"));
         String paciente_primer_segundo_apellido = String.valueOf(request.getParameter("apellido"));
-        String paciente_fnacimiento = String.valueOf(request.getParameter("paciente_fnacimiento"));
+        String paciente_grupo = String.valueOf(request.getParameter("paciente_grupo"));
         String paciente_convencional = String.valueOf(request.getParameter("paciente_convencional"));
         String paciente_telefono = String.valueOf(request.getParameter("paciente_telefono"));
         String paciente_provincia = String.valueOf(request.getParameter("paciente_provincia"));
@@ -43,7 +43,7 @@ public class Buscarpacientee extends HttpServlet {
         newbuscar.setPaciente_dni(paciente_dni);
         newbuscar.setPaciente_primer_segundo_nombre(paciente_primer_segundo_nombre);
         newbuscar.setPaciente_primer_segundo_apellido(paciente_primer_segundo_apellido);
-        newbuscar.setPaciente_fnacimiento(paciente_fnacimiento);
+        newbuscar.setPaciente_grupo(paciente_grupo);
         newbuscar.setPaciente_convencional(paciente_convencional);
         newbuscar.setPaciente_telefono(paciente_telefono);
         newbuscar.setPaciente_provincia(paciente_provincia);
@@ -51,7 +51,7 @@ public class Buscarpacientee extends HttpServlet {
         newbuscar.setPaciente_genero(paciente_genero);
         newbuscar.setPaciente_ayudasocial(paciente_ayudasocial);
         newbuscar.setPaciente_nacionalidad(paciente_nacionalidad);
-        newbuscar.setPaciente_tipo_sangre(paciente_tipo_sangre);
+        newbuscar.setPaciente_correoelectronico(paciente_tipo_sangre);
  
     }
 

@@ -1,4 +1,3 @@
- 
 package BD;
 import java.io.Serializable;
 import java.sql.Connection;
@@ -14,7 +13,7 @@ public class conexion {
 
     public static String url = "jdbc:postgresql://localhost:5432/vinculacion";
     public static String usuario = "postgres";
-    public static String clave = "1234";
+    public static String clave = "12345";
     PreparedStatement ps = null;
     Statement st;
     private Connection conecction;
