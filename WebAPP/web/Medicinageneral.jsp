@@ -12,57 +12,50 @@
         <a class="logo" href="Principal.jsp">
             <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
         </a>
-       
+
         <nav class="nav-tp"></nav>
     </header>     
     <div class="div-head-tittle"><h2></h2></div>
 
 
-   
+
     <!-- 
 <section class="sec-options">
     <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
 </section> !-->
- 
+
     <form id="form1" action="/WebAPP/AddMedicinaGeneral"  autocomplete="off">
-         <section class="sec-input-data">
-       
-            <div class="div-cont-ced"><input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula" name="cedula"/></div>            
-            <div class="div-cont-search"><input type="button" id="btn-actionb" class="inp-search" value="Buscar"/></div>
-        
-    </section>
-        
-        
-        
         <section class="sec-main">
-               <div class="div-cont-main">
-                    <div class="div-row-one">
-                     Identificación:
+            <div class="div-cont-main">
+                <div class="div-cont-ced"><input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula" name="cedula"/></div>            
+                <div class="div-cont-search"><input type="button" id="btn-actionb" class="inp-search" value="Buscar"/></div>
+                <div class="div-row-one">
+                    Identificación:
                     <div class="div-cont-ced"><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div>
                     Nombres:
                     <div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true"/></div>
                     Apellidos:
                     <div class="div-cont-lname"><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true"/></div>
                 </div>
-                   
-                   <div class="div-row-two">
-                        Discapacidad:
+
+                <div class="div-row-two">
+                    Discapacidad:
                     <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true"/></div>
                     Telefono convencional:
                     <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'disabled="true"/></div>
                     Celular:
                     <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div> 
-                                     </div>
-                   
-                   <div class="div-row-three">
-                         Provincia:
+                </div>
+
+                <div class="div-row-three">
+                    Provincia:
                     <div class="div-cont-lname"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"disabled="true"/></div> 
                     Direccion:
                     <div class="div-cont-lname"><input type="text" id="txt-direccion" class="inp-lname" placeholder="Direccion" name="Direccion"disabled="true"/></div>
                     Genero:
                     <div class="div-cont-lname"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"disabled="true"/></div>
-                                    </div>
-                   <div class="div-row-four">
+                </div>
+                <div class="div-row-four">
                     Ayuda economica:
                     <div class="div-cont-lname"><input type="text" id="txt-ayudaeconomica" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"disabled="true"/></div>
                     Nacionalidad:
@@ -88,7 +81,6 @@
                     P/A:
                     <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div>
                 </div> 
-
                 <div class="div-row-seven">
                     Antecedentes alérgicos:
                     <div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl"/></div>
@@ -106,13 +98,13 @@
                 <div class="div-row-nine">
                     Fecha:
                     <div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div>
-Motivo de consulta:
+                    Motivo de consulta:
                     <div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc"/></div>
-Enfermedad o problema actual:
+                    Enfermedad o problema actual:
                     <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></div>
                 </div> 
-                   
-                 <div class="div-row-ten">   
+
+                <div class="div-row-ten">   
                     <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
                             <option>Diagnostico</option>
                             <option>Preventivo</option>
@@ -123,16 +115,16 @@ Enfermedad o problema actual:
 
                     <div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div>
                 </div>   
-                   
+
                 <div class="div-row-eleven"> 
                     <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
                     <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
                 </div> 
-                   
-               </div>
+
+            </div>
         </section>
     </form> 
- 
+
 
 </body>
 <footer></footer>
