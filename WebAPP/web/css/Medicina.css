@@ -32,7 +32,6 @@
     margin-left: 90px;
     color: #ffffff;
 }
-
 .sec-input-data
 {
     width: 90%;
@@ -54,7 +53,7 @@
 .sec-input-data .form
 {
     width: 90%;
-    height: 15vh;    
+    height: 12vh;    
     margin-left: 5%;    
     display: flex;
     align-items: center;
@@ -141,7 +140,7 @@
 .form1
 {
     width:100%;
-    height: 130.46762589928058vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +164,7 @@
 .div-row-one, .div-row-two, .div-row-three, .div-row-four, .div-row-five, .div-row-six, .div-row-seven, .div-row-eigth, .div-row-nine, .div-row-ten, .div-row-eleven
 {    
     width: 90%;
-    height: 17.67vh;
+    height: 11.67vh;
     margin-left: 5%;
     display: flex;
     align-items: center;
