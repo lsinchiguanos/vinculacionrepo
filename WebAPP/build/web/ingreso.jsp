@@ -8,14 +8,14 @@
     </head>
     <body>
         <header id="header" style=" background: #007653 !important;">
-             <nav class="nav-tp"></nav>
+            <nav class="nav-tp"></nav>
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="index.html"></a>
-           
+
         </header>
- <div class="div-head-tittle"><h2></h2></div>
+        <div class="div-head-tittle"><h2></h2></div>
         <!--  <section class="sec-input-data">
               <form class="form">
                   <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>            
@@ -47,21 +47,21 @@
                     </div>
                     <div class="div-row-four">
                         <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular"required=""  onkeypress='return validaNumericos(event)'/></div> 
-                         <select class="sel-dep-to-transf"required=""  name="Provincia">
-                                <option>Seleccione una provincia</option>
-                                <option>Esmeraldas</option><option>Manabí</option>
-                                <option>Los Ríos</option><option>Guayas</option>
-                                <option>El Oro</option><option>Santa Elena</option>
-                                <option>Carchi</option><option>Imbabura</option>
-                                <option>Pichincha</option><option>Santo Domingo de los Tsáchilas</option>
-                                <option>Cotopaxi</option><option>Tungurahua </option>
-                                <option>Chimborazo</option><option>Bolívar</option>
-                                <option>Cañar</option><option>Azuay </option>
-                                <option>Loja</option><option>Sucumbíos</option>
-                                <option>Napo</option><option>Pastaza</option>
-                                <option>Orellana</option><option> Morona Santiago</option>
-                                <option>Zamora Chinchipe</option><option>Galápagos</option>
-                            </select>
+                        <select class="sel-dep-to-transf"required=""  name="Provincia">
+                            <option>Seleccione una provincia</option>
+                            <option>Esmeraldas</option><option>Manabí</option>
+                            <option>Los Ríos</option><option>Guayas</option>
+                            <option>El Oro</option><option>Santa Elena</option>
+                            <option>Carchi</option><option>Imbabura</option>
+                            <option>Pichincha</option><option>Santo Domingo de los Tsáchilas</option>
+                            <option>Cotopaxi</option><option>Tungurahua </option>
+                            <option>Chimborazo</option><option>Bolívar</option>
+                            <option>Cañar</option><option>Azuay </option>
+                            <option>Loja</option><option>Sucumbíos</option>
+                            <option>Napo</option><option>Pastaza</option>
+                            <option>Orellana</option><option> Morona Santiago</option>
+                            <option>Zamora Chinchipe</option><option>Galápagos</option>
+                        </select>
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)"/></div>
                     </div>
                     <div class="div-row-five">
@@ -89,7 +89,10 @@
                                 <option>Si</option>
                                 <option>No</option>
                             </select></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" required="" name="nacionalidad" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-sel-dep-to-transf">
+                            <label for="nacionalidad">Nacionalidad:</label>
+                            <br>
+                            <select class="sel-dep-to-transf" id="nacionalidad" name="nacionalidad" ></select></div>
                     </div>                 
 
                     <div class="div-row-seven">
@@ -156,6 +159,7 @@
         </script>
     </body>
 
-    <footer></footer>
+    
+    <script src="js/pais.js"></script>
     <script src="js/JQuery.js" type="text/javascript"></script>  
 </html>
