@@ -30,30 +30,44 @@
                                 <option>Tipo de identificacion</option>
                                 <option>Cedula</option><option>Pasaporte</option></select></div>
 
-                        <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-ced"><input type="text" id="txt-ced" minlength="10" maxlength="10" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" required="" onkeypress='return validaNumericos(event)'/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)"/></div>
 
                     </div>
                     <div class="div-row-two">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre" onkeypress="return soloLetras(event)"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido" onkeypress="return soloLetras(event)"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"required=""  onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"required=""  onkeypress="return soloLetras(event)"/></div>
 
                     </div>
                     <div class="div-row-three">
-                        <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="Fechadenacimiento"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Correo Electronico" name="CorreoElectronico"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'/></div>
+                        <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido"required=""  name="Fechadenacimiento"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Correo Electronico"required=""  name="CorreoElectronico"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"required=""  onkeypress='return validaNumericos(event)'/></div>
                     </div>
                     <div class="div-row-four">
-                        <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'/></div> 
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular"required=""  onkeypress='return validaNumericos(event)'/></div> 
+                         <select class="sel-dep-to-transf"required=""  name="Provincia">
+                                <option>Seleccione una provincia</option>
+                                <option>Esmeraldas</option><option>Manabí</option>
+                                <option>Los Ríos</option><option>Guayas</option>
+                                <option>El Oro</option><option>Santa Elena</option>
+                                <option>Carchi</option><option>Imbabura</option>
+                                <option>Pichincha</option><option>Santo Domingo de los Tsáchilas</option>
+                                <option>Cotopaxi</option><option>Tungurahua </option>
+                                <option>Chimborazo</option><option>Bolívar</option>
+                                <option>Cañar</option><option>Azuay </option>
+                                <option>Loja</option><option>Sucumbíos</option>
+                                <option>Napo</option><option>Pastaza</option>
+                                <option>Orellana</option><option> Morona Santiago</option>
+                                <option>Zamora Chinchipe</option><option>Galápagos</option>
+                            </select>
+                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)"/></div>
                     </div>
                     <div class="div-row-five">
 
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion" name="Direccion"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia" name="parroquia" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)"/></div>
                         <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="genero">   
                                 <option>Seleccione genero</option>
                                 <option>Masculino</option>
@@ -62,7 +76,7 @@
                     </div>
 
                     <div class="div-row-six">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="estadoCivil">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf"required=""  name="estadoCivil">
                                 <option>Seleccione el estado civil</option>
                                 <option>Soltero</option>
                                 <option>Casado</option>
@@ -70,17 +84,17 @@
                                 <option>Viudo</option>
                                 <option>Divorciado</option>
                             </select></div>
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="Ayuda">
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf"required=""  name="Ayuda">
                                 <option>Recibe Ayuda Social</option>
                                 <option>Si</option>
                                 <option>No</option>
                             </select></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" name="nacionalidad" onkeypress="return soloLetras(event)"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nacionalidad" required="" name="nacionalidad" onkeypress="return soloLetras(event)"/></div>
                     </div>                 
 
                     <div class="div-row-seven">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad" name="discapacidad"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"name="tipoSangre"/> </div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre"/> </div>
                         <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
                     </div> 
                 </div>
@@ -110,6 +124,34 @@
 
                 if (letras.indexOf(tecla) == -1 && !tecla_especial)
                     return false;
+            }
+            function validar() {
+                var cad = document.getElementById("txt-ced").value.trim();
+                var total = 0;
+                var longitud = cad.length;
+                var longcheck = longitud - 1;
+
+                if (cad !== "" && longitud === 10) {
+                    for (i = 0; i < longcheck; i++) {
+                        if (i % 2 === 0) {
+                            var aux = cad.charAt(i) * 2;
+                            if (aux > 9)
+                                aux -= 9;
+                            total += aux;
+                        } else {
+                            total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
+                        }
+                    }
+
+                    total = total % 10 ? 10 - total % 10 : 0;
+
+                    if (cad.charAt(longitud - 1) == total) {
+                    } else {
+                        alert("LA CEDULA NO EXISTE O ES INCORRECTA");
+                        document.getElementById("txt-ced").value = "";
+
+                    }
+                }
             }
         </script>
     </body>

@@ -31,10 +31,7 @@
             <!--Div para el título y subtítulo-->
             <div id="divtitulo">
                 <div id="divsubt" style="opacity: 0">
-
                 </div>
-
-
                 <!--Div de inicio de sesión-->
                 <div class="divforlog">
                     <!--Panel blanco inicio de sesión-->

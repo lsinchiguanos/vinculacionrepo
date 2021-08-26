@@ -13,33 +13,24 @@
             <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
         </a>
         <a class="logo" id="ulUserData" href="index.html"></a>
-       
+
     </header>     
 
 
 
-    <section class="sec-input-data">
-        <form>
-            <div class="div-cont-ced"><input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula"/></div>            
-            <div class="div-cont-search"><input type="button" id="btn-actionb" class="inp-search" value="Buscar"/></div>
-
-        </form>
-    </section>
 
     <section class="sec-options">
         <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
-        <div class="div-cont-repre"><h3>Datos medicos generales</h3></div> 
-        <div class="div-cont-d-medicos"><h3>Antecedentes</h3></div> 
-        <div class="div-cont-d-consulta"><h3>Consulta</h3></div> 
     </section>
+    <section>
+        <form id="form1" action="/WebAPP/AddMedicinaGeneral"  autocomplete="off">
 
-
-    <section class="sec-data-pacient">
-        <form>
             <div class="div-cont-main">
+                <div class="div-cont-ced"><input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula" name="cedula"/></div>            
+                <div class="div-cont-search"><input type="button" id="btn-actionb" class="inp-search" value="Buscar"/></div>
                 <div class="div-row-one">
                     Identificación:
-                    <div class="div-cont-ced"><input type="number" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div>
+                    <div class="div-cont-ced"><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div>
                     Nombres:
                     <div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true"/></div>
                     Apellidos:
@@ -70,77 +61,66 @@
                     Tipo de sangre:
                     <div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Tipo de sangre" name="Tipo de sangre" onkeypress="return soloLetras(event)"disabled="true"/></div>
                 </div> 
-            </div>
-        </form> 
-    </section>
-
-    <section class="sec-data-repre">
-        <form>
-            <div class="div-cont-main">
-                <div class="div-row-one">
-                    <div class="div-cont-ced"><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura"/></div>
-                    <div class="div-cont-name"><input type="text" id="txt-peso" class="inp-name" placeholder="Peso"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre"/></div>
-                </div> 
-                <div class="div-row-two">   
-                    <div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A"/></div>
+                <div class="div-cont-main">
+                    <div class="div-row-one">
+                        <div class="div-cont-ced"><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="estatura"/></div>
+                        <div class="div-cont-name"><input type="text" id="txt-peso" class="inp-name" placeholder="Peso" name="peso"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre"/></div>
+                    </div> 
+                    <div class="div-row-two">   
+                        <div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div>
+                    </div>   
+                    <%--  <div class="div-row-three"> 
+                          <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                          <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                      </div>--%>
                 </div>   
-                <%--  <div class="div-row-three"> 
-                      <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                      <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                  </div>--%>
-            </div>   
+                <div class="div-cont-main">
+                    <div class="div-row-one">
+                        <div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" name="AP"/></div>
+                    </div> 
+                    <div class="div-row-two">   
+                        <div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" name="AF"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" name="Aq"/></div>
+
+                    </div>
+                    <%--  <div class="div-row-three"> 
+                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                    </div>--%>
+
+
+                </div> 
+                <div class="div-cont-main">
+                    <div class="div-row-one">
+                        <div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="fecha" name="fecha"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc"/></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></div>
+                    </div> 
+                    <div class="div-row-two">   
+                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                                <option>Diagnostico</option>
+                                <option>Preventivo</option>
+                                <option>Definitivo</option>
+                            </select></div>
+                        <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></div>
+                        <div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div>
+
+                    </div>
+
+                    <div class="div-row-three"> 
+                        <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
+                    </div> 
+                </div>   
+            </div>
+
         </form> 
     </section>
 
-    <section class="sec-data-medicos">
-        <form>
-            <div class="div-cont-main">
-                <div class="div-row-one">
-                    <div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales"/></div>
-                </div> 
-                <div class="div-row-two">   
-                    <div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos"/></div>
-
-                </div>
-                <%--  <div class="div-row-three"> 
-                    <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                    <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                </div>--%>
-
-
-            </div>   
-        </form> 
-    </section>
-
-    <section class="sec-data-consulta">
-        <form>
-            <div class="div-cont-main">
-                <div class="div-row-one">
-                    <div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual"/></div>
-                </div> 
-                <div class="div-row-two">   
-                    <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
-                            <option>Diagnostico</option>
-                            <option>Preventivo</option>
-                            <option>Definitivo</option>
-                        </select></div>
-                    <div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen"/></div>
-
-                </div>
-
-                <div class="div-row-three"> 
-                    <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                    <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                </div> 
-            </div>   
-        </form> 
-    </section>
 </body>
 <footer></footer>
 <script src="js/JQuery.js" type="text/javascript"></script>

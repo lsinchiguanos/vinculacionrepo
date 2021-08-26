@@ -17,10 +17,10 @@
     <%
         HttpSession s = request.getSession();
         //variables de session
-    %>
+%>
     <body class="is-preload">    
         <header id="header" style="">
-         
+
             <header id="header" style=" background: #007653 !important;">
                 <a class="logo" href="index.jsp">
                 </a>

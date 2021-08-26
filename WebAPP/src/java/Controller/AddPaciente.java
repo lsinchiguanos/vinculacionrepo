@@ -48,15 +48,7 @@ public class AddPaciente extends HttpServlet {
             String Direccion = request.getParameter("Direccion");
             String parroquia = request.getParameter("parroquia");
             String estadoCivil = request.getParameter("estadoCivil");
-            String Ayuda = request.getParameter("Ayuda");
-            if(Ayuda.equals("Si"))
-            {
-                Ayuda = "1";
-            }
-            else
-            {
-                Ayuda = "0";
-            }
+            String Ayuda1 = request.getParameter("Ayuda");
             String nacionalidad = request.getParameter("nacionalidad");
             String discapacidad = request.getParameter("discapacidad");
             String tipoSangre = request.getParameter("tipoSangre");
@@ -70,11 +62,11 @@ public class AddPaciente extends HttpServlet {
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
                     && !Fechadenacimiento.equalsIgnoreCase("") && !CorreoElectronico.equalsIgnoreCase("") && !convencional.equalsIgnoreCase("") && !Celular.equalsIgnoreCase("")
                     && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
-                    && !parroquia.equalsIgnoreCase("") && !estadoCivil.equalsIgnoreCase("") && !Ayuda.equalsIgnoreCase("")
+                    && !parroquia.equalsIgnoreCase("") && !estadoCivil.equalsIgnoreCase("") && !Ayuda1.equalsIgnoreCase("")
                     && !nacionalidad.equalsIgnoreCase("") && !discapacidad.equalsIgnoreCase("") && !tipoSangre.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("")
                     && !genero.equalsIgnoreCase("") && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("")) {
                 ControladorPaciente busuario = new ControladorPaciente(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Fechadenacimiento, Direccion, Celular, genero, discapacidad,
-                        Ayuda, x, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre);
+                        Ayuda1, x, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre);
                 boolean sw = InsertAddPaciente.agregarUsuario(busuario);
                 if (sw) {
                     response.sendRedirect("Principal.jsp");
