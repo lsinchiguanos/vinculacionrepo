@@ -2,105 +2,155 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
         <link href="css/Ingresos.css" rel="stylesheet" type="text/css"/>
         <title>WebApp - Ingresos</title>
     </head>
     <body>
         <header id="header" style=" background: #007653 !important;">
-            <nav class="nav-tp"></nav>
+            <nav class="nav-tp" ></nav>
             <a class="logo" href="Principal.jsp">
-                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+                <img style="margin-top:2px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="index.html"></a>
 
         </header>
         <div class="div-head-tittle"><h2></h2></div>
-        <!--  <section class="sec-input-data">
-              <form class="form">
-                  <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Cédula"/></div>            
-                  <div class="div-cont-search"><input type="button" id="btn-action" class="inp-search" value="Buscar"/></div>
-              </form>
-          </section> !-->
-        <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off">
+        <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" >
             <section class="sec-main">
                 <div class="div-cont-main">
-                    <div class="div-row-one">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="TipoIden">
-                                <option>Tipo de identificacion</option>
-                                <option>Cedula</option><option>Pasaporte</option></select></div>
 
-                        <div class="div-cont-ced"><input type="text" id="txt-ced" minlength="10" maxlength="10" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" required="" onkeypress='return validaNumericos(event)'/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
+                    <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
+                        <thead >
+                            <tr>
+                                <th>Tipo de identificacion</th>
+                                <th>Numero de identificacion</th>
+                                <th>Primer Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf" name="TipoIden">
+                                            <option>Tipo de identificacion</option>
+                                            <option>Cedula</option><option>Pasaporte</option></select></div></td>
+                                <td><div style='margin-top: -40px !important;'class="div-cont-ced"><input type="text" id="txt-ced" minlength="10" maxlength="10" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" required="" onkeypress='return validaNumericos(event)'/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                                <th>Segundo Nombre</th>
+                                <th>Primer Apellido</th>
+                                <th>Segundo Apellido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                                <th>Fecha de Nacimiento</th> 
+                                <th>Telefono Convencional</th>
+                                <th>Celular</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha de nacimiento"required=""  name="Fechadenacimiento"/></div></td> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"required=""  onkeypress='return validaNumericos(event)'/></div></td>
+                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular"required=""  onkeypress='return validaNumericos(event)'/></div> </td>                      
+                            </tr> 
+                        </tbody>
+                        <thead >
+                            <tr>                                
+                                <th>Provincia</th>
+                                <th>Canton</th>
+                                <th>Parroquia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="Provincia">
+                                            <option>Seleccione una provincia</option>
+                                            <option>Esmeraldas</option><option>Manabí</option>
+                                            <option>Los Ríos</option><option>Guayas</option>
+                                            <option>El Oro</option><option>Santa Elena</option>
+                                            <option>Carchi</option><option>Imbabura</option>
+                                            <option>Pichincha</option><option>Santo Domingo de los Tsáchilas</option>
+                                            <option>Cotopaxi</option><option>Tungurahua </option>
+                                            <option>Chimborazo</option><option>Bolívar</option>
+                                            <option>Cañar</option><option>Azuay </option>
+                                            <option>Loja</option><option>Sucumbíos</option>
+                                            <option>Napo</option><option>Pastaza</option>
+                                            <option>Orellana</option><option> Morona Santiago</option>
+                                            <option>Zamora Chinchipe</option><option>Galápagos</option>
+                                        </select></div></td> 
+                                <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                                <th>Direccion</th>                               
+                                <th>Genero</th>
+                                <th>Estado Civil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div></td> 
+                                <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf" name="genero">   
+                                            <option>Seleccione genero</option>
+                                            <option>Masculino</option>
+                                            <option>Femenino</option></select></div></td> 
+                                <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf"required=""  name="estadoCivil">
+                                            <option>Seleccione el estado civil</option>
+                                            <option>Soltero</option>
+                                            <option>Casado</option>
+                                            <option>Union libre</option>
+                                            <option>Viudo</option>
+                                            <option>Divorciado</option>
+                                        </select></div></td>            
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>                                
+                                <th>Ayuda Social</th>
+                                <th>Nacionalidad</th>
+                                <th>Discapacidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf"required=""  name="Ayuda">
+                                            <option>Recibe Ayuda Social</option>
+                                            <option>Si</option>
+                                            <option>No</option>
+                                        </select></div></td> 
+                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf" id="nacionalidad" name="nacionalidad" ></select></div></td> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div></td>
 
-                    </div>
-                    <div class="div-row-two">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
 
-                    </div>
-                    <div class="div-row-three">
-                        <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido"required=""  name="Fechadenacimiento"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Correo Electronico"required=""  name="CorreoElectronico"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"required=""  onkeypress='return validaNumericos(event)'/></div>
-                    </div>
-                    <div class="div-row-four">
-                        <div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="Celular"required=""  onkeypress='return validaNumericos(event)'/></div> 
-                        <select class="sel-dep-to-transf"required=""  name="Provincia">
-                            <option>Seleccione una provincia</option>
-                            <option>Esmeraldas</option><option>Manabí</option>
-                            <option>Los Ríos</option><option>Guayas</option>
-                            <option>El Oro</option><option>Santa Elena</option>
-                            <option>Carchi</option><option>Imbabura</option>
-                            <option>Pichincha</option><option>Santo Domingo de los Tsáchilas</option>
-                            <option>Cotopaxi</option><option>Tungurahua </option>
-                            <option>Chimborazo</option><option>Bolívar</option>
-                            <option>Cañar</option><option>Azuay </option>
-                            <option>Loja</option><option>Sucumbíos</option>
-                            <option>Napo</option><option>Pastaza</option>
-                            <option>Orellana</option><option> Morona Santiago</option>
-                            <option>Zamora Chinchipe</option><option>Galápagos</option>
-                        </select>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
-                    </div>
-                    <div class="div-row-five">
-
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="genero">   
-                                <option>Seleccione genero</option>
-                                <option>Masculino</option>
-                                <option>Femenino</option>
-                            </select></div>
-                    </div>
-
-                    <div class="div-row-six">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf"required=""  name="estadoCivil">
-                                <option>Seleccione el estado civil</option>
-                                <option>Soltero</option>
-                                <option>Casado</option>
-                                <option>Union libre</option>
-                                <option>Viudo</option>
-                                <option>Divorciado</option>
-                            </select></div>
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf"required=""  name="Ayuda">
-                                <option>Recibe Ayuda Social</option>
-                                <option>Si</option>
-                                <option>No</option>
-                            </select></div>
-                        <div class="div-cont-sel-dep-to-transf">
-                            <label for="nacionalidad">Nacionalidad:</label>
-                            <br>
-                            <select class="sel-dep-to-transf" id="nacionalidad" name="nacionalidad" ></select></div>
-                    </div>                 
-
-                    <div class="div-row-seven">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div>
-                        <div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div>
-                        <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/>
-                    </div> 
+                                <th>Tipo de sangre</th>
+                                <th>Correo Electronico</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
+                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/> </div></td>
+                            </tr>
+                        </tbody>
+                    </table> 
                 </div>
             </section>
         </form> 

@@ -36,21 +36,27 @@ public class AddPaciente extends HttpServlet {
             String TipoIden = request.getParameter("TipoIden");
             String Identificacion = request.getParameter("Identificacion");
             String PrimerNombre = request.getParameter("PrimerNombre");
+            
             String SegundoNombre = request.getParameter("SegundoNombre");
             String PrimerApellido = request.getParameter("PrimerApellido");
             String SegundoApellido = request.getParameter("SegundoApellido");
+            
             String Fechadenacimiento = request.getParameter("Fechadenacimiento");
             String CorreoElectronico = request.getParameter("CorreoElectronico");
             String convencional = request.getParameter("convencional");
+            
             String Celular = request.getParameter("Celular");
             String Provincia = request.getParameter("Provincia");
             String canton = request.getParameter("canton");
+            
             String Direccion = request.getParameter("Direccion");
             String parroquia = request.getParameter("parroquia");
             String estadoCivil = request.getParameter("estadoCivil");
+            
             String Ayuda1 = request.getParameter("Ayuda");
             String nacionalidad = request.getParameter("nacionalidad");
             String discapacidad = request.getParameter("discapacidad");
+            
             String tipoSangre = request.getParameter("tipoSangre");
             String genero = request.getParameter("genero");
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
