@@ -12,9 +12,9 @@
         </header>      
 
         <div class="div-head-tittle"><h2></h2></div>
-
-        <section class="sec-main">
+        
             <form>
+                <section class="sec-main">
                 <div class="div-cont-main">
                     <div class="div-row-one">
                         <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Numero de Identificacion"/></div>
@@ -38,10 +38,9 @@
                         <div class="div-observation"><textarea class="txt-ar-ob" placeholder="Observación"></textarea><input type="button" id="btn-action" class="btn-accept" value="Transferir"/></div>
                     </div>
                 </div>
-            </form>
+           
         </section>
-
-
+ </form>
     </body> 
     <script src="js/JQuery.js" type="text/javascript"></script>
     <script src="js/AltoRestante.js" type="text/javascript"></script> 

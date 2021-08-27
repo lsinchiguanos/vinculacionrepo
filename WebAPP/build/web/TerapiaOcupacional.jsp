@@ -15,41 +15,72 @@
 
         <div class="div-head-tittle"><h2></h2></div>
 
-        <section class="sec-main">
-            <form>
+
+        <form>
+            <section class="sec-main">
                 <div class="div-cont-main">
-                    <div class="div-row-one">
-                        <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombre"/></div>
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Apellido"/></div>
-                    </div>
-                    <div class="div-row-two">
-                        <div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
-                                <option>Genero</option>
-                                <option>Masculino</option><option>Femenino</option></select></div>
+                    <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
+                        <thead >
+                            <tr>
+                                <th>Numero de identificacion</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-name"  ><input type="text" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion"/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombre"/></div></td>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Apellido"/></div></td>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                                <th>Genero</th>
+                                <th>Edad</th>
+                                <th>Patologia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf">
+                                            <option>Genero</option>
+                                            <option>Masculino</option><option>Femenino</option></select></div></td>
+                                <td><div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Edad"/></div></td>
+                                <td><div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Patologia"/></div></td>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                                <th>Frecuencia</th>
+                                <th>Costo</th>
+                                <th>Ayuda Social</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Frecuencia"/></div></td>
+                                <td><div class="div-cont-cod"><input type="number" id="txt-cod" class="inp-cod" placeholder="Costo"/></div></td>
+                                <td><div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Ayuda Social"/></div></td>             
+                            </tr> 
+                        </tbody>
+                        <thead >
+                            <tr>                                
+                                <th>Logros Alcanzados</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td><div class="div-observation"><textarea class="txt-ar-ob" placeholder="Logros Alcanzados"></textarea></div></td>
+                                <td><div class="div-cont-edad"><input type="button" id="btn-action" class="btn-accept" value="Guardar"/></div></td>
+                                <td><div class="div-cont-edad"><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></div></td>   
+                            </tr>
+                        </tbody> 
+                    </table>  
 
-                        <div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Edad"/></div>
-                        <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Patologia"/></div>
-
-                    </div>
-                    <div class="div-row-three">
-                        <div class="div-cont-edad"><input type="number" id="txt-edad" class="inp-edad" placeholder="Frecuencia"/></div>
-                        <div class="div-cont-cod"><input type="number" id="txt-cod" class="inp-cod" placeholder="Costo"/></div>
-                        <div class="div-cont-cod"><input type="text" id="txt-cod" class="inp-cod" placeholder="Ayuda Social"/></div>
-                    </div>
-                    <div class="div-row-four">
-                         <div class="div-observation"><textarea class="txt-ar-ob" placeholder="Logros Alcanzados"></textarea>
-                             
-                             <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
-                          <input type="button" id="btn-action" class="btn-accept" value="Cancelar"/>
-                         </div>
-                       
-                    </div>
-
-                </div>
-            </form>
-        </section>
-
+                </div> 
+            </section>
+        </form>
 
     </body> 
     <script src="js/JQuery.js" type="text/javascript"></script>
