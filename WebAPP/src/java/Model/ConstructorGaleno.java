@@ -16,9 +16,9 @@ public class ConstructorGaleno {
             galeno_user, galeno_pass, galeno_apellido_materno,
             galeno_segundo_nombre, galeno_provincia, galeno_canton, galeno_parroquia,
             galeno_estado,galeno_correoelectronico;
-    int galeno_departamento;
+    String galeno_departamento;
 
-    public ConstructorGaleno(String galeno_tipo_dni, String galeno_dni, String galeno_apellido_paterno, String galeno_primer_nombre, String galeno_telefono, String galeno_direccion, String created_at, String galeno_user, String galeno_pass, String galeno_apellido_materno, String galeno_segundo_nombre, String galeno_provincia, String galeno_canton, String galeno_parroquia, String galeno_estado, int galeno_departamento, String galeno_correoelectronico) {
+    public ConstructorGaleno(String galeno_tipo_dni, String galeno_dni, String galeno_apellido_paterno, String galeno_primer_nombre, String galeno_telefono, String galeno_direccion, String created_at, String galeno_user, String galeno_pass, String galeno_apellido_materno, String galeno_segundo_nombre, String galeno_provincia, String galeno_canton, String galeno_parroquia, String galeno_estado, String galeno_departamento, String galeno_correoelectronico) {
         this.galeno_tipo_dni = galeno_tipo_dni;
         this.galeno_dni = galeno_dni;
         this.galeno_apellido_paterno = galeno_apellido_paterno;
@@ -158,11 +158,11 @@ public class ConstructorGaleno {
         this.galeno_estado = galeno_estado;
     }
 
-    public int getGaleno_departamento() {
+    public String getGaleno_departamento() {
         return galeno_departamento;
     }
 
-    public void setGaleno_departamento(int galeno_departamento) {
+    public void setGaleno_departamento(String galeno_departamento) {
         this.galeno_departamento = galeno_departamento;
     }
 

@@ -42,22 +42,19 @@ public class AddGaleno extends HttpServlet {
             String SegundoNombre = request.getParameter("SegundoNombre");
             String PrimerApellido = request.getParameter("PrimerApellido");
             String SegundoApellido = request.getParameter("SegundoApellido");
-            String Celular = request.getParameter("Celular");
-            String Provincia = request.getParameter("Provincia");
+            String Celular = request.getParameter("celular");
+            String Provincia = request.getParameter("provincia");
             String canton = request.getParameter("canton");
             String parroquia = request.getParameter("parroquia");
-            String Direccion = request.getParameter("Direccion");
+            String Direccion = request.getParameter("direccion");
             String email = request.getParameter("email");
             String usuario = request.getParameter("user");
             String pass = request.getParameter("pass");
-            int TipoDepartamento = Integer.valueOf(request.getParameter("departamento"));
-//            if (TipoDepartamento.equals("MedicinaGeneral")) {
-//                TipoDepartamento = "1";
-//            }
-//            else
-//            {
-//                TipoDepartamento = "1";
-//            }
+            String TipoDepartamento = request.getParameter("departamento");
+            if ("medicina".equals(TipoDepartamento)) {
+                TipoDepartamento = "1";
+            }
+            
             String estado = "0";
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             String x = dtf.format(LocalDateTime.now());
@@ -65,7 +62,7 @@ public class AddGaleno extends HttpServlet {
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
                     && !Celular.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("") && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
                     && !parroquia.equalsIgnoreCase("") && !email.equalsIgnoreCase("") && !usuario.equalsIgnoreCase("") && !pass.equalsIgnoreCase("")
-                    && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("")) {
+                    && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("")&& !TipoDepartamento.equalsIgnoreCase("")) {
                 ConstructorGaleno galeno = new ConstructorGaleno(TipoIden,Identificacion,PrimerApellido,PrimerNombre,Celular,Direccion,x,usuario,pass,SegundoApellido,SegundoNombre,Provincia,canton,parroquia,estado,TipoDepartamento,email);
                  boolean sw = InsertAddGaleno.agregarGaleno(galeno);
                  if (sw) {

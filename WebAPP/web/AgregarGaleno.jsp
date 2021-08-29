@@ -21,7 +21,7 @@
 
         </header>
         <div class="div-head-tittle"><h2></h2></div>
-        <form class="form1">
+        <form class="form1" action="/WebAPP/AddGaleno">
             <section class="sec-main">
                 <div class="div-cont-main">
 
@@ -119,7 +119,7 @@
                                 <td><div class="div-cont-lname"><input type="password" id="txt-lname" class="inp-lname" placeholder="Ingrese una Contraseña"required="" name="pass"/> </div></td> 
                                 <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="departamento">
                                             <option>Seleccione un departamento</option>
-                                            <option>1</option>
+                                            <option>medicina</option>
                                         </select></div></td> 
                                 <th>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></th>
                             </tr>
@@ -127,48 +127,7 @@
                     </table> 
                 </div>
             </section>
-            <%
-                PreparedStatement pst;
-                conexion cn = new conexion();
-                ResultSet rs;
-                PreparedStatement ps;
-                String sql;
-                String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag;
 
-                dni = request.getParameter("TipoIden");
-                Pnom = request.getParameter("Identificacion");
-                Snom = request.getParameter("PrimerNombre");
-                telefono = request.getParameter("SegundoNombre");
-                direccion = request.getParameter("PrimerApellido");
-                provincia = request.getParameter("SegundoApellido");
-                canton = request.getParameter("celular");
-                parroquia = request.getParameter("provincia");
-                ap = request.getParameter("canton");
-                af = request.getParameter("parroquia");
-                diag = request.getParameter("direccion");
-                aq = request.getParameter("email");
-                fecha = request.getParameter("user");
-                mc = request.getParameter("pass");
-                ep = request.getParameter("departamento");
-                String estado = "0";
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-                String x = dtf.format(LocalDateTime.now());
-
-                if (dni!=null &&Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && ap != null
-                        && af != null && aq != null && fecha != null && mc != null && ep != null && diag != null && estado != null && x != null) {
-                    ps = cn.getConecction().prepareStatement("insert into galeno(galeno_tipo_dni, "
-                            + "galeno_dni, galeno_apellido_paterno,galeno_primer_nombre, "
-                            + "galeno_telefono, galeno_direccion, created_at, galeno_user, "
-                            + "galeno_pass, galeno_apellido_materno, galeno_segundo_nombre,"
-                            + " galeno_provincia, galeno_canton, galeno_parroquia, galeno_estado,"
-                            + " galeno_departamento, galeno_correoelectronico)values('" + dni + "'  ,'" + Pnom + "'  ,'" + direccion + "','" + Snom + "'  ,'" + canton + "'  ,'" + diag + "'  ,'" + x + "','" + fecha + "'  ,md5('" + mc + "')  ,'" + provincia + "'  ,'" + telefono + "'  ,'" + parroquia + "','" + ap + "'  ,'" + af + "'  ,'" + estado + "'  ,'" + ep + "'  ,'" + aq + "');");
-
-                    ps.executeUpdate();
-                    response.sendRedirect("Principal.jsp");
-                }
-
-
-            %>
         </form> 
 
         <script>

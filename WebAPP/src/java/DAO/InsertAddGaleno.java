@@ -33,7 +33,7 @@ public class InsertAddGaleno {
                         + "            galeno_estado, galeno_departamento, galeno_correoelectronico)\n"
                         + "    VALUES ('"+galeno.getGaleno_tipo_dni()+"', '"+galeno.getGaleno_dni()+"', '"+galeno.getGaleno_apellido_paterno()+"', \n"
                         + "            '"+galeno.getGaleno_primer_nombre()+"', '"+galeno.getGaleno_telefono()+"', '"+galeno.getGaleno_direccion()+"', '"+galeno.getCreated_at()+"', \n"
-                        + "            '"+galeno.getGaleno_user()+"', '"+galeno.getGaleno_pass()+"', '"+galeno.getGaleno_apellido_materno()+"', \n"
+                        + "            '"+galeno.getGaleno_user()+"', md5('"+galeno.getGaleno_pass()+"'), '"+galeno.getGaleno_apellido_materno()+"', \n"
                         + "            '"+galeno.getGaleno_segundo_nombre()+"', '"+galeno.getGaleno_provincia()+"', '"+galeno.getGaleno_canton()+"', '"+galeno.getGaleno_parroquia()+"', \n"
                         + "            '"+galeno.getGaleno_estado()+"', '"+galeno.getGaleno_departamento()+"', '"+galeno.getGaleno_correoelectronico()+"');");
                 agregado = true;
