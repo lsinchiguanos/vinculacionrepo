@@ -54,7 +54,10 @@ public class AddGaleno extends HttpServlet {
             if ("medicina".equals(TipoDepartamento)) {
                 TipoDepartamento = "1";
             }
-            
+            else
+            {
+                TipoDepartamento ="0";
+            }
             String estado = "0";
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             String x = dtf.format(LocalDateTime.now());
@@ -71,8 +74,6 @@ public class AddGaleno extends HttpServlet {
                 } else {
 //                    out.println("Si estas viendo este mensaje es por que algo salio mal, no se pudo completar tu solicitud.");
                 }
-                 
-                 
             }
 
         }

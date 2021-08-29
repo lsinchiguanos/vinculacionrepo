@@ -9,6 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
         <link href="css/Galeno.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>WebApp - Ingresos</title>
     </head>
     <body>
@@ -21,10 +22,10 @@
 
         </header>
         <div class="div-head-tittle"><h2></h2></div>
+        <!--javascript:sendmail()-->
         <form class="form1" action="/WebAPP/AddGaleno">
-            <section class="sec-main">
+            <section class="sec-main" >
                 <div class="div-cont-main">
-
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                         <thead >
                             <tr>
@@ -98,7 +99,7 @@
 
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required="" name="direccion" onkeyup="mayus(this);"/> </div></td> 
-                                <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="email" id="email" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
                             </tr>
                         </tbody>
                         <thead >
@@ -115,78 +116,118 @@
                         </thead>
                         <tbody>
                             <tr> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Ingrese el usuario"required="" name="user"/> </div></td> 
-                                <td><div class="div-cont-lname"><input type="password" id="txt-lname" class="inp-lname" placeholder="Ingrese una Contraseña"required="" name="pass"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="text" id="user" class="inp-lname" placeholder="Ingrese el usuario"required="" name="user"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="password" id="pass" class="inp-lname" placeholder="Ingrese una Contraseña"required="" name="pass"/> </div></td> 
                                 <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="departamento">
                                             <option>Seleccione un departamento</option>
                                             <option>medicina</option>
                                         </select></div></td> 
-                                <th>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></th>
+                                        <th>  <input type="submit" id="btn-action" class="btn-accept"  value="Guardar"/></th>
                             </tr>
                         </tbody>
                     </table> 
                 </div>
             </section>
-
         </form> 
-
+        <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
         <script>
-            function validaNumericos(event) {
-                if (event.charCode >= 48 && event.charCode <= 57) {
-                    return true;
-                }
-                return false;
-            }
-            function soloLetras(e) {
-                key = e.keyCode || e.which;
-                tecla = String.fromCharCode(key).toLowerCase();
-                letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-                especiales = [8, 37, 39, 46];
 
-                tecla_especial = false
-                for (var i in especiales) {
-                    if (key == especiales[i]) {
-                        tecla_especial = true;
-                        break;
-                    }
-                }
+                                    function validaNumericos(event) {
+                                        if (event.charCode >= 48 && event.charCode <= 57) {
+                                            return true;
+                                        }
+                                        return false;
+                                    }
+                                    function soloLetras(e) {
+                                        key = e.keyCode || e.which;
+                                        tecla = String.fromCharCode(key).toLowerCase();
+                                        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                                        especiales = [8, 37, 39, 46];
 
-                if (letras.indexOf(tecla) == -1 && !tecla_especial)
-                    return false;
-            }
-            function validar() {
-                var cad = document.getElementById("txt-ced").value.trim();
-                var total = 0;
-                var longitud = cad.length;
-                var longcheck = longitud - 1;
+                                        tecla_especial = false
+                                        for (var i in especiales) {
+                                            if (key == especiales[i]) {
+                                                tecla_especial = true;
+                                                break;
+                                            }
+                                        }
 
-                if (cad !== "" && longitud === 10) {
-                    for (i = 0; i < longcheck; i++) {
-                        if (i % 2 === 0) {
-                            var aux = cad.charAt(i) * 2;
-                            if (aux > 9)
-                                aux -= 9;
-                            total += aux;
-                        } else {
-                            total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
-                        }
-                    }
+                                        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+                                            return false;
+                                    }
+                                    function validar() {
+                                        var cad = document.getElementById("txt-ced").value.trim();
+                                        var total = 0;
+                                        var longitud = cad.length;
+                                        var longcheck = longitud - 1;
 
-                    total = total % 10 ? 10 - total % 10 : 0;
+                                        if (cad !== "" && longitud === 10) {
+                                            for (i = 0; i < longcheck; i++) {
+                                                if (i % 2 === 0) {
+                                                    var aux = cad.charAt(i) * 2;
+                                                    if (aux > 9)
+                                                        aux -= 9;
+                                                    total += aux;
+                                                } else {
+                                                    total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
+                                                }
+                                            }
 
-                    if (cad.charAt(longitud - 1) == total) {
-                    } else {
-                        alert("LA CEDULA NO EXISTE O ES INCORRECTA");
-                        document.getElementById("txt-ced").value = "";
+                                            total = total % 10 ? 10 - total % 10 : 0;
 
-                    }
-                }
-            }
-            function mayus(e) {
-                e.value = e.value.toUpperCase();
-            }
+                                            if (cad.charAt(longitud - 1) == total) {
+                                            } else {
+                                                alert("LA CEDULA NO EXISTE O ES INCORRECTA");
+                                                document.getElementById("txt-ced").value = "";
+
+                                            }
+                                        }
+                                    }
+                                    function mayus(e) {
+                                        e.value = e.value.toUpperCase();
+                                    }
+                                    function sendmail() {
+
+                                        var email = $('#email').val();
+                                        var subject = $('#user').val();
+                                        var message = $('#pass').val();
+
+                                        // var body = $('#body').val();
+
+                                        var Body = '<br>Email: ' + email + '<br>Usuario ' + subject + '<br>Password ' + message;
+                                        //console.log(name, phone, email, message);
+
+                                        Email.send({
+                                            SecureToken: "b8dcb77b-e238-4e7a-bab3-76f2bbb708c0",
+                                            To: email,
+                                            From: "gadquevedovinculaciongadqueved@gmail.com",
+                                            Subject: "New message de GadQuevedo Vinculacion ",
+                                            Body: Body
+                                        }).then(
+                                                message => {
+                                                    //console.log (message);
+                                                    if (message == 'OK') {
+                                                        alert('Email enviado con datos del medico.');
+                                                        response.sendRedirect("Principal.jsp");
+                                                    } else {
+                                                        console.error(message);
+                                                        alert('Error. No se ha enviado. ')
+
+                                                    }
+
+                                                }
+                                        );
+
+
+
+                                    }
         </script>
+
     </body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/pais.js"></script>
     <script src="js/JQuery.js" type="text/javascript"></script>  
 </html>
