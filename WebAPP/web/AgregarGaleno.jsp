@@ -23,7 +23,7 @@
         <div class="div-head-tittle"><h2></h2></div>
         <!--javascript:sendmail()-->
         <!--/WebAPP/AddGaleno-->
-        <form class="form1" action="javascript:sendmail()">
+        <form class="form1" action="/WebAPP/AddGaleno">
             <section class="sec-main" >
                 <div class="div-cont-main">
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
@@ -211,7 +211,7 @@
                                                     //console.log (message);
                                                     if (message == 'OK') {
                                                         alert('Email enviado con datos del medico.');
-                                                        response.sendRedirect("Principal.jsp");
+                                                        location.href = "login.jsp"
                                                     } else {
                                                         console.error(message);
                                                         alert('Error. No se ha enviado. ')
@@ -225,7 +225,6 @@
 
                                     }
         </script>
-
     </body>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/pais.js"></script>
