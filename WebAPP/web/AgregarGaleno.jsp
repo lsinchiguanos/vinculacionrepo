@@ -19,11 +19,11 @@
                 <img style="margin-top:2px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="index.html"></a>
-
         </header>
         <div class="div-head-tittle"><h2></h2></div>
         <!--javascript:sendmail()-->
-        <form class="form1" action="/WebAPP/AddGaleno">
+        <!--/WebAPP/AddGaleno-->
+        <form class="form1" action="javascript:sendmail()">
             <section class="sec-main" >
                 <div class="div-cont-main">
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
@@ -122,13 +122,14 @@
                                             <option>Seleccione un departamento</option>
                                             <option>medicina</option>
                                         </select></div></td> 
-                                        <th>  <input type="submit" id="btn-action" class="btn-accept"  value="Guardar"/></th>
+                                <th>  <input type="submit" id="btn-action" class="btn-accept"  value="Guardar"/></th>
                             </tr>
                         </tbody>
                     </table> 
                 </div>
             </section>
         </form> 
+
         <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -194,15 +195,14 @@
                                         var email = $('#email').val();
                                         var subject = $('#user').val();
                                         var message = $('#pass').val();
-
+                                        var email1 = 'http://localhost:8084/WebAPP/index.jsp';
                                         // var body = $('#body').val();
 
-                                        var Body = '<br>Email: ' + email + '<br>Usuario ' + subject + '<br>Password ' + message;
+                                        var Body = '<br>LINK DE LA APLICACION ' + email1 +'<br>El Usuario creado es: ' + subject + '<br>Su Password es:' + message;
                                         //console.log(name, phone, email, message);
-
                                         Email.send({
                                             SecureToken: "b8dcb77b-e238-4e7a-bab3-76f2bbb708c0",
-                                            To: email,
+                                            To: email ,
                                             From: "gadquevedovinculaciongadqueved@gmail.com",
                                             Subject: "New message de GadQuevedo Vinculacion ",
                                             Body: Body

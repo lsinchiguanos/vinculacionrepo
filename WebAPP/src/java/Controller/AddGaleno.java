@@ -16,6 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Model.ConstructorGaleno;
 import DAO.InsertAddGaleno;
+import java.util.Properties;
+import javax.swing.JOptionPane;
+import javax.websocket.Session;
+import sun.rmi.transport.Transport;
+
 /**
  *
  * @author jean
@@ -53,10 +58,8 @@ public class AddGaleno extends HttpServlet {
             String TipoDepartamento = request.getParameter("departamento");
             if ("medicina".equals(TipoDepartamento)) {
                 TipoDepartamento = "1";
-            }
-            else
-            {
-                TipoDepartamento ="0";
+            } else {
+                TipoDepartamento = "0";
             }
             String estado = "0";
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -65,10 +68,10 @@ public class AddGaleno extends HttpServlet {
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
                     && !Celular.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("") && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
                     && !parroquia.equalsIgnoreCase("") && !email.equalsIgnoreCase("") && !usuario.equalsIgnoreCase("") && !pass.equalsIgnoreCase("")
-                    && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("")&& !TipoDepartamento.equalsIgnoreCase("")) {
-                ConstructorGaleno galeno = new ConstructorGaleno(TipoIden,Identificacion,PrimerApellido,PrimerNombre,Celular,Direccion,x,usuario,pass,SegundoApellido,SegundoNombre,Provincia,canton,parroquia,estado,TipoDepartamento,email);
-                 boolean sw = InsertAddGaleno.agregarGaleno(galeno);
-                 if (sw) {
+                    && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("") && !TipoDepartamento.equalsIgnoreCase("")) {
+                ConstructorGaleno galeno = new ConstructorGaleno(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Celular, Direccion, x, usuario, pass, SegundoApellido, SegundoNombre, Provincia, canton, parroquia, estado, TipoDepartamento, email);
+                boolean sw = InsertAddGaleno.agregarGaleno(galeno);
+                if (sw) {
                     response.sendRedirect("Principal.jsp");
 //                    request.getRequestDispatcher("Principal.jsp").forward(request, response);
                 } else {
@@ -77,6 +80,7 @@ public class AddGaleno extends HttpServlet {
             }
 
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
