@@ -235,7 +235,7 @@
                 ps = cn.getConecction().prepareStatement("insert into medicinageneral( paciente_dni, estatura, peso, tipossangre,"
                         + "pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares,"
                         + "antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, "
-                        + "diagnositico,tipo, cargararchivo)values('" + dni + "','" + Pnom + "','" + Snom + "','" + telefono + "','" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "','" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "');");
+                        + "diagnositico,tipo, cargararchivo,galeno_user)values('" + dni + "','" + Pnom + "','" + Snom + "','" + telefono + "','" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "','" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "','"+session.getAttribute("galeno_user11")+"');");
                 ps.executeUpdate();
                 response.sendRedirect("Principal.jsp");
             }
@@ -251,30 +251,30 @@
 <script src="js/Opciones.js" type="text/javascript"></script> 
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
-                                $(function () {
+                            $(function () {
 
-                                    $(":input[name = 'search' ]").keyup(function () {
+                                $(":input[name = 'search' ]").keyup(function () {
 
-                                        / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
-                                        $("#list li").remove();
+                                    / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+                                    $("#list li").remove();
 
-                                        var $val = $(this).val();
-                                        var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
-                                        var args = {"time": new Date()};
-                                        $.get(url, args, function (data) {
+                                    var $val = $(this).val();
+                                    var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+                                    var args = {"time": new Date()};
+                                    $.get(url, args, function (data) {
 
-                                            / * La respuesta es una matriz de objetos json * /
-                                            for (var i = 0; i < data.length; i++)
-                                                $("#list").append("<li><a>" + data[i].content + "</a></li>");
+                                        / * La respuesta es una matriz de objetos json * /
+                                        for (var i = 0; i < data.length; i++)
+                                            $("#list").append("<li><a>" + data[i].content + "</a></li>");
 
-                                        }, "json");
+                                    }, "json");
 
-                                    });
+                                });
 
-                                })
-                                function mayus(e) {
-                                    e.value = e.value.toUpperCase();
-                                }
+                            })
+                            function mayus(e) {
+                                e.value = e.value.toUpperCase();
+                            }
 
 
 </script>

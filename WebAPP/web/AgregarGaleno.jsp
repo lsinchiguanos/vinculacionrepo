@@ -1,9 +1,14 @@
+<%@page import="java.time.LocalDateTime"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="BD.conexion"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
-        <link href="css/Ingresos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Galeno.css" rel="stylesheet" type="text/css"/>
         <title>WebApp - Ingresos</title>
     </head>
     <body>
@@ -16,7 +21,7 @@
 
         </header>
         <div class="div-head-tittle"><h2></h2></div>
-        <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" >
+        <form class="form1">
             <section class="sec-main">
                 <div class="div-cont-main">
 
@@ -53,28 +58,16 @@
                         </tbody>
                         <thead >
                             <tr>
-                                <th>Fecha de Nacimiento</th> 
-                                <th>Telefono Convencional</th>
                                 <th>Celular</th>
+                                <th>Provincia</th>
+                                <th>Canton</th>
+
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha de nacimiento"required=""  name="Fechadenacimiento"/></div></td> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"required=""  onkeypress='return validaNumericos(event)'/></div></td>
                                 <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular"required=""  onkeypress='return validaNumericos(event)'/></div> </td>                      
-                            </tr> 
-                        </tbody>
-                        <thead >
-                            <tr>                                
-                                <th>Provincia</th>
-                                <th>Canton</th>
-                                <th>Parroquia</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr> 
-                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="Provincia">
+                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="provincia">
                                             <option>Seleccione una provincia</option>
                                             <option>Esmeraldas</option><option>Manabí</option>
                                             <option>Los Ríos</option><option>Guayas</option>
@@ -90,69 +83,92 @@
                                             <option>Zamora Chinchipe</option><option>Galápagos</option>
                                         </select></div></td> 
                                 <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Canton" name="canton"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
-                            </tr>
-                        </tbody>
-                        <thead >
-                            <tr>
-                                <th>Direccion</th>                               
-                                <th>Genero</th>
-                                <th>Estado Civil</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div></td> 
-                                <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf" name="genero">   
-                                            <option>Seleccione genero</option>
-                                            <option>Masculino</option>
-                                            <option>Femenino</option></select></div></td> 
-                                <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf"required=""  name="estadoCivil">
-                                            <option>Seleccione el estado civil</option>
-                                            <option>Soltero</option>
-                                            <option>Casado</option>
-                                            <option>Union libre</option>
-                                            <option>Viudo</option>
-                                            <option>Divorciado</option>
-                                        </select></div></td>            
-                            </tr>
+
+                            </tr> 
                         </tbody>
                         <thead >
                             <tr>                                
-                                <th>Ayuda Social</th>
-                                <th>Nacionalidad</th>
-                                <th>Discapacidad</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr> 
-                                <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf"required=""  name="Ayuda">
-                                            <option>Recibe Ayuda Social</option>
-                                            <option>Si</option>
-                                            <option>No</option>
-                                        </select></div></td> 
-                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf" id="nacionalidad" name="nacionalidad" ></select></div></td> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div></td>
-
-                            </tr>
-                        </tbody>
-                        <thead >
-                            <tr>
-
-                                <th>Tipo de sangre</th>
+                                <th>Parroquia</th>
+                                <th>Direccion</th>                               
                                 <th>Correo Electronico</th> 
                             </tr>
                         </thead>
                         <tbody>
                             <tr> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
+
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required="" name="direccion" onkeyup="mayus(this);"/> </div></td> 
                                 <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
-                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/> </div></td>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                            </tr>
+                        </thead>
+                        <thead >
+                        <thead >
+                            <tr>
+                                <th>Usuario</th>                               
+                                <th>Contraseña</th> 
+                                <th>Departamento</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Ingrese el usuario"required="" name="user"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="password" id="txt-lname" class="inp-lname" placeholder="Ingrese una Contraseña"required="" name="pass"/> </div></td> 
+                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="departamento">
+                                            <option>Seleccione un departamento</option>
+                                            <option>1</option>
+                                        </select></div></td> 
+                                <th>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></th>
                             </tr>
                         </tbody>
                     </table> 
                 </div>
             </section>
+            <%
+                PreparedStatement pst;
+                conexion cn = new conexion();
+                ResultSet rs;
+                PreparedStatement ps;
+                String sql;
+                String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag;
+
+                dni = request.getParameter("TipoIden");
+                Pnom = request.getParameter("Identificacion");
+                Snom = request.getParameter("PrimerNombre");
+                telefono = request.getParameter("SegundoNombre");
+                direccion = request.getParameter("PrimerApellido");
+                provincia = request.getParameter("SegundoApellido");
+                canton = request.getParameter("celular");
+                parroquia = request.getParameter("provincia");
+                ap = request.getParameter("canton");
+                af = request.getParameter("parroquia");
+                diag = request.getParameter("direccion");
+                aq = request.getParameter("email");
+                fecha = request.getParameter("user");
+                mc = request.getParameter("pass");
+                ep = request.getParameter("departamento");
+                String estado = "0";
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                String x = dtf.format(LocalDateTime.now());
+
+                if (dni!=null &&Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && ap != null
+                        && af != null && aq != null && fecha != null && mc != null && ep != null && diag != null && estado != null && x != null) {
+                    ps = cn.getConecction().prepareStatement("insert into galeno(galeno_tipo_dni, "
+                            + "galeno_dni, galeno_apellido_paterno,galeno_primer_nombre, "
+                            + "galeno_telefono, galeno_direccion, created_at, galeno_user, "
+                            + "galeno_pass, galeno_apellido_materno, galeno_segundo_nombre,"
+                            + " galeno_provincia, galeno_canton, galeno_parroquia, galeno_estado,"
+                            + " galeno_departamento, galeno_correoelectronico)values('" + dni + "'  ,'" + Pnom + "'  ,'" + direccion + "','" + Snom + "'  ,'" + canton + "'  ,'" + diag + "'  ,'" + x + "','" + fecha + "'  ,md5('" + mc + "')  ,'" + provincia + "'  ,'" + telefono + "'  ,'" + parroquia + "','" + ap + "'  ,'" + af + "'  ,'" + estado + "'  ,'" + ep + "'  ,'" + aq + "');");
+
+                    ps.executeUpdate();
+                    response.sendRedirect("Principal.jsp");
+                }
+
+
+            %>
         </form> 
 
         <script>
