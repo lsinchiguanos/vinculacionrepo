@@ -288,10 +288,7 @@
                                         $("#list").append("<li><a>" + data[i].content + "</a></li>");
                                 }, "json");
                                 });
-                                })
-
-
-                                })
+                                }) 
                                         function mayus(e) {
                                         e.value = e.value.toUpperCase();
                                         }
