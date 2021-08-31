@@ -48,9 +48,9 @@
                             Statement smt;
                             ResultSet rs;
                             smt = con.getConecction().createStatement();
-                            rs = smt.executeQuery("select pa.paciente_dni as cedula ,pa.paciente_primer_nombre as primerNombre,pa.paciente_segundo_nombre as segundoNombre,pa.paciente_apellido_paterno as apeliidoPaterno,pa.paciente_apellido_materno as apellidoMaterno,pa.paciente_direccion as direccion,pa.paciente_provincia as provincia, pa.paciente_canton as canton, pa.paciente_parroquia as parroquia,pa.paciente_estado_civil as estadoCivil,me.antecedentespersonales as AntePerosnales, me.antecedentesfamiliares as AntFamiliares,me.antecedentesquirurgicos as AntQuirurgicos,me.fechaconsulta as Fechaconsulta, me.motivoconsulta as motivoConsulta,me.diagnositico as diagnostico from medicinageneral me inner join paciente pa on me.paciente_dni = pa.paciente_dni where me.galeno_user ='"+session.getAttribute("galeno_user11")+"' ");
+                            rs = smt.executeQuery("select pa.paciente_dni as cedula ,pa.paciente_primer_nombre as primerNombre,pa.paciente_segundo_nombre as segundoNombre,pa.paciente_apellido_paterno as apeliidoPaterno,pa.paciente_apellido_materno as apellidoMaterno,pa.paciente_direccion as direccion,pa.paciente_provincia as provincia, pa.paciente_canton as canton, pa.paciente_parroquia as parroquia,pa.paciente_estado_civil as estadoCivil,me.antecedentespersonales as AntePerosnales, me.antecedentesfamiliares as AntFamiliares,me.antecedentesquirurgicos as AntQuirurgicos,me.fechaconsulta as Fechaconsulta, me.motivoconsulta as motivoConsulta,me.diagnositico as diagnostico,me.cargararchivo as archivo  from medicinageneral me inner join paciente pa on me.paciente_dni = pa.paciente_dni where me.galeno_user ='" + session.getAttribute("galeno_user11") + "' ");
                             if (rs.next()) {
-                                rs = smt.executeQuery("select pa.paciente_dni as cedula ,pa.paciente_primer_nombre as primerNombre,pa.paciente_segundo_nombre as segundoNombre,pa.paciente_apellido_paterno as apeliidoPaterno,pa.paciente_apellido_materno as apellidoMaterno,pa.paciente_direccion as direccion,pa.paciente_provincia as provincia, pa.paciente_canton as canton, pa.paciente_parroquia as parroquia,pa.paciente_estado_civil as estadoCivil,me.antecedentespersonales as AntePerosnales, me.antecedentesfamiliares as AntFamiliares,me.antecedentesquirurgicos as AntQuirurgicos,me.fechaconsulta as Fechaconsulta, me.motivoconsulta as motivoConsulta,me.diagnositico as diagnostico from medicinageneral me inner join paciente pa on me.paciente_dni = pa.paciente_dni where me.galeno_user ='"+session.getAttribute("galeno_user11")+"'");
+                                rs = smt.executeQuery("select pa.paciente_dni as cedula ,pa.paciente_primer_nombre as primerNombre,pa.paciente_segundo_nombre as segundoNombre,pa.paciente_apellido_paterno as apeliidoPaterno,pa.paciente_apellido_materno as apellidoMaterno,pa.paciente_direccion as direccion,pa.paciente_provincia as provincia, pa.paciente_canton as canton, pa.paciente_parroquia as parroquia,pa.paciente_estado_civil as estadoCivil,me.antecedentespersonales as AntePerosnales, me.antecedentesfamiliares as AntFamiliares,me.antecedentesquirurgicos as AntQuirurgicos,me.fechaconsulta as Fechaconsulta, me.motivoconsulta as motivoConsulta,me.diagnositico as diagnostico,me.cargararchivo as archivo  from medicinageneral me inner join paciente pa on me.paciente_dni = pa.paciente_dni where me.galeno_user ='" + session.getAttribute("galeno_user11") + "'");
                         %>
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
@@ -71,6 +71,7 @@
                                     <th>AntePerosnales</th>
                                     <th>AntFamiliares</th>
                                     <th>AntQuirurgicos</th>
+                                    <th>Archivo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -93,7 +94,7 @@
                                     <td><%= rs.getString("AntePerosnales")%></td>
                                     <td><%= rs.getString("AntFamiliares")%></td>
                                     <td><%= rs.getString("AntQuirurgicos")%></td>
-
+                                    <td><a href="DownloadServlet?fileName=<%=rs.getString("archivo")%>">Download</a></td>
                                 </tr>
                                 <%}%>
                             </tbody>        

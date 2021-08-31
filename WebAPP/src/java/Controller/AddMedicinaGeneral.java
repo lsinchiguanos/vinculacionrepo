@@ -35,6 +35,7 @@ import javax.servlet.http.Part;
         maxFileSize = 1024 * 1024 * 1000, // 1 GB
         maxRequestSize = 1024 * 1024 * 1000)   	// 1 GB
 public class AddMedicinaGeneral extends HttpServlet {
+
     PrintWriter out = null;
     PreparedStatement ps = null;
     HttpSession session = null;
@@ -48,7 +49,7 @@ public class AddMedicinaGeneral extends HttpServlet {
             out = response.getWriter();
             session = request.getSession(false);
             String folderName = "resources";
-            String uploadPath = "C:/Users/jean/Desktop/resources";//for netbeans use this code
+            String uploadPath = request.getServletContext().getRealPath("") + File.separator + folderName;//for netbeans use this code
             //String uploadPath = request.getServletContext().getRealPath("") + folderName;//for eclipse use this code
             File dir = new File(uploadPath);
             if (!dir.exists()) {
@@ -77,7 +78,7 @@ public class AddMedicinaGeneral extends HttpServlet {
 //            String firstName = request.getParameter("firstname");//Textbox value of name firstname.
 //            String lastName = request.getParameter("lastname");//Textbox value of name lastname.
             String fileName = filePart.getSubmittedFileName();
-            String path = folderName + File.separator + fileName;
+            String patch = folderName + File.separator + fileName;
             Timestamp added_date = new Timestamp(System.currentTimeMillis());
             InputStream is = filePart.getInputStream();
             Files.copy(is, Paths.get(uploadPath + File.separator + fileName), StandardCopyOption.REPLACE_EXISTING);
@@ -86,7 +87,7 @@ public class AddMedicinaGeneral extends HttpServlet {
                 String sql = "insert into medicinageneral(paciente_dni, estatura, peso, tipossangre, \n"
                         + "            pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares, \n"
                         + "            antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, \n"
-                        + "            diagnositico, tipo,galeno_user, path,cargararchivo) values(?, ?, ?, ?, \n"
+                        + "            diagnositico, tipo,galeno_user,cargararchivo,patch) values(?, ?, ?, ?, \n"
                         + "            ?, ?, ?, ?, ?, ?, \n"
                         + "            ?, ?, ?, ?, \n"
                         + "            ?, ?, ?, ?, ?)";
@@ -108,8 +109,8 @@ public class AddMedicinaGeneral extends HttpServlet {
                 ps.setString(15, diag);
                 ps.setString(16, tipo);
                 ps.setString(17, galenoUser);
-                ps.setString(18, path);
-                ps.setString(19, fileName);
+                ps.setString(18, fileName);
+                ps.setString(19, patch);
                 int status = ps.executeUpdate();
                 if (status > 0) {
                     session.setAttribute("fileName", fileName);
