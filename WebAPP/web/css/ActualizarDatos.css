@@ -8,7 +8,7 @@
 .nav-tp
 {
     width: 100%;
-     margin-top: -10px;
+    margin-top: -10px;
     height: 7.22014388489208vh;    
     background-color: #007653;
 }
@@ -27,7 +27,7 @@
 
 .div-head-tittle h2:before
 {
-    content: 'DATOS PERSONALES DE MEDICOS';
+    content: 'ACTUALIZAR DATOS PERSONALES DE MEDICOS';
     font: 900;
     font-size: 1.5em;
     margin-left: 90px;
@@ -81,9 +81,9 @@ form
 
 .div-cont-ced, .div-cont-name, .div-cont-lname, .div-cont-edad, .div-cont-cod
 {    
-    width: 40%;
-    height: 15vh;    
-    display: flex;
+    width: 90% !important;
+    margin-top: 6px !important;
+    height: 15vh;  
     align-items: center;
     justify-content: center;
 }

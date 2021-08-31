@@ -14,7 +14,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <link href="css/Actualizardatosmedico.css" rel="stylesheet" type="text/css"/>
+        <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
         <title>Actualizar datos personales medicos</title>
     </head>
     <body>
@@ -52,9 +52,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Cedula" name="cedula"  value="<%= rs.getInt("galeno_dni")%>" disabled="true"></div> </td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" value="<%= rs.getString("galeno_primer_nombre")%>" required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Segundo Nombre" name="SegundoNombre" value="<%= rs.getString("galeno_segundo_nombre")%>"required="" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"></div></td> 
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="cedula" id="Cedula" value="<%= rs.getInt("galeno_dni")%>" disabled="true"></div> </td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="PrimerNombre" id="PrimerNombre"value="<%= rs.getString("galeno_primer_nombre")%>" required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
+                                <td><div class="div-cont-name"> <input class="inp-lname" type="text" name="SegundoNombre" id="SegundoNombre"value="<%= rs.getString("galeno_segundo_nombre")%>"required="" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"></div></td> 
                             </tr> 
                         </tbody>
                         <thead >
@@ -66,9 +66,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Telefono o Celular"  name="galeno_telefono"  value="<%= rs.getString("galeno_telefono")%>"required="" onkeypress='return validaNumericos(event)'></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Provincia" name="galeno_provincia" value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Canton"  name="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td> 
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_telefono" id="galeno_telefono"value="<%= rs.getString("galeno_telefono")%>"required="" onkeypress='return validaNumericos(event)'></div></td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td> 
                             </tr> 
                         </tbody>
                         <thead >
@@ -80,9 +80,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Parroquia" name="galeno_parroquia" value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Direccion" name="galeno_direccion" value="<%= rs.getString("galeno_direccion")%>"required=""onkeyup="mayus(this);"></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Correo Electronico"  name="galeno_correoelectronico" value="<%= rs.getString("galeno_correoelectronico")%>"required=""></div></td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required=""></div></td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required=""></div></td>
 
                             </tr> 
                             <tr>
