@@ -32,7 +32,6 @@
                 <hr /> 
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead>
-
                         <tr>
                             <th>Numero de identificacion</th>
                             <th>Nombres</th>
