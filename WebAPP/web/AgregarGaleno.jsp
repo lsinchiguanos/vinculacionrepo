@@ -23,10 +23,9 @@
         <div class="div-head-tittle"><h2></h2></div>
         <!--javascript:sendmail()-->
         <!--/WebAPP/AddGaleno-->
-        
-        
-        
+
         <form class="form1" action="/WebAPP/AddGaleno">
+            
             <section class="sec-main" >
                 <div class="div-cont-main">
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
@@ -125,7 +124,7 @@
                                             <option>Seleccione un departamento</option>
                                             <option>medicina</option>
                                         </select></div></td> 
-                               
+
                             </tr>
                         </tbody>
                         <thead>
@@ -137,6 +136,7 @@
                 </div>
             </section>
         </form> 
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
 
         <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -191,7 +191,6 @@
                                             } else {
                                                 alert("LA CEDULA NO EXISTE O ES INCORRECTA");
                                                 document.getElementById("txt-ced").value = "";
-
                                             }
                                         }
                                     }
@@ -206,11 +205,11 @@
                                         var email1 = 'http://localhost:8084/WebAPP/index.jsp';
                                         // var body = $('#body').val();
 
-                                        var Body = '<br>LINK DE LA APLICACION ' + email1 +'<br>El Usuario creado es: ' + subject + '<br>Su Password es:' + message;
+                                        var Body = '<br>LINK DE LA APLICACION ' + email1 + '<br>El Usuario creado es: ' + subject + '<br>Su Password es:' + message;
                                         //console.log(name, phone, email, message);
                                         Email.send({
                                             SecureToken: "b8dcb77b-e238-4e7a-bab3-76f2bbb708c0",
-                                            To: email ,
+                                            To: email,
                                             From: "gadquevedovinculaciongadqueved@gmail.com",
                                             Subject: "New message de GadQuevedo Vinculacion ",
                                             Body: Body
@@ -234,7 +233,6 @@
                                     }
         </script>
     </body>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/pais.js"></script>
     <script src="js/JQuery.js" type="text/javascript"></script>  
 </html>
