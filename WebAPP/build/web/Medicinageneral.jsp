@@ -135,7 +135,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl" onkeyup="mayus(this);"/></div> </td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl" onkeyup="mayus(this);"/></textarea> </td>
                         </tr>
                     <thead>
                         <tr>
@@ -144,7 +144,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" onkeyup="mayus(this);"name="AP"/></div></td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" onkeyup="mayus(this);"name="AP"/></textarea></td>
                         </tr> 
                     <thead>
                         <tr>
@@ -153,7 +153,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" onkeyup="mayus(this);" name="AF"/></div></td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" onkeyup="mayus(this);" name="AF"/></textarea></td>
                         </tr>
                     <thead>
                         <tr>
@@ -162,7 +162,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" onkeyup="mayus(this);"name="Aq"/></div></td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" onkeyup="mayus(this);"name="Aq"/></textarea></td>
                         </tr> 
                     </tbody>
                 </table>  
@@ -179,7 +179,7 @@
                     <tbody>
                         <tr>
                             <td><div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td> 
-                            <td><div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></div> </td> 
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></textarea> </td> 
                         </tr>
                     <thead>
                         <tr>
@@ -188,8 +188,8 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></div></td> 
-                        <td><div class="div-cont-lname"><input type="text" id="txt-diagnostico" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></div></td>
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></textarea></td> 
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></textarea></td>
                     </tr>
                     </tbody>
                     <tbody>
