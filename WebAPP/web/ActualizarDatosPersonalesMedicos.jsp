@@ -13,9 +13,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+        <link href="css/Actualizardatosmedico.css" rel="stylesheet" type="text/css"/>
         <title>Actualizar datos personales medicos</title>
+        
     </head>
     <body>
         <header id="header" style=" background: #007653 !important;">
