@@ -121,13 +121,18 @@
                             <tr> 
                                 <td><div class="div-cont-lname"><input type="text" id="user" class="inp-lname" placeholder="Ingrese el usuario"required="" name="user"/> </div></td> 
                                 <td><div class="div-cont-lname"><input type="password" id="pass" class="inp-lname" placeholder="Ingrese una Contraseña"required="" name="pass"/> </div></td> 
-                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="departamento">
+                                <td><div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf"required=""  name="departamento">
                                             <option>Seleccione un departamento</option>
                                             <option>medicina</option>
                                         </select></div></td> 
-                                <th>  <input type="submit" id="btn-action" class="btn-accept"  value="Guardar"/></th>
+                               
                             </tr>
                         </tbody>
+                        <thead>
+                        <td>
+                            <input type="submit" id="btn-action" class="btn-accept"  value="Guardar"/> 
+                        </td>
+                        </thead>
                     </table> 
                 </div>
             </section>

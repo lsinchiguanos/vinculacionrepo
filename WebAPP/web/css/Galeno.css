@@ -196,18 +196,18 @@
 }
 
 .div-cont-sel-dep-transf, .div-cont-sel-dep-to-transf
-{    
-    width: 40%;
-    height: 15vh;
-    display: flex;
+{   
+    width: 50% !important;
+    margin-top: 5px !important;
+    height: 15vh;  
     align-items: center;
-    justify-content: center;    
+    justify-content: center;  
 }
 
 .sel-dep-transf, .sel-dep-to-transf
 {
     cursor: pointer;
-    width: 290px;
+    width: 365px;
     height: 6.9vh;
     border: none;
     background-color: #D5DCD5;
