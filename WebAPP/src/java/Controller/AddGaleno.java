@@ -1,25 +1,32 @@
- 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controller;
 
-import DAO.InsertAddPaciente;
-import Model.ControladorPaciente;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
- 
-@WebServlet(name = "AddPaciente", urlPatterns = {"/AddPaciente"})
-public class AddPaciente extends HttpServlet {
+import Model.ConstructorGaleno;
+import DAO.InsertAddGaleno;
+import java.util.Properties;
+import javax.swing.JOptionPane;
+import javax.websocket.Session;
+import sun.rmi.transport.Transport;
+
+/**
+ *
+ * @author jean
+ */
+@WebServlet(name = "AddGaleno", urlPatterns = {"/AddGaleno"})
+public class AddGaleno extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,43 +44,33 @@ public class AddPaciente extends HttpServlet {
             String TipoIden = request.getParameter("TipoIden");
             String Identificacion = request.getParameter("Identificacion");
             String PrimerNombre = request.getParameter("PrimerNombre");
-            
             String SegundoNombre = request.getParameter("SegundoNombre");
             String PrimerApellido = request.getParameter("PrimerApellido");
             String SegundoApellido = request.getParameter("SegundoApellido");
-            
-            String Fechadenacimiento = request.getParameter("Fechadenacimiento");
-            String convencional = request.getParameter("convencional");
-            
             String Celular = request.getParameter("celular");
-            String Provincia = request.getParameter("Provincia");
+            String Provincia = request.getParameter("provincia");
             String canton = request.getParameter("canton");
-            
-            String Direccion = request.getParameter("Direccion");
             String parroquia = request.getParameter("parroquia");
-            String estadoCivil = request.getParameter("estadoCivil");
-            
-            String Ayuda1 = request.getParameter("Ayuda");
-            String nacionalidad = request.getParameter("nacionalidad");
-            String discapacidad = request.getParameter("discapacidad");
-            
-            String tipoSangre = request.getParameter("tipoSangre");
-            String genero = request.getParameter("genero");
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-//            System.out.println("yyyy/MM/dd HH:mm:ss-> "+dtf.format(LocalDateTime.now()));
-            String estado = "1";
-            String x = dtf.format(LocalDateTime.now());
+            String Direccion = request.getParameter("direccion");
             String email = request.getParameter("email");
+            String usuario = request.getParameter("user");
+            String pass = request.getParameter("pass");
+            String TipoDepartamento = request.getParameter("departamento");
+            if ("medicina".equals(TipoDepartamento)) {
+                TipoDepartamento = "1";
+            } else {
+                TipoDepartamento = "0";
+            }
+            String estado = "0";
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            String x = dtf.format(LocalDateTime.now());
 
             if (!TipoIden.equalsIgnoreCase("") && !Identificacion.equalsIgnoreCase("") && !PrimerNombre.equalsIgnoreCase("") && !PrimerApellido.equalsIgnoreCase("") && !SegundoApellido.equalsIgnoreCase("")
-                    && !Fechadenacimiento.equalsIgnoreCase("") && !convencional.equalsIgnoreCase("") && !Celular.equalsIgnoreCase("")
-                    && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
-                    && !parroquia.equalsIgnoreCase("") && !estadoCivil.equalsIgnoreCase("") && !Ayuda1.equalsIgnoreCase("")
-                    && !nacionalidad.equalsIgnoreCase("") && !discapacidad.equalsIgnoreCase("") && !tipoSangre.equalsIgnoreCase("") && !email.equalsIgnoreCase("")
-                    && !genero.equalsIgnoreCase("") && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("")&& !estado.equalsIgnoreCase("")) {
-                ControladorPaciente busuario = new ControladorPaciente(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Fechadenacimiento, Direccion, Celular, genero, discapacidad,
-                        Ayuda1, x, SegundoApellido, SegundoNombre, estado, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre,email);
-                boolean sw = InsertAddPaciente.agregarUsuario(busuario);
+                    && !Celular.equalsIgnoreCase("") && !SegundoNombre.equalsIgnoreCase("") && !Provincia.equalsIgnoreCase("") && !canton.equalsIgnoreCase("") && !Direccion.equalsIgnoreCase("")
+                    && !parroquia.equalsIgnoreCase("") && !email.equalsIgnoreCase("") && !usuario.equalsIgnoreCase("") && !pass.equalsIgnoreCase("")
+                    && !x.equalsIgnoreCase("") && !estado.equalsIgnoreCase("") && !TipoDepartamento.equalsIgnoreCase("")) {
+                ConstructorGaleno galeno = new ConstructorGaleno(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Celular, Direccion, x, usuario, pass, SegundoApellido, SegundoNombre, Provincia, canton, parroquia, estado, TipoDepartamento, email);
+                boolean sw = InsertAddGaleno.agregarGaleno(galeno);
                 if (sw) {
                     response.sendRedirect("Principal.jsp");
 //                    request.getRequestDispatcher("Principal.jsp").forward(request, response);
@@ -81,7 +78,9 @@ public class AddPaciente extends HttpServlet {
 //                    out.println("Si estas viendo este mensaje es por que algo salio mal, no se pudo completar tu solicitud.");
                 }
             }
+
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -97,7 +96,6 @@ public class AddPaciente extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
     }
 
     /**
@@ -112,7 +110,6 @@ public class AddPaciente extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
     }
 
     /**
