@@ -6,7 +6,7 @@
         <link href="css/TransPaciente.css" rel="stylesheet" type="text/css"/>  
         <title>WebApp - Transferir Paciente</title>
     </head>
-    <body>
+    <body> 
         <header>
             <nav class="nav-tp"></nav>
         </header>      
