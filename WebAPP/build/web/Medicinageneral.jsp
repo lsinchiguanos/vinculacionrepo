@@ -19,6 +19,7 @@
         <nav class="nav-tp"></nav>
     </header>     
     <div class="div-head-tittle"><h2></h2></div>
+<<<<<<< Updated upstream
 
 
     <form id="form1">
@@ -32,6 +33,21 @@
                 <hr /> 
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead >
+=======
+    <!-- 
+<section class="sec-options">
+    <div class="div-cont-pacient"><h3>Datos personales del paciente</h3></div>
+</section> !-->
+
+    <form id="form1" action="/WebAPP/AddMedicinaGeneral"  autocomplete="off">
+        <section class="sec-main">
+            <div class="div-cont-main">
+                <div class="div-cont-ced"><input type="button" id="btn-actionb" class="inp-search" value="Buscar"/><input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula" name="cedula"/></div>            
+                <!--<div class="div-cont-search"></div>-->
+                <hr /> 
+                <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
+                    <thead>
+>>>>>>> Stashed changes
                         <tr>
                             <th>Numero de identificacion</th>
                             <th>Nombres</th>
@@ -41,6 +57,7 @@
                     <tbody>
                         <tr>
                             <td> <div class="div-cont-ced" style='margin-top: -40px !important;'><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div> </td>
+<<<<<<< Updated upstream
                             <td> <div class="div-cont-name"  ><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                             <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                         </tr>
@@ -50,10 +67,21 @@
                             <th>Discapacidad</th>
                             <th>Telefono convencional</th>
                             <th>Celular</th>
+=======
+                            <td> <div class="div-cont-name"><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
+                            <td> <div class="div-cont-lname"><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
+                        </tr>
+                    <thead>
+                        <tr>
+                            <td>Discapacidad</td>
+                            <td>Telefono convencional</td>
+                            <td>Celular</td>
+>>>>>>> Stashed changes
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+<<<<<<< Updated upstream
                             <td> <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true" disabled="true" onkeyup="mayus(this);"/></div> </td>
                             <td> <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'disabled="true"/></div> </td>
                             <td> <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div>  </td>
@@ -64,16 +92,35 @@
                             <th>Provincia</th>
                             <th>Direccion</th>
                             <th>Genero</th>
+=======
+                            <td> <div class="div-cont-name"><input type="text" id="txt-namef" class="inp-name" placeholder="Discapacidad" name="Discapacidad"disabled="true"/></div> </td>
+                            <td> <div class="div-cont-lname"><input type="text" id="txt-lnamet" class="inp-lname" placeholder="Telefono Convencional" name="convencional" onkeypress='return validaNumericos(event)'disabled="true"/></div> </td>
+                            <td> <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div>  </td>
+                        </tr>
+                    <thead>
+                        <tr>
+                            <td>Provincia</td>
+                            <td>Direccion</td>
+                            <td>Genero</td>
+>>>>>>> Stashed changes
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+<<<<<<< Updated upstream
                             <td>  <div class="div-cont-name"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"disabled="true"/></div>  </td>
                             <td> <div class="div-cont-name"><input type="text" id="txt-direccion" class="inp-lname" placeholder="Direccion" name="Direccion"disabled="true"/></div> </td>
                             <td> <div class="div-cont-name"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
                         </tr> 
                     </tbody>
                     <thead >
+=======
+                            <td>  <div class="div-cont-lname"><input type="text" id="txt-provin" class="inp-lname" placeholder="Provincia" name="Provincia" onkeypress="return soloLetras(event)"disabled="true"/></div>  </td>
+                            <td> <div class="div-cont-lname"><input type="text" id="txt-direccion" class="inp-lname" placeholder="Direccion" name="Direccion"disabled="true"/></div> </td>
+                            <td> <div class="div-cont-lname"><input type="text" id="txt-genero" class="inp-lname" placeholder="Genero" name="Genero" onkeypress="return soloLetras(event)"disabled="true"/></div> </td>
+                        </tr> 
+                    <thead>
+>>>>>>> Stashed changes
                         <tr>
                             <th>Ayuda economica</th>
                             <th>Nacionalidad</th>
@@ -89,6 +136,27 @@
                     </tbody>
                 </table>
                 <hr />
+<<<<<<< Updated upstream
+=======
+
+                <%-- <table style="width: 100%">
+                    <thead style="text-align: center; margin-left: -5%">
+                        <tr>
+                            <th>Ayuda economica</th>
+                            <th>Nacionalidad</th>
+                            <th>Correo Electronico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-ayudaeconomica" class="inp-lname" placeholder="Ayuda economica" name="Ayuda economica" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-nacionalidad" class="inp-lname" placeholder="Nacionalidad" name="Nacionalidad" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-tiposangre" class="inp-lname" placeholder="Correo Electronico" name="Correo Electronico" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
+                        </tr>
+
+                    </tbody>
+</table>  --%>
+>>>>>>> Stashed changes
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead>
                         <tr>
@@ -100,6 +168,7 @@
                     <tbody>
                         <tr>
                             <td><div class="div-cont-ced" style='margin-top: -40px !important;'><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="Estatura"/></div></td>
+<<<<<<< Updated upstream
                             <td><div class="div-cont-name" ><input type="text" id="txt-peso" class="inp-name" placeholder="Peso" name="peso"/></div></td>
                             <td><div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre" onkeyup="mayus(this);"/></div></td>
                         </tr>
@@ -116,6 +185,24 @@
                             <td><div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt" onkeyup="mayus(this);"/></div></td>
                             <td><div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa" onkeyup="mayus(this);"/></div></td>
                         </tr>
+=======
+                            <td><div class="div-cont-name"><input type="text" id="txt-peso" class="inp-name" placeholder="Peso" name="peso"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre"/></div></td>
+                        </tr>
+                    <thead>
+                        <tr>
+                            <td>P/C</td>
+                            <td>P/T</td>
+                            <td>P/A</td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-pc" class="inp-lname" placeholder="P/C" name="pc"/></div></td>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-pt" class="inp-lname" placeholder="P/T" name="pt"/></div></td>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-pa" class="inp-lname" placeholder="P/A" name="pa"/></div></td>
+                    </tr>
+
+>>>>>>> Stashed changes
                     </tbody>
                 </table>
                 <hr />
@@ -127,6 +214,7 @@
                     </thead>
                     <tbody>
                         <tr>
+<<<<<<< Updated upstream
                             <td><div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl" onkeyup="mayus(this);"/></div> </td>
                         </tr>
                     <thead>
@@ -138,6 +226,19 @@
                         <tr>
                             <td><div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" onkeyup="mayus(this);"name="AP"/></div></td>
                         </tr>
+=======
+                            <td><div class="div-cont-lname"><input type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl"/></div> </td>
+                        </tr>
+                    <thead>
+                        <tr>
+                            <td>Antecedentes personales</td> 
+                        </tr>
+                   </thead>
+                    <tbody>
+                    <tr>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" name="AP"/></div></td>
+                    </tr>
+>>>>>>> Stashed changes
                     <thead>
                         <tr>
                             <th>Antecedentes familiares</th> 
@@ -145,6 +246,7 @@
                     </thead>
                     <tbody>
                         <tr>
+<<<<<<< Updated upstream
                             <td><div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" onkeyup="mayus(this);" name="AF"/></div></td>
                         </tr>
                     <thead>
@@ -156,6 +258,19 @@
                         <tr>
                             <td><div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" onkeyup="mayus(this);"name="Aq"/></div></td>
                         </tr>
+=======
+                            <td><div class="div-cont-lname"><input type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" name="AF"/></div></td>
+                        </tr>
+                    <thead>
+                        <tr>
+                            <td>Antecedentes quirurgicos</td> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" name="Aq"/></div></td>
+                    </tr>
+>>>>>>> Stashed changes
                     </tbody>
                 </table>  
                 <hr />
@@ -169,6 +284,7 @@
                     <tbody>
                         <tr>
                             <td><div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td> 
+<<<<<<< Updated upstream
                             <td><div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></div></td> 
                     <thead>
                         <tr>
@@ -179,6 +295,18 @@
                     <tr>
                         <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Enfer" onkeyup="mayus(this);"/></div></td> 
                         <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></div></td>
+=======
+                            <td><div class="div-cont-lname"><input type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc"/></div></td> 
+                    <thead>
+                        <tr>
+                            <td>Enfermedad o problema actual</td> 
+                            <td>Diagnostico</td> 
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></div></td> 
+                        <td><div class="div-cont-lname"><input type="text" id="txt-enfermedad" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></div></td>
+>>>>>>> Stashed changes
                     </tr>
                     <thead>
                         <tr>
@@ -188,6 +316,7 @@
                     </thead>
                     <tbody>
                         <tr>
+<<<<<<< Updated upstream
                             <th><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf" name="tipo">
                                         <option>Diagnostico</option>
                                         <option>Preventivo</option>
@@ -195,6 +324,23 @@
                                     </select></div> </th> 
                             <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
                         </tr>
+=======
+                            <td><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf">
+                                        <option>Diagnostico</option>
+                                        <option>Preventivo</option>
+                                        <option>Definitivo</option>
+                                    </select></div> </td> 
+                            <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
+                            <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
+                        </tr>
+                    </tbody>
+                </table>                
+
+>>>>>>> Stashed changes
 
                         <tr>
                             <th>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></th>
@@ -252,6 +398,26 @@
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
                                 $(function () {
+<<<<<<< Updated upstream
+
+                                    $(":input[name = 'search' ]").keyup(function () {
+
+                                        / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+                                        $("#list li").remove();
+
+                                        var $val = $(this).val();
+                                        var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+                                        var args = {"time": new Date()};
+                                        $.get(url, args, function (data) {
+
+                                            / * La respuesta es una matriz de objetos json * /
+                                            for (var i = 0; i < data.length; i++)
+                                                $("#list").append("<li><a>" + data[i].content + "</a></li>");
+
+                                        }, "json");
+
+                                    });
+=======
 
                                     $(":input[name = 'search' ]").keyup(function () {
 
@@ -272,11 +438,18 @@
                                     });
 
                                 })
+>>>>>>> Stashed changes
+
+                                })
                                 function mayus(e) {
                                     e.value = e.value.toUpperCase();
                                 }
 
 
 </script>
+<<<<<<< Updated upstream
 
 </html> 
+=======
+</html>
+>>>>>>> Stashed changes
