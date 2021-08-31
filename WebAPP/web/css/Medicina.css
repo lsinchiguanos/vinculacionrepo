@@ -1,4 +1,4 @@
-  *
+*
 {
     margin: 0;
     padding: 0;    
@@ -8,8 +8,7 @@
 .nav-tp
 {
     width: 100%;
-    height: 7.22014388489208vh; 
-    margin-top: -40px;
+    height: 7.22014388489208vh;    
     background-color: #007653;
 }
 
@@ -54,7 +53,7 @@
 .sec-input-data .form
 {
     width: 90%;
-     height: 15vh; 
+     height: 15vh;    
     margin-left: 5%;    
     display: flex;
     align-items: center;
@@ -72,9 +71,8 @@
 }
 .div-cont-date, .div-cont-ced, .div-cont-search
 {
- 
  width: 33% !important;    
-     height: 10vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,8 +127,8 @@
 
 .form1
 {
-    width:100%; 
-  height: 130.46762589928058vh; 
+    width:100%;
+  height: 130.46762589928058vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,11 +139,7 @@
     width: 90%;
     height: auto; 
     padding-bottom: 25px;
-<<<<<<< Updated upstream
   margin-top:105%; 
-=======
-    margin-top:105%; 
->>>>>>> Stashed changes
     -webkit-box-shadow: 4px -9px 23px 0px rgba(0, 118, 83,1);
     -moz-box-shadow: 4px -9px 23px 0px rgba(0, 118, 83,1);
     box-shadow: 4px -9px 23px 0px rgba(0, 118, 83,1);
@@ -159,11 +153,7 @@
 .div-row-one, .div-row-two, .div-row-three, .div-row-four, .div-row-five, .div-row-six, .div-row-seven, .div-row-eigth, .div-row-nine, .div-row-ten, .div-row-eleven
 {    
     width: 90%;
-<<<<<<< Updated upstream
   height: 17.67vh;
-=======
-    height: 17.67vh;
->>>>>>> Stashed changes
     margin-left: 5%;
      margin-bottom: 5px;
     display: flex;
@@ -172,17 +162,10 @@
 }
 
 .div-cont-ced, .div-cont-name, .div-cont-lname, .div-cont-edad, .div-cont-cod
-<<<<<<< Updated upstream
 {  
     width: 90% !important;
     margin-top: 6px !important;
     height: 15vh;  
-=======
-{    
-    width: 90% !important;
-    margin-top: 6px !important;
-    height: 15vh;    
->>>>>>> Stashed changes
     align-items: center;
     justify-content: center;
 }
@@ -196,12 +179,7 @@
     background-color: #D5DCD5;
     padding: 0px 20px;
     color: #000000;
-<<<<<<< Updated upstream
     font-size: 1em; 
-=======
-    font-size: 1em;
-    
->>>>>>> Stashed changes
 }
  .inp-ced:focus, .inp-name:focus, .inp-lname:focus, .sel-dep-transf:focus, .sel-dep-to-transf:focus, .inp-cod:focus, .inp-edad:focus, .txt-ar-ob:focus, .btn-accept
 {
@@ -217,8 +195,8 @@
 
 .div-cont-sel-dep-transf, .div-cont-sel-dep-to-transf
 {    
-     width: 50% !important;
-    margin-top: 5px !important;
+    width: 40%;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -289,4 +267,5 @@ footer
 {
     width: 100%;
     height: 20vh;
+
 }
