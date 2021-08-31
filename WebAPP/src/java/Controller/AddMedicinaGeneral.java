@@ -68,7 +68,7 @@ public class AddMedicinaGeneral extends HttpServlet {
             ep = request.getParameter("Ep");
             diag = request.getParameter("diagnostico");
             tipo = request.getParameter("tipo");
-            String galenoUser = "jalmeidam2";
+            String galenoUser = "kmog";
             Part filePart = request.getPart("CargarArchivo");
 //            Part filePart = request.getPart("file");//Textbox value of name file.
 //            String firstName = request.getParameter("firstname");//Textbox value of name firstname.
