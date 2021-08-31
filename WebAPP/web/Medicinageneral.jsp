@@ -21,7 +21,7 @@
     <div class="div-head-tittle"><h2></h2></div>
 
 
-    <form id="form1">
+    <form action="AddMedicinaGeneral" method="post" enctype="multipart/form-data">
         <section class="sec-main">
             <div class="div-cont-main">
                 <div class="div-cont-ced">
@@ -204,44 +204,7 @@
                 </table>        
             </div>
         </section>
-        <%
-            PreparedStatement pst;
-            conexion cn = new conexion();
-            ResultSet rs;
-            PreparedStatement ps;
-            String sql;
-            String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag, tipo, cargar;
 
-            dni = request.getParameter("cedula");
-            Pnom = request.getParameter("Estatura");
-            Snom = request.getParameter("peso");
-            telefono = request.getParameter("sangre");
-            direccion = request.getParameter("pc");
-            provincia = request.getParameter("pt");
-            canton = request.getParameter("pa");
-            parroquia = request.getParameter("AAl");
-            ap = request.getParameter("AP");
-            af = request.getParameter("AF");
-            aq = request.getParameter("Aq");
-            fecha = request.getParameter("Fecha");
-            mc = request.getParameter("mc");
-            ep = request.getParameter("Enfer");
-            diag = request.getParameter("diagnostico");
-            tipo = request.getParameter("tipo");
-            cargar = request.getParameter("CargarArchivo");
-
-            if (Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && ap != null
-                    && af != null && aq != null && fecha != null && mc != null && ep != null && diag != null && tipo != null && cargar != null) {
-                ps = cn.getConecction().prepareStatement("insert into medicinageneral( paciente_dni, estatura, peso, tipossangre,"
-                        + "pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares,"
-                        + "antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, "
-                        + "diagnositico,tipo, cargararchivo,galeno_user)values('" + dni + "','" + Pnom + "','" + Snom + "','" + telefono + "','" + direccion + "','" + provincia + "','" + canton + "','" + parroquia + "','" + ap + "','" + af + "','" + aq + "','" + fecha + "','" + mc + "','" + ep + "','" + diag + "','" + tipo + "','" + cargar + "','"+session.getAttribute("galeno_user11")+"');");
-                ps.executeUpdate();
-                response.sendRedirect("Principal.jsp");
-            }
-
-
-        %>
     </form> 
 
 

@@ -211,7 +211,7 @@
                                                     //console.log (message);
                                                     if (message == 'OK') {
                                                         alert('Email enviado con datos del medico.');
-                                                        location.href = "login.jsp"
+                                                        location.href = "index.jsp"
                                                     } else {
                                                         console.error(message);
                                                         alert('Error. No se ha enviado. ')
