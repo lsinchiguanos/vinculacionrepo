@@ -28,7 +28,7 @@ public class LoginDAO {
 
     public int SearchClienteLogin(Constructor tm) throws SQLException {
         int cliente_id = 0;
-        sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'and galeno_estado=1";
+        sql_command = "Select galeno_id from galeno where galeno_user = '" + tm.getGaleno_user() + "' and galeno_pass = '" + getMD5(tm.getGaleno_pass()) + "'";
         try {
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();

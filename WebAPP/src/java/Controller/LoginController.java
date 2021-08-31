@@ -17,16 +17,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "LoginController", urlPatterns = {"/LoginController"})
 public class LoginController extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     * @throws java.sql.SQLException
-     */
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
@@ -42,7 +33,7 @@ public class LoginController extends HttpServlet {
             tm.setGaleno_user(usuario);
             tm.setGaleno_pass(clave);
             cliente_id = new DAO.LoginDAO().SearchClienteLogin(tm);
-            if (cliente_id == 0) {
+            if (cliente_id != 0) {
                 sesion.setAttribute("galeno_user11", usuario);
                 response.sendRedirect(request.getContextPath() + "/Principal.jsp");
             } else {
