@@ -201,7 +201,7 @@
                                     </select></div> </th> 
                             <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
                         </tr>                        
-                        <tr>
+                         <tr>
                             <td>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
                             <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
                         </tr>

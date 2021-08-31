@@ -83,10 +83,10 @@
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required=""></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required=""></div></td>
-
                             </tr> 
                             <tr>
-                                <td>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
+                                <td></td>
+                                <td><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
                                 <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
                             </tr>
 
