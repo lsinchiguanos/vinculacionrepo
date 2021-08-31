@@ -4,6 +4,8 @@
     Author     : jean
 --%>
 
+<%@page import="java.time.LocalDateTime"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="BD.conexion"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -24,8 +26,8 @@
             <section class="sec-data-pacient">
                 <div class="div-cont-main">
                     <div class="div-row-one">
-                        <input type="text" id="txt-ced" class="inp-ced" placeholder="Nombre de usuario" name="cedula"/>
                         <div class="div-cont-ced"><input type="text" id="txt-ced" class="inp-ced" placeholder="Nombre de usuario" name="nuevoUser"/></div>
+                        <br>
                         <div class="div-cont-name"><input type="password" id="txt-name" class="inp-name" placeholder="Nueva contraseña" name="NuevoPass"/></div>
                     </div>
                     <div class="div-row-three"> 
@@ -34,6 +36,8 @@
             </section>
         </form>
         <%
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            String x = dtf.format(LocalDateTime.now());
             PreparedStatement pst;
             conexion cn = new conexion();
             ResultSet rs;
@@ -41,9 +45,8 @@
             String usuario, clave, cedula1;
             usuario = request.getParameter("nuevoUser");
             clave = request.getParameter("NuevoPass");
-            cedula1 = request.getParameter("cedula");
             if (usuario != null && clave != null) {
-                ps = cn.getConecction().prepareStatement("update galeno set galeno_user='" + usuario + "', galeno_pass=md5('" + clave + "'),galeno_estado='1' where galeno_dni='" + cedula1 + "'");
+                ps = cn.getConecction().prepareStatement("update galeno set galeno_user='" + usuario + "', galeno_pass=md5('" + clave + "'),galeno_estado='1',updated_at='"+x+"' where galeno_user ='" + session.getAttribute("galeno_user11") + "'");
                 ps.executeUpdate();
                 response.sendRedirect("index.jsp");
             }
