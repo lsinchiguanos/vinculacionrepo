@@ -65,7 +65,7 @@ public class AddMedicinaGeneral extends HttpServlet {
             aq = request.getParameter("Aq");
             fecha = request.getParameter("Fecha");
             mc = request.getParameter("mc");
-            ep = request.getParameter("Enfer");
+            ep = request.getParameter("Ep");
             diag = request.getParameter("diagnostico");
             tipo = request.getParameter("tipo");
             String galenoUser = "jalmeidam2";
