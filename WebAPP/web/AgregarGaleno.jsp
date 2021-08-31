@@ -8,12 +8,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
-        <link href="css/Galeno.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Galeno.css" rel="stylesheet" type="text/css"/> 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>WebApp - Ingresos</title>
     </head>
     <body>
-        <header id="header" style=" background: #007653 !important;">
+        <header id="header" style=" background: #007653 !important;"  >
             <nav class="nav-tp" ></nav>
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:2px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
@@ -23,6 +23,9 @@
         <div class="div-head-tittle"><h2></h2></div>
         <!--javascript:sendmail()-->
         <!--/WebAPP/AddGaleno-->
+        
+        
+        
         <form class="form1" action="/WebAPP/AddGaleno">
             <section class="sec-main" >
                 <div class="div-cont-main">
