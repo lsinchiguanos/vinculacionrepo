@@ -14,11 +14,15 @@
         <link href="css/animacionprincipal.css" rel="stylesheet" type="text/css"/>
 
     </head>
-    <%
-        HttpSession s = request.getSession();
-        //variables de session
-%>
+
     <body class="is-preload">    
+
+   <%
+            HttpSession s = request.getSession();
+            //variables de session
+        %>    
+           <!--   <label> // s.getAttribute("galeno_user11") %> </label>-->
+
         <header id="header" style="">
 
             <header id="header" style=" background: #007653 !important;">
@@ -80,18 +84,18 @@
                     </section>
 
                     <!-- CUARTO MODULO -->
-                   <!-- <section class="animadoagregarinformacion">
-                        <div class="content">
-                            <header>
-                                <a href="">
-                                    <img alt="" src="img/icons8_cv_96px.png">
-                                    <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">Transferir Paciente</h3>
-                            </header>
-                            <p>Transferir un paciente a otro departamento</p>
-                            <a href="TransferirPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
-                        </div>
-                    </section>-->
+                    <!-- <section class="animadoagregarinformacion">
+                         <div class="content">
+                             <header>
+                                 <a href="">
+                                     <img alt="" src="img/icons8_cv_96px.png">
+                                     <span class="label"></span></a>
+                                 <h3 style="color:#007653; font-weight: bold">Transferir Paciente</h3>
+                             </header>
+                             <p>Transferir un paciente a otro departamento</p>
+                             <a href="TransferirPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
+                         </div>
+                     </section>-->
                     <!-- Quinto MODULO -->
                     <section class="animadoagregarinformacion">
                         <div class="content">
