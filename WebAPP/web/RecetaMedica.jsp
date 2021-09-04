@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
         <link href="css/Recetamedica.css" rel="stylesheet" type="text/css"/> 
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <title>WebApp - Receta Medica</title>
     </head>
     <body>
@@ -12,29 +13,73 @@
         </header>      
         <div class="div-head-tittle"><h2></h2></div>
 
-        <section class="sec-main">
-            <form class="form1">
-                <div class="div-cont-main">
-                    <div class="div-row-one">
-                        <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
-                        <div class="div-cont-ced"><input type="number" id="txt-ced" class="inp-ced" placeholder="Nombres del Paciente" name="Identificacion" onkeypress='return validaNumericos(event)'/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Apellidos del Paciente" name="PrimerNombre" onkeypress="return soloLetras(event)"/></div>
-                    </div>
-                    <div class="div-row-two">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Nombre del Medico" name="SegundoNombre" onkeypress="return soloLetras(event)"/></div>
-                        <div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Segundo Apellido" name="Fechadenacimiento"/></div>
-                    </div>
-                    <div class="div-row-three">
-                        <div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Medicamento" name="Fechadenacimiento"/></div>
-                        <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Prescripcion" name="CorreoElectronico"/></div>
-                    </div>  
-                    <div class="div-row-four"> 
-                        <input type="button" id="btn-action" class="btn-accept" value="Agregar"/>
-                    </div> 
-                </div>
-            </form> 
-        </section> 
 
+       <form class="form1"> 
+            <section class="sec-main">
+                <div class="div-cont-main">
+                    <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
+                        <thead >
+                            <tr>
+                                <th>Numero de identificacion</th>
+                                <th>Nombres del Paciente</th>
+                                <th>Nombres del Medico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <div class="div-cont-name"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div></td>
+                                <td><div class="div-cont-name"><input type="number" id="txt-ced" class="inp-ced" placeholder="Nombres del Paciente" name="nombres paciente" onkeypress="return soloLetras(event)"/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombres del Medico" name="nombres medico" onkeypress="return soloLetras(event)"/></div></td>
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>
+                                <th>Fecha </th>                           
+                                <th> </th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td>
+                                <td> </td>
+
+                            </tr>
+                        </tbody>
+                        <thead >
+                            <tr>                          
+                                <th>Medicamento</th>
+                                <th>Indicacion Medica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lnamem" class="inp-lname" placeholder="Medicamento" name="medicamento"/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-namei" class="inp-name" placeholder="Indicaciones Medicas" name="indicaciones"/></div></td>
+                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="button"  id="btn-action" class="btn-accept" value="AGREGAR"> </input> </div></td>
+                            </tr>
+                        </tbody>                        
+                    </table> 
+
+                    <div style="width: 70%; height: auto; margin-left: auto; margin-right: auto" >
+                        <div >
+                            <table id="tabla" class="table table-bordered">
+                                <thead>
+                                    <tr> 
+
+                                        <td>Nª</td>
+                                        <td>Medicamento</td>
+                                        <td>Indicaciones medica</td>
+                                        <td>Acciones</td>
+                             
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+         </form>
         <script>
             function validaNumericos(event) {
                 if (event.charCode >= 48 && event.charCode <= 57) {
@@ -81,5 +126,8 @@
         </script>
     </body>
     <footer></footer>
-    <script src="js/JQuery.js" type="text/javascript"></script>  
+    <script src="js/JQuery.js" type="text/javascript"></script> 
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/recetamedica.js" type="text/javascript"></script>
+
 </html>
