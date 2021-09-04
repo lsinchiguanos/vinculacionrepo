@@ -11,7 +11,7 @@
             <nav class="nav-tp"></nav>
         </header>      
         <div class="div-head-tittle"><h2></h2></div>
-        
+
         <section class="sec-main">
             <form class="form1">
                 <div class="div-cont-main">
@@ -29,33 +29,12 @@
                         <div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Prescripcion" name="CorreoElectronico"/></div>
                     </div>  
                     <div class="div-row-four"> 
-                        <input type="button" id="btn-action" class="btn-accept" value="Guardar"/>
+                        <input type="button" id="btn-action" class="btn-accept" value="Agregar"/>
                     </div> 
                 </div>
             </form> 
-        </section>
+        </section> 
 
-        <!--     <div class="div-head-tittle"><h2></h2></div>
-             Cedula del paciente
-             <input type="text" id="txt-ced" class="inp-ced"/>
-             <br><br>
-             Nombre del medico
-             <input type="text" id="txt-ced" class="inp-ced"/>
-             <br><br>
-             Fecha
-             <input type="text" id="txt-ced" class="inp-ced"/>
-             <br><br>
-             Nombres completos
-             <input type="text" id="txt-ced" class="inp-ced"/>
-             <br><br>
-             apellidos completos
-             <input type="text" id="txt-ced" class="inp-ced"/>
-             <br><br>    
-             Medicamento: <textarea type="text" id="txt-ced" class="inp-ced"></textarea>
-             <br><br>   
-             Prescripcion:<textarea type="text" id="txt-ced" class="inp-ced"/></textarea> 
-         <br><br>    
-         <input type="submit" value="Guardar" />!-->
         <script>
             function validaNumericos(event) {
                 if (event.charCode >= 48 && event.charCode <= 57) {
@@ -79,6 +58,25 @@
 
                 if (letras.indexOf(tecla) == -1 && !tecla_especial)
                     return false;
+            }
+            function verificarCedula(cedula) {
+                if (typeof (cedula) == 'string' && cedula.length == 10 && /^\d+$/.test(cedula)) {
+                    var digitos = cedula.split('').map(Number);
+                    var codigo_provincia = digitos[0] * 10 + digitos[1];
+
+                    //if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30) && digitos[2] < 6) {
+
+                    if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30)) {
+                        var digito_verificador = digitos.pop();
+
+                        var digito_calculado = digitos.reduce(
+                                function (valorPrevio, valorActual, indice) {
+                                    return valorPrevio - (valorActual * (2 - indice % 2)) % 9 - (valorActual == 9) * 9;
+                                }, 1000) % 10;
+                        return digito_calculado === digito_verificador;
+                    }
+                }
+                return false;
             }
         </script>
     </body>

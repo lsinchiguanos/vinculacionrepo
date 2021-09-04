@@ -46,7 +46,7 @@
                             <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                         </tr>
                     </tbody>
-                   
+
                     <thead>
                         <tr>
                             <td>Discapacidad</td>
@@ -62,7 +62,7 @@
                             <td> <div class="div-cont-edad"><input type="text" id="txt-cel" class="inp-edad" placeholder="Celular" name="Celular" onkeypress='return validaNumericos(event)'disabled="true"/></div>  </td>
                         </tr>
                     </tbody>
-                     <thead>
+                    <thead>
                         <tr>
                             <td>Provincia</td>
                             <td>Direccion</td>
@@ -167,8 +167,8 @@
                     </tbody>
                 </table>  
                 <hr />
-                
-                
+
+
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead>
                         <tr>
@@ -201,7 +201,7 @@
                                     </select></div> </th> 
                             <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
                         </tr>                        
-                         <tr>
+                        <tr>
                             <td>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
                             <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
                         </tr>
@@ -209,7 +209,7 @@
                 </table>          
             </div>
         </section>
-        
+
     </form> 
 
 
@@ -219,41 +219,60 @@
 <script src="js/Opciones.js" type="text/javascript"></script> 
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
-                                $(function () {
+                            $(function () {
 
 
                                 $(":input[name = 'search' ]").keyup(function () {
 
-                                / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
-                                        $("#list li").remove();
-                                var $val = $(this).val();
-                                var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
-                                var args = {"time": new Date()};
-                                $.get(url, args, function (data) {
+                                    / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+                                    $("#list li").remove();
+                                    var $val = $(this).val();
+                                    var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+                                    var args = {"time": new Date()};
+                                    $.get(url, args, function (data) {
 
-                                / * La respuesta es una matriz de objetos json * /
+                                        / * La respuesta es una matriz de objetos json * /
                                         for (var i = 0; i < data.length; i++)
-                                        $("#list").append("<li><a>" + data[i].content + "</a></li>");
-                                }, "json");
+                                            $("#list").append("<li><a>" + data[i].content + "</a></li>");
+                                    }, "json");
                                 });
                                 $(":input[name = 'search' ]").keyup(function () {
 
-                                / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
-                                        $("#list li").remove();
-                                var $val = $(this).val();
-                                var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
-                                var args = {"time": new Date()};
-                                $.get(url, args, function (data) {
+                                    / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+                                    $("#list li").remove();
+                                    var $val = $(this).val();
+                                    var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+                                    var args = {"time": new Date()};
+                                    $.get(url, args, function (data) {
 
-                                / * La respuesta es una matriz de objetos json * /
+                                        / * La respuesta es una matriz de objetos json * /
                                         for (var i = 0; i < data.length; i++)
-                                        $("#list").append("<li><a>" + data[i].content + "</a></li>");
-                                }, "json");
+                                            $("#list").append("<li><a>" + data[i].content + "</a></li>");
+                                    }, "json");
                                 });
-                                }) 
-                                        function mayus(e) {
-                                        e.value = e.value.toUpperCase();
-                                        }
+                            })
+                            function mayus(e) {
+                                e.value = e.value.toUpperCase();
+                            }
+                            function verificarCedula(cedula) {
+                                if (typeof (cedula) == 'string' && cedula.length == 10 && /^\d+$/.test(cedula)) {
+                                    var digitos = cedula.split('').map(Number);
+                                    var codigo_provincia = digitos[0] * 10 + digitos[1];
+
+                                    //if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30) && digitos[2] < 6) {
+
+                                    if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30)) {
+                                        var digito_verificador = digitos.pop();
+
+                                        var digito_calculado = digitos.reduce(
+                                                function (valorPrevio, valorActual, indice) {
+                                                    return valorPrevio - (valorActual * (2 - indice % 2)) % 9 - (valorActual == 9) * 9;
+                                                }, 1000) % 10;
+                                        return digito_calculado === digito_verificador;
+                                    }
+                                }
+                                return false;
+                            }
 
 
 </script>
