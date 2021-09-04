@@ -50,7 +50,7 @@
                 }
             }
             function mostrarPassword1() {
-                var cambio = document.getElementById("txtPassword");
+                var cambio = document.getElementById("txtPassword1");
                 if (cambio.type == "password") {
                     cambio.type = "text";
                     $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
