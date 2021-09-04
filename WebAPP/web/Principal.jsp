@@ -27,11 +27,9 @@
                 <a class="logo" id="ulUserData" href="index.html"></a>
                 <nav>
                     <a href="cambioclave.jsp" style="color:white" >Cambiar clave</a>
-                    <a href="CambiarUserYpass.jsp" style="color:white" >Cambiar Usuario y Clave</a>
                     <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
                 </nav>
             </header>
-
         </header>
         <!-- container principal -->
         <section class="wrapper">

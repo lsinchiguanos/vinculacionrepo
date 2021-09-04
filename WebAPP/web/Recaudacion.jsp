@@ -12,7 +12,6 @@
         </header>      
 
         <div class="div-head-tittle"><h2></h2></div>
-
         <section class="sec-main">
             <form>
                 <div class="div-cont-main">

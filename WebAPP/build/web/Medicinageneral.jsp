@@ -188,8 +188,8 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep"/></textarea></td> 
-                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname" placeholder="Diagnostico" name="diagnostico"/></textarea></td>
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep" onkeyup="mayus(this);"/></textarea></td> 
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></textarea></td>
                     </tr>
                     </tbody>
                     <tbody>

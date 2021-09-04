@@ -15,17 +15,14 @@
     <body>
         <header id="header" style=" background: #007653 !important;"  >
             <nav class="nav-tp" ></nav>
-            <a class="logo" href="Principal.jsp">
-                <img style="margin-top:2px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
-            </a>
+
             <a class="logo" id="ulUserData" href="index.html"></a>
         </header>
         <div class="div-head-tittle"><h2></h2></div>
         <!--javascript:sendmail()-->
         <!--/WebAPP/AddGaleno-->
-
+       
         <form class="form1" action="/WebAPP/AddGaleno">
-            
             <section class="sec-main" >
                 <div class="div-cont-main">
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
@@ -69,7 +66,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular"required=""  onkeypress='return validaNumericos(event)'/></div> </td>                      
+                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular"required="" maxlength="10"  onkeypress='return validaNumericos(event)'/></div> </td>                      
                                 <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="provincia">
                                             <option>Seleccione una provincia</option>
                                             <option>Esmeraldas</option><option>Manabí</option>
@@ -124,12 +121,11 @@
                                             <option>Seleccione un departamento</option>
                                             <option>medicina</option>
                                         </select></div></td> 
-
                             </tr>
                         </tbody>
                         <thead>
                         <td>
-                            <input type="submit" id="btn-action" class="btn-accept"  value="Guardar"/> 
+                            <input type="submit" class="btn-accept"  value="Guardar"/> 
                         </td>
                         </thead>
                     </table> 

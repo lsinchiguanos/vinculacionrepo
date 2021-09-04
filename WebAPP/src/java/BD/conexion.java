@@ -1,4 +1,5 @@
 package BD;
+
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,7 +27,6 @@ public class conexion {
             System.err.println(e.getMessage());
         }
     }
-
     public synchronized Connection getConecction() {
         try {
             if (conecction == null || conecction.isClosed()) {
