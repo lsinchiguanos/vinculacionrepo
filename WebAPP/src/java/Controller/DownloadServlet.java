@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -43,7 +44,10 @@ public class DownloadServlet extends HttpServlet {
             /**
              * *** Print The Response ****
              */
-            response.getWriter().println("<h3>File " + fileName + " Is Not Present .....!</h3>");
+//            response.getWriter().println("<h3>File " + fileName + " Is Not Present .....!</h3>");
+            JOptionPane.showMessageDialog(null, "NO HAY ARCHIVO PARA VISUALIZARLO: INGRESE UN DOCUMENTO EN EL MENU DE SUBIR EXAMENES.");
+            response.sendRedirect("HistorialPaciente.jsp");
+            
         } else {
             String applicationPath = getServletContext().getRealPath("");
             String downloadPath = applicationPath + File.separator + UPLOAD_DIR;
@@ -91,7 +95,8 @@ public class DownloadServlet extends HttpServlet {
                         outStream.write(buffer, 0, bytesRead);
                     }
                 } catch (IOException ioExObj) {
-                    System.out.println("Exception While Performing The I/O Operation?= " + ioExObj.getMessage());
+//                    System.out.println("Exception While Performing The I/O Operation?= " + ioExObj.getMessage());
+                    JOptionPane.showMessageDialog(null, "NO HAY ARCHIVO PARA VISUALIZARLO: INGRESE UN DOCUMENTO EN EL MENU DE SUBIR EXAMENES.");
                 } finally {
                     if (inputStream != null) {
                         inputStream.close();
@@ -112,7 +117,8 @@ public class DownloadServlet extends HttpServlet {
                 /**
                  * *** Print The Response ****
                  */
-                response.getWriter().println("<h3>File " + fileName + " Is Not Present .....!</h3>");
+                JOptionPane.showMessageDialog(null, "NO HAY ARCHIVO PARA VISUALIZARLO: INGRESE UN DOCUMENTO EN EL MENU DE SUBIR EXAMENES.");
+//                response.getWriter().println("<h3>File " + fileName + " Is Not Present .....!</h3>");
             }
 
         }

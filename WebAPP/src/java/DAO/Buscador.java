@@ -9,29 +9,30 @@ import java.util.List;
 import Model.BuscadorPaciente;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 public class Buscador {
-    
-  String sql = "";
+
+    String sql = "";
     ResultSet rs = null;
     conexion cn = new conexion();
     private String sql_command = "";
-    private PreparedStatement pst = null; 
+    private PreparedStatement pst = null;
 
- public BuscadorPaciente Listbuscarpaciente(String cedula) {
-        BuscadorPaciente newbuscar = new  BuscadorPaciente();
+    public BuscadorPaciente Listbuscarpaciente(String cedula) {
+        BuscadorPaciente newbuscar = new BuscadorPaciente();
         pst = null;
         rs = null;
         try {
-              sql_command ="select paciente_dni, CONCAT(paciente_primer_nombre, ' ',paciente_segundo_nombre) as nombre,"
-                        + "CONCAT(paciente_apellido_paterno, ' ',paciente_apellido_materno)as apellido,paciente_grupo,"
-                        + "paciente_convencional,paciente_telefono,paciente_provincia,paciente_direccion,\n"
-                        + " paciente_genero, paciente_ayudasocial,paciente_nacionalidad, "
-                        + "paciente_correoelectronico from paciente "
-                        + "where paciente_dni = '" + cedula + "'";
+            sql_command = "select paciente_dni, CONCAT(paciente_primer_nombre, ' ',paciente_segundo_nombre) as nombre,"
+                    + "CONCAT(paciente_apellido_paterno, ' ',paciente_apellido_materno)as apellido,paciente_grupo,"
+                    + "paciente_convencional,paciente_telefono,paciente_provincia,paciente_direccion,\n"
+                    + " paciente_genero, paciente_ayudasocial,paciente_nacionalidad, "
+                    + "paciente_correoelectronico from paciente "
+                    + "where paciente_dni = '" + cedula + "'";
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
             while (rs.next()) {
-              
+
                 newbuscar.setPaciente_dni(String.valueOf(rs.getString("paciente_dni")));
                 newbuscar.setPaciente_primer_segundo_nombre(String.valueOf(rs.getString("nombre")));
                 newbuscar.setPaciente_primer_segundo_apellido(String.valueOf(rs.getString("apellido")));
@@ -43,8 +44,8 @@ public class Buscador {
                 newbuscar.setPaciente_genero(String.valueOf(rs.getString("paciente_genero")));
                 newbuscar.setPaciente_ayudasocial(String.valueOf(rs.getString("paciente_ayudasocial")));
                 newbuscar.setPaciente_nacionalidad(String.valueOf(rs.getString("paciente_nacionalidad")));
-                newbuscar.setPaciente_correoelectronico(String.valueOf(rs.getString("paciente_correoelectronico"))); 
-                
+                newbuscar.setPaciente_correoelectronico(String.valueOf(rs.getString("paciente_correoelectronico")));
+
             }
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());

@@ -109,11 +109,14 @@ public class AddMedicinaGeneral extends HttpServlet {
                 ps.setString(19, patch);
                 int status = ps.executeUpdate();
                 if (status > 0) {
+                    if(fileName!=null)
+                    {
                     session.setAttribute("fileName", fileName);
                     String msg = "" + fileName + " File uploaded successfully...";
                     request.setAttribute("msg", msg);
                     RequestDispatcher rd = request.getRequestDispatcher("/Principal.jsp");
                     rd.forward(request, response);
+                    }
                 }
             } catch (SQLException e) {
                 out.println("Exception: " + e);
