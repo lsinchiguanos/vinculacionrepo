@@ -16,10 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Model.ConstructorGaleno;
 import DAO.InsertAddGaleno;
-import java.util.Properties;
-import javax.swing.JOptionPane;
-import javax.websocket.Session;
-import sun.rmi.transport.Transport;
 
 /**
  *

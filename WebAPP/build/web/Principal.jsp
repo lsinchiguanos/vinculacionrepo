@@ -18,7 +18,7 @@
         <%
             HttpSession s = request.getSession();
             //variables de session
-        %>    
+%>    
         <label id="usuario"><%= s.getAttribute("galeno_user11")%> </label> 
         <label id="nombre"></label> 
 
@@ -63,7 +63,7 @@
                                 <h3 style="color:#007653; font-weight: bold" class="textgrueso">Reportes</h3>
                             </header>
                             <p>Mostrar informe de las actividades</p>
-                            <a href="" class="button primary" style=" background: #007653 !important;">Acceder</a>
+                            <a href="Reportes.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
 
@@ -133,7 +133,7 @@
         <script src="Principal/js/util.js"></script>
         <script src="Principal/js/main.js"></script>
         <script src="js/animacion.js" type="text/javascript"></script>
- 
+
 
     </body>
 
