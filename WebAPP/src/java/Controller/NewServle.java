@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import DAO.Insertarecetamedica;
@@ -20,10 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Dell
- */
 public class NewServle extends HttpServlet {
 
     /**
@@ -38,17 +29,17 @@ public class NewServle extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         String op = request.getParameter("op");
+        String op = request.getParameter("op");
         HttpSession sesion = request.getSession();
         PrintWriter out = response.getWriter();
-           switch (op) {
+        switch (op) {
             case "1":
                 String cedula = request.getParameter("cedula");
                 //Integer galenoid = resquest.getParameter("");
                 Insertarecetamedica buscar1 = new Insertarecetamedica();
                 String jsons = new Gson().toJson(buscar1.Listbuscarpaciente1(cedula));
-               System.out.print(jsons); 
-              //  sesion.setAttribute("DatePaciente", json);
+                System.out.print(jsons);
+                //  sesion.setAttribute("DatePaciente", json);
                 // Establece el tipo de respuesta en formato json
                 response.setContentType("text/javascript");
                 response.getWriter().print(jsons);
@@ -58,36 +49,29 @@ public class NewServle extends HttpServlet {
                 String users = request.getParameter("user");
                 Insertarecetamedica buscau = new Insertarecetamedica();
                 String jsonnn = new Gson().toJson(buscau.Listbuscarm(users));
-                System.out.print(jsonnn);               
+                System.out.print(jsonnn);
                 response.setContentType("text/javascript");
                 response.getWriter().print(jsonnn);
                 break;
             case "3":
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-                String x = dtf.format(LocalDateTime.now());
-                String idDoctor = sesion.getAttribute("idDoctor").toString();  
-                String jsonDatePaciente = sesion.getAttribute("DatePaciente").toString(); 
-                String jsonReceta = request.getParameter("jsonreceta");
-                String fecha = request.getParameter("fecha"); 
-                
-                JsonParser jsonParser = new JsonParser();
-                JsonObject myJson = (JsonObject) jsonParser.parse(jsonDatePaciente);
-                
-                String pacienteid = myJson.get("pacienteid").getAsString();
+                String x = dtf.format(LocalDateTime.now());            ////datos de encabezado          
+
+                String idDoctor = request.getParameter("galenoid");
+                String pacienteid = request.getParameter("pacienteid"); 
                 Insertarecetamedica insertarreceta = new Insertarecetamedica();
-          
-                int id_encabezado = insertarreceta.agregarrecetamedicaencabezado(idDoctor,pacienteid,x);
-                
+                int id_encabezado = insertarreceta.agregarrecetamedicaencabezado(idDoctor, pacienteid, x);
+
                 String medicamento = "";
                 String indicaciones = "";
-                
-                insertarreceta.agregarrecetamedicadetalle(id_encabezado,medicamento,indicaciones);
-                
-               //JsonParser jsondetalle = new JsonParse();
+
+                insertarreceta.agregarrecetamedicadetalle(id_encabezado, medicamento, indicaciones);
+              
+                //JsonParser jsondetalle = new JsonParse();
                 ////VALIDAR LOS TEXT
                 break;
-                
-           }
+
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

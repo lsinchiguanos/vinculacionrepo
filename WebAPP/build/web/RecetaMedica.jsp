@@ -131,8 +131,7 @@
         </script>
     </body>
     <footer></footer>
-     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-   
+     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>   
     <script src="js/recetamedica.js" type="text/javascript"></script>
     <script src="js/Buscadorpaciente.js" type="text/javascript"></script>
     <script src="js/newjavascript.js" type="text/javascript"></script>
