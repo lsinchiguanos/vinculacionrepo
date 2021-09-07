@@ -1,3 +1,14 @@
+$(document).ready(function()
+{
+   $("#PaginaMedi").click(function()
+   {
+        window.location.href = "./Medicinageneral.jsp?user="+document.getElementById("usuario").innerHTML;
+       
+   }); 
+});
+
+
+
 let modal = document.getElementById('miModal');
 let flex = document.getElementById('flex');
 let abrir = document.getElementById('abrir');

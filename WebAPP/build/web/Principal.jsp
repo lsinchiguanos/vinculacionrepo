@@ -12,16 +12,15 @@
         <meta name="keywords" content="" />
         <link rel="stylesheet" href="Principal/css/main.css" />
         <link href="css/animacionprincipal.css" rel="stylesheet" type="text/css"/>
-
     </head>
 
     <body class="is-preload">    
-
-   <%
+        <%
             HttpSession s = request.getSession();
             //variables de session
         %>    
-           <!--   <label> // s.getAttribute("galeno_user11") %> </label>-->
+        <label id="usuario"><%= s.getAttribute("galeno_user11")%> </label> 
+        <label id="nombre"></label> 
 
         <header id="header" style="">
 
@@ -50,7 +49,7 @@
 
                             </header>
                             <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
-                            <a  href="Medicinageneral.jsp" class="button primary" style=" background: #007653 !important;" >Acceder</a>
+                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Acceder</a>
                         </div>
                     </section>
 
@@ -62,7 +61,6 @@
                                     <img alt="" src="img/icons8_account_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold" class="textgrueso">Reportes</h3>
-
                             </header>
                             <p>Mostrar informe de las actividades</p>
                             <a href="" class="button primary" style=" background: #007653 !important;">Acceder</a>
@@ -128,12 +126,14 @@
         </section>
 
         <!-- Scripts -->
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
         <script src="Principal/js/jquery.min.js"></script>
         <script src="Principal/js/browser.min.js"></script>
         <script src="Principal/js/breakpoints.min.js"></script>
         <script src="Principal/js/util.js"></script>
         <script src="Principal/js/main.js"></script>
         <script src="js/animacion.js" type="text/javascript"></script>
+ 
 
     </body>
 

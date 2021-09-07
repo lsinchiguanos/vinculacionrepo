@@ -2,12 +2,14 @@ package Model;
 
 public class BuscadorPaciente {
 
-    private String paciente_ayudasocial,paciente_dni,paciente_primer_segundo_nombre,paciente_grupo, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_correoelectronico, paciente_telefono, paciente_convencional;
+    private String pacienteid,nombrescompleto,paciente_ayudasocial,paciente_dni,paciente_primer_segundo_nombre,paciente_grupo, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_correoelectronico, paciente_telefono, paciente_convencional;
 
     public BuscadorPaciente() {
     }
 
-    public BuscadorPaciente(String paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_correoelectronico, String paciente_ayudasocial, String paciente_telefono, String paciente_convencional, String paciente_grupo) {
+    public BuscadorPaciente(String pacienteid,String nombrescompletos,String paciente_dni, String paciente_primer_segundo_nombre, String paciente_primer_segundo_apellido, String paciente_direccion, String paciente_provincia, String paciente_nacionalidad, String paciente_genero, String paciente_correoelectronico, String paciente_ayudasocial, String paciente_telefono, String paciente_convencional, String paciente_grupo) {
+       this.pacienteid=pacienteid;
+        this.nombrescompleto=nombrescompletos;
         this.paciente_dni = paciente_dni;
         this.paciente_primer_segundo_nombre = paciente_primer_segundo_nombre;
         this.paciente_primer_segundo_apellido = paciente_primer_segundo_apellido;
@@ -20,6 +22,22 @@ public class BuscadorPaciente {
         this.paciente_telefono = paciente_telefono;
         this.paciente_convencional = paciente_convencional;
         this.paciente_grupo = paciente_grupo;
+    }
+
+    public String getPacienteid() {
+        return pacienteid;
+    }
+
+    public void setPacienteid(String pacienteid) {
+        this.pacienteid = pacienteid;
+    }
+
+    public String getNombrescompleto() {
+        return nombrescompleto;
+    }
+
+    public void setNombrescompleto(String nombrescompleto) {
+        this.nombrescompleto = nombrescompleto;
     }
 
      

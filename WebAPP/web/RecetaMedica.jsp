@@ -27,9 +27,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <div class="div-cont-name"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)'/></div></td>
-                                <td><div class="div-cont-name"><input type="number" id="txt-ced" class="inp-ced" placeholder="Nombres del Paciente" name="nombres paciente" onkeypress="return soloLetras(event)"/></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-name" class="inp-name" placeholder="Nombres del Medico" name="nombres medico" onkeypress="return soloLetras(event)"/></div></td>
+                                <td> <div class="div-cont-name"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericosA(event)'/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-namep" class="inp-ced" placeholder="Nombres del Paciente" name="nombres paciente" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
+                                <td><div class="div-cont-name"><input type="text" id="txt-nameme" class="inp-name" placeholder="Nombres del Medico" name="nombres medico" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
                             </tr>
                         </tbody>
                         <thead >
@@ -41,9 +41,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td>
+                                <td><div class="div-cont-lname"><input type="date" id="txt-lnamef" class="inp-lname" placeholder="Fecha" name="fecha" /></div></td>
                                 <td> </td>
-
                             </tr>
                         </tbody>
                         <thead >
@@ -56,7 +55,9 @@
                             <tr>
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lnamem" class="inp-lname" placeholder="Medicamento" name="medicamento"/></div></td>
                                 <td><div class="div-cont-name"><input type="text" id="txt-namei" class="inp-name" placeholder="Indicaciones Medicas" name="indicaciones"/></div></td>
-                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="button"  id="btn-action" class="btn-accept" value="AGREGAR"> </input> </div></td>
+                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="button"  id="btn-action" class="btn-accept" value="+"> 
+                                <input type="button"  id="btn-addReceta" class="btn-accept" value="GUARDAR"></div></td> 
+                                
                             </tr>
                         </tbody>                        
                     </table> 
@@ -84,6 +85,10 @@
             function validaNumericos(event) {
                 if (event.charCode >= 48 && event.charCode <= 57) {
                     return true;
+                }
+                if(event.charCode ==13){
+                   console.log("unio");
+                     buscador1();
                 }
                 return false;
             }
@@ -126,8 +131,11 @@
         </script>
     </body>
     <footer></footer>
+    
     <script src="js/JQuery.js" type="text/javascript"></script> 
     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="js/recetamedica.js" type="text/javascript"></script>
-
+    <script src="js/Buscadorpaciente.js" type="text/javascript"></script>
+    <script src="js/newjavascript.js" type="text/javascript"></script>
+    
 </html>

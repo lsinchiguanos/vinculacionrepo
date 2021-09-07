@@ -202,8 +202,14 @@
                             <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
                         </tr>                        
                         <tr>
-                            <td>  <input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
-                            <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
+                            <td>  <input type="submit" id="btn-actiong" class="btn-accept" value="Guardar"/></td>
+                          <%--  <td><input type="button" id="btn-actionc" class="btn-accept" value="Cancelar"/></td>            --%>                
+                            <td>
+                             <a><input type="button" id="btn-actionr" class="btn-accept" value="Receta" /></a>
+                                
+                            </td>
+                 
+                            
                         </tr>
                     </tbody>
                 </table>          
@@ -211,8 +217,8 @@
         </section>
 
     </form> 
-
-
+                            <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+                            <script src="js/newjavascript.js" type="text/javascript"></script>
 </body>
 <footer></footer>
 <script src="js/JQuery.js" type="text/javascript"></script>
@@ -276,4 +282,6 @@
 
 
 </script>
+
+
 </html> 
