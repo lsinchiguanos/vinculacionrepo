@@ -85,8 +85,6 @@ function buscador1() {
 
 
 }
-
-
 function validaNumericosA(event)
 {
     if (event.charCode >= 48 && event.charCode <= 57)
@@ -126,17 +124,57 @@ function usermedico() {
 
     });
 }
+ $("#btn-addReceta").click(function (e) {
+          enviarDatosreceta();
+    e.preventDefault();
+    var table = document.getElementById('tabla');
+    var rowLength = table.rows.length;
+    var jsonAll = [];
+    for (var i = 1; i < rowLength; i += 1) {
+        var row = table.rows[i];
+        var jsoncell = {
+            medicamento: row.cells[1].innerHTML,
+            indicaciones: row.cells[2].innerHTML
+        };
+        jsonAll[i - 1] = jsoncell;
+    }
 
-/*function ingresoreceta(){
- $('#btn-actiongg').click(function (e) {
+
+   /* console.log(JSON.stringify(jsonAll));
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url: "./NewServle",
+        data: {jsonreceta: JSON.stringify(jsonAll), op: "3"},
+        dataType: 'json',
+        error: function (request, status, error)
+        {
+            alert(request, status, error);
+        },
+        success: function (data)
+        {
+            console.log(data);
+            document.getElementById("txt-lnamef").value = data.fecha.toString();
+       
+        }
+    });*/
+});
  
- var json = {
- pacienteid: document.getElementById("").value;
- galenoid: document.getElementById("").value;
- fecha:document.getElementById("txt-lnamef").value;
- medicamento: document.getElementById("").value;
- indicaciones: document.getElementById("").value;
- }
- 
- });*/
+
+function enviarDatosreceta() {
+    $.ajax({
+        data: {galenoid:idemedico, pacienteid: ideusuario,op:3},
+        url: "./NewServle",
+        cache: false,
+        type: "POST",
+        error: function (request, status, error)
+        {
+            alert(request, status, error);
+        },
+        success: function (data)
+        {
+            console.log(data);        
+        }
+    });
+}
 

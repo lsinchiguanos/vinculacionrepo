@@ -91,7 +91,6 @@ public class Insertarecetamedica {
     }
 
     public int agregarrecetamedicaencabezado(String galenoid, String pacienteid, String fecha) {
-
         int aux = -1;
         try {
             conexion c = new conexion();
@@ -99,7 +98,6 @@ public class Insertarecetamedica {
             if (con != null) {
                 Statement st;
                 st = con.createStatement();
-
                 ResultSet rs = st.executeQuery("select * from encabezado('" + galenoid + "','" + pacienteid + "','" + fecha + "')");
                 rs.next();
                 aux = rs.getInt(1);
@@ -111,7 +109,6 @@ public class Insertarecetamedica {
             aux = -1;
         }
         return aux;
-
     }
 
     public void agregarrecetamedicadetalle(int idrecet, String medicamento, String indicaciones) {
