@@ -88,7 +88,7 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/icons8_profile_96px.png">
+                                    <img alt="" src="img/icons8_cv_96px.png">
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold">Actualizar datos personales</h3>
                             </header>
