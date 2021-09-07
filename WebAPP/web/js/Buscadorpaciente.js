@@ -116,16 +116,16 @@ function usermedico() {
         {
             console.log(data.nombresmedico.toString());
             // $("#txt-namep").val(data.nombrescompletos);
-             var cadena = data.nombresmedico.split("-");
+            var cadena = data.nombresmedico.split("-");
             document.getElementById("txt-nameme").value = cadena[0];
-            idemedico=cadena[1];
-            
+            idemedico = cadena[1];
+
         }
 
     });
 }
- $("#btn-addReceta").click(function (e) {
-          enviarDatosreceta();
+$("#btn-addReceta").click(function (e) {
+    enviarDatosreceta();
     e.preventDefault();
     var table = document.getElementById('tabla');
     var rowLength = table.rows.length;
@@ -138,15 +138,31 @@ function usermedico() {
         };
         jsonAll[i - 1] = jsoncell;
     }
+   $.ajax({
+           cache: false,
+        url: "./NewServle",
+        data: data.JSON.stringify(jsonAll), op:"3",  
+        type: "POST",
+        dataType: 'json',
+       error: function (request, status, error)
+        {
+            alert(request, status, error);
+        },
+        success: function (data)
+        {
+            console.log(data);
+        }
+    }); 
+});
 
 
-   /* console.log(JSON.stringify(jsonAll));
+function enviarDatosreceta() {
+   // recorrertabla();
     $.ajax({
+        data: {galenoid: idemedico, pacienteid: ideusuario, op: 3},
+        url: "./NewServle",
         cache: false,
         type: "POST",
-        url: "./NewServle",
-        data: {jsonreceta: JSON.stringify(jsonAll), op: "3"},
-        dataType: 'json',
         error: function (request, status, error)
         {
             alert(request, status, error);
@@ -154,28 +170,35 @@ function usermedico() {
         success: function (data)
         {
             console.log(data);
-            document.getElementById("txt-lnamef").value = data.fecha.toString();
-       
-        }
-    });*/
-});
- 
-
-function enviarDatosreceta() {
-    $.ajax({
-        data: {galenoid:idemedico, pacienteid: ideusuario,op:3},
-        url: "./NewServle",
-        cache: false,
-        type: "POST",
-        error: function (request, status, error)
-        {
-            alert(request, status, error);
-        },
-        success: function (data)
-        {
-            console.log(data);        
         }
     });
 }
-
-var data = { medicamento : $('#medicamento').val(), indicaciones : $('#indicaciones').val() };
+//function recorrertabla() {
+//var table = document.getElementById('tabla');
+//    var rowLength = table.rows.length;
+//    var jsonAll = [];
+//    for (var i = 1; i < rowLength; i += 1) {
+//        var row = table.rows[i];
+//        var jsoncell = {
+//            medicamento: row.cells[1].innerHTML,
+//            indicaciones: row.cells[2].innerHTML
+//        };
+//        jsonAll[i - 1] = jsoncell;
+//    } 
+//    // var data = {medicamento: $('#medicamento').val(), indicaciones: $('#indicaciones').val()};
+//    $.ajax({
+//           cache: false,
+//        url: "./NewServle",
+//        data: JSON.stringify(jsonAll), op:"3",  
+//        type: "POST",
+//        dataType: 'json',
+//       error: function (request, status, error)
+//        {
+//            alert(request, status, error);
+//        },
+//        success: function (data)
+//        {
+//            console.log(data);
+//        }
+//    }); 
+//}
