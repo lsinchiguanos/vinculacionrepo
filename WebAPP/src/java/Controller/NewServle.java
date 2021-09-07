@@ -1,8 +1,11 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controller;
 
-import DAO.Buscador;
 import DAO.Insertarecetamedica;
-import Model.Constructorrecetamedivca;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -17,7 +20,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class Addrecetamedica extends HttpServlet {
+/**
+ *
+ * @author Dell
+ */
+public class NewServle extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,29 +38,27 @@ public class Addrecetamedica extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String op = request.getParameter("op");
+         String op = request.getParameter("op");
         HttpSession sesion = request.getSession();
-        switch (op) {
+        PrintWriter out = response.getWriter();
+           switch (op) {
             case "1":
                 String cedula = request.getParameter("cedula");
                 //Integer galenoid = resquest.getParameter("");
-
                 Insertarecetamedica buscar1 = new Insertarecetamedica();
-                String json = new Gson().toJson(buscar1.Listbuscarpaciente1(cedula));
-                out.print(json);
-                sesion.setAttribute("DatePaciente", json);
+                String jsons = new Gson().toJson(buscar1.Listbuscarpaciente1(cedula));
+               System.out.print(jsons); 
+              //  sesion.setAttribute("DatePaciente", json);
                 // Establece el tipo de respuesta en formato json
                 response.setContentType("text/javascript");
-                response.getWriter().print(json);
-
+                response.getWriter().print(jsons);
                 break;
 
             case "2":
                 String users = request.getParameter("user");
                 Insertarecetamedica buscau = new Insertarecetamedica();
                 String jsonnn = new Gson().toJson(buscau.Listbuscarm(users));
-                out.print(jsonnn);
-                // Establece el tipo de respuesta en formato json
+                System.out.print(jsonnn);               
                 response.setContentType("text/javascript");
                 response.getWriter().print(jsonnn);
                 break;
@@ -78,13 +83,11 @@ public class Addrecetamedica extends HttpServlet {
                 
                 insertarreceta.agregarrecetamedicadetalle(id_encabezado,medicamento,indicaciones);
                 
-               //JsonParser jsondetalle = new JsonParse();    
-                
+               //JsonParser jsondetalle = new JsonParse();
+                ////VALIDAR LOS TEXT
                 break;
                 
-                
-        }
-
+           }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

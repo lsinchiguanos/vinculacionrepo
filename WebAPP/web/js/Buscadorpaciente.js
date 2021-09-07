@@ -1,8 +1,8 @@
-$(document).ready(function(){
-   
-    $("#btn-actionr").click(function (){
-       
-          window.location.href = "./RecetaMedica.jsp?user="+getQueryVariableRe();
+$(document).ready(function () {
+
+    $("#btn-actionr").click(function () {
+
+        window.location.href = "./RecetaMedica.jsp?user=" + getQueryVariableRe();
     });
     usermedico();
 });
@@ -12,9 +12,10 @@ function getQueryVariableRe() {
     var vars = query.split("&");
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
-     return pair[1];
+        console.log(pair[1].toString());
+        return pair[1].toString();
     }
-   
+
 }
 
 
@@ -56,28 +57,34 @@ $(function () {
     };
 });
 //Datos del paciente
-function buscador1 () {
+var ideusuario;
+var idemedico;
+function buscador1() {
 
-        var cedula = document.getElementById("txt-ced").value;
-        $.ajax({
-            cache: false,
-            type: "POST",
-            url: "Addrecetamedica",
-            data: {cedula: cedula,op:"1"},
-            dataType: 'json',
-            error: function (request, status, error)
-            {
-                alert(request, status, error);
-            },
-            success: function (data)
-            {
-                console.log(data);
-               // $("#txt-namep").val(data.nombrescompletos);
-                document.getElementById("txt-namep").value=data.nombrescompleto.toString();
-            }
+    var cedu = document.getElementById("txt-ced").value;
 
-        });
-    };
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url: "./NewServle",
+        data: {cedula: cedu, op: "1"},
+        dataType: 'json',
+        error: function (request, status, error)
+        {
+            console.log(request, status, error);
+        },
+        success: function (data)
+        {
+            console.log(data.nombrescompleto.toString());
+            var cadena = data.nombrescompleto.split("-");
+            document.getElementById("txt-namep").value = cadena[0];
+            ideusuario = cadena[1];
+        }
+
+    });
+
+
+}
 
 
 function validaNumericosA(event)
@@ -86,47 +93,50 @@ function validaNumericosA(event)
     {
         return true;
     }
-    if (event.charCode == 13)
+    if (event.charCode === 13)
     {
-        console.log("unio");
+
         buscador1();
     }
     return false;
 }
 //datos medico
-function usermedico(){
-           
-      var user = getQueryVariableRe();
-        $.ajax({
-            cache: false,
-            type: "POST",
-            url: "Addrecetamedica",
-            data: {user: user,op:"2"},
-            dataType: 'json',
-            error: function (request, status, error)
-            {
-                alert(request, status, error);
-            },
-            success: function (data)
-            {
-                console.log(data);
-               // $("#txt-namep").val(data.nombrescompletos);
-                document.getElementById("txt-nameme").value=data.nombresmedico.toString();
-            }
+function usermedico() {
 
-        });
-    }
+    var user = getQueryVariableRe();
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url: "./NewServle",
+        data: {user: user, op: "2"},
+        dataType: 'json',
+        error: function (request, status, error)
+        {
+            console.log(request, status, error);
+        },
+        success: function (data)
+        {
+            console.log(data.nombresmedico.toString());
+            // $("#txt-namep").val(data.nombrescompletos);
+             var cadena = data.nombresmedico.split("-");
+            document.getElementById("txt-nameme").value = cadena[0];
+            idemedico=cadena[1];
+            
+        }
+
+    });
+}
 
 /*function ingresoreceta(){
-     $('#btn-actiongg').click(function (e) {
-    
-        var json = {
-            pacienteid: document.getElementById("").value;
-            galenoid: document.getElementById("").value;
-            fecha:document.getElementById("txt-lnamef").value;
-            medicamento: document.getElementById("").value;
-            indicaciones: document.getElementById("").value;
-        }
-     
-    });*/
+ $('#btn-actiongg').click(function (e) {
+ 
+ var json = {
+ pacienteid: document.getElementById("").value;
+ galenoid: document.getElementById("").value;
+ fecha:document.getElementById("txt-lnamef").value;
+ medicamento: document.getElementById("").value;
+ indicaciones: document.getElementById("").value;
+ }
+ 
+ });*/
 

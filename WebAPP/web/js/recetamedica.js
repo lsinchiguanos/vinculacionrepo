@@ -24,7 +24,7 @@ var aumento = 0;
         $.ajax({
             cache: false,
             type: "POST",
-            url: "Addrecetamedica",
+            url: "./NewServle",
             data: {jsonreceta: JSON.stringify(jsonAll), op: "3"},
             dataType: 'json',
             error: function (request, status, error)
@@ -44,7 +44,7 @@ var aumento = 0;
         $.ajax({
             cache: false,
             type: "POST",
-            url: "Addrecetamedica",
+            url: "./NewServle",
             data: {user: user, op: "2"},
             dataType: 'json',
             error: function (request, status, error)

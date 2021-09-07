@@ -55,7 +55,7 @@
                             <tr>
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lnamem" class="inp-lname" placeholder="Medicamento" name="medicamento"/></div></td>
                                 <td><div class="div-cont-name"><input type="text" id="txt-namei" class="inp-name" placeholder="Indicaciones Medicas" name="indicaciones"/></div></td>
-                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="button"  id="btn-action" class="btn-accept" value="+"> 
+                                <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="button" id="btn-action" class="btn-accept" value="+"> 
                                 <input type="button"  id="btn-addReceta" class="btn-accept" value="GUARDAR"></div></td> 
                                 
                             </tr>
@@ -131,9 +131,8 @@
         </script>
     </body>
     <footer></footer>
-    
-    <script src="js/JQuery.js" type="text/javascript"></script> 
-    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+   
     <script src="js/recetamedica.js" type="text/javascript"></script>
     <script src="js/Buscadorpaciente.js" type="text/javascript"></script>
     <script src="js/newjavascript.js" type="text/javascript"></script>

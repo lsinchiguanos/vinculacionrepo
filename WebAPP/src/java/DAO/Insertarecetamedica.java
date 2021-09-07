@@ -2,7 +2,7 @@ package DAO;
 
 import BD.conexion;
 import Model.BuscadorPaciente;
-import Controller.Addrecetamedica;
+import Controller.NewServle;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -32,9 +32,9 @@ public class Insertarecetamedica {
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
             while (rs.next()) {
-                newbuscar.setPacienteid(String.valueOf(rs.getString("paciente_id")));
-                newbuscar.setNombrescompleto(String.valueOf(rs.getString("nombres")));
-
+               // newbuscar.setPacienteid(String.valueOf(rs.getString("paciente_id")));
+                newbuscar.setNombrescompleto(String.valueOf(rs.getString("nombres")+"-"+rs.getString("paciente_id")));
+                System.out.println(String.valueOf(rs.getString("paciente_id")+rs.getString("nombres")));
             }
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
@@ -66,8 +66,9 @@ public class Insertarecetamedica {
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
             while (rs.next()) {
-                newbuscarm.setGalenoid(Integer.valueOf(rs.getString("galeno_id")));
-                newbuscarm.setNombresmedico(String.valueOf(rs.getString("nombremedico")));
+                //newbuscarm.setGalenoid(Integer.valueOf(rs.getString("galeno_id")));
+                newbuscarm.setNombresmedico(String.valueOf(rs.getString("nombremedico")+"-"+ rs.getString("galeno_id")));
+                System.out.println(String.valueOf(rs.getString("nombremedico")));
             }
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
@@ -127,5 +128,11 @@ public class Insertarecetamedica {
             c.isConected();
         } catch (SQLException e) {
         }
+    }
+
+    public static void main(String[] args) {
+
+        Insertarecetamedica i = new Insertarecetamedica();
+        i.Listbuscarpaciente1("1207925015");
     }
 }

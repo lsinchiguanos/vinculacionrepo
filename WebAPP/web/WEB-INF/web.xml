@@ -16,6 +16,14 @@
         <servlet-name>AddMedicinaGeneral</servlet-name>
         <servlet-class>Controller.AddMedicinaGeneral</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>DAO.NewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewServle</servlet-name>
+        <servlet-class>Controller.NewServle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Buscarpacientee</servlet-name>
         <url-pattern>/Buscarpacientee</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>AddMedicinaGeneral</servlet-name>
         <url-pattern>/AddMedicinaGeneral</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServle</servlet-name>
+        <url-pattern>/NewServle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
