@@ -66,13 +66,7 @@ public class NewServle extends HttpServlet {
                 String indicaciones = "";
 
                 insertarreceta.agregarrecetamedicadetalle(id_encabezado, medicamento, indicaciones);
-                
-//                JSONArray jsonArray = new JSONArray(jsonString);
-//
-//                for (int i = 0; i < jsonArray.length(); i++) {
-//                    JSONObject object = jsonArray.getJSONObject(i);
-//                    clave = object.getString("clave");
-//                }
+              
                 //JsonParser jsondetalle = new JsonParse();
                 ////VALIDAR LOS TEXT
                 break;

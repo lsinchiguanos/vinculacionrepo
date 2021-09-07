@@ -178,3 +178,4 @@ function enviarDatosreceta() {
     });
 }
 
+var data = { medicamento : $('#medicamento').val(), indicaciones : $('#indicaciones').val() };
