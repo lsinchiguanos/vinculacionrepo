@@ -78,7 +78,7 @@ public class Addrecetamedica extends HttpServlet {
                 
                 insertarreceta.agregarrecetamedicadetalle(id_encabezado,medicamento,indicaciones);
                 
-               //JsonParser jsondetalle = new JsonParse();
+               //JsonParser jsondetalle = new JsonParse();    
                 
                 break;
                 
