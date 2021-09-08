@@ -185,7 +185,7 @@
                     pichincha: [" Quito", "Cayambe", "Mejía", "Pedro Moncayo", " Pedro Vicente Maldonado", "Puerto Quito", " Rumiñahui", "San Miguel de los Bancos"],
                     santaElena: ["Santa Elena", "La Libertad", "Salinas"],
                     santodomingo: ["Santo Domingo", "La Concordia"],
-                    sucumbios: [" Lago Agrio", "Cascales", "Cuyabeno", "Gonzalo Pizarro", "Putumayo", "Shushufindi", "Sucumbíos"],
+                    sucumbíos: ["Lago Agrio", "Cascales", "Cuyabeno", "Gonzalo Pizarro", "Putumayo", "Shushufindi", "Sucumbíos"],
                     tungurahua: ["Ambato", " Baños", "Cevallos", "Mocha", "Patate", "Pelileo", "Quero", "Santiago de Píllaro", "Tisaleo"],
                     zamorachinchipe: ["Zamora", "Centinela del Cóndor", "Chinchipe", "El Pangui", "Nangaritza", "Palanda", " Paquisha", "Yacuambi", "Yantzaza"]
 
@@ -196,7 +196,7 @@
                 var provinciaSeleccionada = provincias.value;
 
                 // Se limpian los pueblos
-                pueblos.innerHTML = '<option value="">Seleccione un Pueblo...</option>'
+                pueblos.innerHTML = '<option value="">Seleccione un canton...</option>'
 
                 if (provinciaSeleccionada !== '') {
                     // Se seleccionan los pueblos y se ordenan
