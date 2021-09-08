@@ -17,7 +17,10 @@
     <body>
         <header id="header" style=" background: #007653 !important;">
             <nav class="nav-tp">
-                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+                <a class="logo" href="Principal.jsp">
+                    <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+                </a>
+                <a class="logo" id="ulUserData" href="Principal.jsp"></a>
             </nav>
         </header>
 
@@ -32,12 +35,12 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/icons8_workstation_96px.png">
+                                    <img alt="" src="svg/doctor.svg" width="96" height="96">
                                     <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">AGREGAR INFORMACIÓN</h3>
+                                <h3 style="color:#007653; font-weight: bold">PACIENTES ATENDIDOS</h3>
 
                             </header>
-                            <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
+                            <p>Visualizar la estadística de los pacientes atendidos</p>
                             <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Acceder</a>
                         </div>
                     </section>
@@ -47,11 +50,11 @@
                         <div class="content">
                             <header>
                                 <a href="" >
-                                    <img alt="" src="img/icons8_account_96px.png">
+                                    <img alt="" src="svg/receta.svg" width="96" height="96">
                                     <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold" class="textgrueso">Reportes</h3>
+                                <h3 style="color:#007653; font-weight: bold" class="textgrueso">Recetarios</h3>
                             </header>
-                            <p>Mostrar informe de las actividades</p>
+                            <p>Historial de recetarios</p>
                             <a href="Reportes.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
@@ -61,54 +64,15 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/icons8_accounting_96px.png">
+                                    <img alt="" src="svg/examen.svg" width="96" height="96">
                                     <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">Historial</h3>
+                                <h3 style="color:#007653; font-weight: bold">AGENDA</h3>
                             </header>
-                            <p>Mostrar la información de las actividades </p>
+                            <p>Mostrar la lista de agendados </p>
                             <a href="HistorialPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
 
-                    <!-- CUARTO MODULO -->
-                    <!-- <section class="animadoagregarinformacion">
-                         <div class="content">
-                             <header>
-                                 <a href="">
-                                     <img alt="" src="img/icons8_cv_96px.png">
-                                     <span class="label"></span></a>
-                                 <h3 style="color:#007653; font-weight: bold">Transferir Paciente</h3>
-                             </header>
-                             <p>Transferir un paciente a otro departamento</p>
-                             <a href="TransferirPaciente.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
-                         </div>
-                     </section>-->
-                    <!-- Quinto MODULO -->
-                    <section class="animadoagregarinformacion">
-                        <div class="content">
-                            <header>
-                                <a href="">
-                                    <img alt="" src="img/icons8_cv_96px.png">
-                                    <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">Actualizar datos personales</h3>
-                            </header>
-                            <p>Podrá actualizar sus datos personales, en caso de alguna actualización</p>
-                            <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
-                        </div>
-                    </section>
-                    <!-- Sexto MODULO -->
-                    <section class="animadoagregarinformacion">
-                        <div class="content">
-                            <header>
-                                <a href="">
-                                    <img alt="" src="img/icons8_profile_96px.png">
-                                    <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">Ingresar Información</h3>
-                            </header>
-                            <p>Ingresar informacion por primera vez del paciente</p>
-                            <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
-                        </div>
-                    </section>
                 </div>
             </div>
 
