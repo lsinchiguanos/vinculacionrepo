@@ -138,7 +138,6 @@
                         </tbody>
                         <thead >
                             <tr>
-
                                 <th>Tipo de sangre</th>
                                 <th>Correo Electronico</th> 
                             </tr>
@@ -168,15 +167,15 @@
                 letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
                 especiales = [8, 37, 39, 46];
 
-                tecla_especial = false
+                tecla_especial = false;
                 for (var i in especiales) {
-                    if (key == especiales[i]) {
+                    if (key === especiales[i]) {
                         tecla_especial = true;
                         break;
                     }
                 }
 
-                if (letras.indexOf(tecla) == -1 && !tecla_especial)
+                if (letras.indexOf(tecla) === -1 && !tecla_especial)
                     return false;
             }
             function validar() {
@@ -199,11 +198,10 @@
 
                     total = total % 10 ? 10 - total % 10 : 0;
 
-                    if (cad.charAt(longitud - 1) == total) {
+                    if (cad.charAt(longitud - 1) === total) {
                     } else {
                         alert("LA CEDULA NO EXISTE O ES INCORRECTA");
                         document.getElementById("txt-ced").value = "";
-
                     }
                 }
             }
@@ -211,18 +209,18 @@
                 e.value = e.value.toUpperCase();
             }
             function verificarCedula(cedula) {
-                if (typeof (cedula) == 'string' && cedula.length == 10 && /^\d+$/.test(cedula)) {
+                if (typeof (cedula) === 'string' && cedula.length === 10 && /^\d+$/.test(cedula)) {
                     var digitos = cedula.split('').map(Number);
                     var codigo_provincia = digitos[0] * 10 + digitos[1];
 
                     //if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30) && digitos[2] < 6) {
 
-                    if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30)) {
+                    if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia === 30)) {
                         var digito_verificador = digitos.pop();
 
                         var digito_calculado = digitos.reduce(
                                 function (valorPrevio, valorActual, indice) {
-                                    return valorPrevio - (valorActual * (2 - indice % 2)) % 9 - (valorActual == 9) * 9;
+                                    return valorPrevio - (valorActual * (2 - indice % 2)) % 9 - (valorActual === 9) * 9;
                                 }, 1000) % 10;
                         return digito_calculado === digito_verificador;
                     }

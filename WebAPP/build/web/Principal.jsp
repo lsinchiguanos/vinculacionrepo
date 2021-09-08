@@ -18,7 +18,7 @@
         <%
             HttpSession s = request.getSession();
             //variables de session
-%>    
+        %>    
         <label id="usuario"><%= s.getAttribute("galeno_user11")%> </label> 
         <label id="nombre"></label> 
 

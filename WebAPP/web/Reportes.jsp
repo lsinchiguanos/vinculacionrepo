@@ -15,15 +15,15 @@
         <link href="css/animacionprincipal.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-            <header id="header" style=" background: #007653 !important;">
-                   <nav class="nav-tp">
-               <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
-                </nav>
-            </header>
-    
+        <header id="header" style=" background: #007653 !important;">
+            <nav class="nav-tp">
+                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+            </nav>
+        </header>
+
         <div class="div-head-tittle"><h2></h2></div>
-        
-        
+
+
         <section class="wrapper">
             <div class="inner">
                 <div class="highlights">
