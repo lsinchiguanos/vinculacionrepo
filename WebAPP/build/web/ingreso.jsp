@@ -12,8 +12,7 @@
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:2px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
-            <a class="logo" id="ulUserData" href="index.html"></a>
-
+            <a class="logo" id="ulUserData" href="Principal.jsp"></a>
         </header>
         <div class="div-head-tittle"><h2></h2></div>
         <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" >
