@@ -44,13 +44,13 @@ public class AddMedicinaGeneral extends HttpServlet {
         try {
             out = response.getWriter();
             session = request.getSession(false);
-            String folderName = "resources";
-            String uploadPath = request.getServletContext().getRealPath("") + File.separator + folderName;//for netbeans use this code
-            //String uploadPath = request.getServletContext().getRealPath("") + folderName;//for eclipse use this code
-            File dir = new File(uploadPath);
-            if (!dir.exists()) {
-                dir.mkdirs();
-            }
+//            String folderName = "resources";
+//            String uploadPath = request.getServletContext().getRealPath("") + File.separator + folderName;//for netbeans use this code
+//            //String uploadPath = request.getServletContext().getRealPath("") + folderName;//for eclipse use this code
+//            File dir = new File(uploadPath);
+//            if (!dir.exists()) {
+//                dir.mkdirs();
+//            }
             String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email, ap, af, aq, fecha, mc, ep, diag, tipo;
             dni = request.getParameter("cedula");
             Pnom = request.getParameter("Estatura");
@@ -73,20 +73,20 @@ public class AddMedicinaGeneral extends HttpServlet {
 //            Part filePart = request.getPart("file");//Textbox value of name file.
 //            String firstName = request.getParameter("firstname");//Textbox value of name firstname.
 //            String lastName = request.getParameter("lastname");//Textbox value of name lastname.
-            String fileName = filePart.getSubmittedFileName();
-            String patch = folderName + File.separator + fileName;
-            Timestamp added_date = new Timestamp(System.currentTimeMillis());
-            InputStream is = filePart.getInputStream();
-            Files.copy(is, Paths.get(uploadPath + File.separator + fileName), StandardCopyOption.REPLACE_EXISTING);
+//            String fileName = filePart.getSubmittedFileName();
+//            String patch = folderName + File.separator + fileName;
+//            Timestamp added_date = new Timestamp(System.currentTimeMillis());
+//            InputStream is = filePart.getInputStream();
+//            Files.copy(is, Paths.get(uploadPath + File.separator + fileName), StandardCopyOption.REPLACE_EXISTING);
             try {
                 System.out.println("connection done");
                 String sql = "insert into medicinageneral(paciente_dni, estatura, peso, tipossangre, \n"
                         + "            pc, pt, pa, antecedentesalergicos, antecedentespersonales, antecedentesfamiliares, \n"
                         + "            antecedentesquirurgicos, fechaconsulta, motivoconsulta, enfermedad, \n"
-                        + "            diagnositico, tipo,galeno_user,cargararchivo,patch) values(?, ?, ?, ?, \n"
+                        + "            diagnositico, tipo,galeno_user) values(?, ?, ?, ?, \n"
                         + "            ?, ?, ?, ?, ?, ?, \n"
                         + "            ?, ?, ?, ?, \n"
-                        + "            ?, ?, ?, ?, ?)";
+                        + "            ?, ?, ?)";
                 ps = c.getConecction().prepareStatement(sql);
                 ps.setString(1, dni);
                 ps.setString(2, Pnom);
@@ -105,19 +105,8 @@ public class AddMedicinaGeneral extends HttpServlet {
                 ps.setString(15, diag);
                 ps.setString(16, tipo);
                 ps.setString(17, galenoUser);
-                ps.setString(18, fileName);
-                ps.setString(19, patch);
-                int status = ps.executeUpdate();
-                if (status > 0) {
-                    if(fileName!=null)
-                    {
-                    session.setAttribute("fileName", fileName);
-                    String msg = "" + fileName + " File uploaded successfully...";
-                    request.setAttribute("msg", msg);
-                    RequestDispatcher rd = request.getRequestDispatcher("/Principal.jsp");
-                    rd.forward(request, response);
-                    }
-                }
+                ps.executeUpdate();
+                response.sendRedirect("Principal.jsp");
             } catch (SQLException e) {
                 out.println("Exception: " + e);
                 System.out.println("Exception1: " + e);
@@ -126,7 +115,6 @@ public class AddMedicinaGeneral extends HttpServlet {
                     if (ps != null) {
                         ps.close();
                     }
-
                 } catch (SQLException e) {
                     out.println(e);
                 }
