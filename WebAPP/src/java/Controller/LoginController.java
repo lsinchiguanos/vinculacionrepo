@@ -35,6 +35,7 @@ public class LoginController extends HttpServlet {
             cliente_id = new DAO.LoginDAO().SearchClienteLogin(tm);
             if (cliente_id != 0) {
                 sesion.setAttribute("galeno_user11", usuario);
+//                response.sendRedirect("Principal.jsp");
                 response.sendRedirect(request.getContextPath() + "/Principal.jsp");
             } else {
                 response.sendRedirect(request.getContextPath() + "/index.jsp");

@@ -48,7 +48,7 @@ public class AddGaleno extends HttpServlet {
             String PrimerApellido = request.getParameter("PrimerApellido");
             String SegundoApellido = request.getParameter("SegundoApellido");
             String Celular = request.getParameter("celular");
-            String Provincia = request.getParameter("provincia");
+            String Provincia = request.getParameter("Provincia");
             String canton = request.getParameter("canton");
             String parroquia = request.getParameter("parroquia");
             String Direccion = request.getParameter("direccion");
