@@ -2,7 +2,7 @@ package Model;
 
 public class BuscadorPaciente {
 
-    private String paciente_ayudasocial,paciente_dni,paciente_primer_segundo_nombre,paciente_grupo, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_correoelectronico, paciente_telefono, paciente_convencional;
+    private String paciente_ayudasocial, paciente_dni, paciente_primer_segundo_nombre, paciente_grupo, paciente_primer_segundo_apellido, paciente_direccion, paciente_provincia, paciente_nacionalidad, paciente_genero, paciente_correoelectronico, paciente_telefono, paciente_convencional;
 
     public BuscadorPaciente() {
     }
@@ -22,8 +22,6 @@ public class BuscadorPaciente {
         this.paciente_grupo = paciente_grupo;
     }
 
-     
-
     public String getPaciente_grupo() {
         return paciente_grupo;
     }
@@ -31,8 +29,6 @@ public class BuscadorPaciente {
     public void setPaciente_grupo(String paciente_grupo) {
         this.paciente_grupo = paciente_grupo;
     }
-
-  
 
     public String getPaciente_primer_segundo_nombre() {
         return paciente_primer_segundo_nombre;
@@ -122,6 +118,8 @@ public class BuscadorPaciente {
         this.paciente_convencional = paciente_convencional;
     }
 
-    
+    public void setNombrescompleto(String valueOf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

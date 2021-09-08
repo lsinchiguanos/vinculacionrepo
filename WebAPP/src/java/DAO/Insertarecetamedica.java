@@ -1,16 +1,11 @@
 package DAO;
 
 import BD.conexion;
-import Model.BuscadorPaciente;
-import Controller.NewServle;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 import Model.BuscadorPaciente;
 import Model.Constructorrecetamedivca;
-import Model.ControladorPaciente;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -125,11 +120,5 @@ public class Insertarecetamedica {
             c.isConected();
         } catch (SQLException e) {
         }
-    }
-
-    public static void main(String[] args) {
-
-        Insertarecetamedica i = new Insertarecetamedica();
-        i.Listbuscarpaciente1("1207925015");
     }
 }

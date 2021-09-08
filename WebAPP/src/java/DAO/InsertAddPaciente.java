@@ -18,22 +18,21 @@ public class InsertAddPaciente {
             Connection con = c.getConecction();
             if (con != null) {
                 Statement st;
-                String sql_command = "INSERT INTO paciente(paciente_tipo_dni, paciente_dni, paciente_apellido_paterno, \n"
+                st = con.createStatement();
+                st.executeUpdate("INSERT INTO paciente(paciente_tipo_dni, paciente_dni, paciente_apellido_paterno, \n"
                         + "            paciente_primer_nombre, paciente_fnacimiento, paciente_direccion, \n"
                         + "            paciente_telefono, paciente_genero, paciente_grupo, paciente_ayudasocial, \n"
-                        + "            paciente_apellido_materno, paciente_segundo_nombre, \n"
-                        + "            paciente_provincia, paciente_canton, paciente_parroquia, \n"
+                        + "            created_at, paciente_apellido_materno, paciente_segundo_nombre, \n"
+                        + "            paciente_estado, paciente_provincia, paciente_canton, paciente_parroquia, \n"
                         + "            paciente_nacionalidad, paciente_estado_civil, paciente_convencional, \n"
                         + "            paciente_tipo_sangre,paciente_correoelectronico)VALUES ('" + usuario.getPaciente_tipo_dni() + "','" + usuario.getPaciente_dni() + "','" + usuario.getPaciente_apellido_paterno()
                         + "','" + usuario.getPaciente_primer_nombre() + "','" + usuario.getPaciente_fnacimiento() + "','" + usuario.getPaciente_direccion()
                         + "','" + usuario.getPaciente_telefono() + "','" + usuario.getPaciente_genero() + "','" + usuario.getPaciente_grupo()
-                        + "','" + usuario.getPaciente_ayudasocial() + "','" + usuario.getPaciente_apellido_materno()
-                        + "','" + usuario.getPaciente_segundo_nombre() + "','" + usuario.getPaciente_provincia()
+                        + "','" + usuario.getPaciente_ayudasocial() + "','" + usuario.getCreated_at() + "','" + usuario.getPaciente_apellido_materno()
+                        + "','" + usuario.getPaciente_segundo_nombre() + "','" + usuario.getPaciente_estado() + "','" + usuario.getPaciente_provincia()
                         + "','" + usuario.getPaciente_canton() + "','" + usuario.getPaciente_parroquia() + "','" + usuario.getPaciente_nacionalidad()
                         + "','" + usuario.getPaciente_estado_civil() + "','" + usuario.getPaciente_convencional() + "','" + usuario.getPaciente_tipo_sangre()
-                        + "','" + usuario.getPaciente_email() + "')";
-                st = con.createStatement();
-                st.executeUpdate(sql_command);
+                        + "','" + usuario.getPaciente_email() + "')");
                 agregado = true;
                 st.close();
             }
