@@ -22,6 +22,7 @@
         <div class="container">
             <h1>Modificar Registro</h1>
             <hr>
+            
             <form id="form1" action="subirExamenes" method="POST" enctype="multipart/form-data" style="width: 500px; height: 400px">
                 <input type="text"  readonly="" name="codigo" class="form-control" style="visibility:hidden;" value="<%= rs.getInt("codigo")%>"/>
                 CEDULA DEL PACIENTE
