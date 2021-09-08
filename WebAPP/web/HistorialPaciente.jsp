@@ -26,7 +26,7 @@
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
-            <a class="logo" id="ulUserData" href="index.html"></a>
+            <a class="logo" id="ulUserData" href="Principal.jsp"></a>
            <nav class="nav-tp"></nav>
     </header>     
     <div class="div-head-tittle"><h2></h2></div> 
