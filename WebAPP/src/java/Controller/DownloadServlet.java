@@ -97,6 +97,7 @@ public class DownloadServlet extends HttpServlet {
                 } catch (IOException ioExObj) {
 //                    System.out.println("Exception While Performing The I/O Operation?= " + ioExObj.getMessage());
                     JOptionPane.showMessageDialog(null, "NO HAY ARCHIVO PARA VISUALIZARLO: INGRESE UN DOCUMENTO EN EL MENU DE SUBIR EXAMENES.");
+                    response.sendRedirect("HistorialPaciente.jsp");
                 } finally {
                     if (inputStream != null) {
                         inputStream.close();
@@ -118,6 +119,7 @@ public class DownloadServlet extends HttpServlet {
                  * *** Print The Response ****
                  */
                 JOptionPane.showMessageDialog(null, "NO HAY ARCHIVO PARA VISUALIZARLO: INGRESE UN DOCUMENTO EN EL MENU DE SUBIR EXAMENES.");
+                response.sendRedirect("HistorialPaciente.jsp");
 //                response.getWriter().println("<h3>File " + fileName + " Is Not Present .....!</h3>");
             }
 

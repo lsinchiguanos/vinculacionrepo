@@ -12,7 +12,7 @@ public class conexion {
 
     public static String url = "jdbc:postgresql://localhost:5432/vinculacion";
     public static String usuario = "postgres";
-    public static String clave = "12345";
+    public static String clave = "1234";
     PreparedStatement ps = null;
     Statement st;
     private Connection conecction;
@@ -25,7 +25,6 @@ public class conexion {
             System.err.println(e.getMessage());
         }
     }
-
     public synchronized Connection getConecction() {
         try {
             if (conecction == null || conecction.isClosed()) {

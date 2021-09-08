@@ -48,8 +48,11 @@
                                 <h3 style="color:#007653; font-weight: bold">AGREGAR INFORMACIÓN</h3>
 
                             </header>
-                            <p>Agregar, modificar y eliminar informacion sobre el paciente</p>
-                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Acceder</a>
+                            <p>Agregar consulta sobre el  paciente</p>
+                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta</a>
+                            <br>
+                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar receta medica</a>
+                            
                         </div>
                     </section>
 
