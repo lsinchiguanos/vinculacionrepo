@@ -120,6 +120,21 @@
                             <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
+                    <!-- SEPTIMO MODULO -->
+                    <section class="animadoagregarinformacion">
+                        <div class="content">
+                            <header>
+                                <a href="">
+                                    <img alt="" src="img/icons8_profile_96px.png">
+                                    <span class="label"></span></a>
+                                <h3 style="color:#007653; font-weight: bold">EXAMENES</h3>
+                            </header>
+                            <p>Subir o actualizar examenes del paciente</p>
+                            <a href="ListarPacientes.jsp" class="button primary" style=" background: #007653 !important;">Subir examenes</a>
+                            <br>
+                            <a href="ListarPacientesGeneral.jsp" class="button primary" style=" background: #007653 !important;">Actualizar examenes</a>
+                        </div>
+                    </section>
                 </div>
             </div>
 

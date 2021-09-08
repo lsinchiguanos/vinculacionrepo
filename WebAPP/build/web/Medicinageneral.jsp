@@ -199,7 +199,6 @@
                                         <option>Preventivo</option>
                                         <option>Definitivo</option>
                                     </select></div> </th> 
-                            <td><div class="div-cont-lname"><input type="file" id="txt-datoexamen" class="inp-lname" placeholder="Datos de examen" name="CargarArchivo"/></div></td>
                         </tr>                        
                         <tr>
                             <td>  <input type="submit" id="btn-actiong" class="btn-accept" value="Guardar"/></td>
