@@ -112,9 +112,9 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/icons8_profile_96px.png">
+                                    <img alt="" src="svg/medico.svg" width="96" height="96">
                                     <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">Ingresar Información</h3>
+                                <h3 style="color:#007653; font-weight: bold">Ingresar Paciente</h3>
                             </header>
                             <p>Ingresar informacion por primera vez del paciente</p>
                             <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
@@ -125,7 +125,7 @@
                         <div class="content">
                             <header>
                                 <a href="">
-                                    <img alt="" src="img/icons8_profile_96px.png">
+                                    <img alt="" src="svg/resultados-de-los-examenes.svg" width="96" height="96">
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold">EXAMENES</h3>
                             </header>
