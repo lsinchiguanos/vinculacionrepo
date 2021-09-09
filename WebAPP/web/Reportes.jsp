@@ -15,6 +15,13 @@
         <link href="css/animacionprincipal.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <%
+            HttpSession s = request.getSession();
+            //variables de session
+        %>
+        <label id="usuario" style="display:none;"><%= s.getAttribute("galeno_user11")%> </label> 
+        <label id="nombre"></label> 
+        
         <header id="header" style=" background: #007653 !important;">
             <nav class="nav-tp">
                 <a class="logo" href="Principal.jsp">
@@ -41,7 +48,7 @@
 
                             </header>
                             <p>Visualizar la estadística de los pacientes atendidos</p>
-                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Acceder</a>
+                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;" href="" >Acceder</a>
                         </div>
                     </section>
 
@@ -72,7 +79,6 @@
                             <a href="HistorialPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
-
                 </div>
             </div>
         </section>
