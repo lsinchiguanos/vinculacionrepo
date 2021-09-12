@@ -1,5 +1,4 @@
 package DAO;
-
 import BD.conexion;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -8,6 +7,8 @@ import Model.BuscadorPaciente;
 import Model.Constructorrecetamedivca;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+
 
 public class Insertarecetamedica {
 
@@ -27,9 +28,9 @@ public class Insertarecetamedica {
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
             while (rs.next()) {
-               // newbuscar.setPacienteid(String.valueOf(rs.getString("paciente_id")));
-                newbuscar.setNombrescompleto(String.valueOf(rs.getString("nombres")+"-"+rs.getString("paciente_id")));
-                System.out.println(String.valueOf(rs.getString("paciente_id")+rs.getString("nombres")));
+                // newbuscar.setPacienteid(String.valueOf(rs.getString("paciente_id")));
+                newbuscar.setNombrescompleto(String.valueOf(rs.getString("nombres") + "-" + rs.getString("paciente_id")));
+                System.out.println(String.valueOf(rs.getString("paciente_id") + rs.getString("nombres")));
             }
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
@@ -62,7 +63,7 @@ public class Insertarecetamedica {
             rs = pst.executeQuery();
             while (rs.next()) {
                 //newbuscarm.setGalenoid(Integer.valueOf(rs.getString("galeno_id")));
-                newbuscarm.setNombresmedico(String.valueOf(rs.getString("nombremedico")+"-"+ rs.getString("galeno_id")));
+                newbuscarm.setNombresmedico(String.valueOf(rs.getString("nombremedico") + "-" + rs.getString("galeno_id")));
                 System.out.println(String.valueOf(rs.getString("nombremedico")));
             }
         } catch (SQLException ex) {

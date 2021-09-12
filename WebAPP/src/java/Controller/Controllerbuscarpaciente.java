@@ -1,4 +1,3 @@
-
 package Controller;
 
 import DAO.Buscador;
@@ -16,7 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+
 public class Controllerbuscarpaciente extends HttpServlet {
 
     /**
@@ -30,17 +29,16 @@ public class Controllerbuscarpaciente extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         String cedula = request.getParameter("cedula");
-     
-        Buscador buscar = new Buscador(); 
+
+        Buscador buscar = new Buscador();
         String json = new Gson().toJson(buscar.Listbuscarpaciente(cedula));
-            out.print(json);
+        out.print(json);
         // Establece el tipo de respuesta en formato json
         response.setContentType("text/javascript");
         response.getWriter().print(json);
 
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -54,7 +54,7 @@ public class LoginDAO {
         }
         return cliente_id;
     }
- 
+
     public static String getMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");

@@ -203,9 +203,9 @@
                         <tr>
                             <td>  <input type="submit" id="btn-actiong" class="btn-accept" value="Guardar"/></td>
                                 <%--  <td><input type="button" id="btn-actionc" class="btn-accept" value="Cancelar"/></td>            --%>                
-                                <%--   <td>
+                                   <td>
                                    <a><input type="button" id="btn-actionr" class="btn-accept" value="Receta" /></a>
-                                  </td>--%>
+                                  </td>
                         </tr>
                     </tbody>
                 </table>          
@@ -217,11 +217,10 @@
     <script src="js/newjavascript.js" type="text/javascript"></script>
 </body>
 <footer></footer>
-<script src="js/JQuery.js" type="text/javascript"></script>
-<script src="js/Opciones.js" type="text/javascript"></script> 
+<script src="js/JQuery.js" type="text/javascript"></script> 
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
-                            $(function () {
+   $(function () {
 
 
                                 $(":input[name = 'search' ]").keyup(function () {
@@ -252,7 +251,7 @@
                                             $("#list").append("<li><a>" + data[i].content + "</a></li>");
                                     }, "json");
                                 });
-                            });
+                            })
                             function mayus(e) {
                                 e.value = e.value.toUpperCase();
                             }
@@ -275,7 +274,6 @@
                                 }
                                 return false;
                             }
-
 </script>
 
 

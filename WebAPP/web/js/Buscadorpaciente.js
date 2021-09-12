@@ -82,6 +82,8 @@ function buscador1() {
         }
 
     });
+
+
 }
 function validaNumericosA(event)
 {
@@ -123,10 +125,10 @@ function usermedico() {
     });
 }
 $("#btn-addReceta").click(function (e) {
-    e.preventDefault();
+     e.preventDefault();
     var table = document.getElementById('tabla');
-    var rowLength = table.rows.length;
-    var jsonAll = [];
+    var rowLength = table.rows.length; 
+    var jsonAll = []; 
     for (var i = 1; i < rowLength; i += 1) {
         var row = table.rows[i];
         var jsoncell = {
@@ -134,11 +136,12 @@ $("#btn-addReceta").click(function (e) {
             indicaciones: row.cells[2].innerHTML
         };
         jsonAll[i - 1] = jsoncell;
-    }
+    } 
     $.ajax({
-        cache: false, url: "./NewServle",
-        data: {galenoid: idemedico, pacienteid: ideusuario, dt: JSON.stringify(jsonAll).toString(), op: "3"},
-        type: "POST",
+        cache: false,
+        url: "./NewServle",
+        data: {galenoid: idemedico, pacienteid: ideusuario, dt:JSON.stringify(jsonAll).toString(), op:"3"},
+        type: "POST", 
         error: function (request, status, error)
         {
             alert(request, status, error);
@@ -152,5 +155,6 @@ $("#btn-addReceta").click(function (e) {
 });
 function limpiar1()
 {
-    document.getElementById("tabla").innerHTML = "";
+    document.getElementById("tabla").innerHTML = ""; 
 }
+ 

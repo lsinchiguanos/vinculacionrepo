@@ -15,12 +15,12 @@
     </head>
 
     <body class="is-preload">    
-        <%
+       <%
             HttpSession s = request.getSession();
             //variables de session
         %>    
-        <label id="usuario"><%= session.getAttribute("galeno_user11")%> </label> 
-        <label id="nombre"></label> 
+        <label id="usuario" style="display:none;"><%= s.getAttribute("galeno_user11")%> </label> 
+        <label id="nombre"></label>
 
         <header id="header" style="">
 
@@ -49,9 +49,9 @@
 
                             </header>
                             <p>Agregar consulta sobre el  paciente</p>
-                            <a  href="Medicinageneral.jsp" id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta</a>
+                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta</a>
                             <br>
-                            <a href="RecetaMedica.jsp" id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar receta medica</a>
+                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;"  href="RecetaMedica.jsp">Agregar receta medica</a>
 
                         </div>
                     </section>

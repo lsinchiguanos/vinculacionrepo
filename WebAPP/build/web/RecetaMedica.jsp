@@ -32,6 +32,7 @@
                                 <td><div class="div-cont-name"><input type="text" id="txt-nameme" class="inp-name" placeholder="Nombres del Medico" name="nombres medico" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
                             </tr>
                         </tbody>
+                        
                         <thead >
                             <tr>                          
                                 <th>Medicamento</th>
@@ -48,6 +49,7 @@
                             </tr>
                         </tbody>                        
                     </table> 
+
                     <div style="width: 70%; height: auto; margin-left: auto; margin-right: auto" >
                         <div >
                             <table id="tabla" class="table table-bordered">
@@ -120,6 +122,5 @@
      <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>   
     <script src="js/recetamedica.js" type="text/javascript"></script>
     <script src="js/Buscadorpaciente.js" type="text/javascript"></script>
-    <script src="js/newjavascript.js" type="text/javascript"></script>
-    
+    <script src="js/newjavascript.js" type="text/javascript"></script>    
 </html>
