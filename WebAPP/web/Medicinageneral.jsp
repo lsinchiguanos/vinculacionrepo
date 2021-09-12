@@ -202,13 +202,10 @@
                         </tr>                        
                         <tr>
                             <td>  <input type="submit" id="btn-actiong" class="btn-accept" value="Guardar"/></td>
-                          <%--  <td><input type="button" id="btn-actionc" class="btn-accept" value="Cancelar"/></td>            --%>                
-                            <td>
-                             <a><input type="button" id="btn-actionr" class="btn-accept" value="Receta" /></a>
-                                
-                            </td>
-                 
-                            
+                                <%--  <td><input type="button" id="btn-actionc" class="btn-accept" value="Cancelar"/></td>            --%>                
+                                <%--   <td>
+                                   <a><input type="button" id="btn-actionr" class="btn-accept" value="Receta" /></a>
+                                  </td>--%>
                         </tr>
                     </tbody>
                 </table>          
@@ -216,8 +213,8 @@
         </section>
 
     </form> 
-                            <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-                            <script src="js/newjavascript.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/newjavascript.js" type="text/javascript"></script>
 </body>
 <footer></footer>
 <script src="js/JQuery.js" type="text/javascript"></script>
@@ -255,7 +252,7 @@
                                             $("#list").append("<li><a>" + data[i].content + "</a></li>");
                                     }, "json");
                                 });
-                            })
+                            });
                             function mayus(e) {
                                 e.value = e.value.toUpperCase();
                             }
@@ -278,7 +275,6 @@
                                 }
                                 return false;
                             }
-
 
 </script>
 

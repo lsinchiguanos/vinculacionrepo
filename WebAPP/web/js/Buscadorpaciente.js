@@ -82,8 +82,6 @@ function buscador1() {
         }
 
     });
-
-
 }
 function validaNumericosA(event)
 {
@@ -125,7 +123,6 @@ function usermedico() {
     });
 }
 $("#btn-addReceta").click(function (e) {
-    enviarDatosreceta();
     e.preventDefault();
     var table = document.getElementById('tabla');
     var rowLength = table.rows.length;
@@ -138,30 +135,9 @@ $("#btn-addReceta").click(function (e) {
         };
         jsonAll[i - 1] = jsoncell;
     }
-   $.ajax({
-           cache: false,
-        url: "./NewServle",
-        data: data.JSON.stringify(jsonAll), op:"3",  
-        type: "POST",
-        dataType: 'json',
-       error: function (request, status, error)
-        {
-            alert(request, status, error);
-        },
-        success: function (data)
-        {
-            console.log(data);
-        }
-    }); 
-});
-
-
-function enviarDatosreceta() {
-   // recorrertabla();
     $.ajax({
-        data: {galenoid: idemedico, pacienteid: ideusuario, op: 3},
-        url: "./NewServle",
-        cache: false,
+        cache: false, url: "./NewServle",
+        data: {galenoid: idemedico, pacienteid: ideusuario, dt: JSON.stringify(jsonAll).toString(), op: "3"},
         type: "POST",
         error: function (request, status, error)
         {
@@ -170,35 +146,11 @@ function enviarDatosreceta() {
         success: function (data)
         {
             console.log(data);
+            limpiar1();
         }
     });
+});
+function limpiar1()
+{
+    document.getElementById("tabla").innerHTML = "";
 }
-//function recorrertabla() {
-//var table = document.getElementById('tabla');
-//    var rowLength = table.rows.length;
-//    var jsonAll = [];
-//    for (var i = 1; i < rowLength; i += 1) {
-//        var row = table.rows[i];
-//        var jsoncell = {
-//            medicamento: row.cells[1].innerHTML,
-//            indicaciones: row.cells[2].innerHTML
-//        };
-//        jsonAll[i - 1] = jsoncell;
-//    } 
-//    // var data = {medicamento: $('#medicamento').val(), indicaciones: $('#indicaciones').val()};
-//    $.ajax({
-//           cache: false,
-//        url: "./NewServle",
-//        data: JSON.stringify(jsonAll), op:"3",  
-//        type: "POST",
-//        dataType: 'json',
-//       error: function (request, status, error)
-//        {
-//            alert(request, status, error);
-//        },
-//        success: function (data)
-//        {
-//            console.log(data);
-//        }
-//    }); 
-//}

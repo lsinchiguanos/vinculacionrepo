@@ -18,8 +18,8 @@
         <%
             HttpSession s = request.getSession();
             //variables de session
-%>    
-        <label id="usuario" style="display:none;"><%= s.getAttribute("galeno_user11")%> </label> 
+        %>    
+        <label id="usuario"><%= session.getAttribute("galeno_user11")%> </label> 
         <label id="nombre"></label> 
 
         <header id="header" style="">
@@ -27,15 +27,10 @@
             <header id="header" style=" background: #007653 !important;">
                 <a class="logo" href="index.jsp">
                 </a>
+                <a class="logo" id="ulUserData" href="index.html"></a>
                 <nav>
-                    <a href="#menu" style="color:white" >Configuración</a>
-                </nav>
-                <nav id="menu"  style="color:white">
-                    <ul class="links">
-                        <li><a href="cambioclave.jsp">Cambiar clave</a></li>
-                        <li><a href="CambiarUserYpass.jsp" style="" >Cambiar usuario y contraseña</a></li>
-                        <li><a href="cerrar.jsp" style="" >Cerrar sesion</a></li>
-                    </ul>
+                    <a href="cambioclave.jsp" style="color:white" >Cambiar clave</a>
+                    <a href="cerrar.jsp" style="color:white" >Cerrar sesión</a>
                 </nav>
             </header>
         </header>
@@ -54,9 +49,9 @@
 
                             </header>
                             <p>Agregar consulta sobre el  paciente</p>
-                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta</a>
+                            <a  href="Medicinageneral.jsp" id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta</a>
                             <br>
-                            <a  id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar receta medica</a>
+                            <a href="RecetaMedica.jsp" id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar receta medica</a>
 
                         </div>
                     </section>

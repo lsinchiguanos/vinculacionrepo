@@ -33,19 +33,6 @@
                             </tr>
                         </tbody>
                         <thead >
-                            <tr>
-                                <th>Fecha </th>                           
-                                <th> </th>
-                                <th> </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><div class="div-cont-lname"><input type="date" id="txt-lnamef" class="inp-lname" placeholder="Fecha" name="fecha" /></div></td>
-                                <td> </td>
-                            </tr>
-                        </tbody>
-                        <thead >
                             <tr>                          
                                 <th>Medicamento</th>
                                 <th>Indicacion Medica</th>
@@ -61,7 +48,6 @@
                             </tr>
                         </tbody>                        
                     </table> 
-
                     <div style="width: 70%; height: auto; margin-left: auto; margin-right: auto" >
                         <div >
                             <table id="tabla" class="table table-bordered">

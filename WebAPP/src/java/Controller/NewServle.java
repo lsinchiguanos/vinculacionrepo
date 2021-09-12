@@ -14,6 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 
 public class NewServle extends HttpServlet {
 
@@ -58,15 +62,21 @@ public class NewServle extends HttpServlet {
                 String x = dtf.format(LocalDateTime.now());            ////datos de encabezado          
 
                 String idDoctor = request.getParameter("galenoid");
-                String pacienteid = request.getParameter("pacienteid"); 
+                String pacienteid = request.getParameter("pacienteid");
                 Insertarecetamedica insertarreceta = new Insertarecetamedica();
                 int id_encabezado = insertarreceta.agregarrecetamedicaencabezado(idDoctor, pacienteid, x);
 
-                String medicamento = "";
-                String indicaciones = "";
+                String dt = request.getParameter("dt");
+                JsonArray array = new JsonParser().parse(dt).getAsJsonArray();
 
-                insertarreceta.agregarrecetamedicadetalle(id_encabezado, medicamento, indicaciones);
-              
+                for (JsonElement item : array) {
+                    JsonObject gsonObj = item.getAsJsonObject();
+                    String medicamento = gsonObj.get("medicamento").getAsString();
+                    String indicaciones = gsonObj.get("indicaciones").getAsString();
+                    insertarreceta.agregarrecetamedicadetalle(id_encabezado, medicamento, indicaciones);
+                }
+                response.getWriter().write(String.valueOf(id_encabezado));
+
                 //JsonParser jsondetalle = new JsonParse();
                 ////VALIDAR LOS TEXT
                 break;
