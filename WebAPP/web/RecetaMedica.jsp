@@ -14,7 +14,7 @@
         <div class="div-head-tittle"><h2></h2></div>
 
 
-       <form class="form1"> 
+        <form class="form1"> 
             <section class="sec-main">
                 <div class="div-cont-main">
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
@@ -27,12 +27,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <div class="div-cont-name"><input type="number" id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericosA(event)'/></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namep" class="inp-ced" placeholder="Nombres del Paciente" name="nombres paciente" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
+                                <td> <div class="div-cont-name"><input type="text"onkeypress='return validaNumericos(event)' id="txt-ced" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericosA(event)' maxlength="15"/></div></td>
+                                <td><div class="div-cont-name"><input type="text" disabled="true" id="txt-namep"onkeypress="return soloLetras(event)" class="inp-ced" placeholder="Nombres del Paciente" name="nombres paciente" onkeypress="return soloLetras(event)"/></div></td>
                                 <td><div class="div-cont-name"><input type="text" id="txt-nameme" class="inp-name" placeholder="Nombres del Medico" name="nombres medico" onkeypress="return soloLetras(event)"disabled="true"/></div></td>
                             </tr>
                         </tbody>
-                        
+
                         <thead >
                             <tr>                          
                                 <th>Medicamento</th>
@@ -41,11 +41,11 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lnamem" class="inp-lname" placeholder="Medicamento" name="medicamento"/></div></td>
-                                <td><div class="div-cont-name"><input type="text" id="txt-namei" class="inp-name" placeholder="Indicaciones Medicas" name="indicaciones"/></div></td>
+                                <td><div class="div-cont-lname"><input type="text" onkeyup="mayus(this);" id="txt-lnamem" class="inp-lname" placeholder="Medicamento" name="medicamento"/></div></td>
+                                <td><div class="div-cont-name"><input type="text"onkeyup="mayus(this);" id="txt-namei" class="inp-name" placeholder="Indicaciones Medicas" name="indicaciones"/></div></td>
                                 <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="button" id="btn-action" class="btn-accept" value="+"> 
-                                <input type="button"  id="btn-addReceta" class="btn-accept" value="GUARDAR"></div></td> 
-                                
+                                        <input type="button"  id="btn-addReceta" class="btn-accept" value="GUARDAR"></div></td> 
+
                             </tr>
                         </tbody>                        
                     </table> 
@@ -60,7 +60,7 @@
                                         <td>Medicamento</td>
                                         <td>Indicaciones medica</td>
                                         <td>Acciones</td>
-                             
+
                                     </tr>
                                 </thead>
                             </table>
@@ -68,15 +68,18 @@
                     </div>
                 </div>
             </section> 
-         </form>
+        </form>
         <script>
+            function mayus(e) {
+                e.value = e.value.toUpperCase();
+            }
             function validaNumericos(event) {
                 if (event.charCode >= 48 && event.charCode <= 57) {
                     return true;
                 }
-                if(event.charCode ==13){
-                   console.log("unio");
-                     buscador1();
+                if (event.charCode == 13) {
+                    console.log("unio");
+                    buscador1();
                 }
                 return false;
             }
@@ -119,7 +122,7 @@
         </script>
     </body>
     <footer></footer>
-     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>   
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>   
     <script src="js/recetamedica.js" type="text/javascript"></script>
     <script src="js/Buscadorpaciente.js" type="text/javascript"></script>
     <script src="js/newjavascript.js" type="text/javascript"></script>    

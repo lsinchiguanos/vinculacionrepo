@@ -26,7 +26,7 @@
             <div class="div-cont-main">
                 <div class="div-cont-ced">
                     <input type="button" id="btn-actionb" class="inp-search" value="Buscar"/>
-                    <input type="text" id="txt-cede" class="inp-ced" placeholder="Cédula" name="cedula"/>
+                    <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' required=""placeholder="Cédula" name="cedula" maxlength="15"/>
                 </div>            
                 <!--<div class="div-cont-search"></div>-->
                 <hr /> 
@@ -104,7 +104,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-ced" style='margin-top: -40px !important;'><input type="number" id="txt-estatura" class="inp-ced" placeholder="Estatura" name="Estatura"/></div></td>
+                            <td><div class="div-cont-ced" style='margin-top: -40px !important;'><input type="text" id="txt-estatura" class="inp-ced" placeholder="Estatura"onkeyup="mayus(this);" name="Estatura"/></div></td>
                             <td><div class="div-cont-name" ><input type="text" id="txt-peso" class="inp-name" placeholder="Peso" name="peso"/></div></td>
                             <td><div class="div-cont-lname"><input type="text" id="txt-tiposangree" class="inp-lname" placeholder="Tipo de Sangre" name="sangre" onkeyup="mayus(this);"/></div></td>
                         </tr>
@@ -179,7 +179,7 @@
                     <tbody>
                         <tr>
                             <td><div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td> 
-                            <td><div class="div-cont-lname"><textarea type="text" id="txt-motivocon" class="inp-lname" placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></textarea> </td> 
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-motivocon" class="inp-lname" required=""placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></textarea> </td> 
                         </tr>
                     <thead>
                         <tr>
@@ -188,8 +188,8 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" placeholder="Enfermedad o problema actual" name="Ep" onkeyup="mayus(this);"/></textarea></td> 
-                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></textarea></td>
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" required="" placeholder="Enfermedad o problema actual" name="Ep" onkeyup="mayus(this);"/></textarea></td> 
+<td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname"required="" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></textarea></td>
                     </tr>
                     </tbody>
                     <tbody>
@@ -203,9 +203,9 @@
                         <tr>
                             <td>  <input type="submit" id="btn-actiong" class="btn-accept" value="Guardar"/></td>
                                 <%--  <td><input type="button" id="btn-actionc" class="btn-accept" value="Cancelar"/></td>            --%>                
-                                   <td>
-                                   <a><input type="button" id="btn-actionr" class="btn-accept" value="Receta" /></a>
-                                  </td>
+                            <td>
+                                <a><input type="button" id="btn-actionr" class="btn-accept" value="Receta" /></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>          
@@ -220,8 +220,31 @@
 <script src="js/JQuery.js" type="text/javascript"></script> 
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
-   $(function () {
+                            function validaNumericos(event) {
+                                if (event.charCode >= 48 && event.charCode <= 57) {
+                                    return true;
+                                }
+                                return false;
+                            }
+                            function soloLetras(e) {
+                                key = e.keyCode || e.which;
+                                tecla = String.fromCharCode(key).toLowerCase();
+                                letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                                especiales = [8, 37, 39, 46];
 
+                                tecla_especial = false
+                                for (var i in especiales) {
+                                    if (key == especiales[i]) {
+                                        tecla_especial = true;
+                                        break;
+                                    }
+                                }
+
+                                if (letras.indexOf(tecla) == -1 && !tecla_especial)
+                                    return false;
+                            }
+
+                            $(function () {
 
                                 $(":input[name = 'search' ]").keyup(function () {
 
