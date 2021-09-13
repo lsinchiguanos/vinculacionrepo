@@ -19,8 +19,16 @@
             rs = ps.executeQuery();
             while (rs.next()) {
         %>
+        <header id="header" style=" background: #007653 !important;">
+            <a class="logo" href="Principal.jsp">
+                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+            </a>
+            <a class="logo" id="ulUserData" href="index.html"></a>
+            <nav>
+            </nav>
+        </header>
         <div class="container">
-            <h1>Modificar Registro</h1>
+            <h1>Modificar Examenes</h1>
             <hr>
             <form id="form1" action="subirExamenes" method="POST" enctype="multipart/form-data" style="width: 500px; height: 400px">
                 <input type="text"  readonly="" name="codigo" class="form-control" style="visibility:hidden;" value="<%= rs.getInt("codigo")%>"/>

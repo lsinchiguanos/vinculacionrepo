@@ -46,8 +46,8 @@
                         <thead >
                             <tr>
                                 <th>Numero de identificacion</th>
-                                <th>Nombres</th>
-                                <th>Apellidos</th>
+                                <th>Primer Nombre</th>
+                                <th>Segundo Nombre</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,37 +59,54 @@
                         </tbody>
                         <thead >
                             <tr>
+                                <th>Primer Apellido</th>
+                                <th>Segundo Apellido</th>
                                 <th>Telefono o Celular</th>
-                                <th>Provincia</th>
-                                <th>Canton</th>
+
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="PrimerApellido" id="galeno_telefono"value="<%= rs.getString("galeno_apellido_paterno")%>" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"required="" ></div></td>
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="SegundoApellido" id="galeno_provincia"value="<%= rs.getString("galeno_apellido_materno")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_telefono" id="galeno_telefono"value="<%= rs.getString("galeno_telefono")%>"required="" onkeypress='return validaNumericos(event)'></div></td>
+
+                            </tr> 
+                        </tbody>
+
+
+                        <thead >
+                            <tr>
+                                <th>Provincia</th>
+                                <th>Canton</th>
+                                <th>Parroquia</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td> 
+                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                             </tr> 
                         </tbody>
                         <thead >
                             <tr>
-                                <th>Parroquia</th>
                                 <th>Direccion</th>
                                 <th>Correo Electronico</th> 
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required=""></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required=""></div></td>
                             </tr> 
                             <tr>
                                 <td></td>
                                 <td><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
-                                <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar"/></td>
+                                <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar" onclick="history.back()"/></td>
                             </tr>
-
                         </tbody>                     
                     </table>
                 </div>
@@ -144,7 +161,7 @@
         </form>
         <%}%>
         <%
-            String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email;
+            String dni, Pnom, Snom, telefono, direccion, provincia, canton, parroquia, email,Papellido,Sapellido;
             dni = request.getParameter("Cedula");
             Pnom = request.getParameter("PrimerNombre");
             Snom = request.getParameter("SegundoNombre");
@@ -154,13 +171,17 @@
             canton = request.getParameter("galeno_canton");
             parroquia = request.getParameter("galeno_parroquia");
             email = request.getParameter("galeno_correoelectronico");
-            if (Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && email != null) {
+            Papellido = request.getParameter("PrimerApellido");
+            Sapellido = request.getParameter("SegundoApellido");
+            if (Pnom != null && Snom != null && telefono != null && direccion != null && provincia != null && canton != null && parroquia != null && email != null && Papellido != null && Sapellido != null) {
                 ps = cn.getConecction().prepareStatement("update galeno set galeno_primer_nombre='" + Pnom + "', galeno_segundo_nombre='" + Snom + "', galeno_telefono='" + telefono + "'"
                         + ",galeno_direccion='" + direccion + "'"
                         + ",galeno_provincia='" + provincia + "' "
                         + ",galeno_canton='" + canton + "'"
                         + " ,galeno_parroquia='" + parroquia + "'"
                         + ",galeno_correoelectronico='" + email + "'"
+                                + ",galeno_apellido_paterno='" + Papellido + "'"
+                                        + ",galeno_apellido_materno='" + Sapellido + "'"
                         + " where galeno_user='" + session.getAttribute("galeno_user11") + "'");
                 ps.executeUpdate();
                 response.sendRedirect("Principal.jsp");

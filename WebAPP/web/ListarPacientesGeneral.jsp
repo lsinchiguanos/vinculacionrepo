@@ -20,6 +20,14 @@
             rs = smt.executeQuery("select idmedicinageneral as codigo, paciente_dni as cedula, fechaconsulta as fecha, motivoconsulta as motivo from medicinageneral where galeno_user = '" + session.getAttribute("galeno_user11") + "'");
             //Creamo la Tabla:     
         %>
+        <header id="header" style=" background: #007653 !important;">
+            <a class="logo" href="Principal.jsp">
+                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+            </a>
+            <a class="logo" id="ulUserData" href="index.html"></a>
+            <nav>
+            </nav>
+        </header>
         <div class="container">               
             <!--<a  class="btn btn-success" href="Agregar.jsp">Nuevo Registro</a> Esto es Cuando se Crea un nuevo Archivo Agregar.jsp -->         
             <table class="table table-bordered"  id="tablaDatos">
