@@ -18,10 +18,10 @@
         <%
             HttpSession s = request.getSession();
             //variables de session
-        %>
+%>
         <label id="usuario" style="display:none;"><%= s.getAttribute("galeno_user11")%> </label> 
         <label id="nombre"></label> 
-        
+
         <header id="header" style=" background: #007653 !important;">
             <nav class="nav-tp">
                 <a class="logo" href="Principal.jsp">
@@ -47,7 +47,7 @@
                                 <h3 style="color:#007653; font-weight: bold">PACIENTES ATENDIDOS</h3>
 
                             </header>
-                            <p>Visualizar la estadística de los pacientes atendidos</p>
+                            <p>Descargar en PDF las estadísticas de los pacientes atendidos</p>
                             <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;" href="" >Acceder</a>
                         </div>
                     </section>
@@ -61,22 +61,8 @@
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold" class="textgrueso">Recetarios</h3>
                             </header>
-                            <p>Historial de recetarios</p>
+                            <p>Descargar en PDF las recetas medicas</p>
                             <a href="Reportes.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
-                        </div>
-                    </section>
-
-                    <!-- TERCER MODULO -->                 
-                    <section class="animadoagregarinformacion">
-                        <div class="content">
-                            <header>
-                                <a href="">
-                                    <img alt="" src="svg/examen.svg" width="96" height="96">
-                                    <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">AGENDA</h3>
-                            </header>
-                            <p>Mostrar la lista de agendados </p>
-                            <a href="HistorialPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
                 </div>

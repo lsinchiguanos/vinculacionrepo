@@ -45,14 +45,11 @@
                                 <a href="">
                                     <img alt="" src="img/icons8_workstation_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">AGREGAR INFORMACIÓN</h3>
+                                <h3 style="color:#007653; font-weight: bold">AGREGAR CONSULTA MEDICA Y RECETA</h3>
 
                             </header>
-                            <p>Agregar consulta sobre el  paciente</p>
-                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta</a>
-                            <br>
-                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;"  href="RecetaMedica.jsp">Agregar receta medica</a>
-
+                            <p>Agregar consulta sobre el  paciente y receta medica</p>
+                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;" >Agregar consulta o receta</a>
                         </div>
                     </section>
 
@@ -65,8 +62,8 @@
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold" class="textgrueso">Reportes</h3>
                             </header>
-                            <p>Mostrar informe de las actividades</p>
-                            <a href="Reportes.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
+                            <p>Descargar en PDF las actividades o recetas medicas de los pacientes</p>
+                            <a href="Reportes.jsp" class="button primary" style=" background: #007653 !important;">Ver reportes</a>
                         </div>
                     </section>
 
@@ -79,8 +76,8 @@
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold">Historial</h3>
                             </header>
-                            <p>Mostrar la información de las actividades </p>
-                            <a href="HistorialPaciente.jsp" class="button primary"style=" background: #007653 !important;">Acceder</a>
+                            <p>Mostrar la información de las actividades de los pacientes</p>
+                            <a href="HistorialPaciente.jsp" class="button primary"style=" background: #007653 !important;">Ver historial</a>
                         </div>
                     </section>
 
@@ -104,7 +101,7 @@
                                 <a href="">
                                     <img alt="" src="img/icons8_profile_96px.png">
                                     <span class="label"></span></a>
-                                <h3 style="color:#007653; font-weight: bold">Actualizar datos personales</h3>
+                                <h3 style="color:#007653; font-weight: bold">Actualizar datos personales medico</h3>
                             </header>
                             <p>Podrá actualizar sus datos personales, en caso de alguna actualización</p>
                             <a href="ActualizarDatosPersonalesMedicos.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
@@ -119,7 +116,7 @@
                                     <span class="label"></span></a>
                                 <h3 style="color:#007653; font-weight: bold">Ingresar Paciente</h3>
                             </header>
-                            <p>Ingresar informacion por primera vez del paciente</p>
+                            <p>Ingresar datos personales por primera vez del paciente</p>
                             <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
@@ -140,9 +137,7 @@
                     </section>
                 </div>
             </div>
-
         </section>
-
         <!-- Scripts -->
         <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
         <script src="Principal/js/jquery.min.js"></script>
