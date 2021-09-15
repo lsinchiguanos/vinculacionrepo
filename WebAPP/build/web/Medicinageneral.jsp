@@ -41,7 +41,6 @@
                     <tbody>
                         <tr>
                             <td> <div class="div-cont-ced" style='margin-top: -40px !important;'><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div> </td>
-
                             <td> <div class="div-cont-name"  ><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                             <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                         </tr>
@@ -189,7 +188,7 @@
                     </thead>
                     <tr>
                         <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" required="" placeholder="Enfermedad o problema actual" name="Ep" onkeyup="mayus(this);"/></textarea></td> 
-<td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname"required="" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></textarea></td>
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname"required="" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></textarea></td>
                     </tr>
                     </tbody>
                     <tbody>
@@ -220,83 +219,83 @@
 <script src="js/JQuery.js" type="text/javascript"></script> 
 <script src="js/Buscadorpaciente.js" type="text/javascript"></script> 
 <script type="text/javascript">
-                            function validaNumericos(event) {
-                                if (event.charCode >= 48 && event.charCode <= 57) {
-                                    return true;
-                                }
-                                return false;
-                            }
-                            function soloLetras(e) {
-                                key = e.keyCode || e.which;
-                                tecla = String.fromCharCode(key).toLowerCase();
-                                letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-                                especiales = [8, 37, 39, 46];
+    function validaNumericos(event) {
+        if (event.charCode >= 48 && event.charCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = [8, 37, 39, 46];
 
-                                tecla_especial = false
-                                for (var i in especiales) {
-                                    if (key == especiales[i]) {
-                                        tecla_especial = true;
-                                        break;
-                                    }
-                                }
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
 
-                                if (letras.indexOf(tecla) == -1 && !tecla_especial)
-                                    return false;
-                            }
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+            return false;
+    }
 
-                            $(function () {
+    $(function () {
 
-                                $(":input[name = 'search' ]").keyup(function () {
+        $(":input[name = 'search' ]").keyup(function () {
 
-                                    / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
-                                    $("#list li").remove();
-                                    var $val = $(this).val();
-                                    var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
-                                    var args = {"time": new Date()};
-                                    $.get(url, args, function (data) {
+            / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+            $("#list li").remove();
+            var $val = $(this).val();
+            var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+            var args = {"time": new Date()};
+            $.get(url, args, function (data) {
 
-                                        / * La respuesta es una matriz de objetos json * /
-                                        for (var i = 0; i < data.length; i++)
-                                            $("#list").append("<li><a>" + data[i].content + "</a></li>");
-                                    }, "json");
-                                });
-                                $(":input[name = 'search' ]").keyup(function () {
+                / * La respuesta es una matriz de objetos json * /
+                for (var i = 0; i < data.length; i++)
+                    $("#list").append("<li><a>" + data[i].content + "</a></li>");
+            }, "json");
+        });
+        $(":input[name = 'search' ]").keyup(function () {
 
-                                    / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
-                                    $("#list li").remove();
-                                    var $val = $(this).val();
-                                    var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
-                                    var args = {"time": new Date()};
-                                    $.get(url, args, function (data) {
+            / * Cada vez que el usuario suelta la tecla, se borrará el último contenido del mensaje * /
+            $("#list li").remove();
+            var $val = $(this).val();
+            var url = "${pageContext.request.contextPath}/searchservlet?content=" + $val;
+            var args = {"time": new Date()};
+            $.get(url, args, function (data) {
 
-                                        / * La respuesta es una matriz de objetos json * /
-                                        for (var i = 0; i < data.length; i++)
-                                            $("#list").append("<li><a>" + data[i].content + "</a></li>");
-                                    }, "json");
-                                });
-                            })
-                            function mayus(e) {
-                                e.value = e.value.toUpperCase();
-                            }
-                            function verificarCedula(cedula) {
-                                if (typeof (cedula) == 'string' && cedula.length == 10 && /^\d+$/.test(cedula)) {
-                                    var digitos = cedula.split('').map(Number);
-                                    var codigo_provincia = digitos[0] * 10 + digitos[1];
+                / * La respuesta es una matriz de objetos json * /
+                for (var i = 0; i < data.length; i++)
+                    $("#list").append("<li><a>" + data[i].content + "</a></li>");
+            }, "json");
+        });
+    })
+    function mayus(e) {
+        e.value = e.value.toUpperCase();
+    }
+    function verificarCedula(cedula) {
+        if (typeof (cedula) == 'string' && cedula.length == 10 && /^\d+$/.test(cedula)) {
+            var digitos = cedula.split('').map(Number);
+            var codigo_provincia = digitos[0] * 10 + digitos[1];
 
-                                    //if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30) && digitos[2] < 6) {
+            //if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30) && digitos[2] < 6) {
 
-                                    if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30)) {
-                                        var digito_verificador = digitos.pop();
+            if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30)) {
+                var digito_verificador = digitos.pop();
 
-                                        var digito_calculado = digitos.reduce(
-                                                function (valorPrevio, valorActual, indice) {
-                                                    return valorPrevio - (valorActual * (2 - indice % 2)) % 9 - (valorActual == 9) * 9;
-                                                }, 1000) % 10;
-                                        return digito_calculado === digito_verificador;
-                                    }
-                                }
-                                return false;
-                            }
+                var digito_calculado = digitos.reduce(
+                        function (valorPrevio, valorActual, indice) {
+                            return valorPrevio - (valorActual * (2 - indice % 2)) % 9 - (valorActual == 9) * 9;
+                        }, 1000) % 10;
+                return digito_calculado === digito_verificador;
+            }
+        }
+        return false;
+    }
 </script>
 
 

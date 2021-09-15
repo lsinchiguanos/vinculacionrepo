@@ -6,6 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Actualizarexamenes.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
@@ -19,14 +20,20 @@
             rs = ps.executeQuery();
             while (rs.next()) {
         %>
+       
+        
         <header id="header" style=" background: #007653 !important;">
+
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="index.html"></a>
-            <nav>
-            </nav>
+            <nav class="nav-tp"> </nav>
         </header>
+
+        <div class="div-head-tittle"><h2></h2></div>
+        
+        
         <div class="container">
             <h1>Modificar Examenes</h1>
             <hr>

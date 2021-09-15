@@ -7,15 +7,16 @@
         <title>WebApp - Ingresos</title>
     </head>
     <body onload="cargarProvincias()">
-        <header id="header" style=" background: #007653 !important;">
-            <a class="logo" href="Principal.jsp">
-                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
-            </a>
-            <a class="logo" id="ulUserData" href="index.html"></a>
-            <nav>
-            </nav>
-        </header>
-        <div class="div-head-tittle"><h2></h2></div>
+     
+      <header id="header" style=" background: #007653 !important;">
+        <a class="logo" href="Principal.jsp">
+            <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+        </a>
+<a class="logo" id="ulUserData" href="index.html"></a> 
+    </header>     
+    <div class="div-head-tittle"><h2></h2></div>
+
+    
         <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" >
             <section class="sec-main">
                 <div class="div-cont-main">

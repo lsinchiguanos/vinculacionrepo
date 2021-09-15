@@ -14,7 +14,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-        <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
+    <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
         <title>Actualizar datos personales medicos</title>
     </head>
     <body>
@@ -40,7 +40,7 @@
         %>
         <div class="div-head-tittle"><h2></h2></div>
         <form id="form1" autocomplete="off">
-            <section class="sec-main">
+         <section class="sec-main">
                 <div class="div-cont-main">
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                         <thead >
@@ -101,11 +101,12 @@
                             <tr>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required=""></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required=""></div></td>
+                                <td><div class="div-cont-name" style='margin-top: -20px !important;'><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></div> </td>
                             </tr> 
                             <tr>
                                 <td></td>
-                                <td><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></td>
-                                <td><input type="button" id="btn-action" class="btn-accept" value="Cancelar" onclick="history.back()"/></td>
+                                
+                                <%--<td><input type="button" id="btn-action" class="btn-accept" value="Cancelar" onclick="history.back()"/></td>--%>
                             </tr>
                         </tbody>                     
                     </table>

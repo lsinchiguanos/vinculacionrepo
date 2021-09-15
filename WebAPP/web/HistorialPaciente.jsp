@@ -31,8 +31,7 @@
     </header>     
     <div class="div-head-tittle"><h2></h2></div> 
         
-    <!--<div style="height:50px"></div>-->
-
+   
         <!--Ejemplo tabla con DataTables-->
         <div class="container">
             <div class="row">

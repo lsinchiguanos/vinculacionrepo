@@ -20,20 +20,19 @@
             //variables de session
 %>
         <label id="usuario" style="display:none;"><%= s.getAttribute("galeno_user11")%> </label> 
-        <label id="nombre"></label> 
+        <label id="nombre" style="display:none;"></label> 
 
         <header id="header" style=" background: #007653 !important;">
-            <nav class="nav-tp">
+         
                 <a class="logo" href="Principal.jsp">
                     <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
                 </a>
                 <a class="logo" id="ulUserData" href="Principal.jsp"></a>
-            </nav>
+              <nav class="nav-tp"> </nav>
         </header>
 
         <div class="div-head-tittle"><h2></h2></div>
-
-
+    
         <section class="wrapper">
             <div class="inner">
                 <div class="highlights">
