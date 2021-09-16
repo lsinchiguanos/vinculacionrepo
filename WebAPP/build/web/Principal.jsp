@@ -117,7 +117,9 @@
                                 <h3 style="color:#007653; font-weight: bold">Ingresar Paciente</h3>
                             </header>
                             <p>Ingresar datos personales por primera vez del paciente</p>
-                            <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
+                            <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Ingresar Paciente</a>
+                            <br>
+                            <a href="Actualizardatospaciente.jsp" class="button primary" style=" background: #007653 !important;">Actualizar paciente</a>
                         </div>
                     </section>
                     <!-- SEPTIMO MODULO -->
