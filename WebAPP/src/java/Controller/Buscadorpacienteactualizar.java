@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
-import DAO.Buscadorpaciente;
+import DAO.Buscadorpacienteact;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,11 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-/**
- *
- * @author Dell
- */
+ 
 public class Buscadorpacienteactualizar extends HttpServlet {
 
     /**
@@ -33,10 +25,10 @@ public class Buscadorpacienteactualizar extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       String cedula = request.getParameter("cedula");
+       String cedul = request.getParameter("cedul");
 
-        Buscadorpaciente buscar = new Buscadorpaciente();
-        String json = new Gson().toJson(buscar.Listabuscarpaciente(cedula));
+        Buscadorpacienteact buscar = new Buscadorpacienteact();
+        String json = new Gson().toJson(buscar.Listabuscadorpacienteact(cedul));
         out.print(json);
         // Establece el tipo de respuesta en formato json
         response.setContentType("text/javascript");

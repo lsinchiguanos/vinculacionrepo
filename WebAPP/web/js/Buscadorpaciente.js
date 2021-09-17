@@ -157,4 +157,6 @@ function limpiar1()
 {
     document.getElementById("tabla").innerHTML = ""; 
 }
+
+
  
