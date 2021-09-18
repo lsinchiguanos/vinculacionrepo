@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
         <link href="css/Actualizardatospaciente.css" rel="stylesheet" type="text/css"/>
-        <a href="../src/java/DAO/Buscadorpacienteact.java"></a>
+    <a href="../src/java/DAO/Buscadorpacienteact.java"></a>
     <title>WebApp - Actualizar paciente</title>
 </head>
 <body onload="cargarProvincias()">
@@ -15,7 +15,7 @@
         <a class="logo" id="ulUserData" href="index.html"></a> 
     </header>  
     <div class="div-head-tittle"><h2></h2></div>
-    <form class="form1"  >
+    <form class="form1" action="ActPaciente" method="POST">
         <section class="sec-main">
             <div class="div-cont-main">
                 <div class="div-cont-ced">
@@ -71,8 +71,9 @@
                     <thead >
                         <tr>                                
                             <th>Provincia</th>
-                            <th>Canton</th>
                             <th>Parroquia</th>
+                            <th>Direccion</th>                               
+
                         </tr>
                     </thead>
                     <tbody>
@@ -80,22 +81,21 @@
                             <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"  name="Provincia" onchange="cargarPueblos();" id="txt-provinciaa" >
                                         <option>Seleccione una provincia</option>
                                     </select></div></td> 
-                            <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf" name="canton" id="txt-cantonn">
-                                        <option>Seleccione un canton</option>
-                                    </select></div></td> 
                             <td><div class="div-cont-lname"><input type="text" id="txt-lnamepara" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
+                            <td><div class="div-cont-lname"><input type="text" id="txt-lnamedi" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div></td> 
+
                         </tr>
                     </tbody>
                     <thead >
                         <tr>
-                            <th>Direccion</th>                               
                             <th>Genero</th>
                             <th>Estado Civil</th>
+                            <th>Ayuda Social</th>
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr> 
-                            <td><div class="div-cont-lname"><input type="text" id="txt-lnamedi" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div></td> 
                             <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf" name="genero"id="txt-lnamege">   
                                         <option>Seleccione genero</option>
                                         <option>Masculino</option>
@@ -107,37 +107,38 @@
                                         <option>Union libre</option>
                                         <option>Viudo</option>
                                         <option>Divorciado</option>
-                                    </select></div></td>            
-                        </tr>
-                    </tbody>
-                    <thead >
-                        <tr>                                
-                            <th>Ayuda Social</th>
-                            <th>Nacionalidad</th>
-                            <th>Discapacidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr> 
+                                    </select></div></td>    
                             <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf"required=""  name="Ayuda" id="txt-lnameayu">
                                         <option>Recibe Ayuda Social</option>
                                         <option>Si</option>
                                         <option>No</option>
-                                    </select></div></td> 
+                                    </select></div></td>
+                        </tr>
+                    </tbody>
+                    <thead >
+                        <tr>                                
+                            <th>Nacionalidad</th>
+                            <th>Discapacidad</th>
+                            <th>Tipo de sangre</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> 
+
                             <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf" id="nacionalidad" name="nacionalidad" ></select></div></td> 
                             <td><div class="div-cont-lname"><input type="text" id="txt-lnamedis" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-lnametiposangre" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
 
                         </tr>
                     </tbody>
                     <thead >
                         <tr>
-                            <th>Tipo de sangre</th>
                             <th>Correo Electronico</th> 
                         </tr>
                     </thead>
                     <tbody>
                         <tr> 
-                            <td><div class="div-cont-lname"><input type="text" id="txt-lnametiposangre" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
                             <td><div class="div-cont-lname"><input type="email" id="txt-lnamecorreo" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
                             <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/> </div></td>
                         </tr>
