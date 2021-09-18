@@ -1,3 +1,4 @@
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="BD.conexion"%>
 <%@page import="BD.conexion"%>
@@ -92,6 +93,7 @@
                 if (dni.equals(mnom1)) {
                     ps = cn.getConecction().prepareStatement("update galeno set galeno_pass=md5('" + dni + "') where galeno_user='" + session.getAttribute("galeno_user11") + "'");
                     ps.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "LA CONTRASEÑA HA SIDO MODIFICADA CORRECTAMENTE.....");
                     response.sendRedirect("index.jsp");
                 }
             }

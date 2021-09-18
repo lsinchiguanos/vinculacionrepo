@@ -63,35 +63,33 @@ public class ActPaciente extends HttpServlet {
         try {
             System.out.println("connection done");
             String sql = "UPDATE public.paciente\n"
-                    + "   SET paciente_tipo_dni=?,paciente_apellido_paterno=?, \n"
+                    + "   SET paciente_apellido_paterno=?, \n"
                     + "       paciente_primer_nombre=?, paciente_fnacimiento=?, paciente_direccion=?, \n"
                     + "       paciente_telefono=?, paciente_genero=?, paciente_grupo=?, paciente_ayudasocial=?, \n"
                     + "       paciente_apellido_materno=?, paciente_segundo_nombre=?, \n"
                     + "       paciente_provincia=?,paciente_parroquia=?, \n"
                     + "       paciente_nacionalidad=?, paciente_estado_civil=?, paciente_convencional=?, \n"
-                    + "       paciente_tipo_sangre=?, paciente_correoelectronico=?,paciente_dni=?\n"
+                    + "       paciente_tipo_sangre=?, paciente_correoelectronico=?\n"
                     + " WHERE paciente_dni=?;";
             ps = c.getConecction().prepareStatement(sql);
-            ps.setString(1, TipoIden);
-            ps.setString(3, PrimerNombre);
-            ps.setString(11, SegundoNombre);
-            ps.setString(2, PrimerApellido);
-            ps.setString(10, SegundoApellido);
-            ps.setString(4, Fechadenacimiento);
-            ps.setString(16, convencional);
-            ps.setString(6, Celular);
-            ps.setString(12, Provincia);
-            ps.setString(5, Direccion);
-            ps.setString(13, parroquia);
-            ps.setString(15, estadoCivil);
-            ps.setString(9, Ayuda1);
-            ps.setString(14, nacionalidad);
-            ps.setString(8, discapacidad);
-            ps.setString(17, tipoSangre);
-            ps.setString(7, genero);
-            ps.setString(18, email);
-            ps.setString(19, Identificacion);
-            ps.setString(20, cond);
+            ps.setString(2, PrimerNombre);
+            ps.setString(10, SegundoNombre);
+            ps.setString(1, PrimerApellido);
+            ps.setString(9, SegundoApellido);
+            ps.setString(3, Fechadenacimiento);
+            ps.setString(15, convencional);
+            ps.setString(5, Celular);
+            ps.setString(11, Provincia);
+            ps.setString(4, Direccion);
+            ps.setString(12, parroquia);
+            ps.setString(14, estadoCivil);
+            ps.setString(8, Ayuda1);
+            ps.setString(13, nacionalidad);
+            ps.setString(7, discapacidad);
+            ps.setString(16, tipoSangre);
+            ps.setString(6, genero);
+            ps.setString(17, email);
+            ps.setString(18, cond);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "ACTUALIZADO INFORMACION CORRECTAMENTE");
             response.sendRedirect("Principal.jsp");

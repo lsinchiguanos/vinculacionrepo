@@ -4,6 +4,7 @@
     Author     : jean
 --%>
 
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="java.time.LocalDateTime"%>
 <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.sql.ResultSet"%>
@@ -48,6 +49,7 @@
             if (usuario != null && clave != null) {
                 ps = cn.getConecction().prepareStatement("update galeno set galeno_user='" + usuario + "', galeno_pass=md5('" + clave + "'),galeno_estado='1',updated_at='"+x+"' where galeno_user ='" + session.getAttribute("galeno_user11") + "'");
                 ps.executeUpdate();
+                JOptionPane.showMessageDialog(null, "USUARIO Y CONTRASEÑA HAN SIDO MODIFICADA......");
                 response.sendRedirect("index.jsp");
             }
         %>

@@ -1,3 +1,4 @@
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="javafx.scene.control.Alert"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -185,6 +186,7 @@
                                         + ",galeno_apellido_materno='" + Sapellido + "'"
                         + " where galeno_user='" + session.getAttribute("galeno_user11") + "'");
                 ps.executeUpdate();
+                JOptionPane.showMessageDialog(null, "INFORMACION ACTUALIZADA CORECTAMENTE");
                 response.sendRedirect("Principal.jsp");
             }
 
