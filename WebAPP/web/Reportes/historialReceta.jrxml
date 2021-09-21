@@ -1,27 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eaf34a79-2ddc-4c0e-be6f-b09ec7bb1887">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="700" pageHeight="870" columnWidth="700" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="eaf34a79-2ddc-4c0e-be6f-b09ec7bb1887">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="cedulaPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1206774603"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cedulaGaleno" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1206774604"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha" class="java.lang.String">
+		<defaultValueExpression><![CDATA["2021/09/21"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select  distinct g.galeno_dni as cedulaG, concat(g.galeno_primer_nombre ,' ',g.galeno_segundo_nombre,' ', g.galeno_apellido_paterno,' ',g.galeno_apellido_materno) as nombreG,g.galeno_telefono as celularG, g.galeno_correoelectronico as emailG,
+p.paciente_dni as cedulap, concat(p.paciente_primer_nombre ,' ',p.paciente_segundo_nombre,' ', p.paciente_apellido_paterno,' ',p.paciente_apellido_materno) as nombrep,p.paciente_telefono as celularp, p.paciente_correoelectronico as emailp
+,drm.medicamento as medicamento, drm.indicaciones as indicaciones
+from recetamedica rm inner join paciente p on rm.paciente_id = p.paciente_id
+inner join galeno g on rm.galeno_id = g.galeno_id
+inner join detalle_recetamedica drm on  rm.id_recetamedica  = drm.id_recetamedica 
+where p.paciente_dni = $P{cedulaPaciente} and g.galeno_dni = $P{cedulaGaleno} and rm.fecha = $P{fecha}]]>
+	</queryString>
+	<field name="cedulag" class="java.lang.String"/>
+	<field name="nombreg" class="java.lang.String"/>
+	<field name="celularg" class="java.lang.String"/>
+	<field name="emailg" class="java.lang.String"/>
+	<field name="cedulap" class="java.lang.String"/>
+	<field name="nombrep" class="java.lang.String"/>
+	<field name="celularp" class="java.lang.String"/>
+	<field name="emailp" class="java.lang.String"/>
+	<field name="medicamento" class="java.lang.String"/>
+	<field name="indicaciones" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="79" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="b7918f8a-e44d-42e7-bbf5-497675b4cc10" x="15" y="37" width="310" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTAMENTO DE MEDICINA GENERAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7b9213b4-d1f1-4996-961d-200f07f195f9" x="56" y="0" width="607" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOBIERNO AUTÓNOMO DESCENTRALIZADO DE QUEVEDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="353" y="37" width="159" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c74eafcf-c7d1-4f4b-b467-dce985f2c91f" x="540" y="37" width="100" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch"/>
+		<band height="254" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="171" y="0" width="359" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DATOS GENERALES DEL MEDICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="262" y="72" width="90" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="262" y="36" width="90" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRES: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cfb10829-0efd-4678-bf71-0d3010ae05cb" x="26" y="72" width="90" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="26" y="36" width="90" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÉDULA: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="171" y="107" width="359" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DATOS GENERALES DEL PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="29" y="146" width="91" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÉDULA: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="262" y="182" width="91" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="262" y="146" width="91" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRES: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cfb10829-0efd-4678-bf71-0d3010ae05cb" x="29" y="182" width="91" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="78cafc1d-cca4-430c-96ac-0936a244f993" x="372" y="36" width="268" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="49b9b5a0-90b2-4ba0-ba53-370e300a8824" x="141" y="72" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{celularg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6bf66ccb-2f87-45c7-a52a-b43948c78345" x="372" y="72" width="268" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{emailg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="193f9a4a-a4e9-47f7-8d4a-ef1994070dfb" x="372" y="146" width="268" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nombrep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2ef83281-c5f4-48ab-bac5-6cd99c6e810b" x="141" y="182" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{celularp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dd6920fa-c75a-4321-a1e6-074c557ca541" x="372" y="182" width="268" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{emailp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="444da2bc-179f-49e3-a3d0-8a700ead6c17" x="141" y="146" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{cedulaPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="75540ed6-7cfb-4121-8c4e-7ad59e14a486" x="141" y="36" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{cedulaGaleno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="68" y="224" width="128" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MEDICAMENTO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="372" y="224" width="126" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INDICACIONES]]></text>
+			</staticText>
+		</band>
 	</pageHeader>
-	<columnHeader>
-		<band height="61" splitType="Stretch"/>
-	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="41">
+			<textField>
+				<reportElement uuid="fa7e13b3-54a8-4c26-9862-2b2e84b577b9" x="71" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{medicamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5759f17f-2e04-4469-8582-b4ad362cb90c" x="382" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{indicaciones}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="83ad1873-7a16-4d4d-bfc6-531a68f8f3c6" x="71" y="20" width="411" height="1"/>
+			</line>
+		</band>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band height="99">
+			<staticText>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="241" y="61" width="159" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c14959ce-8f73-4f8d-93ea-6c7e1278a8b7" x="217" y="41" width="219" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nombreg}]]></textFieldExpression>
+			</textField>
+		</band>
 	</columnFooter>
-	<pageFooter>
-		<band height="54" splitType="Stretch"/>
-	</pageFooter>
 </jasperReport>

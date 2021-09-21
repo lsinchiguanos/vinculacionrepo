@@ -18,7 +18,7 @@
             Statement smt;
             ResultSet rs;
             smt = c.getConecction().createStatement();
-            rs = smt.executeQuery("select idmedicinageneral as codigo, paciente_dni as cedula, fechaconsulta as fecha, motivoconsulta as motivo from medicinageneral where galeno_user = '" + session.getAttribute("galeno_user11") + "'");
+            rs = smt.executeQuery("select idmedicinageneral as codigo, paciente_dni as cedula, fechaconsulta as fecha, motivoconsulta as motivo from medicinageneral where cargararchivo is not null and galeno_user = '" + session.getAttribute("galeno_user11") + "'");
             //Creamo la Tabla:     
         %>
 
