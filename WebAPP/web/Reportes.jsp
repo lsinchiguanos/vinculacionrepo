@@ -61,7 +61,7 @@
                                 <h3 style="color:#007653; font-weight: bold" class="textgrueso">Recetarios</h3>
                             </header>
                             <p>Descargar en PDF las recetas medicas</p>
-                            <a href="LlamarReportereceta.jsp" class="button primary" style=" background: #007653 !important;">Acceder</a>
+                            <a href="#" class="button primary" style=" background: #007653 !important;">Acceder</a>
                         </div>
                     </section>
                 </div>
