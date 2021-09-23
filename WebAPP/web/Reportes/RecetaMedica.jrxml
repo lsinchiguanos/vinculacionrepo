@@ -37,22 +37,24 @@ where p.paciente_dni = $P{CEDULApaciente} and g.galeno_dni = $P{CEDULAgalenos} a
 	<title>
 		<band height="69" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="b7918f8a-e44d-42e7-bbf5-497675b4cc10" x="213" y="0" width="389" height="27"/>
+				<reportElement uuid="b7918f8a-e44d-42e7-bbf5-497675b4cc10" x="213" y="0" width="389" height="27" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DEPARTAMENTO DE MEDICINA GENERAL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="10" y="44" width="147" height="20"/>
-				<textElement verticalAlignment="Bottom">
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="213" y="44" width="147" height="20" forecolor="#000000" backcolor="#000000"/>
+				<textElement verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha de consulta:]]></text>
 			</staticText>
 			<textField>
-				<reportElement uuid="32ac5236-90e6-43f0-a411-6ce2ed46b8d1" x="175" y="44" width="112" height="20"/>
-				<textElement verticalAlignment="Bottom"/>
+				<reportElement uuid="32ac5236-90e6-43f0-a411-6ce2ed46b8d1" x="490" y="44" width="112" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{FECHA}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -64,120 +66,132 @@ where p.paciente_dni = $P{CEDULApaciente} and g.galeno_dni = $P{CEDULAgalenos} a
 			</rectangle>
 			<textField>
 				<reportElement uuid="9f484048-5de9-44d7-9fa5-e43640a7e6be" x="151" y="103" width="187" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{celularg}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="0cdcc529-058d-4006-99c7-8aeaefd32312" x="522" y="103" width="270" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{emailg}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ff7e8144-daa3-41f9-8a2d-9fe61a72bd8d" x="522" y="192" width="270" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nombrep}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="7435d272-883f-4534-9696-1d2d02f1f9df" x="151" y="232" width="187" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{celularp}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="03f5f4cd-af59-42c1-aa29-ee63fa65f316" x="522" y="232" width="270" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{emailp}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="1a9ef93d-b063-4aa6-b31f-f976414dd09d" x="152" y="192" width="186" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{CEDULApaciente}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="104" y="14" width="518" height="36"/>
+				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="104" y="14" width="518" height="36" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[DATOS GENERALES DEL MEDICO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="10" y="63" width="129" height="20"/>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="10" y="63" width="129" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cédula:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="352" y="103" width="145" height="20"/>
+				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="352" y="103" width="145" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Email:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="cfb10829-0efd-4678-bf71-0d3010ae05cb" x="10" y="103" width="129" height="20"/>
+				<reportElement uuid="cfb10829-0efd-4678-bf71-0d3010ae05cb" x="10" y="103" width="129" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Teléfono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="352" y="63" width="145" height="20"/>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="352" y="63" width="145" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Nombre del medico]]></text>
+				<text><![CDATA[Nombre del medico:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="cfb10829-0efd-4678-bf71-0d3010ae05cb" x="10" y="232" width="129" height="20"/>
+				<reportElement uuid="cfb10829-0efd-4678-bf71-0d3010ae05cb" x="10" y="232" width="129" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Teléfono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="10" y="192" width="129" height="20"/>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="10" y="192" width="129" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cédula:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="352" y="232" width="156" height="20"/>
+				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="352" y="232" width="156" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Email:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="352" y="192" width="156" height="20"/>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="352" y="192" width="156" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Nombre del paciente]]></text>
+				<text><![CDATA[Nombre del paciente:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="104" y="140" width="518" height="36"/>
+				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="104" y="140" width="518" height="36" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[DATOS GENERALES DEL PACIENTE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="104" y="252" width="518" height="36"/>
+				<reportElement uuid="d8896fdc-24f5-42c3-b277-298f5e3baf04" x="104" y="252" width="518" height="36" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[RECETA MEDICA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="493" y="288" width="129" height="20"/>
+				<reportElement uuid="c2d5b19d-2974-4725-94f7-d9878cfa08b6" x="493" y="288" width="129" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INDICACIONES]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="104" y="288" width="129" height="20"/>
+				<reportElement uuid="5cac522a-3579-411a-a58f-17fb3a50965c" x="104" y="288" width="129" height="20" forecolor="#000000" backcolor="#000000"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -185,12 +199,16 @@ where p.paciente_dni = $P{CEDULApaciente} and g.galeno_dni = $P{CEDULAgalenos} a
 			</staticText>
 			<textField>
 				<reportElement uuid="3c24dd51-0900-4712-a2c9-4e79204e6382" x="522" y="63" width="270" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nombreg}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="9d3e1eeb-56f1-4f0a-9482-2611a71d886e" x="151" y="63" width="187" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{cedulag}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -207,7 +225,9 @@ where p.paciente_dni = $P{CEDULApaciente} and g.galeno_dni = $P{CEDULAgalenos} a
 			</textField>
 			<textField>
 				<reportElement uuid="774a9f2b-9745-4631-b711-bad894232214" x="431" y="12" width="361" height="23"/>
-				<textElement/>
+				<textElement>
+					<font size="10" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{indicaciones}]]></textFieldExpression>
 			</textField>
 			<line>
@@ -218,17 +238,19 @@ where p.paciente_dni = $P{CEDULApaciente} and g.galeno_dni = $P{CEDULAgalenos} a
 	<summary>
 		<band height="102">
 			<line>
-				<reportElement uuid="3cfb4de1-a88c-424f-a314-7b54e5fc26b9" x="261" y="63" width="341" height="1"/>
+				<reportElement uuid="3cfb4de1-a88c-424f-a314-7b54e5fc26b9" x="261" y="63" width="361" height="1"/>
 			</line>
 			<textField>
-				<reportElement uuid="9fd97ab1-06d2-482d-91a5-0f1a14e52f27" x="305" y="64" width="317" height="20"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<reportElement uuid="9fd97ab1-06d2-482d-91a5-0f1a14e52f27" x="305" y="64" width="317" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nombreg}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="970507fa-6c7e-465b-b938-2ba1b68e8241" x="261" y="63" width="44" height="20"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom">
-					<font size="10" isBold="false"/>
+					<font size="12" isBold="false" isItalic="true" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[DR.]]></text>
 			</staticText>

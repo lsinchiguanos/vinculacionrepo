@@ -47,7 +47,7 @@
 
                             </header>
                             <p>Descargar en PDF las estadísticas de los pacientes atendidos</p>
-                            <a id="PaginaMedi" class="button primary" style=" background: #007653 !important;" href="" >Acceder</a>
+                            <a href="formularioReporteHistorialPaciente.jsp" class="button primary" style=" background: #007653 !important;" href="" >Acceder</a>
                         </div>
                     </section>
 
