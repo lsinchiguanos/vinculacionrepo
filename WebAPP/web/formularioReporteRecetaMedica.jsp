@@ -28,19 +28,27 @@
                 </tr>
                 <tr>
                     <td width="168">INGRESE SU CEDULA:</td>
-                    <td width="415"><label for="cedulaGaleno"></label>
+                    <td width="415"><label for="cedulaGaleno" name="cedulaGaleno" id="cedulaGaleno"></label>
                         <input type="text" name="cedulaGaleno" id="cedulaGaleno"></td>
                 </tr>
                 <tr>
                     <td width="168">INGRESE LA FECHA:</td>
                     <td width="415"><label for="fecha"></label>
-                        <input type="text" name="fecha" id="fecha"></td>
+                        <input type="date" name="fecha" id="fecha" onchange="myFunction(value)"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td><input type="submit" name="button" id="button" value="Generar Reporte"></td>
+                    <td><input type="submit" name="button" id="button" value="Generar receta medica "></td>
                 </tr>
             </table>
         </form>
+        <script>
+            var a;
+            function myFunction(val) {
+                a = val.split("-").reverse().join("/");
+                document.getElementById("fecha").type = "text";
+                document.getElementById("fecha").value = a;
+            }
+        </script>
     </body>
 </html>

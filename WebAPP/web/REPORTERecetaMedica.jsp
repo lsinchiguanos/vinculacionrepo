@@ -24,13 +24,13 @@ y seguiremos el formato del método runReportToPdf*/
 varchar(5), lo almacenamos en una String*/
     String idcliente = request.getParameter("cedulaCliente");
     String Cedulaagalenos = request.getParameter("cedulaGaleno");
-    String fechass = request.getParameter("fecha");
+    String f = request.getParameter("fecha");
     /*Digitamos la siguiente linea de codigo entre parentesis ira el parametro que agregamos en nuestro reporte
 llamado $P{CODIGO}, pero solo se escribira "CODIGO", el String que capturamos lo colocamos, en este caso el 
 reporte solo nos pide un parametro*/
     parameters.put("CEDULApaciente", idcliente);
     parameters.put("CEDULAgalenos", Cedulaagalenos);
-    parameters.put("FECHAconsulta", fechass);
+    parameters.put("FECHA", f);
     /*Enviamos la ruta del reporte, los parámetros y la conexión(objeto Connection)*/
     byte[] bytes = JasperRunManager.runReportToPdf(reportFile.getPath(), parameters, conexion1.getConecction());
 

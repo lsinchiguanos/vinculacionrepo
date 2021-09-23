@@ -58,7 +58,7 @@ public class NewServle extends HttpServlet {
                 response.getWriter().print(jsonnn);
                 break;
             case "3":
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 String x = dtf.format(LocalDateTime.now());            ////datos de encabezado          
 
                 String idDoctor = request.getParameter("galenoid");
