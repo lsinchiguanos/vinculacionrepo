@@ -186,7 +186,7 @@
                                         + ",galeno_apellido_materno='" + Sapellido + "'"
                         + " where galeno_user='" + session.getAttribute("galeno_user11") + "'");
                 ps.executeUpdate();
-                JOptionPane.showMessageDialog(null, "INFORMACION ACTUALIZADA CORECTAMENTE");
+                //JOptionPane.showMessageDialog(null, "INFORMACION ACTUALIZADA CORECTAMENTE");
                 response.sendRedirect("Principal.jsp");
             }
 
