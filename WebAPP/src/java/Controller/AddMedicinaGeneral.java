@@ -107,7 +107,7 @@ public class AddMedicinaGeneral extends HttpServlet {
                 ps.setString(16, tipo);
                 ps.setString(17, galenoUser);
                 ps.executeUpdate();
-                JOptionPane.showMessageDialog(null, "CONSULTA AGREGADA CORECTAMENTE");
+//                JOptionPane.showMessageDialog(null, "CONSULTA AGREGADA CORECTAMENTE");
                 response.sendRedirect("RecetaMedica.jsp");
             } catch (SQLException e) {
                 out.println("Exception: " + e);
