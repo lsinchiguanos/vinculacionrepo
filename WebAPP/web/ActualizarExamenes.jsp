@@ -20,8 +20,6 @@
             rs = ps.executeQuery();
             while (rs.next()) {
         %>
-       
-        
         <header id="header" style=" background: #007653 !important;">
 
             <a class="logo" href="Principal.jsp">
