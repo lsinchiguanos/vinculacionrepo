@@ -16,14 +16,14 @@
             <%
                 HttpSession s = request.getSession();
                 //variables de session
-            %>
+%>
             <table width="487" align="center">
                 <tr>
                     <td colspan="2" align="center"><strong>REPORTES PDF RECETA MEDICA </strong></td>
                 </tr>
                 <tr>
                     <td width="168">INGRESE CEDULA DEL PACIENTE:</td>
-                    <td width="415"><label for="cedulaCliente"></label> 
+                    <td width="415"><label for="cedulaCliente"></label>
                         <input type="text" name="cedulaCliente" id="cedulaCliente"></td>
                 </tr>
                 <tr>
