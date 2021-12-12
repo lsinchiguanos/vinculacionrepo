@@ -16,7 +16,7 @@
             <%
                 HttpSession s = request.getSession();
                 //variables de session
-%>
+            %>
             <table width="487" align="center">
                 <tr>
                     <td colspan="2" align="center"><strong>REPORTES PDF RECETA MEDICA </strong></td>
