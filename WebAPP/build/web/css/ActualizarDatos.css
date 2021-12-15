@@ -1,4 +1,4 @@
-*
+ *
 {
     margin: 0;
     padding: 0;    
@@ -55,8 +55,8 @@ form
 
 .div-cont-main
 {
-  width: 100%;
-    height: 98.94244604316546vh;    
+  width: 90%;
+    height: 78.94244604316546vh;    
     -webkit-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     -moz-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);

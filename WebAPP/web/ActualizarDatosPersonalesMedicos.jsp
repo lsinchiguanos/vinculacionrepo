@@ -13,12 +13,12 @@
 <%@ page import = "BD.conexion"%>
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
+        <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
         <title>Actualizar datos personales medicos</title>
     </head>
-    <body>
+    <body> 
         <header id="header" style=" background: #007653 !important;">
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
@@ -27,6 +27,7 @@
             <nav>
             </nav>
         </header>
+        
         <%
             HttpSession s = request.getSession();
             PreparedStatement pst;
@@ -38,13 +39,15 @@
             pst = cn.getConecction().prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
-        %>
-        <div class="div-head-tittle"><h2></h2></div>
+        %>         
+                  
+                                
+       <div class="div-head-tittle"><h2></h2></div>
         <form id="form1" autocomplete="off">
-         <section class="sec-main">
+            <section class="sec-main">
                 <div class="div-cont-main">
-                    <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
-                        <thead >
+                    <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 25px;'>
+                      <thead >
                             <tr>
                                 <th>Numero de identificacion</th>
                                 <th>Primer Nombre</th>
@@ -63,7 +66,6 @@
                                 <th>Primer Apellido</th>
                                 <th>Segundo Apellido</th>
                                 <th>Telefono o Celular</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -71,11 +73,8 @@
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="PrimerApellido" id="galeno_telefono"value="<%= rs.getString("galeno_apellido_paterno")%>" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"required="" ></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="SegundoApellido" id="galeno_provincia"value="<%= rs.getString("galeno_apellido_materno")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_telefono" id="galeno_telefono"value="<%= rs.getString("galeno_telefono")%>"required="" onkeypress='return validaNumericos(event)'></div></td>
-
                             </tr> 
                         </tbody>
-
-
                         <thead >
                             <tr>
                                 <th>Provincia</th>
@@ -86,7 +85,6 @@
                         </thead>
                         <tbody>
                             <tr>
-
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_provincia" id="galeno_provincia"value="<%= rs.getString("galeno_provincia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_canton" id="galeno_canton" value="<%= rs.getString("galeno_canton")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td> 
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_parroquia" id="galeno_parroquia"value="<%= rs.getString("galeno_parroquia")%>"required="" onkeypress="return soloLetras(event)"onkeyup="mayus(this);"></div></td>
@@ -103,12 +101,7 @@
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_direccion" id="galeno_direccion"value="<%= rs.getString("galeno_direccion")%>"required=""></div></td>
                                 <td><div class="div-cont-name"><input class="inp-lname" type="text" name="galeno_correoelectronico" id="galeno_correoelectronico"value="<%= rs.getString("galeno_correoelectronico")%>"required=""></div></td>
                                 <td><div class="div-cont-name" style='margin-top: -20px !important;'><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/></div> </td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                
-                                <%--<td><input type="button" id="btn-action" class="btn-accept" value="Cancelar" onclick="history.back()"/></td>--%>
-                            </tr>
+                            </tr>  
                         </tbody>                     
                     </table>
                 </div>
@@ -189,8 +182,6 @@
                 //JOptionPane.showMessageDialog(null, "INFORMACION ACTUALIZADA CORECTAMENTE");
                 response.sendRedirect("Principal.jsp");
             }
-
-
         %>
     </body>
 </html>
