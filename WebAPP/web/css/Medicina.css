@@ -164,6 +164,7 @@
 
 .div-cont-ced, .div-cont-name, .div-cont-lname, .div-cont-edad, .div-cont-cod
 {  
+   
     width: 90% !important;
     margin-top: 6px !important;
     height: 15vh;  
@@ -173,6 +174,7 @@
 
 .inp-ced, .inp-name, .inp-lname, .inp-edad, .inp-cod
 {
+    resize:none;
     width: 90%;
     height: 6.9vh;
     border-radius: 10px;
@@ -197,10 +199,9 @@
 .div-cont-sel-dep-transf, .div-cont-sel-dep-to-transf
 {    
     width: 40%;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+    height: auto; 
+    margin: 2%;
+    margin-top: 1%; 
 }
 
 .sel-dep-transf, .sel-dep-to-transf

@@ -134,7 +134,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><textarea type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl" onkeyup="mayus(this);"/></textarea> </td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-aalergic" class="inp-lname" placeholder="Antecedentes alérgicos" name="AAl" onkeyup="mayus(this);"style='height: 85px;'/></textarea> </td>
                         </tr>
                     <thead>
                         <tr>
@@ -143,7 +143,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><textarea type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" onkeyup="mayus(this);"name="AP"/></textarea></td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-apersonales" class="inp-lname" placeholder="Antecedentes personales" onkeyup="mayus(this);"name="AP"style='height: 85px;'/></textarea></td>
                         </tr> 
                     <thead>
                         <tr>
@@ -152,7 +152,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><textarea type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" onkeyup="mayus(this);" name="AF"/></textarea></td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-afamiliares" class="inp-lname" placeholder="Antecedentes familiares" onkeyup="mayus(this);" name="AF"style='height: 85px;'/></textarea></td>
                         </tr>
                     <thead>
                         <tr>
@@ -161,7 +161,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-lname"><textarea type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" onkeyup="mayus(this);"name="Aq"/></textarea></td>
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-aquirurgicos" class="inp-lname" placeholder="Antecedentes quirurgicos" onkeyup="mayus(this);"name="Aq"style='height: 85px;'/></textarea></td>
                         </tr> 
                     </tbody>
                 </table>  
@@ -178,7 +178,7 @@
                     <tbody>
                         <tr>
                             <td><div class="div-cont-lname"><input type="date" id="txt-motivocon" class="inp-lname" placeholder="Fecha" name="Fecha"/></div></td> 
-                            <td><div class="div-cont-lname"><textarea type="text" id="txt-motivocon" class="inp-lname" required=""placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"/></textarea> </td> 
+                            <td><div class="div-cont-lname"><textarea type="text" id="txt-motivocon" class="inp-lname" required=""placeholder="Motivo de consulta" name="mc" onkeyup="mayus(this);"style='height: 85px;'/></textarea> </td> 
                         </tr>
                     <thead>
                         <tr>
@@ -187,13 +187,13 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" required="" placeholder="Enfermedad o problema actual" name="Ep" onkeyup="mayus(this);"/></textarea></td> 
-                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname"required="" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"/></textarea></td>
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-enfermedad" class="inp-lname" required="" placeholder="Enfermedad o problema actual" name="Ep" onkeyup="mayus(this);"style='height: 85px;'/></textarea></td> 
+                        <td><div class="div-cont-lname"><textarea type="text" id="txt-diagnostico" class="inp-lname"required="" placeholder="Diagnostico" name="diagnostico" onkeyup="mayus(this);"style='height: 85px;'/></textarea></td>
                     </tr>
                     </tbody>
                     <tbody>
                         <tr>
-                            <th><div class="div-cont-sel-dep-to-transf" style='margin-top: -40px !important;'><select class="sel-dep-to-transf" name="tipo">
+                            <th><div class="div-cont-sel-dep-to-transf"><select class="sel-dep-to-transf" name="tipo">
                                         <option>Diagnostico</option>
                                         <option>Preventivo</option>
                                         <option>Definitivo</option>
