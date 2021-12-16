@@ -68,7 +68,7 @@
                                 </span>
                             </p>
                             <p style="color:black; background-color:white; font-family:sans-serif; font-size:11px; text-align:center; margin-top:3px">
-                                <a id="LinkButton1" class="waves-effect waves-light btn modal-trigger" href="">
+                                <a id="LinkButton1" class="waves-effect waves-light btn modal-trigger" href="cambioclaveLogin.jsp">
                                     <strong style="color:#007653; font-size:16px; font-size: 85%" class="textgrueso">Recuperar Contraseña</strong>
                                 </a>
                                 <br>
