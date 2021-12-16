@@ -23,14 +23,7 @@
                     <input type="text" id="txt-cedee" class="inp-ced" onkeypress='return validaNumericos(event)' required=""placeholder="Cédula" name="cedula" maxlength="15"/>
                 </div>  
                 <hr /> 
-                    <div class="div-cont-ced">
-                   <th> <input type="button" id="btn-actionbusc" class="inp-search" value="Buscar"/></th>
-                   <th> <input style='width: 40%' type="text" id="txt-namea" class="inp-name" placeholder="Nombres" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
-                    </th>
-                   <th> <input style='width: 40%'  type="text" id="txt-lnamesega" class="inp-lname" placeholder="Apellidos" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
-                </th>
-                    </div>
-                     <hr /> 
+                   
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead >
                         <tr>

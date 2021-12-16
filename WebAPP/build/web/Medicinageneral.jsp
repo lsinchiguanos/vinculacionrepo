@@ -24,11 +24,26 @@
     <form id="form1" action="AddMedicinaGeneral" method="POST" enctype="multipart/form-data">
         <section class="sec-main">
             <div class="div-cont-main">
-                <div class="div-cont-ced">
+                <!--<div class="div-cont-ced">
                     <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' placeholder="Cédula" name="cedula" maxlength="15"/>
                     <input type="text" id="txt-cede" class="inp-ced" onkeypress="return soloLetras(event)" placeholder="Apellidos y nombres" name="apellidos" maxlength="250"/>
                     <input type="button" id="btn-actionb" class="inp-search" value="Buscar"/>
-                </div>            
+                </div>   
+                -->
+                 <div class="div-cont-ced">
+                    <input type="button" id="btn-actionbu" class="inp-search" value="Buscar"/>
+                    <input type="text" id="txt-cedee" class="inp-ced" onkeypress='return validaNumericos(event)' required=""placeholder="Cédula" name="cedula" maxlength="15"/>
+                </div>  
+                <hr /> 
+                
+                  <div class="div-cont-ced">
+                   <th> <input type="button" id="btn-actionbusc" class="inp-search" value="Buscar"/></th>
+                   <th> <input style='width: 40%' type="text" id="txt-namea" class="inp-name" placeholder="Nombres" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
+                    </th>
+                   <th> <input style='width: 40%'  type="text" id="txt-lnamesega" class="inp-lname" placeholder="Apellidos" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
+                </th>
+                    </div>
+                
                 <!--<div class="div-cont-search"></div>-->
                 <hr /> 
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
