@@ -27,7 +27,7 @@
 
 .div-head-tittle h2:before
 {
-    content: 'REPORTE PDF HISTORIAL PACIENTE';
+    content: 'REPORTES PDF RECETA MEDICA';
     font: 900;
     font-size: 1.5em;
     margin-left: 90px;
@@ -54,8 +54,8 @@ form
 
 .div-cont-main
 {
-  width: 70%;
-    height: 38.94244604316546vh;    
+  width: 80%;
+    height: 48.94244604316546vh;    
     -webkit-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     -moz-box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
     box-shadow: 4px -9px 43px 0px rgba(0, 118, 83,1);
@@ -170,7 +170,7 @@ form
 }
 .btn-accept
 {
-    width: 125px;
+    width: 180px;
     margin-left: 50px;
     height: 6.9vh;
     border-radius: 50px;

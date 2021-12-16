@@ -11,8 +11,6 @@
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
-
-            <nav class="nav-tp"></nav>
         </header>
         <div class="div-head-tittle"><h2></h2></div>
         <form name="form1" method="post" action="REPORTEHistorialpaciente.jsp">
@@ -20,20 +18,25 @@
                 HttpSession s = request.getSession();
                 //variables de session
 %>
-            <table width="487" align="center">
-                <tr>
-                    <td colspan="2" align="center"><strong>REPORTES PDF HISTORIAL PACIENTE </strong></td>
-                </tr>
-                <tr>
-                    <td width="168">SU USUARIO ES:</td>
-                    <td width="415"><label for="usuario"></label> 
-                        <input type="text" name="usuario" id="usuario"></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td><input type="submit" name="button" id="button" value="Generar Reporte "></td>
-                </tr>
-            </table>
+            <section class="sec-main">
+                <div class="div-cont-main"> 
+                    <div class="div-cont-ced">
+
+                        <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
+                            <tr>
+                            <thead>
+                                <tr>
+                                    <%--<th width="168">SU USUARIO ES:</th>--%>   
+                                    <td><div class="div-cont-ced" style='margin-top: 40px !important;'><input type="text" id="usuario" class="inp-ced" placeholder="SU USUARIO ES" name="Usuario"/></div></td>
+                                    <td><input type="submit" name="button" id="btn-actiong" class="btn-accept" value="Generar Reporte"/></td>           
+                                        <%--<th width="415"><label for="usuario"></label><input type="text" name="usuario" id="usuario"></th>                                                                            
+                                              <td><input type="submit" name="button" id="button" value="Generar Reporte "></td> --%>  
+                                         </tr>
+                            </thead>   
+                        </table>
+                    </div>           
+                </div>
+            </section>            
         </form>
         <script>
             var a;
