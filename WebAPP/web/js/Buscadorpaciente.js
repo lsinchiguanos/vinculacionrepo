@@ -18,6 +18,45 @@ function getQueryVariableRe() {
 
 }
 
+$(function () {
+    $('#btn-actionbusc').click(function (e) {
+        buscador();
+    });
+    const buscador = () => {
+
+        var dato = {
+            apellido: document.getElementById("txt-lnamesega").value,
+            nombre: document.getElementById("txt-namea").value
+        };
+        $.ajax({
+            cache: false,
+            type: "POST",
+            url: "Controllerbuscarnew",
+            data: dato,
+            dataType: 'json',
+            error: function (request, status, error)
+            {
+                alert(request, status, error);
+            },
+            success: function (data)
+            {
+                console.log(data);
+                $("#txt-cedi").val(data.paciente_dni);
+                $("#txt-namen").val(data.paciente_primer_segundo_nombre);
+                $("#txt-lnamea").val(data.paciente_primer_segundo_apellido);
+                $("#txt-namef").val(data.paciente_grupo);
+                $("#txt-lnamet").val(data.paciente_convencional);
+                $("#txt-cel").val(data.paciente_telefono);
+                $("#txt-provin").val(data.paciente_provincia);
+                $("#txt-direccion").val(data.paciente_direccion);
+                $("#txt-genero").val(data.paciente_genero);
+                $("#txt-ayudaeconomica").val(data.paciente_ayudasocial);
+                $("#txt-nacionalidad").val(data.paciente_nacionalidad);
+                $("#txt-tiposangre").val(data.paciente_correoelectronico);
+            }
+        });
+    };
+});
 
 $(function () {
     $('#btn-actionb').click(function (e) {
@@ -56,6 +95,7 @@ $(function () {
         });
     };
 });
+
 //Datos del paciente
 var ideusuario;
 var idemedico;
@@ -125,10 +165,10 @@ function usermedico() {
     });
 }
 $("#btn-addReceta").click(function (e) {
-     e.preventDefault();
+    e.preventDefault();
     var table = document.getElementById('tabla');
-    var rowLength = table.rows.length; 
-    var jsonAll = []; 
+    var rowLength = table.rows.length;
+    var jsonAll = [];
     for (var i = 1; i < rowLength; i += 1) {
         var row = table.rows[i];
         var jsoncell = {
@@ -136,12 +176,12 @@ $("#btn-addReceta").click(function (e) {
             indicaciones: row.cells[2].innerHTML
         };
         jsonAll[i - 1] = jsoncell;
-    } 
+    }
     $.ajax({
         cache: false,
         url: "./NewServle",
-        data: {galenoid: idemedico, pacienteid: ideusuario, dt:JSON.stringify(jsonAll).toString(), op:"3"},
-        type: "POST", 
+        data: {galenoid: idemedico, pacienteid: ideusuario, dt: JSON.stringify(jsonAll).toString(), op: "3"},
+        type: "POST",
         error: function (request, status, error)
         {
             alert(request, status, error);
@@ -155,7 +195,7 @@ $("#btn-addReceta").click(function (e) {
 });
 function limpiar1()
 {
-    document.getElementById("tabla").innerHTML = ""; 
+    document.getElementById("tabla").innerHTML = "";
 }
 
 
