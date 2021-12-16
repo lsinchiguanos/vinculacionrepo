@@ -1,16 +1,9 @@
 package Controller;
 
 import DAO.Buscador;
-import Model.BuscadorPaciente;
 import com.google.gson.Gson;
 import java.io.IOException;
-import java.io.PrintWriter;
 import static java.lang.System.out;
-import static java.nio.file.Files.list;
-import static java.rmi.Naming.list;
-import java.util.ArrayList;
-import static java.util.Collections.list;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
