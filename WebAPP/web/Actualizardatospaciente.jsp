@@ -24,9 +24,10 @@
                 </div>  
                 <hr /> 
                     <div class="div-cont-ced">
-                    <input type="button" id="btn-actionbu" class="inp-search" value="Buscar"/>
-                    <div class="div-cont-name"><input type="text" id="txt-namea" class="inp-name" placeholder="Nombres" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
-                    <div class="div-cont-lname"><input type="text" id="txt-lnamesega" class="inp-lname" placeholder="Apellidos" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div>
+                    <input type="button" id="btn-actionbusc" class="inp-search" value="Buscar"/>
+                    <input style='width: 40%' type="text" id="txt-namea" class="inp-name" placeholder="Nombres" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
+                    <th style='width: 50%'></th>
+                    <input style='width: 40%'  type="text" id="txt-lnamesega" class="inp-lname" placeholder="Apellidos" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
                  </div>
                      <hr /> 
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
