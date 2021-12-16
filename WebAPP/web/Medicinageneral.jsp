@@ -25,8 +25,9 @@
         <section class="sec-main">
             <div class="div-cont-main">
                 <div class="div-cont-ced">
+                    <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' placeholder="Cédula" name="cedula" maxlength="15"/>
+                    <input type="text" id="txt-cede" class="inp-ced" onkeypress="return soloLetras(event)" placeholder="Apellidos y nombres" name="apellidos" maxlength="250"/>
                     <input type="button" id="btn-actionb" class="inp-search" value="Buscar"/>
-                    <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' required=""placeholder="Cédula" name="cedula" maxlength="15"/>
                 </div>            
                 <!--<div class="div-cont-search"></div>-->
                 <hr /> 
