@@ -1,17 +1,19 @@
-<%-- 
-    Document   : formulario
-    Created on : 26/09/2013, 03:46:47 PM
-    Author     : Unknown
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Reporte Historial Medico</title>
     </head>
     <body>
+        <header id="header" style=" background: #007653 !important;">
+        <a class="logo" href="Principal.jsp">
+            <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+        </a>
+
+        <nav class="nav-tp"></nav>
+    </header>
+         <div class="div-head-tittle"><h2></h2></div>
         <form name="form1" method="post" action="REPORTERecetaMedica.jsp">
             <%
                 HttpSession s = request.getSession();
