@@ -61,9 +61,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha de nacimiento"required=""  name="Fechadenacimiento"/></div></td> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional"required=""  onkeypress='return validaNumericos(event)'/></div></td>
-                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular"required=""  onkeypress='return validaNumericos(event)'/></div> </td>                      
+                                <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha de nacimiento"required=""  name="Fechadenacimiento"/></div></td>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" value="9999999999" required=""  onkeypress='return validaNumericos(event)'/></div></td>
+                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular" value="9999999999" required="" onkeypress='return validaNumericos(event)'/></div> </td>
                             </tr> 
                         </tbody>
                         <thead >
@@ -78,7 +78,7 @@
                                 <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required="" id="Provincia" name="Provincia" onchange="cargarPueblos();">
                                             <option>Seleccione una provincia</option>
                                         </select></div></td> 
-                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required=""  name="canton" id="canton">
+                                <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required="" name="canton" id="canton">
                                             <option>Seleccione un canton</option>
                                         </select></div></td> 
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
@@ -93,7 +93,7 @@
                         </thead>
                         <tbody>
                             <tr> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion"required=""  name="Direccion" onkeyup="mayus(this);"/></div></td> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Direccion" required=""  name="Direccion" onkeyup="mayus(this);"/></div></td> 
                                 <td><div class="div-cont-sel-dep-to-transf"  ><select class="sel-dep-to-transf" name="genero">   
                                             <option>Seleccione genero</option>
                                             <option>Masculino</option>
@@ -122,8 +122,8 @@
                                             <option>Si</option>
                                             <option>No</option>
                                         </select></div></td> 
-                                <td><div class="div-cont-lname"><input type="text" id="nacionalidad" class="inp-lname" placeholder="nacionalidad"required=""  name="nacionalidad" onkeyup="mayus(this);"/></div></td>
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div></td>
+                                        <td><div class="div-cont-lname"><input type="text" id="nacionalidad" class="inp-lname" placeholder="nacionalidad"required="" value="Ecuatoriana" name="nacionalidad" onkeyup="mayus(this);"/></div></td>
+                                        <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Discapacidad" value="Ninguna" required=""  name="discapacidad" onkeyup="mayus(this);"/></div></td>
 
                             </tr>
                         </tbody>
@@ -136,7 +136,7 @@
                         <tbody>
                             <tr> 
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
-                                <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico" value="info@paciente.com" name="email"/> </div></td> 
                                 <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/> </div></td>
                             </tr>
                         </tbody>
