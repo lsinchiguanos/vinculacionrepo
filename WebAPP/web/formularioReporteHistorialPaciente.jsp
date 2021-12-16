@@ -1,22 +1,25 @@
-<%-- 
-    Document   : formulario
-    Created on : 26/09/2013, 03:46:47 PM
-    Author     : Unknown
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/ReporteHistorialPaciente.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
+        <header id="header" style=" background: #007653 !important;">
+            <a class="logo" href="Principal.jsp">
+                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+            </a>
+
+            <nav class="nav-tp"></nav>
+        </header>
+        <div class="div-head-tittle"><h2></h2></div>
         <form name="form1" method="post" action="REPORTEHistorialpaciente.jsp">
             <%
                 HttpSession s = request.getSession();
                 //variables de session
-            %>
+%>
             <table width="487" align="center">
                 <tr>
                     <td colspan="2" align="center"><strong>REPORTES PDF HISTORIAL PACIENTE </strong></td>
