@@ -119,7 +119,7 @@
                             <p>Ingresar datos personales por primera vez del paciente</p>
                             <a href="ingreso.jsp" class="button primary" style=" background: #007653 !important;">Ingresar Paciente</a>
                             <br>
-                            <a href="Actualizardatospaciente.jsp" class="button primary" style=" background: #007653 !important;">Actualizar paciente</a>
+                            <a href="Actualizardatospaciente.jsp" class="button primary" style=" background: #007653 !important; margin-top: 12px;">Actualizar paciente</a>
                         </div>
                     </section>
                     <!-- SEPTIMO MODULO -->
@@ -134,7 +134,7 @@
                             <p>Subir o actualizar examenes del paciente</p>
                             <a href="ListarPacientes.jsp" class="button primary" style=" background: #007653 !important;">Subir examenes</a>
                             <br>
-                            <a href="ListarPacientesGeneral.jsp" class="button primary" style=" background: #007653 !important;">Actualizar examenes</a>
+                            <a href="ListarPacientesGeneral.jsp" class="button primary" style=" background: #007653 !important; margin-top: 12px;">Actualizar examenes</a>
                         </div>
                     </section>
                 </div>
