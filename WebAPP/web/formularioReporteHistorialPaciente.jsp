@@ -27,7 +27,7 @@
                             <thead>
                                 <tr>
                                     <%--<th width="168">SU USUARIO ES:</th>--%>   
-                                    <td><div class="div-cont-ced" style='margin-top: 40px !important;'><input type="text" id="usuario" class="inp-ced" placeholder="SU USUARIO ES" name="Usuario"/></div></td>
+                                    <td><div class="div-cont-ced" style='margin-top: 40px !important;'><input type="text" id="Usuario" class="inp-ced" placeholder="SU USUARIO ES" name="Usuario"/></div></td>
                                     <td><input type="submit" name="button" id="btn-actiong" class="btn-accept" value="Generar Reporte"/></td>           
                                         <%--<th width="415"><label for="usuario"></label><input type="text" name="usuario" id="usuario"></th>                                                                            
                                               <td><input type="submit" name="button" id="button" value="Generar Reporte "></td> --%>  
