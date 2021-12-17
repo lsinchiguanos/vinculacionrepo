@@ -8,13 +8,13 @@
     </head>
     <body onload="cargarProvincias()">
 
-        <header id="header" style=" background: #007653 !important;">
+        <header id="header" style=" background: #007653 !important; margin-top:-40px">
             <a class="logo" href="Principal.jsp">
                 <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="index.html"></a> 
         </header>     
-        <div class="div-head-tittle"><h2></h2></div>
+        <div class="div-head-tittle" style="margin-top:-18px"><h2></h2></div>
 
 
         <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" >
