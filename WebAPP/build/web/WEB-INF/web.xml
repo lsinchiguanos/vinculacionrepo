@@ -32,6 +32,10 @@
         <servlet-name>Controllerbuscarnew</servlet-name>
         <servlet-class>Controller.Controllerbuscarnew</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Buscadorpacienteactualizarnew</servlet-name>
+        <servlet-class>Controller.Buscadorpacienteactualizarnew</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Buscarpacientee</servlet-name>
         <url-pattern>/Buscarpacientee</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>Controllerbuscarnew</servlet-name>
         <url-pattern>/Controllerbuscarnew</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Buscadorpacienteactualizarnew</servlet-name>
+        <url-pattern>/Buscadorpacienteactualizarnew</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
