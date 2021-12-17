@@ -22,7 +22,7 @@ y seguiremos el formato del método runReportToPdf*/
     Map parameters = new HashMap();
     /*Capturamos el valor de nuestra formulario que es el codigo del cliente que es un
 varchar(5), lo almacenamos en una String*/
-    String usuarioss = request.getParameter("usuario");
+    String usuarioss = request.getParameter("Usuario");
 
     /*Digitamos la siguiente linea de codigo entre parentesis ira el parametro que agregamos en nuestro reporte
 llamado $P{CODIGO}, pero solo se escribira "CODIGO", el String que capturamos lo colocamos, en este caso el 
