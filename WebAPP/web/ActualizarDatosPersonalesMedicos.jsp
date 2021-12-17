@@ -14,19 +14,17 @@
 <!DOCTYPE html>
 <html>
    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   
         <link href="css/ActualizarDatos.css" rel="stylesheet" type="text/css"/> 
         <title>Actualizar datos personales medicos</title>
     </head>
     <body> 
-        <header id="header" style=" background: #007653 !important;">
-            <a class="logo" href="Principal.jsp">
-                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
-            </a>
-            <a class="logo" id="ulUserData" href="index.html"></a>
-            <nav>
-            </nav>
-        </header>
+       <header id="header" style=" background: #007653 !important;">
+        <a class="logo" href="Principal.jsp">
+            <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+        </a>
+        <a class="logo" id="ulUserData" href="index.html"></a> 
+    </header>  
         
         <%
             HttpSession s = request.getSession();
@@ -40,13 +38,12 @@
             rs = pst.executeQuery();
             while (rs.next()) {
         %>         
-                  
-                                
+                                                 
        <div class="div-head-tittle"><h2></h2></div>
         <form id="form1" autocomplete="off">
             <section class="sec-main">
                 <div class="div-cont-main">
-                    <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 25px;'>
+                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 25px;'>
                       <thead >
                             <tr>
                                 <th>Numero de identificacion</th>
@@ -105,7 +102,7 @@
                         </tbody>                     
                     </table>
                 </div>
-            </section>  
+            </section>
             <script>
                 function validaNumericos(event) {
                     if (event.charCode >= 48 && event.charCode <= 57) {
