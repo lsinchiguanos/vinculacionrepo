@@ -24,26 +24,18 @@
     <form id="form1" action="AddMedicinaGeneral" method="POST" enctype="multipart/form-data">
         <section class="sec-main">
             <div class="div-cont-main">
-                <!--<div class="div-cont-ced">
-                    <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' placeholder="Cédula" name="cedula" maxlength="15"/>
-                    <input type="text" id="txt-cede" class="inp-ced" onkeypress="return soloLetras(event)" placeholder="Apellidos y nombres" name="apellidos" maxlength="250"/>
-                    <input type="button" id="btn-actionb" class="inp-search" value="Buscar"/>
-                </div>   
-                -->
                 <div class="div-cont-ced">
                     <input type="button" id="btn-actionb" class="inp-search" value="Buscar"/>
-                    <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' required=""placeholder="Cédula" name="cedula" maxlength="15"/>
-                </div>  
-                <hr /> 
-
+                    <input type="text" id="txt-cede" class="inp-ced" onkeypress='return validaNumericos(event)' placeholder="Cédula" name="Identificacion" maxlength="15"/>
+                </div>
+                <hr />
                 <div class="div-cont-ced">
                     <input type="button" id="btn-actionbusc" class="inp-search" value="Buscar"/></th>
                     <input style='width: 40%' type="text" id="txt-namea" class="inp-name" placeholder="Nombres" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
                     <p></p>
                     <input style='width: 40%; margin-left:5%;'  type="text" id="txt-lnamesega" class="inp-lname" placeholder="Apellidos" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
                 </div>
-                <!--<div class="div-cont-search"></div>-->
-                <hr /> 
+                <hr />
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead>
                         <tr>
@@ -54,7 +46,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td> <div class="div-cont-ced" style='margin-top: -40px !important;'><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="Identificacion" onkeypress='return validaNumericos(event)' disabled="true"/></div> </td>
+                            <td> <div class="div-cont-ced" style='margin-top: -40px !important;'><input type="text" id="txt-cedi" class="inp-ced" placeholder="Numero de identificacion" name="cedula" onkeypress='return validaNumericos(event)' readonly="true"/></div> </td>
                             <td> <div class="div-cont-name"  ><input type="text" id="txt-namen" class="inp-name" placeholder="Nombres" name="Nombres" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                             <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                         </tr>
