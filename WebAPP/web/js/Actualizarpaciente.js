@@ -19,7 +19,7 @@ $(function () {
             {
                 console.log(data);
                 $("#txt-tipoca").val(data.paciente_tipo_dni);
-                $("#txt-ceda").val(data.paciente_dni);
+                $("#txt-cedee").val(data.paciente_dni);
                 $("#txt-namea").val(data.paciente_primernombre);
                 $("#txt-lnamesega").val(data.paciente_segundonombre);
                 $("#txt-nameapa").val(data.paciente_primerapellido);
@@ -67,7 +67,7 @@ $(function () {
             {
                 console.log(data);
                 $("#txt-tipoca").val(data.paciente_tipo_dni);
-                $("#txt-ceda").val(data.paciente_dni);
+                $("#txt-cedee").val(data.paciente_dni);
                 $("#txt-namea").val(data.paciente_primernombre);
                 $("#txt-lnamesega").val(data.paciente_segundonombre);
                 $("#txt-nameapa").val(data.paciente_primerapellido);

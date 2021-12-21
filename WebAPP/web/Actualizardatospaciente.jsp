@@ -120,14 +120,13 @@
                         </tr>
                     </tbody>
                     <thead >
-                        <tr>                                
-
+                        <tr>
                             <th>Tipo de sangre</th>
-                            <th>Correo Electronico</th> 
+                            <th>Correo Electronico</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr> 
+                        <tr>
                             <td><div class="div-cont-lname"><input type="text" id="txt-lnametiposangre" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
                             <td><div class="div-cont-lname"><input type="email" id="txt-lnamecorreo" class="inp-lname" placeholder="correo electronico"required="" name="email"/> </div></td> 
                             <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/> </div></td>
