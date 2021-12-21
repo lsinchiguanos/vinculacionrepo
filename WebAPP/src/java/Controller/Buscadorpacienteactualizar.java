@@ -1,16 +1,14 @@
-
 package Controller;
 
 import DAO.Buscadorpacienteact;
 import com.google.gson.Gson;
 import java.io.IOException;
-import java.io.PrintWriter;
 import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+
 public class Buscadorpacienteactualizar extends HttpServlet {
 
     /**
@@ -25,7 +23,7 @@ public class Buscadorpacienteactualizar extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       String cedul = request.getParameter("cedul");
+        String cedul = request.getParameter("cedul");
 
         Buscadorpacienteact buscar = new Buscadorpacienteact();
         String json = new Gson().toJson(buscar.Listabuscadorpacienteact(cedul));

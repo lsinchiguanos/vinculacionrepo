@@ -22,12 +22,17 @@
                     <input type="button" id="btn-actionbu" class="inp-search" value="Buscar"/>
                     <input type="text" id="txt-cedee" class="inp-ced" onkeypress='return validaNumericos(event)' required=""placeholder="Cédula" name="cedula" maxlength="15"/>
                 </div>  
-                <hr /> 
-                   
+                <hr />
+                <div class="div-cont-ced">
+                    <input type="button" id="btn-actionbusc" class="inp-search" value="Buscar"/></th>
+                    <input style='width: 40%' type="text" id="txt-nameaz" class="inp-name" placeholder="Nombres" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
+                    <p></p>
+                    <input style='width: 40%; margin-left:5%;'  type="text" id="txt-lnamesegaz" class="inp-lname" placeholder="Apellidos" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/>
+                </div> 
+                <hr />
                 <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                     <thead >
                         <tr>
-
                             <th>Primer Nombre</th>
                             <th>Segundo Nombre</th>
                             <th>Primer Apellido</th>
@@ -110,7 +115,7 @@
                                         <option>Si</option>
                                         <option>No</option>
                                     </select></div></td>
-                            <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf" id="nacionalidad" name="nacionalidad" ></select></div></td> 
+                            <td><div class="div-cont-lname" ><input type="text" id="nacionalidad" class="inp-lname" placeholder="nacionalidad" required="" value="Ecuatoriana" name="nacionalidad" onkeyup="mayus(this);"/></div></td>
                             <td><div class="div-cont-lname"><input type="text" id="txt-lnamedis" class="inp-lname" placeholder="Discapacidad"required=""  name="discapacidad" onkeyup="mayus(this);"/></div></td>
                         </tr>
                     </tbody>

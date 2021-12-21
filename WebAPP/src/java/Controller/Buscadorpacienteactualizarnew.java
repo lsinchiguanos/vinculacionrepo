@@ -5,9 +5,10 @@
  */
 package Controller;
 
-import DAO.Buscador;
+import DAO.Buscadorpacienteact;
 import com.google.gson.Gson;
 import java.io.IOException;
+import java.io.PrintWriter;
 import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Lemmar Dell
  */
-public class Controllerbuscarnew extends HttpServlet {
+public class Buscadorpacienteactualizarnew extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,8 +35,8 @@ public class Controllerbuscarnew extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String apellido = request.getParameter("apellido");
         String nombre = request.getParameter("nombre");
-        Buscador buscar = new Buscador();
-        String json = new Gson().toJson(buscar.Listbuscarpaciente(apellido, nombre));
+        Buscadorpacienteact buscar = new Buscadorpacienteact();
+        String json = new Gson().toJson(buscar.Listabuscadorpacienteact(apellido, nombre));
         out.print(json);
         // Establece el tipo de respuesta en formato json
         response.setContentType("text/javascript");
