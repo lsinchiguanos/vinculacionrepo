@@ -51,7 +51,6 @@
                             <td> <div class="div-cont-lname"  ><input type="text" id="txt-lnamea" class="inp-lname" placeholder="Apellidos" name="Apellidos" onkeypress="return soloLetras(event)"disabled="true" onkeyup="mayus(this);"/></div> </td>
                         </tr>
                     </tbody>
-
                     <thead>
                         <tr>
                             <td>Discapacidad</td>

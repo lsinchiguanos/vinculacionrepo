@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -98,7 +99,7 @@ public class AddMedicinaGeneral extends HttpServlet {
                 ps.setString(16, tipo);
                 ps.setString(17, galenoUser);
                 ps.executeUpdate();
-//                JOptionPane.showMessageDialog(null, "CONSULTA AGREGADA CORECTAMENTE");
+                JOptionPane.showMessageDialog(null, "CONSULTA AGREGADA CORECTAMENTE");
                 response.sendRedirect("Medicinageneral.jsp");
             } catch (SQLException e) {
                 out.println("Exception: " + e);
