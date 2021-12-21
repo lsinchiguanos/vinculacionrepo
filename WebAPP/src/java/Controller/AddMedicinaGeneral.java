@@ -1,6 +1,7 @@
 package Controller;
 
 import BD.conexion;
+import static java.awt.SystemColor.window;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.PreparedStatement;
@@ -100,7 +101,9 @@ public class AddMedicinaGeneral extends HttpServlet {
                 ps.setString(17, galenoUser);
                 ps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "CONSULTA AGREGADA CORECTAMENTE");
-                response.sendRedirect("Medicinageneral.jsp");
+//                request.getRequestDispatcher("/Medicinageneral.jsp").forward(request, response);
+                response.sendRedirect("Principal.jsp");
+//                response.sendRedirect("RecetaMedica.jsp");
             } catch (SQLException e) {
                 out.println("Exception: " + e);
                 System.out.println("Exception1: " + e);
