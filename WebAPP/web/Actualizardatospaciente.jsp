@@ -40,9 +40,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><div class="div-cont-name"><input type="text" id="txt-namea" class="inp-name" placeholder="Primer Nombre" name="PrimerNombre" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
-                            <td><div class="div-cont-lname"><input type="text" id="txt-lnamesega" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombre"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
-                            <td><div class="div-cont-name"><input type="text" id="txt-nameapa" class="inp-name" placeholder="Primer Apellido" name="PrimerApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-name"><input type="text" id="txt-namea" class="inp-name" placeholder="Primer Nombre" name="PrimerNombres" required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-lnamesega" class="inp-lname" placeholder="Segundo Nombre" name="SegundoNombres"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-name"><input type="text" id="txt-nameapa" class="inp-name" placeholder="Primer Apellido" name="PrimerApellidos"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
                         </tr>
                     </tbody>
                     <thead >
@@ -55,7 +55,7 @@
                     <tbody>
                         <tr>
 
-                            <td><div class="div-cont-lname"><input type="text" id="txt-lnamesp2" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellido"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
+                            <td><div class="div-cont-lname"><input type="text" id="txt-lnamesp2" class="inp-lname" placeholder="Segundo Apellido" name="SegundoApellidos"required=""  onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td>
                             <td><div class="div-cont-lname"><input type="date" id="txt-lnamefa" class="inp-lname" placeholder="Fecha de nacimiento"required=""  name="Fechadenacimiento"/></div></td> 
                             <td><div class="div-cont-lname"><input type="text" id="txt-lnametca" class="inp-lname" placeholder="Telefono Convencional" name="convencional"required=""  onkeypress='return validaNumericos(event)'/></div></td>
                         </tr>

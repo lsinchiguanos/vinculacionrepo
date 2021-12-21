@@ -42,10 +42,10 @@ public class ActPaciente extends HttpServlet {
         session = request.getSession(false);
         String TipoIden = request.getParameter("TipoIden");
         String Identificacion = request.getParameter("Identificacion");
-        String PrimerNombre = request.getParameter("PrimerNombre");
-        String SegundoNombre = request.getParameter("SegundoNombre");
-        String PrimerApellido = request.getParameter("PrimerApellido");
-        String SegundoApellido = request.getParameter("SegundoApellido");
+        String PrimerNombre = request.getParameter("PrimerNombres");
+        String SegundoNombre = request.getParameter("SegundoNombres");
+        String PrimerApellido = request.getParameter("PrimerApellidos");
+        String SegundoApellido = request.getParameter("SegundoApellidos");
         String Fechadenacimiento = request.getParameter("Fechadenacimiento");
         String convencional = request.getParameter("convencional");
         String Celular = request.getParameter("celular");
