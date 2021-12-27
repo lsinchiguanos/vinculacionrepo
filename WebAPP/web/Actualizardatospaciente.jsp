@@ -15,7 +15,7 @@
         <a class="logo" id="ulUserData" href="index.html"></a> 
     </header>  
     <div class="div-head-tittle"><h2></h2></div>
-    <form class="form1" action="ActPaciente" method="POST">
+    <form class="form1" action="ActPaciente" method="POST" style="margin-top:30px">
         <section class="sec-main">
             <div class="div-cont-main">
                 <div class="div-cont-ced">
