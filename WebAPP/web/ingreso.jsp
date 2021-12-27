@@ -13,13 +13,13 @@
                 <a class="logo" href="Principal.jsp" id="ulUserData"> 
                 <img  style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
-            
+             <nav class="nav-tp"></nav>
             
         </header>     
         <div class="div-head-tittle" style="margin-top:-18px"><h2></h2></div>
 
 
-        <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" >
+        <form class="form1" action="/WebAPP/AddPaciente" autocomplete="off" style="margin-top:-30px">
             <section class="sec-main">
                 <div class="div-cont-main">
 
