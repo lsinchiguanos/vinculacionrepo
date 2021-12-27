@@ -10,6 +10,14 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <header id="header" style=" background: #007653 !important;">
+
+            <a class="logo" href="ListarPacientes.jsp">
+                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
+            </a>
+            <a class="logo" id="ulUserData" href="index.html"></a>
+          
+        </header>
         <%
             //CONECTANOD A LA BASE DE DATOS:
             conexion c = new conexion();
@@ -40,14 +48,14 @@
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                         <thead>
                             <tr>
-                                <%--   <input type="text"  readonly="" name="codigo" class="form-control" style="visibility:hidden;" value="<%= rs.getInt("codigo")%>"/>
-                                --%>
+                                <input type="text"  readonly="" name="codigo" class="form-control" style="visibility:hidden;" value="<%= rs.getInt("codigo")%>"/>
+                                
                                 <th>Cedula del Paciente</th> 
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <div class="div-cont-ced" style='margin-top: 10px !important;'><input value="<%= rs.getString("cedula")%>" type="text" id="txt-cedi" class="inp-ced" name="txtNom" /></div> </td>
+                                <td> <div class="div-cont-ced" style='margin-top: 10px !important;'><input value="<%= rs.getString("cedula")%>" type="text" id="txt-cedi" readonly="" class="inp-ced" name="txtNom" /></div> </td>
                             </tr>
                         </tbody>
                         <thead>
@@ -57,7 +65,7 @@
                         </thead>
                         <tbody>
                             <tr> 
-                                <td><div class="div-cont-ced" style='margin-top: 10px !important;'><input value="<%= rs.getString("fecha")%>" type="text" id="txt-cedi" class="inp-ced" name="txtDNI" /></div> </td>
+                                <td><div class="div-cont-ced" style='margin-top: 10px !important;'><input value="<%= rs.getString("fecha")%>" type="text" id="txt-cedi" readonly="" class="inp-ced" name="txtDNI" /></div> </td>
                             </tr>
                         </tbody>
                         <thead>
@@ -67,12 +75,12 @@
                         </thead>
                         <tbody>
                             <tr>  
-                                <td> <div class="div-cont-ced" style='margin-top: 10px !important;'><input value="<%= rs.getString("motivo")%>" type="text" id="txt-cedi" class="inp-ced" name="txtDNI" /></div> </td>
+                                <td> <div class="div-cont-ced" style='margin-top: 10px !important;'><input value="<%= rs.getString("motivo")%>" type="text" id="txt-cedi" readonly="" class="inp-ced" name="txtDNI" /></div> </td>
                             </tr>
                         </tbody>
                         <thead>
                             <tr>
-                                <th><div style='margin-top: 10px !important;'>Actualizar examenes</div></th> 
+                                <th><div style='margin-top: 10px !important;'>Subir examenes</div></th> 
                             </tr>
                         </thead>
                         <tbody>

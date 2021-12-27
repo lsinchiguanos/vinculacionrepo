@@ -37,8 +37,8 @@
                     <table style='width: 100%; text-align: center; margin-left: 20px; margin-top: 30px'>
                         <thead>
                             <tr>
-                                <%--   <input type="text"  readonly="" name="codigo" class="form-control" style="visibility:hidden;" value="<%= rs.getInt("codigo")%>"/>
-                                --%>
+                                <input type="text"  readonly="" name="codigo" class="form-control" style="visibility:hidden;" value="<%= rs.getInt("codigo")%>"/>
+                                
                                 <th>Cedula del Paciente</th> 
                             </tr>
                         </thead>
