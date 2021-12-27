@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 public class Addrecetamedica extends HttpServlet {
 
@@ -74,7 +75,8 @@ public class Addrecetamedica extends HttpServlet {
                 String indicaciones = "";
                 
                 insertarreceta.agregarrecetamedicadetalle(id_encabezado,medicamento,indicaciones);
-                
+                JOptionPane.showMessageDialog(null, "RECETA MEDICA AGREGADA CORECTAMENTE");
+                response.sendRedirect("Principal.jsp");
                //JsonParser jsondetalle = new JsonParse();
                 
                 break;
