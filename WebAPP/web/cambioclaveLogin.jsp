@@ -19,7 +19,6 @@
     <body>
         <header id="header" style=" background: #007653 !important;">
             <a class="logo" href="index.jsp">
-                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a> 
         </header>     
         <div class="div-head-tittle"><h2></h2></div>

@@ -20,11 +20,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
         <link href="css/Historial.css" rel="stylesheet" type="text/css"/>
     </head>
-
     <body> 
         <header id="header" style=" background: #007653 !important;">
             <a class="logo" href="Principal.jsp">
-                <img style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
             <a class="logo" id="ulUserData" href="Principal.jsp"></a>
            <nav class="nav-tp"></nav>

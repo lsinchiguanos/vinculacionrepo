@@ -75,7 +75,7 @@ public class Addrecetamedica extends HttpServlet {
                 String indicaciones = "";
                 
                 insertarreceta.agregarrecetamedicadetalle(id_encabezado,medicamento,indicaciones);
-                JOptionPane.showMessageDialog(null, "RECETA MEDICA AGREGADA CORECTAMENTE");
+//                JOptionPane.showMessageDialog(null, "RECETA MEDICA AGREGADA CORECTAMENTE");
                 response.sendRedirect("Principal.jsp");
                //JsonParser jsondetalle = new JsonParse();
                 

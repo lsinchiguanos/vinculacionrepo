@@ -91,7 +91,7 @@ public class ActPaciente extends HttpServlet {
             ps.setString(17, email);
             ps.setString(18, cond);
             ps.executeUpdate();
-            JOptionPane.showMessageDialog(null, "ACTUALIZADO INFORMACION CORRECTAMENTE");
+//            JOptionPane.showMessageDialog(null, "ACTUALIZADO INFORMACION CORRECTAMENTE");
             response.sendRedirect("Principal.jsp");
         } catch (IOException | SQLException e) {
             out.println("Exception: " + e);

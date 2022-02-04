@@ -72,7 +72,7 @@ public class AddPaciente extends HttpServlet {
                         Ayuda1, SegundoApellido, SegundoNombre, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre,email);
                 boolean sw = InsertAddPaciente.agregarUsuario(busuario);
                 if (sw) {
-                    JOptionPane.showMessageDialog(null, "PACIENTE AGREGADA/O CORECTAMENTE");
+//                    JOptionPane.showMessageDialog(null, "PACIENTE AGREGADA/O CORECTAMENTE");
                     response.sendRedirect("Principal.jsp");
 //                    request.getRequestDispatcher("Principal.jsp").forward(request, response);
                 } else {

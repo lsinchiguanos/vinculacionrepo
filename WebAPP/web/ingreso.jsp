@@ -11,7 +11,6 @@
         <header id="header" style=" background: #007653 !important; margin-top:-40px">
             
                 <a class="logo" href="Principal.jsp" id="ulUserData"> 
-                <img  style="margin-top:8px"src="img/circled_left_30px.png" title="Ir a la página anterior" alt="logo">
             </a>
              <nav class="nav-tp"></nav>
             

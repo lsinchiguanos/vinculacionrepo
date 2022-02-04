@@ -65,7 +65,7 @@ public class AddGaleno extends HttpServlet {
                 ConstructorGaleno galeno = new ConstructorGaleno(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Celular, Direccion, x, usuario, pass, SegundoApellido, SegundoNombre, Provincia, canton, parroquia, estado, TipoDepartamento, email);
                 boolean sw = InsertAddGaleno.agregarGaleno(galeno);
                 if (sw) {
-                    JOptionPane.showMessageDialog(null, "AGREGADO CORRECTAMENTE");
+//                    JOptionPane.showMessageDialog(null, "AGREGADO CORRECTAMENTE");
                     response.sendRedirect("index.jsp");
 //                    request.getRequestDispatcher("Principal.jsp").forward(request, response);
                 } else {
