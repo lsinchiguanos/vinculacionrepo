@@ -78,7 +78,7 @@ public class Buscadorpacienteact {
                     + "paciente_apellido_paterno, paciente_apellido_materno,paciente_fnacimiento,\n"
                     + "paciente_convencional,paciente_telefono, paciente_provincia,paciente_canton, paciente_parroquia,\n"
                     + "paciente_direccion, paciente_genero,paciente_estado_civil, paciente_ayudasocial,paciente_nacionalidad, paciente_grupo,\n"
-                    + "paciente_tipo_sangre,paciente_correoelectronico from paciente where CONCAT(paciente_primer_nombre, ' ',paciente_segundo_nombre) ='" + nombre + "' AND CONCAT(paciente_apellido_paterno, ' ',paciente_apellido_materno) ='" + apellido + "'";
+                    + "paciente_tipo_sangre,paciente_correoelectronico from paciente where CONCAT(paciente_primer_nombre, ' ',paciente_segundo_nombre) like '%" + nombre + "%' AND CONCAT(paciente_apellido_paterno, ' ',paciente_apellido_materno) like '%" + apellido + "%'";
             pst = cn.getConecction().prepareStatement(sql_command);
             rs = pst.executeQuery();
             while (rs.next()) {

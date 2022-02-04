@@ -63,8 +63,8 @@
                         <tbody>
                             <tr>
                                 <td><div class="div-cont-lname"><input type="date" id="txt-lname" class="inp-lname" placeholder="Fecha de nacimiento"required=""  name="Fechadenacimiento"/></div></td>
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" value="9999999999" required=""  onkeypress='return validaNumericos(event)'/></div></td>
-                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular" value="9999999999" required="" onkeypress='return validaNumericos(event)'/></div> </td>
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Telefono Convencional" name="convencional" value=""  onkeypress='return validaNumericos(event)'/></div></td>
+                                <td><div class="div-cont-edad"><input type="text" id="txt-edad" class="inp-edad" placeholder="Celular" name="celular" value="" required="" onkeypress='return validaNumericos(event)'/></div> </td>
                             </tr> 
                         </tbody>
                         <thead >
@@ -82,7 +82,7 @@
                                 <td><div class="div-cont-sel-dep-to-transf" ><select class="sel-dep-to-transf"required="" name="canton" id="canton">
                                             <option>Seleccione un canton</option>
                                         </select></div></td> 
-                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeypress="return soloLetras(event)" onkeyup="mayus(this);"/></div></td> 
+                                <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Parroquia"required=""  name="parroquia" onkeyup="mayus(this);"/></div></td> 
                             </tr>
                         </tbody>
                         <thead >
@@ -137,7 +137,7 @@
                         <tbody>
                             <tr> 
                                 <td><div class="div-cont-lname"><input type="text" id="txt-lname" class="inp-lname" placeholder="Tipo de sangre"required="" name="tipoSangre" onkeyup="mayus(this);"/> </div></td> 
-                                <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico" value="info@paciente.com" name="email"/> </div></td> 
+                                <td><div class="div-cont-lname"><input type="email" id="txt-lname" class="inp-lname" placeholder="correo electronico" value="" required="" name="email"/> </div></td> 
                                 <td><div style='margin-top: -20px !important;'class="div-cont-lname"><input type="submit" id="btn-action" class="btn-accept" value="Guardar"/> </div></td>
                             </tr>
                         </tbody>
