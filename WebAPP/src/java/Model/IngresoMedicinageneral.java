@@ -9,7 +9,7 @@ public class IngresoMedicinageneral {
     }
 
     public IngresoMedicinageneral(int paciente_id, String estatura, String peso, String tiposangre, String pc, String pt, String pa, String antecedentesalergicos, String antecedentesfamiliares, String antecedentesquirugicos, String antecedentespersonales, String fechaconsulta, String motivoconsulta, String enfermedad, String diagnostico, String cargararchivo) {
-        this.paciente_id=paciente_id;
+        this.paciente_id = paciente_id;
         this.estatura = estatura;
         this.peso = peso;
         this.pc = pc;

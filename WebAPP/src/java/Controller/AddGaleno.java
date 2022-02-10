@@ -1,4 +1,3 @@
- 
 package Controller;
 
 import java.io.IOException;
@@ -12,11 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Model.ConstructorGaleno;
 import DAO.InsertAddGaleno;
-import java.util.Properties;
 import javax.swing.JOptionPane;
-import javax.websocket.Session;
-import sun.rmi.transport.Transport;
- 
+
 @WebServlet(name = "AddGaleno", urlPatterns = {"/AddGaleno"})
 public class AddGaleno extends HttpServlet {
 
@@ -53,7 +49,7 @@ public class AddGaleno extends HttpServlet {
             } else {
                 TipoDepartamento = "0";
             }
-            
+
             String estado = "0";
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             String x = dtf.format(LocalDateTime.now());

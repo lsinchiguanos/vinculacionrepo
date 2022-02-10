@@ -1,24 +1,16 @@
- 
 package Controller;
 
 import DAO.InsertAddPaciente;
 import Model.ControladorPaciente;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
- 
+
 @WebServlet(name = "AddPaciente", urlPatterns = {"/AddPaciente"})
 public class AddPaciente extends HttpServlet {
 
@@ -38,26 +30,26 @@ public class AddPaciente extends HttpServlet {
             String TipoIden = request.getParameter("TipoIden");
             String Identificacion = request.getParameter("Identificacion");
             String PrimerNombre = request.getParameter("PrimerNombre");
-            
+
             String SegundoNombre = request.getParameter("SegundoNombre");
             String PrimerApellido = request.getParameter("PrimerApellido");
             String SegundoApellido = request.getParameter("SegundoApellido");
-            
+
             String Fechadenacimiento = request.getParameter("Fechadenacimiento");
             String convencional = request.getParameter("convencional");
-            
+
             String Celular = request.getParameter("celular");
             String Provincia = request.getParameter("Provincia");
             String canton = request.getParameter("canton");
-            
+
             String Direccion = request.getParameter("Direccion");
             String parroquia = request.getParameter("parroquia");
             String estadoCivil = request.getParameter("estadoCivil");
-            
+
             String Ayuda1 = request.getParameter("Ayuda");
             String nacionalidad = request.getParameter("nacionalidad");
             String discapacidad = request.getParameter("discapacidad");
-            
+
             String tipoSangre = request.getParameter("tipoSangre");
             String genero = request.getParameter("genero");
             String email = request.getParameter("email");
@@ -69,7 +61,7 @@ public class AddPaciente extends HttpServlet {
                     && !nacionalidad.equalsIgnoreCase("") && !discapacidad.equalsIgnoreCase("") && !tipoSangre.equalsIgnoreCase("") && !email.equalsIgnoreCase("")
                     && !genero.equalsIgnoreCase("")) {
                 ControladorPaciente busuario = new ControladorPaciente(TipoIden, Identificacion, PrimerApellido, PrimerNombre, Fechadenacimiento, Direccion, Celular, genero, discapacidad,
-                        Ayuda1, SegundoApellido, SegundoNombre, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre,email);
+                        Ayuda1, SegundoApellido, SegundoNombre, Provincia, canton, parroquia, nacionalidad, estadoCivil, convencional, tipoSangre, email);
                 boolean sw = InsertAddPaciente.agregarUsuario(busuario);
                 if (sw) {
 //                    JOptionPane.showMessageDialog(null, "PACIENTE AGREGADA/O CORECTAMENTE");

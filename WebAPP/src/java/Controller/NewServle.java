@@ -2,11 +2,8 @@ package Controller;
 
 import DAO.Insertarecetamedica;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.servlet.ServletException;
@@ -58,7 +55,7 @@ public class NewServle extends HttpServlet {
                 response.getWriter().print(jsonnn);
                 break;
             case "3":
-                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 String x = dtf.format(LocalDateTime.now());            ////datos de encabezado          
 
                 String idDoctor = request.getParameter("galenoid");

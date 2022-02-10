@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import Controller.DownloadServlet;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -47,7 +46,7 @@ public class DownloadServlet extends HttpServlet {
 //            response.getWriter().println("<h3>File " + fileName + " Is Not Present .....!</h3>");
             JOptionPane.showMessageDialog(null, "NO HAY ARCHIVO PARA VISUALIZARLO: INGRESE UN DOCUMENTO EN EL MENU DE SUBIR EXAMENES.");
             response.sendRedirect("HistorialPaciente.jsp");
-            
+
         } else {
             String applicationPath = getServletContext().getRealPath("");
             String downloadPath = applicationPath + File.separator + UPLOAD_DIR;

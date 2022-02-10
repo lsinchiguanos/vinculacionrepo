@@ -1,7 +1,6 @@
 package Controller;
 
 import BD.conexion;
-import static java.awt.SystemColor.window;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.PreparedStatement;

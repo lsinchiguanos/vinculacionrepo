@@ -1,4 +1,5 @@
 package DAO;
+
 import BD.conexion;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -7,8 +8,6 @@ import Model.BuscadorPaciente;
 import Model.Constructorrecetamedivca;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-
 
 public class Insertarecetamedica {
 

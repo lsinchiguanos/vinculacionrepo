@@ -8,7 +8,6 @@ package Controller;
 import DAO.Buscadorpacienteact;
 import com.google.gson.Gson;
 import java.io.IOException;
-import java.io.PrintWriter;
 import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

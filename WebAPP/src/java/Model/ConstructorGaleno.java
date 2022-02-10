@@ -15,7 +15,7 @@ public class ConstructorGaleno {
             galeno_primer_nombre, galeno_telefono, galeno_direccion, created_at,
             galeno_user, galeno_pass, galeno_apellido_materno,
             galeno_segundo_nombre, galeno_provincia, galeno_canton, galeno_parroquia,
-            galeno_estado,galeno_correoelectronico;
+            galeno_estado, galeno_correoelectronico;
     String galeno_departamento;
 
     public ConstructorGaleno(String galeno_tipo_dni, String galeno_dni, String galeno_apellido_paterno, String galeno_primer_nombre, String galeno_telefono, String galeno_direccion, String created_at, String galeno_user, String galeno_pass, String galeno_apellido_materno, String galeno_segundo_nombre, String galeno_provincia, String galeno_canton, String galeno_parroquia, String galeno_estado, String galeno_departamento, String galeno_correoelectronico) {
@@ -173,5 +173,5 @@ public class ConstructorGaleno {
     public void setGaleno_correoelectronico(String galeno_correoelectronico) {
         this.galeno_correoelectronico = galeno_correoelectronico;
     }
-    
+
 }

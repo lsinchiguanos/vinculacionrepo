@@ -1,13 +1,10 @@
 package Controller;
 
-import DAO.Buscador;
 import DAO.Insertarecetamedica;
-import Model.Constructorrecetamedivca;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.io.IOException;
-import java.io.PrintWriter;
 import static java.lang.System.out;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -51,37 +48,42 @@ public class Addrecetamedica extends HttpServlet {
                 String users = request.getParameter("user");
                 Insertarecetamedica buscau = new Insertarecetamedica();
                 String jsonnn = new Gson().toJson(buscau.Listbuscarm(users));
-                System.out.print(jsonnn);               
+                System.out.print(jsonnn);
                 response.setContentType("text/javascript");
                 response.getWriter().print(jsonnn);
                 break;
             case "3":
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 String x = dtf.format(LocalDateTime.now());
-                String idDoctor = sesion.getAttribute("idDoctor").toString();  
-                String jsonDatePaciente = sesion.getAttribute("DatePaciente").toString(); 
+                String idDoctor = sesion.getAttribute("idDoctor").toString();
+                String jsonDatePaciente = sesion.getAttribute("DatePaciente").toString();
                 String jsonReceta = request.getParameter("jsonreceta");
-                String fecha = request.getParameter("fecha"); 
-                
+                String fecha = request.getParameter("fecha");
+
                 JsonParser jsonParser = new JsonParser();
                 JsonObject myJson = (JsonObject) jsonParser.parse(jsonDatePaciente);
-                
+
                 String pacienteid = myJson.get("pacienteid").getAsString();
                 Insertarecetamedica insertarreceta = new Insertarecetamedica();
-          
-                int id_encabezado = insertarreceta.agregarrecetamedicaencabezado(idDoctor,pacienteid,x);
-                
+
+                int id_encabezado = insertarreceta.agregarrecetamedicaencabezado(idDoctor, pacienteid, x);
+
                 String medicamento = "";
                 String indicaciones = "";
+<<<<<<< Updated upstream
                 
                 insertarreceta.agregarrecetamedicadetalle(id_encabezado,medicamento,indicaciones);
 //                JOptionPane.showMessageDialog(null, "RECETA MEDICA AGREGADA CORECTAMENTE");
+=======
+
+                insertarreceta.agregarrecetamedicadetalle(id_encabezado, medicamento, indicaciones);
+                JOptionPane.showMessageDialog(null, "RECETA MEDICA AGREGADA CORECTAMENTE");
+>>>>>>> Stashed changes
                 response.sendRedirect("Principal.jsp");
-               //JsonParser jsondetalle = new JsonParse();
-                
+                //JsonParser jsondetalle = new JsonParse();
+
                 break;
-                
-                
+
         }
 
     }

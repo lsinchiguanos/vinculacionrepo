@@ -25,6 +25,7 @@ public class conexion {
             System.err.println(e.getMessage());
         }
     }
+
     public synchronized Connection getConecction() {
         try {
             if (conecction == null || conecction.isClosed()) {
